@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF – 2026年5月13日（水）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      padding: 0 0 60px;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      padding: 18px 0 14px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .masthead-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .masthead-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #555;
+      margin-top: 6px;
+    }
+    .masthead-dateline {
+      font-family: 'Source Serif 4', serif;
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+      border-top: 1px solid #d0c9b8;
+      padding-top: 8px;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 16px;
+    }
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.2;
+      flex: 1;
+    }
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: #1a1a1a;
+    }
+
+    /* ── ARTICLE ── */
+    .article {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .article-source {
+      font-size: 11px;
+      color: #777;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .article-recap {
+      background: #e8e3d9;
+      border-left: 3px solid #d0c9b8;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.65;
+      color: #444;
+      border-radius: 0 3px 3px 0;
+    }
+    .article-body {
+      font-size: 15px;
+      line-height: 1.78;
+    }
+    .article-body p + p {
+      margin-top: 8px;
+    }
+
+    sup.note {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      color: #888;
+      vertical-align: super;
+      cursor: pointer;
+      margin-left: 1px;
+    }
+
+    /* ── ANNOTATIONS ── */
+    details.annotation {
+      margin-top: 12px;
+      border: 1px solid #d0c9b8;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    details.annotation summary {
+      background: #e8e3d9;
+      padding: 7px 12px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+    details.annotation summary::-webkit-details-marker { display: none; }
+    details.annotation summary::before {
+      content: '▶';
+      font-size: 9px;
+      transition: transform 0.2s;
+    }
+    details[open].annotation summary::before { transform: rotate(90deg); }
+    .annotation-body {
+      padding: 10px 14px;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .annotation-body ol {
+      padding-left: 18px;
+    }
+    .annotation-body li {
+      margin-bottom: 5px;
+    }
+    .annotation-body li strong {
+      color: #1a1a1a;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 3px double #1a1a1a;
+      margin: 36px 0 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 2px solid #1a1a1a;
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-label">Transaction Banking Intelligence</div>
+    <div class="masthead-title">THE MORNING BRIEF</div>
+    <div class="masthead-sub">For Financial Systems Professionals</div>
+    <div class="masthead-dateline">2026年5月13日（水）&ensp;|&ensp;情報基準：前日 EST 23:00</div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 : 技術トレンド
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 1</span>
+    <span class="section-title">技術トレンド</span>
+  </div>
+
+  <!-- Article 1-1 -->
+  <div class="article">
+    <div class="article-headline">JPMorgan、AI投資を「コアインフラ」へ正式昇格　技術予算198億ドル・AI専任2,000名体制</div>
+    <div class="article-source">Crescendo AI / LLM Stats &nbsp;|&nbsp; 2026年5月上旬</div>
+    <div class="article-recap">
+      JPMorganは2023〜25年にかけて生成AIを段階的に業務試験導入し、毎年技術予算を拡大してきた。2025年末にはAI関連投資を複数事業横断で統合管理する体制に移行。2026年に入り、AIをR&amp;Dではなく恒常的なインフラ支出と位置付ける決定を下した。
+    </div>
+    <div class="article-body">
+      <p>JPMorgan Chaseは2026年の技術予算を約<strong>198億ドル</strong>と設定し、そのうちAI関連を「実験的R&amp;D」から<strong>コアインフラ支出</strong>へ正式に再分類したことが明らかになった。AI専任スタッフは約2,000名に達し、リスク管理・トレジャリー<sup class="note">[1]</sup>・コンプライアンス・顧客サービスの各領域でAIエージェント<sup class="note">[2]</sup>が本番運用フェーズに移行している。</p>
+      <p>この動きは金融システム開発における転換点を示す。従来「POC止まり」とされていたAI施策が、調達・予算管理・人事評価の対象となる恒常インフラへ格上げされた意味は大きく、他のメガバンクも同様の再分類を迫られる可能性が高い。トランザクションバンキング部門においても、決済照合・流動性予測・不正検知の自動化が実用段階へ移行するペースが加速すると見られる。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>トレジャリー（Treasury）</strong>：企業・銀行の資金調達・運用・流動性管理を担う部門または機能。</li>
+          <li><strong>AIエージェント</strong>：目標を与えられると自律的に計画・実行・修正を繰り返すAIシステム。単純なチャットボットと異なり、複数ツールを呼び出しながら多段階タスクをこなす。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-2 -->
+  <div class="article">
+    <div class="article-headline">2026年春のLLMリリースラッシュ　GPT-5.5・DeepSeek v4・Kimi K2.6が相次ぎ登場</div>
+    <div class="article-source">LLM Stats / Crescendo AI &nbsp;|&nbsp; 2026年5月</div>
+    <div class="article-recap">
+      大規模言語モデル<sup class="note">[1]</sup>の競争は2024年末から急激に激化し、2025年を通じて各社が半年ごとにモデルを更新するサイクルが定着した。2026年に入ってもその頻度は落ちず、Q2（4〜6月）だけで複数の主要モデルが更新・新規公開されている。
+    </div>
+    <div class="article-body">
+      <p>5月前半に確認された主な新着モデルは次の通り。OpenAIの<strong>GPT-5.5</strong>は推論精度と長文コンテキスト処理を強化。中国発の<strong>DeepSeek v4</strong>は引き続きオープンウェイト<sup class="note">[2]</sup>路線で公開され、コーディング・数学推論でトップクラスのベンチマーク結果を記録。月飛（Moonshot AI）の<strong>Kimi K2.6</strong>はコーディング特化チャレンジで注目を集めた。Anthropicは<strong>Claude Code</strong>の修正リリースも行っている。</p>
+      <p>金融システム開発への示唆として、コード生成・テスト自動化・自然言語でのクエリ生成精度がいずれのモデルでも向上しており、フロントエンドからバックエンドまで開発補助の適用範囲がさらに広がっている。特にDeepSeekのオープンウェイト戦略はオンプレミス<sup class="note">[3]</sup>でのプライベート展開を検討する金融機関にとって現実的な選択肢を提供する。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>大規模言語モデル（LLM: Large Language Model）</strong>：大量のテキストデータで学習し、自然言語の生成・理解・翻訳・要約などを行うAIモデル。GPT・Claude・Geminiなどが代表例。</li>
+          <li><strong>オープンウェイト（Open-weight）</strong>：モデルの重み（パラメータ）を公開しており、誰でもダウンロード・ローカル実行できること。完全なオープンソースとは異なり、学習データやコードの公開範囲は限定的な場合が多い。</li>
+          <li><strong>オンプレミス（On-premises）</strong>：クラウドではなく自社データセンターや専用サーバー上でシステムを稼働させる形態。金融機関はデータ管理・規制対応の観点からオンプレミスを好む場合が多い。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-3 -->
+  <div class="article">
+    <div class="article-headline">AIエージェントの「メモリ」が独立アーキテクチャ要素へ　Mem0が高効率新アルゴリズムを公開</div>
+    <div class="article-source">mem0.ai / MIT News &nbsp;|&nbsp; 2026年4〜5月</div>
+    <div class="article-recap">
+      AIエージェントの実用化において「文脈記憶」の欠如が最大の障壁として認識されてきた。2023〜25年はコンテキストウィンドウ<sup class="note">[1]</sup>の拡張で一時的に対応してきたが、長期・大規模な業務記憶には根本的なアーキテクチャが必要との認識が定まってきた。
+    </div>
+    <div class="article-body">
+      <p>2026年4月、メモリ管理専業スタートアップのMem0は<strong>単一パス階層抽出＋マルチシグナル検索</strong>を組み合わせたトークン効率型メモリアルゴリズムを公開した。エージェントが過去の会話・手順・ユーザー嗜好を長期保持しながら新規タスクに適用できる仕組みで、専用ベンチマークスイート<sup class="note">[2]</sup>でトップスコアを記録した。</p>
+      <p>並行してMIT研究者らはエラー発生時にLLMが自動バックトラック<sup class="note">[3]</sup>し複数の実行経路を並列試行する「EnCompass」フレームワークを発表。これらの進展は、金融業務における複数システム連携エージェント（例：与信照会→決済指示→確認通知の一連フロー）の信頼性を大幅に引き上げる可能性を持つ。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>コンテキストウィンドウ（Context Window）</strong>：LLMが一度に参照できるテキスト量の上限。入力＋出力トークン数で表される。大きいほど長い会話や文書を扱えるが、コストも増大する。</li>
+          <li><strong>ベンチマークスイート</strong>：AIモデルやシステムの性能を比較するための標準化された評価指標・テストセットの集合体。</li>
+          <li><strong>バックトラック（Backtrack）</strong>：問題解決の途中で誤りや行き詰まりを検知し、以前の状態に戻って別の経路を試みること。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-4 -->
+  <div class="article">
+    <div class="article-headline">NatWest、2026年FinTechプログラムに8社選出　全社がAI特化型スタートアップ</div>
+    <div class="article-source">Fintech Futures / Yahoo Finance &nbsp;|&nbsp; 2026年5月12日</div>
+    <div class="article-recap">
+      NatWestは2018年からFinTechプログラムを継続し、毎年6〜10社の有望スタートアップを支援してきた。過去コホート<sup class="note">[1]</sup>では決済・融資・ID管理が中心テーマだったが、2025年以降はAIと規制技術（RegTech<sup class="note">[2]</sup>）への重点シフトが顕著になっている。
+    </div>
+    <div class="article-body">
+      <p>英NatWest Groupが2026年コホートの8社を発表した。Aveni（音声AI）、Condukt（金融犯罪検知）、DeepFlow（業務フロー自動化）、Empath_AI（顧客脆弱性<sup class="note">[3]</sup>対応）、Galveston Group（リスク管理）、Gradient Labs（コンプライアンス自動化）、Murphy AI（不正検知）、Round Treasury（資金繰り最適化）の8社で、<strong>全社がAIを中核技術とする早期段階企業</strong>だ。</p>
+      <p>大手銀行がプログラムの採択基準をAI前提に統一したことは、金融システムのAI組み込みが「検討段階」から「前提条件」へ移行したことを象徴する。国内金融機関においても同種のアクセラレーター<sup class="note">[4]</sup>プログラムへの参加・設立の動きが加速するものと予想される。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>コホート（Cohort）</strong>：プログラムへの同期参加グループ。ここでは同年に選出されたスタートアップの一群を指す。</li>
+          <li><strong>RegTech（レグテック）</strong>：Regulatory Technology の略。コンプライアンス・規制対応をテクノロジーで効率化する手法・製品群。</li>
+          <li><strong>顧客脆弱性（Customer Vulnerability）</strong>：高齢・障害・精神的ストレス・経済的困窮などにより金融サービス利用で不利益を被りやすい状態にある顧客を指す概念。英FCA<sup>★</sup>が重視する監督上の課題。<br>　★<strong>FCA（Financial Conduct Authority）</strong>：英国金融行動監視機構。</li>
+          <li><strong>アクセラレーター</strong>：スタートアップに対してメンタリング・資金・ネットワーク・顧客接点を提供し、短期間で成長を加速する支援プログラム。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-5 -->
+  <div class="article">
+    <div class="article-headline">Adyen、ロイヤルティSaaS大手Talon.Oneを7.5億ユーロで買収　決済と販促の統合を加速</div>
+    <div class="article-source">Fintech Futures &nbsp;|&nbsp; 2026年5月上旬</div>
+    <div class="article-recap">
+      オランダの決済プラットフォームAdyenは2021〜24年にかけて加盟店向けデータ分析・リテンション機能を段階的に強化してきた。一方、ベルリン拠点のTalon.Oneは顧客ロイヤルティプログラム<sup class="note">[1]</sup>のSaaS<sup class="note">[2]</sup>として欧米の大手小売・旅行・フィンテック企業に導入実績を持つ。
+    </div>
+    <div class="article-body">
+      <p>Adyenは<strong>7.5億ユーロ</strong>（約1,250億円）でTalon.Oneの全株式取得に関する定款合意に署名した。取引完了後、Adyenは決済処理とロイヤルティ・プロモーション機能を単一プラットフォーム上で提供できるようになる。</p>
+      <p>金融システム目線では、この統合が<strong>企業間（B2B）決済のインセンティブ設計</strong>にも波及する可能性がある。サプライヤー・調達先への支払い条件とロイヤルティ施策を連動させるユースケースが現実味を帯び、トランザクションバンキングにおける付加価値サービスの競争軸が変わりうる。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ロイヤルティプログラム</strong>：顧客の継続利用・購買を促進するためのポイント・特典・割引制度。航空マイレージや小売ポイントが代表例。</li>
+          <li><strong>SaaS（Software as a Service）</strong>：ソフトウェアをインターネット経由でサービスとして提供するモデル。ユーザーはインストール不要で利用でき、月額・年額等のサブスクリプション課金が一般的。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 : 第三者ベンダー動向
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 2</span>
+    <span class="section-title">第三者ベンダー動向</span>
+  </div>
+
+  <!-- Article 2-1 -->
+  <div class="article">
+    <div class="article-headline">SWIFT、2026年11月にISO 20022非構造化住所の削除を予定　対応未完の金融機関へ警告</div>
+    <div class="article-source">SWIFT公式 / Red Compass Labs &nbsp;|&nbsp; 2026年5月</div>
+    <div class="article-recap">
+      SWIFTは2022年からISO 20022<sup class="note">[1]</sup>への段階移行を開始し、2025年11月22日にグローバルな全面移行を完了した。移行後も非構造化データ形式の住所フィールドは一定期間許容されてきたが、最終的な削除期限が設定された。
+    </div>
+    <div class="article-body">
+      <p>SWIFTは<strong>2026年11月14日</strong>以降、すべての照会・調査（E&amp;I）メッセージをMXフォーマット<sup class="note">[2]</sup>（camt.110 / camt.111）で受信できることを義務化する。加えて、決済メッセージに含まれる<strong>非構造化住所フィールドの使用を同時期に廃止</strong>する予定であることを改めて周知した。</p>
+      <p>SWIFTによると、現時点で全決済メッセージの<strong>約65%が非構造化住所</strong>を含んでいる。残り9ヶ月で構造化または混在型への変換が必要で、SWIFTはコミュニティに対して対応加速を強く求めた。国内銀行における対応状況の確認とバックログ解消が急務となる。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ISO 20022</strong>：国際標準化機構（ISO）が策定した金融メッセージング標準規格。従来のMT電文に比べてデータが構造化・豊富化されており、AML<sup>★</sup>照合・即時決済・クロスボーダー追跡が容易になる。<br>　★<strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング防止。</li>
+          <li><strong>MXフォーマット</strong>：ISO 20022に基づくXML形式の金融メッセージ。従来のMTフォーマット（テキスト形式）の後継として順次移行が進んでいる。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 2-2 -->
+  <div class="article">
+    <div class="article-headline">ステーブルコインの年間決済額がVisa・Mastercard合算を超過　B2B需要が60%占める</div>
+    <div class="article-source">Motley Fool / Crypto News / Fortune &nbsp;|&nbsp; 2026年5月</div>
+    <div class="article-recap">
+      ステーブルコイン<sup class="note">[1]</sup>は2019〜22年にかけて主に投機・暗号資産取引の決済手段として普及した。2023年以降はVisaがUSDC<sup class="note">[2]</sup>建て決済を試験導入し、Mastercardがサークル・Paxosとパートナーシップを締結するなど、従来型決済ネットワークとの融合が加速した。
+    </div>
+    <div class="article-body">
+      <p>2025年のオンチェーン<sup class="note">[3]</sup>ステーブルコイン決済額は<strong>33兆ドル</strong>に達し、VisaとMastercardの合算（25.5兆ドル）を超えた。2026年には50兆ドルを超える見通しで、企業間（B2B）クロスボーダー決済・トレジャリー送金・サプライヤー支払いが<strong>全体の約60%</strong>を占めている。</p>
+      <p>金融機関の約90%が既にステーブルコインを利用中または試験導入しているというデータも示された。SWIFTが2025年にブロックチェーン連携の新決済スキームを発表したことも踏まえると、トランザクションバンキングにとってステーブルコインは「競合」から「チャネルの一つ」として戦略的に位置づけ直す段階に入っている。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ステーブルコイン（Stablecoin）</strong>：法定通貨（主に米ドル）等に価値を連動させた暗号資産。価格変動が小さく決済・送金用途に適している。代表例はUSDC、USDT。</li>
+          <li><strong>USDC（USD Coin）</strong>：Circle社が発行するドル連動型ステーブルコイン。大手金融機関との連携が進んでいる。</li>
+          <li><strong>オンチェーン（On-chain）</strong>：ブロックチェーン上に記録・実行されるトランザクション。オフチェーン（中央集権型台帳など）に対する概念。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 : 外銀TB速報
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 3</span>
+    <span class="section-title">外銀TB速報</span>
+  </div>
+
+  <!-- Article 3-1 -->
+  <div class="article">
+    <div class="article-headline">Standard Chartered、シンガポール湾岸銀行と提携　クロスボーダー即時決済のPartiorネットワーク活用を拡大</div>
+    <div class="article-source">Cryptonomist / The Asian Banker &nbsp;|&nbsp; 2026年5月12日</div>
+    <div class="article-recap">
+      Partior<sup class="note">[1]</sup>はDBS・JPMorgan・Temasekが共同設立したブロックチェーン基盤の多通貨決済・清算ネットワークで、2022年に稼働を開始した。Standard Charteredは設立当初から参加しており、クロスボーダー決済の高速化・透明性向上を主目的として段階的にユースケースを拡大してきた。
+    </div>
+    <div class="article-body">
+      <p>Standard CharteredとSingapore Gulf Bank（SGB）は5月12日、Partiorプラットフォームを活用した<strong>クロスボーダー即時決済スキーム</strong>の導入に関する合意を発表した。従来数日を要していた国際送金をリアルタイムまたは近リアルタイムで完結させる仕組みで、中東・東南アジア間の資金フローを主な対象とする。</p>
+      <p>決済コリドー<sup class="note">[2]</sup>の拡充はトランザクションバンキングにおける競合優位の主要指標であり、ブロックチェーン基盤インフラを利用した外銀の先行展開が国内大手の戦略検討を促す可能性がある。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>Partior</strong>：DBS・JPMorgan・Temasekが設立したブロックチェーン基盤の多通貨決済ネットワーク。スマートコントラクトを用いた即時ネット決済<sup>★</sup>が特徴。<br>　★<strong>ネット決済</strong>：複数の取引を差引計算し、差額のみを決済する方式。資金効率が高い。</li>
+          <li><strong>決済コリドー（Payment Corridor）</strong>：特定の2通貨・2国間の資金移動ルート。コリドーを「開く」とは、そのルートで効率的・低コストな送金が可能になることを指す。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 3-2 -->
+  <div class="article">
+    <div class="article-headline">Standard Chartered、Ole Matthiessenをグローバルヘッドに任命　TBとデジタル資産を組織統合</div>
+    <div class="article-source">FinanceFeeds / The Asian Banker &nbsp;|&nbsp; 2026年5月</div>
+    <div class="article-recap">
+      Standard Charteredはここ数年、デジタル資産・トークン化<sup class="note">[1]</sup>ビジネスを従来のトランザクションバンキング部門と並行して育成してきた。組織的な縦割り構造が新サービス開発のボトルネックとの指摘があり、経営陣は統合的なリーダーシップ体制の必要性を検討してきた。
+    </div>
+    <div class="article-body">
+      <p>Standard Charteredは<strong>Ole Matthiessen</strong>をGlobal Head of Transaction Services and Digital Assetsとして任命し、トランザクションサービス・ファイナンシング＆証券サービス・デジタル資産の三機能を単一ラインに統合した。</p>
+      <p>外銀において「トランザクションバンキング×デジタル資産」の統合組織を明示的に設置する動きは2026年に入り加速しており、同行はその先行事例となる。法人顧客に対してトークン化された資産の管理・決済・トレードファイナンス<sup class="note">[2]</sup>を一気通貫で提供する体制を整えることが狙いで、競合他行の組織再編の動向を注視する必要がある。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>トークン化（Tokenization）</strong>：不動産・債券・預金など現実世界の資産をブロックチェーン上のデジタルトークンとして表現すること。分割・移転・清算の効率化が期待される。</li>
+          <li><strong>トレードファイナンス（Trade Finance）</strong>：輸出入に伴う代金支払いリスクを軽減するための金融商品・サービス群。信用状（L/C）・荷為替手形・サプライチェーンファイナンスなどを含む。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 : 国内政治
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 4</span>
+    <span class="section-title">国内政治</span>
+  </div>
+
+  <!-- Article 4-1 -->
+  <div class="article">
+    <div class="article-headline">ベッセント米財務長官が訪日　高市首相・植田日銀総裁と会談、貿易・為替政策を協議</div>
+    <div class="article-source">KSI政策ニュース.jp &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      米トランプ政権は2025年以降、貿易赤字是正を最優先課題とし、主要国に対して個別交渉を重ねてきた。日本との間では関税・為替・防衛費負担が三位一体の議題として扱われており、財務長官の訪日は定期的な二国間協議の一環。
+    </div>
+    <div class="article-body">
+      <p>スコット・ベッセント米財務長官が5月13日まで訪日し、<strong>高市首相・片山財務大臣・植田日銀総裁</strong>らとそれぞれ会談した。主要議題は貿易不均衡の是正策、為替の安定、および米国債保有政策とみられる。</p>
+      <p>日銀の利上げスタンスと米国の高金利維持が交差する局面で、財務当局間の通貨政策の擦り合わせは市場にとっても重要な関心事となっている。為替リスク管理を担うトレジャリー担当者は引き続き動向を注視されたい。</p>
+    </div>
+  </div>
+
+  <!-- Article 4-2 -->
+  <div class="article">
+    <div class="article-headline">法務省が「検察抗告原則禁止」の本則修正案を自民党に提示　刑事司法改革が新局面へ</div>
+    <div class="article-source">KSI政策ニュース.jp &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      2024〜25年にかけて複数の著名刑事事件で検察の捜査手法に対する批判が高まり、国会での刑事訴訟法<sup class="note">[1]</sup>改正論議が活発化していた。与党内でも強制捜査権限の見直しを求める声が増えており、法務省が具体案を提示する段階に至った。
+    </div>
+    <div class="article-body">
+      <p>法務省は5月13日、自民党に対して<strong>「検察抗告<sup class="note">[2]</sup>原則禁止」</strong>を刑事訴訟法の本則に盛り込む修正案を提示した。現行法では検察による不服申し立て（抗告）が広く認められているが、改正案では対象事件を限定する。</p>
+      <p>金融システム開発者に直接の影響は限定的だが、金融犯罪・不正事案における司法手続きの変化として中長期的に注視する事案。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>刑事訴訟法</strong>：刑事事件の捜査・起訴・公判・判決手続きを定める法律。</li>
+          <li><strong>抗告</strong>：裁判所の決定・命令に対して上級裁判所に不服申し立てを行う手続き。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5 : 海外政治
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 5</span>
+    <span class="section-title">海外政治</span>
+  </div>
+
+  <!-- Article 5-1 -->
+  <div class="article">
+    <div class="article-headline">トランプ大統領が北京到着　習近平主席と会談へ——テック大手CEO3名が同行、対イラン・貿易・AI覇権が議題</div>
+    <div class="article-source">CNN Politics / Al Jazeera &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      米中関係は2025年後半に関税交渉が一時凍結されたことで緊張が再燃していた。2026年に入り、イラン問題での米中間の温度差が新たな外交課題として浮上。トランプ大統領の中国訪問は2017年以来初となる。
+    </div>
+    <div class="article-body">
+      <p>トランプ大統領は5月13日に北京入りし、<strong>Apple CEO ティム・クック、Tesla CEO イーロン・マスク、Nvidia CEO ジェンスン・フアン</strong>を経済代表団として帯同した。14日に習近平国家主席との首脳会談が予定されており、主要議題は①対イラン政策の協調、②貿易不均衡の是正、③AI覇権をめぐる二国間枠組みの設置とされる。</p>
+      <p>Nvidiaのフアン氏の同行は半導体輸出規制の緩和交渉との関連が取り沙汰されており、結果次第ではAIチップの供給制約緩和→国内金融機関のAI基盤整備コスト変動につながる可能性がある。</p>
+    </div>
+  </div>
+
+  <!-- Article 5-2 -->
+  <div class="article">
+    <div class="article-headline">米イラン、停戦合意が依然不安定　バンス副大統領「進展あり」もイラン軍「退く余地なし」</div>
+    <div class="article-source">Al Jazeera / Just Security &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      米国とイランの軍事的対立は2025年後半に激化し、2026年初頭に暫定停戦が成立したが、交渉は難航続きだった。トランプ大統領が5月初旬にイランの提案を「受け入れ不可能」と拒否し、緊張が再度高まっていた。
+    </div>
+    <div class="article-body">
+      <p>JDバンス米副大統領は「イランとの交渉は進展している」と述べる一方、イラン軍のアクラミ・ニア准将は「最高水準の準備態勢を維持し、退く余地はない」と声明を出した。同紛争にかかる米国の軍事費は5月13日時点で<strong>累計290億ドル</strong>に達したとペンタゴン<sup class="note">[1]</sup>が議会に報告した。</p>
+      <p>中東情勢の長期化は原油価格・エネルギーコストに直結するため、日本の製造業・物流向け法人与信リスクのモニタリングが求められる。また日本政府は夏季の電気・ガス料金補助の再導入を検討中と報じられている。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ペンタゴン（Pentagon）</strong>：米国国防総省の別称。建物が五角形（ペンタゴン）であることに由来する。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 6 : 国内企業動向
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 6</span>
+    <span class="section-title">国内企業動向</span>
+  </div>
+
+  <!-- Article 6-1 -->
+  <div class="article">
+    <div class="article-headline">日経平均が63,272円で続騰　2025年度経常黒字は過去最大の34.5兆円——半導体輸出が牽引</div>
+    <div class="article-source">日本経済新聞 &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      日経平均は2025年末に5万円台を突破し、2026年5月1日には連休前の急騰で62,833円の当時最高値を記録した。主因はAI・半導体関連銘柄への資金流入と円安誘導期待。並行して2025年度の貿易統計が発表された。
+    </div>
+    <div class="article-body">
+      <p>5月13日の東京市場で日経平均は<strong>63,272円</strong>と続伸し、史上最高値を更新した。半導体関連を中心としたハイベータ銘柄<sup class="note">[1]</sup>への買いが継続している。また財務省が発表した2025年度の経常収支は<strong>黒字34.5兆円</strong>（5年ぶりの貿易黒字を含む）で、半導体・製造装置の輸出増が主因。</p>
+      <p>株価上昇・円安・経常黒字の三重奏は一見好材料だが、金利上昇懸念との綱引きが続く。日銀の利上げ継続スタンスと米中首脳会談の結果が次の転換点となりうる。法人向け決済・ヘッジ需要の増大はTB部門にとってのビジネス機会でもある。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ハイベータ銘柄</strong>：市場全体の動きに対して価格変動が大きい株式。上昇相場では大きく上がり、下落相場では大きく下がる傾向がある。半導体・成長株が代表例。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 6-2 -->
+  <div class="article">
+    <div class="article-headline">5月中旬に3月期本決算の発表ピーク　トヨタ・任天堂など主要企業の業績見通しが出揃う</div>
+    <div class="article-source">日本経済新聞 &nbsp;|&nbsp; 2026年5月</div>
+    <div class="article-recap">
+      日本の上場企業の過半数は3月末決算で、5月が本決算・翌年度業績予想の発表集中期となる。2025年度はドル高・半導体需要増・インバウンド回復が追い風となった一方、原材料コストの高止まりや地政学リスクが利益圧縮要因として働いた。
+    </div>
+    <div class="article-body">
+      <p>5月8日にはトヨタ自動車と任天堂が決算を発表、5月中旬には残る大手企業の発表がピークを迎える。各社が示す<strong>2026年度の業績見通し</strong>は米中摩擦・為替・AIへの設備投資方針が反映される重要なシグナルとなる。</p>
+      <p>銀行・金融機関にとっては法人顧客の資金需要・設備投資計画を把握するうえで決算シーズンは重要な情報収集期。各取引先のキャッシュフロー変化に応じた流動性管理・融資枠の見直しが必要となる時期でもある。</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 7 : 海外企業動向
+  ══════════════════════════════════════════ -->
+  <hr class="section-divider">
+  <div class="section-header">
+    <span class="section-number">§ 7</span>
+    <span class="section-title">海外企業動向</span>
+  </div>
+
+  <!-- Article 7-1 -->
+  <div class="article">
+    <div class="article-headline">JPMorganが投資銀行部門の共同ヘッドを刷新　Blessing・Foley・Kayeの三頭体制へ</div>
+    <div class="article-source">Bloomberg &nbsp;|&nbsp; 2026年5月13日</div>
+    <div class="article-recap">
+      JPMorganの投資銀行部門は長年ダニエル・ピント（COO）体制のもとで経営されてきたが、2025〜26年にかけてシニアバンカーの退任・転籍が相次ぎ、リーダーシップの刷新が必要となっていた。特にM&amp;A・ECM<sup class="note">[1]</sup>・DCM<sup class="note">[2]</sup>各部門の統合管理体制の再整備が課題とされていた。
+    </div>
+    <div class="article-body">
+      <p>JPMorganは5月13日、グローバル投資銀行事業の共同ヘッドとして<strong>Dorothee Blessing・Kevin Foley・Jared Kaye</strong>の三名を任命した。欧州・米国・アジアの地域バランスと各プロダクト専門性を組み合わせた三頭体制で、大型案件の獲得競争に対応する組織強化が狙い。</p>
+      <p>投資銀行ビジネスの強化はトランザクションバンキングとのクロスセル機会拡大にも直結する。JPMorganが再編した組織のもとでTBサービスの販売戦略がどう変わるかは、競合する国内外銀行にとって注目点となる。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>ECM（Equity Capital Markets）</strong>：株式資本市場業務。株式・転換社債等のエクイティ性証券の発行・引受・販売を担う部門。</li>
+          <li><strong>DCM（Debt Capital Markets）</strong>：債券資本市場業務。社債・国債・証券化商品等の発行・引受を担う部門。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 7-2 -->
+  <div class="article">
+    <div class="article-headline">Ebury、サンタンデールが追加出資で株式55%へ　フィンテック国際送金大手が6億ポンド規模調達</div>
+    <div class="article-source">Fintech Futures &nbsp;|&nbsp; 2026年5月上旬</div>
+    <div class="article-recap">
+      英国フィンテックのEburyはSME<sup class="note">[1]</sup>・中堅企業向け国際送金・為替ヘッジを主力サービスとし、2019年にサンタンデールが過半数株式を取得。その後も東南アジア・中南米への展開を積極化し、累計取扱高を拡大してきた。
+    </div>
+    <div class="article-body">
+      <p>Eburyは約<strong>5.5億ポンド</strong>（約1,100億円）の資金調達ラウンドを実施中で、筆頭株主のサンタンデールが5,000万ポンドの追加出資により持分を<strong>55%</strong>に引き上げることが明らかになった。調達資金はアジア・中東市場への拡大と技術投資に充当される見込み。</p>
+      <p>グローバルに事業展開する中堅企業向けFX<sup class="note">[2]</sup>・国際送金市場は競争が激化している。Eburyの調達完了は競合他社——特に従来型銀行の中堅法人向けトランザクションサービス部門——へのプレッシャーを高める。</p>
+    </div>
+    <details class="annotation">
+      <summary>注釈</summary>
+      <div class="annotation-body">
+        <ol>
+          <li><strong>SME（Small and Medium-sized Enterprises）</strong>：中小企業。一般に従業員数や売上高で定義され、国・地域により基準が異なる。</li>
+          <li><strong>FX（Foreign Exchange）</strong>：外国為替。通貨の両替・為替取引を指す。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- FOOTER -->
+  <hr class="section-divider" style="margin-top:48px;">
+  <footer>
+    THE MORNING BRIEF &ensp;|&ensp; Transaction Banking Intelligence<br>
+    2026年5月13日（水）発行 &ensp;|&ensp; 情報基準：2026-05-12 EST 23:00<br>
+    本資料は公開情報に基づく情報提供を目的としており、投資助言・法的助言を構成するものではありません。
+  </footer>
+
+</div>
+</body>
+</html>
