@@ -1,0 +1,46 @@
+name: Update Index to Latest Morning Brief
+
+on:
+  schedule:
+    # 毎朝 9:30 JST (= 00:30 UTC) に実行
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find latest morning brief
+        id: find
+        run: |
+          LATEST=$(ls morning-brief-*.html 2>/dev/null | sort | tail -1)
+          if [ -z "$LATEST" ]; then
+            echo "No morning brief files found"
+            exit 1
+          fi
+          echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
+          echo "Found: $LATEST"
+
+      - name: Update LATEST_FILE in index.html
+        run: |
+          LATEST="${{ steps.find.outputs.latest }}"
+          sed -i "s|const LATEST_FILE = '.*';|const LATEST_FILE = '${LATEST}';|" index.html
+          echo "Updated index.html -> $LATEST"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --staged --quiet; then
+            echo "index.html already up to date"
+          else
+            git commit -m "chore: update index to ${{ steps.find.outputs.latest }}"
+            git push
+          fi

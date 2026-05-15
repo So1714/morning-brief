@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', 'Noto Serif JP', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 640px;
+      width: 100%;
+      padding: 0 20px 60px;
+      text-align: center;
+    }
+    .masthead {
+      border-top: 3px double #1a1a1a;
+      border-bottom: 3px double #1a1a1a;
+      padding: 20px 0 16px;
+      margin-bottom: 32px;
+    }
+    .masthead-label {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .masthead h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .masthead-sub {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .status {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 24px;
+    }
+    .dots::after {
+      content: '';
+      animation: dots 1.5s infinite;
+    }
+    @keyframes dots {
+      0%   { content: ''; }
+      33%  { content: '.'; }
+      66%  { content: '..'; }
+      100% { content: '...'; }
+    }
+    .error {
+      font-size: 0.9rem;
+      color: #666;
+      border: 1px solid #ccc;
+      padding: 16px;
+      background: #fff;
+    }
+    .error a {
+      color: #1a1a1a;
+    }
+    .archive {
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .archive a {
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      margin: 0 6px;
+    }
+    .archive a:hover {
+      border-bottom-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="masthead">
+      <div class="masthead-label">Transaction Banking</div>
+      <h1>THE MORNING BRIEF</h1>
+      <div class="masthead-sub">Daily Financial Intelligence</div>
+    </div>
+    <p class="status" id="status">最新号を読み込んでいます<span class="dots"></span></p>
+    <div id="error-msg" style="display:none" class="error"></div>
+    <div id="archive" class="archive" style="display:none"></div>
+  </div>
+
+  <script>
+    // GitHub Actions により毎朝更新される最新ファイル名
+    const LATEST_FILE = 'morning-brief-2026-05-15.html';
+
+    function getJSTDateStr(daysBack) {
+      const now = new Date();
+      const jst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+      jst.setDate(jst.getDate() - daysBack);
+      return jst.toISOString().slice(0, 10);
+    }
+
+    async function fileExists(url) {
+      try {
+        const res = await fetch(url, { method: 'HEAD' });
+        return res.ok;
+      } catch {
+        return false;
+      }
+    }
+
+    async function findAndRedirect() {
+      const candidates = new Set([LATEST_FILE]);
+      for (let i = 0; i < 7; i++) {
+        candidates.add(`morning-brief-${getJSTDateStr(i)}.html`);
+      }
+
+      for (const file of candidates) {
+        if (await fileExists(file)) {
+          window.location.replace(file);
+          return;
+        }
+      }
+
+      // 全候補が見つからなかった場合
+      document.getElementById('status').textContent = '最新号が見つかりませんでした';
+      const errEl = document.getElementById('error-msg');
+      errEl.innerHTML = '本日の朝刊はまだ発行されていないか、読み込みに失敗しました。<br>しばらくしてから再度お試しください。';
+      errEl.style.display = 'block';
+
+      // アーカイブリンクを生成
+      const archiveEl = document.getElementById('archive');
+      const links = Array.from(candidates)
+        .map(f => `<a href="${f}">${f.replace('morning-brief-', '').replace('.html', '')}</a>`)
+        .join('');
+      archiveEl.innerHTML = 'アーカイブ: ' + links;
+      archiveEl.style.display = 'block';
+    }
+
+    findAndRedirect();
+  </script>
+</body>
+</html>
