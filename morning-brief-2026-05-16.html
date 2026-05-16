@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF – 2026年5月16日（土）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+
+    /* ─── MASTHEAD ─── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 20px 0 14px;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .masthead-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5a5244;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin: 6px 0 4px;
+    }
+    .masthead-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      color: #5a5244;
+      letter-spacing: 0.1em;
+    }
+    .masthead-date {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      margin-top: 10px;
+      font-style: italic;
+      color: #3a3228;
+    }
+
+    /* ─── EDITION BADGE ─── */
+    .edition-badge {
+      background: #1a1a1a;
+      color: #f4f1ec;
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 4px 0;
+      margin-bottom: 28px;
+    }
+
+    /* ─── SECTION HEADERS ─── */
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7a6e60;
+      border-top: 2px solid #d0c9b8;
+      padding-top: 8px;
+      margin-bottom: 18px;
+    }
+    .section-label span {
+      background: #f4f1ec;
+      padding-right: 8px;
+    }
+
+    /* ─── ARTICLES ─── */
+    .article {
+      border-bottom: 1px solid #d0c9b8;
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+    }
+    .article:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .article-tag {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a6e60;
+      margin-bottom: 4px;
+    }
+
+    .article h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .article-meta {
+      font-size: 11px;
+      color: #7a6e60;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .article-recap {
+      background: #ede9e0;
+      border-left: 3px solid #d0c9b8;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #3a3228;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .article p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    /* ─── ANNOTATIONS ─── */
+    .annotation-toggle {
+      width: 100%;
+      border: 1px solid #d0c9b8;
+      border-radius: 4px;
+      margin-top: 14px;
+      background: transparent;
+    }
+    .annotation-toggle summary {
+      padding: 8px 12px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a6e60;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .annotation-toggle summary::-webkit-details-marker { display: none; }
+    .annotation-toggle summary::after {
+      content: '＋';
+      font-size: 14px;
+    }
+    .annotation-toggle[open] summary::after { content: '－'; }
+    .annotation-list {
+      padding: 4px 12px 12px;
+      border-top: 1px solid #d0c9b8;
+    }
+    .annotation-list ol {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+    .annotation-list li {
+      font-size: 12px;
+      color: #3a3228;
+      margin-bottom: 5px;
+      line-height: 1.55;
+    }
+
+    /* ─── WEEKLY DEEP DIVE ─── */
+    .deep-dive {
+      background: #1a1a1a;
+      color: #f4f1ec;
+      padding: 20px 18px;
+      margin-bottom: 36px;
+      border-radius: 2px;
+    }
+    .deep-dive .section-label {
+      color: #d0c9b8;
+      border-top-color: #5a5244;
+    }
+    .deep-dive .section-label span {
+      background: #1a1a1a;
+    }
+    .deep-dive .article {
+      border-bottom-color: #3a3228;
+    }
+    .deep-dive .article h2 {
+      color: #f4f1ec;
+    }
+    .deep-dive .article-meta {
+      color: #a09882;
+    }
+    .deep-dive .article-recap {
+      background: #2a2a2a;
+      border-left-color: #5a5244;
+      color: #d0c9b8;
+    }
+    .deep-dive .article p {
+      color: #e0ddd4;
+    }
+    .deep-dive .annotation-toggle {
+      border-color: #3a3228;
+    }
+    .deep-dive .annotation-toggle summary {
+      color: #a09882;
+    }
+    .deep-dive .annotation-list {
+      border-top-color: #3a3228;
+    }
+    .deep-dive .annotation-list li {
+      color: #d0c9b8;
+    }
+    .deep-dive .article-tag {
+      color: #a09882;
+    }
+
+    /* ─── EVENTS CALLOUT ─── */
+    .events-box {
+      background: #ede9e0;
+      border: 1px solid #d0c9b8;
+      padding: 14px 16px;
+      margin-top: 20px;
+      border-radius: 2px;
+    }
+    .events-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .events-box ul {
+      padding-left: 16px;
+    }
+    .events-box li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #3a3228;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      border-top: 1px solid #d0c9b8;
+      padding-top: 16px;
+      text-align: center;
+      font-size: 11px;
+      color: #7a6e60;
+      line-height: 1.6;
+    }
+
+    sup {
+      font-size: 10px;
+      color: #7a6e60;
+      vertical-align: super;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ════ MASTHEAD ════ -->
+  <header class="masthead">
+    <div class="masthead-label">Transaction Banking Intelligence</div>
+    <div class="masthead-title">THE MORNING BRIEF</div>
+    <div class="masthead-sub">For Financial Systems Professionals</div>
+    <div class="masthead-date">2026年5月16日（土曜日）｜ Saturday Edition</div>
+  </header>
+  <div class="edition-badge">土曜版 — 平日版 ＋ 外銀TB週次深掘り</div>
+
+
+  <!-- ════ SECTION 1：技術トレンド ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 1 ／ 技術トレンド</span></div>
+
+    <!-- Article 1-1 -->
+    <article class="article">
+      <div class="article-tag">AI × 金融コンプライアンス</div>
+      <h2>FIS × Anthropic、金融犯罪捜査を「数時間→数分」に圧縮するAMLエージェントを発表</h2>
+      <div class="article-meta">ソース：FIS Press Release / PYMNTS.com ／ 2026年5月4〜6日</div>
+      <div class="article-recap">
+        FIS（フィデリティ・ナショナル・インフォメーション・サービシズ）<sup>1</sup>は、世界中の銀行の中核システムを支える主要ベンダー。Anthropic<sup>2</sup>は生成AIの大手で、ClaudeというAIモデルを開発。両社は2025年より協議を深め、2026年5月に正式協業を発表した。AML<sup>3</sup>コンプライアンスは米国の金融機関が年間約400億ドルを費やす最大コスト項目の一つ。
+      </div>
+      <p>FISとAnthropicは、銀行のAML調査業務を自動化する「Financial Crimes AI Agent<sup>4</sup>」を共同開発すると発表した。従来、コンプライアンス担当者がトランザクションデータ・顧客記録・タイポロジー<sup>5</sup>の照合に要していた数時間〜数日分の作業を、エージェント型AIが自律的に実行し、数分以内に高リスクケースを絞り込む。</p>
+      <p>すでにBMO（カナダ・モントリオール銀行）とAmalgamated Bankが開発版を試用中で、2026年下半期の一般提供開始が予定されている。FISは今後、審査・ローン決定・不正防止・顧客オンボーディングへの展開も計画する。Anthropicの現地エンジニアリングチームがFIS側に常駐し、共同設計を行う体制が採用された点も注目される。</p>
+      <p><strong>開発者への含意：</strong>エージェントAIが銀行の内部システムに直接アクセスするアーキテクチャが標準化しつつある。データ管理やAIアクション監査ログの整備が次のコンプライアンス要件になる可能性が高い。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>FIS（Fidelity National Information Services）：</strong>世界最大級の金融テクノロジー企業。銀行の基幹システム・決済インフラを多数提供。</li>
+            <li><strong>Anthropic：</strong>元OpenAI研究者らが設立した米AI企業。Claude（クロード）シリーズを開発。</li>
+            <li><strong>AML（Anti-Money Laundering）：</strong>マネーロンダリング防止。金融機関が疑わしい取引を検知・報告する義務的プロセス。</li>
+            <li><strong>Financial Crimes AI Agent：</strong>金融犯罪捜査を自律的に実行するAIエージェント。証拠収集→タイポロジー照合→SAR（不審取引報告書）ドラフト作成までを自動化。</li>
+            <li><strong>タイポロジー（Typology）：</strong>マネーロンダリングの手口パターン類型。規制当局が公表する既知の手法リスト。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 1-2 -->
+    <article class="article">
+      <div class="article-tag">ブロックチェーン × 決済インフラ</div>
+      <h2>JPMorgan Kinexys、Canton Networkと統合——JPMコインが「市場の速度で動くデジタル現金」へ</h2>
+      <div class="article-meta">ソース：J.P. Morgan Newsroom / CoinDesk ／ 2026年1月〜5月</div>
+      <div class="article-recap">
+        JPMorganは2019年にJPMコイン（現JPMD）を開発、2023年に「Kinexys」ブランドへ刷新。Canton Network<sup>6</sup>はDigital Assetが運営するプライバシー重視のブロックチェーンで、大手金融機関が多数参加する。KinexysはChainlink<sup>7</sup>やOndo<sup>8</sup>とのクロスチェーン決済テストも実施済み。
+      </div>
+      <p>JPMorganのブロックチェーン決済部門Kinexysは、2026年中にJPMコイン（JPMD）をCantonネットワーク上でネイティブ発行する計画を発表。現在のKinexysは1日30億ドル超の取引量・累計2兆ドル超の決済実績を持ち、これをパブリック分散台帳上で動作させることで「トークン化資産のスマートコントラクト決済」との連動が可能になる。</p>
+      <p>具体的には、JPMコインの発行・送金・償還をCanton上で完結させ、既存のJPM Blockchain Deposit Account<sup>9</sup>との相互運用性を確保する計画。将来的にPartior<sup>10</sup>との接続も視野に入れる。</p>
+      <p><strong>開発者への含意：</strong>主要行のデポジットトークンが複数のパブリック/コンソーシアムチェーンで動作し始めると、接続先チェーンごとの法的・技術的スタックへの対応が必要になる。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>Canton Network：</strong>Digital Asset社が運営するプライバシー機能付きのエンタープライズ向けブロックチェーン。Goldman Sachs、BNP ParibasなどのTier1金融機関が参加。</li>
+            <li><strong>Chainlink：</strong>ブロックチェーン間のデータ接続を担うオラクルネットワーク。スマートコントラクトに外部データを供給。</li>
+            <li><strong>Ondo Finance：</strong>米国債等の実物資産をトークン化するDeFiプロトコル。機関投資家向けRWA（実物資産トークン）の主要発行体。</li>
+            <li><strong>Blockchain Deposit Account：</strong>JPMorganが提供する、ブロックチェーン上での当座預金管理機能。24時間365日の資金移動を可能にする。</li>
+            <li><strong>Partior：</strong>JPMorgan・DBS・Temasekが設立したブロックチェーン決済清算ネットワーク。後のセクションで詳述。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 1-3 -->
+    <article class="article">
+      <div class="article-tag">Embedded AI × 銀行コアシステム</div>
+      <h2>Temenos、生成AIをバンキングプラットフォームに組み込み——「データは銀行管理下」設計で規制対応</h2>
+      <div class="article-meta">ソース：Fintech Futures / IBS Intelligence ／ 2026年5月</div>
+      <div class="article-recap">
+        Temenos<sup>11</sup>はスイス拠点の銀行コアシステム最大手で、世界150カ国・3,000行以上に導入実績を持つ。生成AIの銀行利用は2024年からパイロット段階にあったが、2026年はデータプライバシー規制への懸念から「オンプレミス型」の需要が急増している。
+      </div>
+      <p>Temenosは生成AIモデルをバンキングプラットフォームの内部に直接組み込んだ新アーキテクチャを発表。特徴は「クラウドに顧客データを送出しないオンプレミス推論エンジン」で、EU AI法<sup>12</sup>やGDPR<sup>13</sup>に準拠しながら融資審査・顧客対応・レポート生成を自動化できる。</p>
+      <p>同時期にFISもAnthropicとのAMLエージェントで「クライアントデータをFIS管理インフラ内に保持する」設計を採用しており、「データ主権（Data Sovereignty）」が銀行AIの競争軸になりつつある。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>Temenos：</strong>スイス拠点の銀行向けコアバンキングソフトウェア企業。世界で最も広く導入されている銀行基幹システムの一つ。</li>
+            <li><strong>EU AI法（EU AI Act）：</strong>EUが2024年に成立させたAI規制法。銀行など高リスク用途のAIに対して透明性・説明責任を義務付ける。</li>
+            <li><strong>GDPR（General Data Protection Regulation）：</strong>EU一般データ保護規則。個人データの処理・移転に関する厳格な規制。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 1-4 -->
+    <article class="article">
+      <div class="article-tag">ステーブルコイン × 決済インフラ</div>
+      <h2>ステーブルコイン決済量がVisaとMastercardの合計を超過——B2B送金の60%がドルトークン利用へ</h2>
+      <div class="article-meta">ソース：Motley Fool / Stablecoin Insider / AlphaPoint ／ 2026年5月</div>
+      <div class="article-recap">
+        ステーブルコイン<sup>14</sup>の決済利用は2020年代初頭まで主に暗号資産取引所内で完結していた。2023〜2024年に機関投資家向け利用が急増し、2025年にはオンチェーン決済量33兆ドルを記録。Visa・MastercardのB2B処理合計25.5兆ドルを上回った。
+      </div>
+      <p>2026年時点で、ステーブルコイン決済の約60%が法人間（B2B）の国際送金・サプライヤー決済・財務管理用途と推定される。金融機関の90%超がすでに利用またはパイロット段階にあるとの調査もある。USDT<sup>15</sup>とUSDC<sup>16</sup>がSolana・Ethereumネットワーク上で数分以内に国際決済を完結させており、SWIFTの「IOUメッセージング」モデルとの速度差が大きく拡大した。</p>
+      <p>TBシステム開発の観点では、企業顧客からのステーブルコイン決済API接続要望が増加しており、既存の外為・国際送金ワークフローとの統合設計が急務になっている。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>ステーブルコイン（Stablecoin）：</strong>米ドルなどの法定通貨に価値を連動させた暗号資産。USDT・USDCが代表例。</li>
+            <li><strong>USDT（Tether）：</strong>Tether社が発行する最大流通量のドル建てステーブルコイン。</li>
+            <li><strong>USDC（USD Coin）：</strong>Circle社とCoinbaseが共同運営するドル建てステーブルコイン。規制準拠性が高く機関投資家向けに普及。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 1-5 -->
+    <article class="article">
+      <div class="article-tag">量子コンピューティング × サイバーセキュリティ</div>
+      <h2>量子×AI融合の不正検知が金融機関の次期セキュリティ基盤へ——2026年導入レースが加速</h2>
+      <div class="article-meta">ソース：Fintech Futures / BDO 2026 Predictions ／ 2026年</div>
+      <div class="article-recap">
+        量子コンピューティング<sup>17</sup>は2010年代から研究段階にあり、2024年頃からクラウドプロバイダー（AWS、Azure、Google）が金融機関向けの量子計算サービスを試験提供し始めた。金融詐欺被害額は年間500億ドル超（米国のみ）とされ、AI単体では検知困難な新手法が増加している。
+      </div>
+      <p>2026年の金融セキュリティ領域では、量子コンピューティングとAIを組み合わせた「量子強化型不正検知」の実用化が進む。従来のAIモデルが見逃す微細な取引パターンを、量子アルゴリズム<sup>18</sup>が高次元データ空間で分析する手法で、複数の大手金融機関がパイロットを開始している。また、現行の暗号化方式が将来の量子計算機に破られるリスクへの備えとして、耐量子暗号<sup>19</sup>（PQC）への移行計画策定も急務となっている。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>量子コンピューティング：</strong>量子力学の原理を利用した計算方式。特定の問題では従来コンピュータを圧倒的に上回る計算速度を実現できる。</li>
+            <li><strong>量子アルゴリズム：</strong>量子コンピュータ向けに設計された計算手順。グローバーのアルゴリズムやショアのアルゴリズムが代表例。</li>
+            <li><strong>耐量子暗号（PQC: Post-Quantum Cryptography）：</strong>量子コンピュータでも解読困難な暗号方式。NISTが2024年に標準規格を確定。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 2：第三者ベンダー動向 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 2 ／ 第三者ベンダー動向</span></div>
+
+    <!-- Article 2-1 -->
+    <article class="article">
+      <div class="article-tag">Mastercard × ステーブルコインインフラ</div>
+      <h2>Mastercard、ステーブルコインインフラのBVNKを18億ドルで買収——130カ国のオンチェーン決済網を取り込む</h2>
+      <div class="article-meta">ソース：Mastercard Investor Relations / CNBC ／ 2026年3月17日発表</div>
+      <div class="article-recap">
+        BVNK<sup>20</sup>はロンドン拠点のステーブルコインインフラ企業で、法定通貨とオンチェーン資産の双方向送金を130カ国以上でサポート。Mastercardは2025年からステーブルコイン関連の投資・提携を加速させており、BVNKはその中で最大の買収案件となった。
+      </div>
+      <p>Mastercardは2026年3月17日、BVNKを最大18億ドル（うち3億ドルは業績連動報酬）で買収すると発表。BVNKのプラットフォームを取り込むことで、Mastercardは既存のカードレール<sup>21</sup>に加えてブロックチェーン上のステーブルコイン決済を同一ネットワークとして提供できるようになる。同取引は2026年中に規制当局の承認を得る見込み。</p>
+      <p>同時期にVisaとBridgeも3月3日にステーブルコインリンクカードプログラムを100カ国以上に拡大。カード大手2社がそれぞれの手法でステーブルコインレールの確保を急いでいる構図だ。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>BVNK：</strong>ロンドン拠点のステーブルコインインフラ企業。B2Bおよびリテール向けに、法定通貨とステーブルコインの相互交換・送受信をAPIで提供。</li>
+            <li><strong>カードレール（Card Rails）：</strong>VisaやMastercardが構築した国際カード決済網。加盟店・銀行・消費者をつなぐ既存インフラ。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 2-2 -->
+    <article class="article">
+      <div class="article-tag">Partior × 国際ブロックチェーン決済</div>
+      <h2>Partior、ドイツ銀行の参加で主要行ネットワークが拡大——ユーロ建て本番決済が稼働開始</h2>
+      <div class="article-meta">ソース：Fintech Futures / Ledger Insights ／ 2024年11月〜2025年9月</div>
+      <div class="article-recap">
+        Partior<sup>22</sup>は2021年にJPMorgan・DBS・Temasekによる合弁で設立されたブロックチェーン決済清算ネットワーク。2024年11月にシリーズB8,000万ドルを調達、Deutsche Bankが戦略投資家として参加した。この時点での累計調達額は1億4,000万ドル超。
+      </div>
+      <p>Deutsche BankはPartiorへの2,000万ドル出資に加え、プラットフォーム協定を締結。2025年9月には初のユーロ建てクロスボーダー決済本番送金を完了（受取銀行はDBS）。PartiorはJPMorgan・DBS・Standard Chartered・Deutsche Bankの4行を中核に、アトミック決済<sup>23</sup>と24時間365日稼働を軸とした銀行主導の次世代清算インフラとして実用フェーズに移行した。</p>
+      <p>規制当局との関係・流動性管理・コンプライアンスを銀行自身がコントロールできる設計が、ステーブルコインや純粋DeFiとの差別化点として機能している。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>Partior：</strong>JPMorgan・DBS・Temasek設立のブロックチェーン決済清算ネットワーク。銀行が共同ガバナンスを持つ点でSWIFTとも異なる新興プラットフォーム。</li>
+            <li><strong>アトミック決済（Atomic Settlement）：</strong>支払いと資産の引き渡しが単一の不可分な取引として同時に確定する決済方式。決済リスクをゼロにできる。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 3：外銀TB速報 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 3 ／ 外銀TB速報</span></div>
+
+    <!-- Article 3-1 -->
+    <article class="article">
+      <div class="article-tag">HSBC</div>
+      <h2>HSBC、初代チーフAIオフィサーを任命——コーポレート・インスティテューショナル部門COOのDavid Riceが昇格</h2>
+      <div class="article-meta">ソース：efinancialcareers / Finextra ／ 2026年5月</div>
+      <div class="article-recap">
+        HSBCは2024年からAI戦略を全行横断の最優先課題に位置付け、2025年に複数のAI系スタートアップへの出資を実施。2026年初頭にCitiと共同でカスタムトレーディング技術のAdaptiveへの戦略投資を行うなど、TB・IB双方でAI活用を推進してきた。
+      </div>
+      <p>HSBCはコーポレート・インスティテューショナル部門（CIB）のCOOであったDavid Riceを初代チーフAIオフィサー（CAIO<sup>24</sup>）として昇格させた。AI専任の最高責任者を置くことで、TB・IB・リテール全部門のAI投資判断を一元化し、ROI<sup>25</sup>管理と規制対応（EU AI法等）を強化する狙いがある。CIBとの連続性を持つRiceの起用は、法人向けTBへのAI実装を優先する同行の戦略を反映している。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>CAIO（Chief AI Officer）：</strong>最高AI責任者。AI戦略・投資・ガバナンスを統括するC-suite役員。2024〜2026年にかけてグローバル大手企業に急速に普及。</li>
+            <li><strong>ROI（Return on Investment）：</strong>投資対効果。AI投資の場合、コスト削減・収益増加・リスク低減効果を数値化して測定する。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 3-2 -->
+    <article class="article">
+      <div class="article-tag">RBC分析</div>
+      <h2>ステーブルコインが収益を直撃——HSBCとDeutsche Bankで最大7%の手数料収入減少リスクとRBCが警告</h2>
+      <div class="article-meta">ソース：CryptoTimes / Finextra ／ 2026年4月16日</div>
+      <div class="article-recap">
+        国際送金・外為サービスはトランザクションバンキング（TB）の主要収益源の一つ。HSBC・Deutsche Bankはクロスボーダー企業決済で特に強い地位を持つ。ステーブルコインによるSWIFT代替が進む中、手数料収益への構造的影響が業界全体で分析され始めている。
+      </div>
+      <p>RBCキャピタルマーケッツは分析レポートで、ステーブルコインを使った企業間国際送金の普及が続けば、HSBCとDeutsche Bankの法人向け手数料収入が最大7%減少し得ると警告した。具体的には、FX<sup>26</sup>手数料・コルレス銀行<sup>27</sup>経由の中間手数料・電信送金手数料が代替される可能性を指摘。両行ともステーブルコインへの対応策を模索しているが、現時点で公式な製品ラインアップとしての発表はない。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>FX（Foreign Exchange）：</strong>外国為替。異なる通貨の交換取引。TB部門の主要収益源の一つ。</li>
+            <li><strong>コルレス銀行（Correspondent Bank）：</strong>国際送金において中継役を担う銀行。送金銀行と受取銀行が直接取引関係を持たない場合に介在し、手数料を得る。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 4：国内政治 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 4 ／ 国内政治</span></div>
+
+    <!-- Article 4-1 -->
+    <article class="article">
+      <div class="article-tag">日米財務当局 × 為替</div>
+      <h2>ベッセント米財務長官が訪日——高市首相・片山財務相・植田日銀総裁と相次ぎ会談、「為替連携緊密」を確認</h2>
+      <div class="article-meta">ソース：Bloomberg Japan / 日本経済新聞 / NRI ／ 2026年5月11〜13日</div>
+      <div class="article-recap">
+        2026年ゴールデンウィーク期間中（4月30日〜5月上旬）、日本政府・日銀は円安是正のため複数回にわたる為替介入<sup>28</sup>を実施。4月30日の単日介入規模は5兆円超とみられ、ドル円は160円台から155円台に急落した。この直後にベッセント米財務長官の訪日が決定し、為替協議が最大の焦点となった。
+      </div>
+      <p>スコット・ベッセント米財務長官は5月11日から13日にかけて来日し、高市首相・片山財務相・植田日銀総裁と個別に会談した。片山財務相との会談後、ベッセント長官は「為替市場における望ましくない過度な変動に対処する両国の意思疎通と連携は今後も揺るぎない」と声明。過度な円安を問題視しつつも明示的な目標水準には言及せず、「緊密かつ強固な日米連携」の継続を強調するにとどまった。</p>
+      <p>市場では、介入容認の暗黙的なお墨付きを得たとの解釈が広がり、会談後に円が小幅強含みで推移している。金融システム観点では、急激な為替変動時の外貨流動性管理・外国為替決済（CLS<sup>29</sup>）リスクへの備えが改めて問われる局面だ。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>為替介入：</strong>政府・中央銀行が外国為替市場で自国通貨の売買を行い、為替レートを調整する政策手段。日本の場合、財務省が決定し日銀が実施する。</li>
+            <li><strong>CLS（Continuous Linked Settlement）：</strong>外国為替取引の決済リスクを削減するための国際清算機関。日米欧の主要銀行が参加し、外為取引の両通貨を同時決済する。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 4-2 -->
+    <article class="article">
+      <div class="article-tag">エネルギー × 経済対策</div>
+      <h2>中東情勢悪化で日本のエネルギーコスト急騰——高市政権が米国産LNG確保と補助金延長を検討</h2>
+      <div class="article-meta">ソース：NHK / 時事ドットコム / 日経ビジネス ／ 2026年5月</div>
+      <div class="article-recap">
+        イラン情勢の悪化（詳細は海外政治セクション参照）により中東産原油・LNG<sup>30</sup>の供給に不確実性が生じている。日本は一次エネルギーの約90%を輸入に依存しており、中東情勢に対して特に脆弱な構造を持つ。
+      </div>
+      <p>中東情勢の緊迫化を受け、ガソリン・灯油・電気・ガス料金が急騰。政府は米国産LNGの調達拡大を交渉しながら、補助金延長による家計・企業負担軽減策を検討中だ。日経ビジネスの分析では、燃料・資材・肥料を海外原料に依存する構造が「有事に弱い」と指摘され、日本の産業サプライチェーン全体の見直し論議が再燃している。5月19日発表予定の1〜3月期GDP速報値では、補助金効果と資源高の綱引きが焦点になる見通し。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>LNG（Liquefied Natural Gas）：</strong>液化天然ガス。天然ガスを-162℃に冷却・液化し、タンカーで輸送できる形態にしたもの。日本の電力・都市ガスの主要燃料。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 5：海外政治 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 5 ／ 海外政治</span></div>
+
+    <!-- Article 5-1 -->
+    <article class="article">
+      <div class="article-tag">米中関係</div>
+      <h2>トランプ×習近平首脳会談（北京）終了——「素晴らしい貿易合意」と自賛も内容は限定的、台湾巡る緊張は継続</h2>
+      <div class="article-meta">ソース：The Japan Times / CNBC / CBC News ／ 2026年5月14〜15日</div>
+      <div class="article-recap">
+        2025年の米中貿易戦争激化を経て、双方に交渉機運が高まり2026年春に首脳会談が設定された。トランプ政権は「100日以内に中国との合意」を公約としており、会談の結果が金融市場と国際貿易体制に与える影響は甚大と注目された。
+      </div>
+      <p>トランプ大統領と習近平国家主席は5月14〜15日、北京で2日間の首脳会談を実施。トランプ大統領は「素晴らしい貿易合意を交わした」と述べたが、実際の成果は儀礼的な色彩が強く具体性に乏しかった。確認できた合意内容は次の通り：①ボーイング機200機の購入（当初想定の500機を大幅に下回り株価は−4%）②大豆・石油・LNGの追加購入約束 ③「貿易・投資評議会」設置と「相互関税引き下げ枠組み」策定 ④「建設的な中米戦略的安定関係」の構築宣言。一方で習主席は台湾問題での誤った対応が「衝突の可能性」につながると警告。関税問題は議題にも上がらなかったとトランプ大統領自身が認めた。</p>
+      <p>会談後のS&P500は1.24%下落、ナスダックは1.54%安。市場はブレークスルーなしと判断した。</p>
+    </article>
+
+    <!-- Article 5-2 -->
+    <article class="article">
+      <div class="article-tag">中東情勢</div>
+      <h2>ホルムズ海峡付近で船舶拿捕・撃沈——原油価格上昇とグローバル・インフレ再燃リスクが浮上</h2>
+      <div class="article-meta">ソース：Enterprise Bank & Trust Geopolitical Update / Reuters ／ 2026年5月</div>
+      <div class="article-recap">
+        ホルムズ海峡<sup>31</sup>は世界の原油輸送量の約20%が通過するチョークポイント。イラン核合意を巡る交渉が2024〜2025年に決裂し、地域の緊張が高まる中、2026年春から海上における偶発的事案が相次いでいる。
+      </div>
+      <p>UAE沖で停泊中の商船がイラン方面に拿捕される事件が発生、さらにオマーン沖では別の船舶が攻撃を受け沈没したと報告されている。エネルギー輸送ルートの封鎖リスクが現実的になりつつあり、原油先物価格は週間で大幅上昇。1〜2四半期にわたる油価高騰が続けばグローバルリセッション<sup>32</sup>リスクが高まるとの警戒感が広がっている。日本の金融機関にとっては、コモディティ融資・貿易金融ポートフォリオのカントリーリスク<sup>33</sup>再評価が求められる。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>ホルムズ海峡：</strong>ペルシャ湾とオマーン湾を結ぶ幅最小32kmの海峡。サウジアラビア・UAE・イラク・クウェートなどの主要産油国が同海峡を経由して原油を輸出する。</li>
+            <li><strong>グローバルリセッション：</strong>世界経済の同時不況。IMFは通常、世界全体の実質GDP成長率が2〜3%を下回る状態をリセッションと定義する。</li>
+            <li><strong>カントリーリスク（Country Risk）：</strong>特定の国への投融資に伴う政治・経済・社会的リスク。戦争・政権変更・為替規制・デフォルトなどを含む。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 6：国内企業動向 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 6 ／ 国内企業動向</span></div>
+
+    <!-- Article 6-1 -->
+    <article class="article">
+      <div class="article-tag">日本経済 × AI投資</div>
+      <h2>日経クロストレンドがAIを「今後伸びるビジネス」首位に——スコア4.82で98キーワード中最高評価</h2>
+      <div class="article-meta">ソース：日経BP / 日経ビジネス ／ 2026年5月15日</div>
+      <div class="article-recap">
+        日経クロストレンドは毎年・半期ごとに将来性の高いビジネスキーワードをスコアリングして発表する。2024〜2025年にかけてAI関連キーワードが急浮上し、大企業から中小企業までAI投資競争が本格化している。
+      </div>
+      <p>日経クロストレンドが発表した「今後伸びるビジネス2026年上半期ランキング」で、「AI（人工知能）」が評価対象98キーワード中トップのスコア4.82を記録。テクノロジー分野だけでなく、製造・小売・金融・医療の各業界からのAI関連投資宣言が続いており、日本企業のデジタル変革が量から質への転換期を迎えているとの見方が広がっている。金融セクターでは特にコンプライアンス自動化・不正検知・融資審査へのAI導入が急増している。</p>
+    </article>
+
+    <!-- Article 6-2 -->
+    <article class="article">
+      <div class="article-tag">会計不正 × 監査人不足</div>
+      <h2>スタートアップから大企業まで会計不正が相次ぐ——公認会計士不足が監査品質を圧迫</h2>
+      <div class="article-meta">ソース：日経ビジネス / 時事ドットコム ／ 2026年5月</div>
+      <div class="article-recap">
+        日本では2020年代に入り、上場企業・スタートアップの会計不正が相次いで発覚。東証が上場基準強化を進める一方、会計士不足の構造問題が監査品質の維持を困難にしている。
+      </div>
+      <p>企業の内部統制の脆弱性と会計不正が社会問題化する中、日経ビジネスは「監査人不足が引き起こすリスクの連鎖」を特集。公認会計士の需要が急増する一方で供給が追いつかず、1人あたりの担当企業数が増加している実態が明らかになった。金融機関にとっては、融資先・出資先企業の財務報告の信頼性確保（デューデリジェンス<sup>34</sup>強化）が与信管理上の重要課題となっている。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>デューデリジェンス（Due Diligence）：</strong>投資・融資・買収に先立って行う調査・審査。財務・法務・事業の実態を精査するプロセス。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 7：海外企業動向 ════ -->
+  <section class="section">
+    <div class="section-label"><span>Section 7 ／ 海外企業動向</span></div>
+
+    <!-- Article 7-1 -->
+    <article class="article">
+      <div class="article-tag">米国株 × テック株</div>
+      <h2>米中首脳会談の失望でS&P500が1.24%安——NvidiaやIntelなどテック株が週間大幅下落</h2>
+      <div class="article-meta">ソース：CNBC / Bloomberg ／ 2026年5月15日</div>
+      <div class="article-recap">
+        米中貿易摩擦の緩和期待が株価を支えていた2026年春、市場は首脳会談での「包括的合意」を一部織り込んでいた。しかし会談結果が予想を下回り、大型テック株を中心に利益確定売りが殺到した。
+      </div>
+      <p>5月15日（金）の米株式市場は、トランプ・習近平会談の結果が期待を大きく下回ったことでリスクオフ<sup>35</sup>が広がった。S&P500は−1.24%、ナスダックは−1.54%、DOWは−1.07%。個別株ではIntel −6.3%、AMD −5.7%、Micron −6.6%、Nvidia −4.4%と半導体・AIチップ株が特に大きく売られた。小売セクター（SPDR小売ETF）も週間−6%超と低調で、BRICS諸国の動向と重なる形で地政学リスクが広範に意識されている。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>リスクオフ（Risk-off）：</strong>投資家がリスク資産（株式など）を売却し、安全資産（米国債・金・円など）に資金を移す動き。地政学的不確実性の高まり時に起こりやすい。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 7-2 -->
+    <article class="article">
+      <div class="article-tag">エネルギー × M&A</div>
+      <h2>NextEra Energy、Dominionの買収交渉か——中東情勢とエネルギー安全保障がM&A市場を動かす</h2>
+      <div class="article-meta">ソース：Bloomberg ／ 2026年5月15日</div>
+      <div class="article-recap">
+        NextEra Energy<sup>36</sup>は米国最大の再生可能エネルギー企業。Dominion Energy<sup>37</sup>はバージニア州を中心に操業する大手電力会社。中東情勢と原油・ガス価格高騰を背景に、エネルギー安全保障の観点からM&Aが加速している。
+      </div>
+      <p>Bloombergによると、NextEra Energyがユーティリティ大手Dominionとの買収交渉に入っているもようだ。中東情勢の悪化を背景に、エネルギーポートフォリオの多様化（再エネ拡大・国内電源確保）を目指す動きが加速している。金融機関にとっては、エネルギーセクター向けプロジェクトファイナンス<sup>38</sup>や電力インフラ融資の新規案件が増加する可能性がある。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>NextEra Energy：</strong>フロリダ州拠点の米最大手再生可能エネルギー企業。風力・太陽光を中心に展開。</li>
+            <li><strong>Dominion Energy：</strong>米バージニア州拠点の大手電力・天然ガス会社。東部沿岸部を中心にサービスを提供。</li>
+            <li><strong>プロジェクトファイナンス（Project Finance）：</strong>特定プロジェクトから生じるキャッシュフローを返済原資とする融資手法。インフラ・エネルギー案件で多用される。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ════ SECTION 8：外銀TB週次深掘り（土曜版） ════ -->
+  <div class="deep-dive">
+    <div class="section-label"><span>Section 8 ／ 外銀TB週次深掘り（土曜版）</span></div>
+
+    <!-- Article 8-1 -->
+    <article class="article">
+      <div class="article-tag">週次総括 ／ JPMorgan × Kinexys</div>
+      <h2>Kinexys×Canton統合が示す外銀TBの「ブロックチェーン本番化」——週間の最重要アクション</h2>
+      <div class="article-meta">ソース：J.P. Morgan Newsroom / CoinDesk / PYMNTS ／ 2026年1〜5月</div>
+      <div class="article-recap">
+        JPMorganは2019年のJPMコイン実験から7年をかけてKinexysブランドに刷新し、2026年初頭にCanton Networkとの統合を発表。2025年末時点での累計決済処理は2兆ドル超、日次取引量は30億ドル超に達している。
+      </div>
+      <p>今週最大のTBニュースは、JPMorganのKinexys×Canton統合の具体的なロードマップが公開されたことだ。JPMコイン（JPMD）をパブリック分散台帳上でネイティブ発行することにより、①トークン化資産とのDvP<sup>39</sup>決済 ②スマートコントラクトによる条件付き自動送金 ③24時間365日リアルタイム清算——の三機能が一体化する。これはTBの「日中流動性管理」概念を根底から変える可能性がある。</p>
+      <p><strong>業界トレンド分析：</strong>主要行がブロックチェーン決済をパイロットから本番稼働に移す流れが明確になった。Partior（DBS・JPMorgan・Deutsche Bank）、HSBC・Standard Charlotteredの香港決済パイロット、そしてKinexys×Cantonと、複数の並走する「銀行主導ブロックチェーン決済網」が実稼働フェーズに入った。日系メガバンクがこれらネットワークへの接続を検討する際、どのネットワークを主軸とするかの戦略判断が2026〜2027年の最重要課題になる可能性が高い。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>DvP（Delivery versus Payment）：</strong>証券の引き渡しと資金決済を同時に行う決済方式。決済リスクをゼロにする手法として広く採用されている。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 8-2 -->
+    <article class="article">
+      <div class="article-tag">週次総括 ／ Mastercard × Visa</div>
+      <h2>Mastercard（BVNK）とVisa（Bridge）が同時にステーブルコインレールを確保——カード大手2社の戦略が完全に収れん</h2>
+      <div class="article-meta">ソース：Mastercard IR / CNBC / Forrester ／ 2026年3〜5月</div>
+      <div class="article-recap">
+        ステーブルコイン取引量がVisaとMastercardの合算を超えたと報告されたのが2025年末。2026年に入り両社は急速に戦略的対応を加速させた。MastercardはBVNK買収（3月17日）、VisaはBridgeとのステーブルコインリンクカード100カ国展開（3月3日）を相次いで発表。
+      </div>
+      <p>外銀TBの観点で重要なのは、カード大手2社がステーブルコインをB2B決済の「主要レール」として正式に位置付けたことだ。MastercardがBVNKの130カ国ネットワークを取り込むことで、コーポレートカード・法人送金・サプライヤー決済がブロックチェーン上で完結するシナリオが現実的になる。これは従来、外銀TBが独占してきた「コルレス銀行ネットワーク」による国際決済ビジネスと直接競合する。</p>
+      <p><strong>業界トレンド分析：</strong>2026年のTB戦略において「ステーブルコイン対応」は任意ではなく必須要件になりつつある。既存のSWIFT/電信送金フローをどの程度ステーブルコインレールに移行させるか、各行の立場（コルレス銀行 vs. 接続先行）によって損益影響は大きく異なる。RBCが指摘した7%の収益減リスクは、早期対応行と遅れた行で実際の影響に差が出るだろう。</p>
+    </article>
+
+    <!-- Article 8-3 -->
+    <article class="article">
+      <div class="article-tag">週次総括 ／ FIS × Anthropic × 外銀TB</div>
+      <h2>AMLエージェントAIが外銀TBオペレーションを再編——「人→AIアシスト」から「AI自律→人レビュー」へのパラダイムシフト</h2>
+      <div class="article-meta">ソース：FIS / Business Wire / Fintech Global ／ 2026年5月4〜6日</div>
+      <div class="article-recap">
+        AMLコンプライアンスコストは外銀TB部門で最大の非収益コスト項目の一つ。JPMorgan・Citi・HSBCなど主要外銀は数千人のコンプライアンス専門家を抱え、膨大なアラートを処理している。AIによる自動化はコスト削減と人員配置最適化の両面で経営上の最重要テーマ。
+      </div>
+      <p>FIS×AnthropicのAMLエージェント発表は、外銀TBのオペレーションに構造的変化をもたらす可能性がある。従来の「AIがアラートをスコアリング→人が精査・判断」という補助的利用から、「AIが証拠収集・判断・SAR<sup>40</sup>ドラフト作成まで完結→人は最終レビューのみ」という自律的運用へのシフトだ。BMO・Amalgamated Bankに続き、主要外銀が2026年下半期以降に同様のエージェントAI採用を検討するとみられる。</p>
+      <p><strong>業界トレンド分析：</strong>エージェントAIが銀行の中核システムに直接アクセスする新アーキテクチャは、コンプライアンス以外のTB業務（貿易金融書類審査・与信モニタリング・決済異常検知）にも急速に波及する見通し。日系メガバンクも同様のアーキテクチャ検討を迫られる可能性が高い。</p>
+      <details class="annotation-toggle">
+        <summary>用語注釈</summary>
+        <div class="annotation-list">
+          <ol>
+            <li><strong>SAR（Suspicious Activity Report）：</strong>不審取引報告書。金融機関が疑わしいと判断した取引を規制当局（米国ではFinCEN）に報告するための公式文書。</li>
+          </ol>
+        </div>
+      </details>
+    </article>
+
+    <!-- Article 8-4 -->
+    <article class="article">
+      <div class="article-tag">週次総括 ／ 来週の注目イベント</div>
+      <h2>【来週の注目】日本GDP速報値・Partior次期アップデート・BAFT欧州フォーラム</h2>
+      <div class="article-meta">2026年5月18〜22日</div>
+      <div class="article-recap">
+        TB関連の定期的な規制・業界イベントが集中する週。特に日本のマクロ指標とBlockchain決済ネットワークの動向が注目される。
+      </div>
+
+      <div class="events-box" style="background:#2a2a2a;border-color:#3a3228;">
+        <h3 style="color:#f4f1ec;">📅 来週のキーイベント（5月18〜22日）</h3>
+        <ul style="color:#d0c9b8;">
+          <li><strong>5月19日（月）</strong>：日本1〜3月期GDP速報値発表——高市政権の景気刺激策効果と資源高の綱引きが焦点。金融機関の国内融資・リスク戦略に直結</li>
+          <li><strong>5月19〜20日</strong>：BAFT 2026欧州フォーラム（英国）——TB・トレードファイナンスの国際カンファレンス。ステーブルコイン対応・AI導入の最前線議論に注目</li>
+          <li><strong>5月下旬</strong>：Partior次期機能アップデート予定——ユーロ建て拡大とFX決済への対応状況を確認</li>
+          <li><strong>随時</strong>：MastercardのBVNK買収規制審査の進捗——EU・英国FCAの動向が決済業界のステーブルコイン戦略に大きく影響</li>
+          <li><strong>随時</strong>：中東・ホルムズ海峡情勢——原油価格・貿易金融リスクへの影響を週次モニタリング</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <p>THE MORNING BRIEF は、トランザクションバンキング部署の金融システム開発者向けに自動生成されています。</p>
+    <p style="margin-top:6px;">情報基準：前日（2026年5月15日）EST 23:00時点 ／ 発行：2026年5月16日（土）</p>
+    <p style="margin-top:6px; color:#a09882;">本資料は情報提供を目的とし、投資・法務・コンプライアンス上のアドバイスを構成するものではありません。</p>
+  </footer>
+
+</div>
+</body>
+</html>
