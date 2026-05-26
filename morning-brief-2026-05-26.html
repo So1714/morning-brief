@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF – 2026年5月26日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 16px 60px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      text-align: center;
+      padding: 24px 0 18px;
+      margin-bottom: 6px;
+    }
+    .masthead-kicker {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .masthead-meta {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #555;
+      border-top: 1px solid #d0c9b8;
+      padding-top: 10px;
+      margin-top: 8px;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section {
+      margin-top: 40px;
+    }
+    .section-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #888;
+      border-bottom: 1px solid #d0c9b8;
+      padding-bottom: 6px;
+      margin-bottom: 28px;
+    }
+
+    /* ── ARTICLE ── */
+    .article {
+      margin-bottom: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child {
+      border-bottom: none;
+    }
+
+    .article-number {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      color: #aaa;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .article-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .article-source {
+      font-size: 11px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 14px;
+      letter-spacing: 0.03em;
+    }
+
+    .article-recap {
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      border-left: 3px solid #d0c9b8;
+      padding-left: 12px;
+      margin-bottom: 14px;
+      line-height: 1.65;
+    }
+
+    .article-body {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .article-body p + p {
+      margin-top: 10px;
+    }
+
+    sup {
+      font-size: 10px;
+      color: #888;
+      cursor: default;
+    }
+
+    /* ── ANNOTATIONS ACCORDION ── */
+    .annotations {
+      margin-top: 18px;
+    }
+    .annotations summary {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .annotations summary::before {
+      content: '▶';
+      font-size: 9px;
+      transition: transform 0.2s;
+    }
+    details[open] .annotations summary::before {
+      transform: rotate(90deg);
+    }
+    .annotations ol {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .annotations li {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.65;
+      margin-bottom: 5px;
+    }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      text-align: center;
+      color: #d0c9b8;
+      margin: 10px 0 0;
+      font-size: 20px;
+      letter-spacing: 6px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 50px;
+      border-top: 2px solid #1a1a1a;
+      padding-top: 14px;
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      font-family: 'Source Serif 4', serif;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══════════════════════════════════════
+       MASTHEAD
+  ══════════════════════════════════════ -->
+  <header class="masthead">
+    <p class="masthead-kicker">Transaction Banking Intelligence</p>
+    <h1 class="masthead-title">THE MORNING BRIEF</h1>
+    <p class="masthead-meta">2026年5月26日（火曜日）&ensp;｜&ensp;情報基準：前日EST 23:00&ensp;｜&ensp;平日版</p>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       SECTION 1: 技術トレンド
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 1 &mdash; 技術トレンド</p>
+
+    <!-- Article 1-1 -->
+    <article class="article">
+      <p class="article-number">1 / 1</p>
+      <h2 class="article-headline">ホワイトハウス、フィンテック規制改革の大統領令に署名——フェド<sup>1</sup>マスター口座開放へ転換</h2>
+      <p class="article-source">Consumer Finance Monitor / WhiteHouse.gov &ensp;·&ensp; 2026年5月19日</p>
+      <p class="article-recap">
+        米国では2020年代初頭からフィンテック・暗号資産企業による連邦準備銀行<sup>1</sup>へのマスター口座<sup>2</sup>取得を巡る訴訟が相次いでいた。規制当局は従来、非銀行機関への口座開放に消極的な姿勢を維持してきたが、業界からの圧力が継続していた。
+      </p>
+      <div class="article-body">
+        <p>トランプ政権は5月19日、「金融技術イノベーションの規制フレームワークへの統合」と題する大統領令に署名した。同令はFederal Reserve<sup>1</sup>を含む連邦銀行規制当局に対し、非銀行金融機関やデジタル資産<sup>3</sup>プロバイダーの決済インフラへのアクセスを阻んできた従来の障壁を見直すよう指示するものだ。</p>
+        <p>具体的には、フィンテック・暗号資産企業が長年求めてきたFedのマスター口座<sup>2</sup>取得の道が大きく開かれる可能性がある。銀行とフィンテックのパートナーシップ拡大が期待される一方、消費者団体は規制緩和による高コスト貸付けや暗号リスクの拡大を懸念し直ちに批判声明を発表した。銀行システム開発の観点では、非銀行が直接Fed決済レールへ接続できるとなれば、コルレス<sup>4</sup>モデルの長期的見直しと、接続API<sup>5</sup>の標準整備が焦点になる。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>Federal Reserve（フェド）</strong>：米国の中央銀行制度。FedWire等の決済インフラを運営する。</li>
+          <li><strong>マスター口座</strong>：民間金融機関がFedに保有する決済決済清算用口座。これを持つことでFedWireへの直接接続が可能になる。</li>
+          <li><strong>デジタル資産</strong>：ブロックチェーン上で発行・流通する暗号資産・ステーブルコイン・トークン化資産等の総称。</li>
+          <li><strong>コルレス（コルレスポンデント銀行）</strong>：国際送金において他行の代理として決済を行う銀行間の委託関係・取引先銀行。</li>
+          <li><strong>API（Application Programming Interface）</strong>：ソフトウェアシステム間でデータや機能を連携させるための接続仕様。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-2 -->
+    <article class="article">
+      <p class="article-number">1 / 2</p>
+      <h2 class="article-headline">エージェンティックAI<sup>1</sup>、銀行業務への導入率が6ヶ月で7%→44%に急伸——IMFも専門レポートを公表</h2>
+      <p class="article-source">Fintech Times / IMF Notes / Fintech Futures &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        2024年以降、生成AI<sup>2</sup>チャットボット活用は銀行各行で試験段階を超え始めていた。しかし自律型エージェント（AIが人間の指示なしに複数ステップのタスクを実行）の業務導入は2025年初頭時点でまだ7%に留まっていた。
+      </p>
+      <div class="article-body">
+        <p>2026年第1四半期、金融機関のエージェンティックAI<sup>1</sup>導入率は44%に達し、前年同期から600%超の増加を記録した。グローバル支出は2026年末までに500億ドルに達する見通しとIMFが試算している。</p>
+        <p>Citiは社内プラットフォーム「Arc<sup>3</sup>」を通じてポートフォリオ分析からリスクシミュレーションまで行員がAIエージェントを展開できる基盤を整備済み。JPMorganは「Kinexys<sup>4</sup>」のトークン決済レールと組み合わせ、エージェントが資金移動の意思決定の一部を自律実行する構成を検討中とされる。決済インフラ側では、Stripeが「AIを最初のユーザーとして設計した」API群を拡充しており、機械がトランザクションを起票・完結する「アジェンティック・コマース<sup>5</sup>」時代のインフラ競争が激化している。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>エージェンティックAI</strong>：目標だけ与えられ、計画立案・ツール操作・実行を自律的に繰り返すAIシステム。従来のQ&amp;A型AIと区別される。</li>
+          <li><strong>生成AI</strong>：テキスト・画像・コード等を生成できる大規模言語モデル（LLM）等の総称。ChatGPTやClaudeが代表例。</li>
+          <li><strong>Arc（Citibank）</strong>：Citigroupが2026年に公開した社内AIエージェント展開プラットフォームの名称。</li>
+          <li><strong>Kinexys</strong>：JPMorgan Chaseが運営するブロックチェーン決済プラットフォーム。旧称JPM Coin。デポジット・トークンで日次50億ドル超を処理。</li>
+          <li><strong>アジェンティック・コマース</strong>：人間が操作するのではなくAIエージェントが代理で商品購入・契約・決済を完結させる商取引形態。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-3 -->
+    <article class="article">
+      <p class="article-number">1 / 3</p>
+      <h2 class="article-headline">SWIFT、6月から小売クロスボーダー決済の新スキーム稼働——25行以上が初回コリドーに参加</h2>
+      <p class="article-source">SWIFT公式 / PYMNTS &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        SWIFTは2022年の「SWIFT gpi<sup>1</sup>」展開後、コーポレート向け送金の高速化を進めてきた。しかし個人・中小企業向け（リテール）クロスボーダー決済への対応は各国の国内即時決済網との連携が課題として残されており、新フレームワーク開発が2024年から本格化していた。
+      </p>
+      <div class="article-body">
+        <p>SWIFTは2026年6月末を目標に、個人・SME<sup>2</sup>向けクロスボーダー決済の新スキームを稼働させる。40行以上が共同開発に参画し、初回ライブ参加行は25行超。対象コリドー<sup>3</sup>はオーストラリア・バングラデシュ・カナダ・中国・ドイツ・インド・パキスタン・スペイン・タイ・英国・米国。</p>
+        <p>同スキームは既存のSWIFTメッセージング<sup>4</sup>基盤を拡張しつつ、ブロックチェーン共有台帳<sup>5</sup>と組み合わせて24/7のリアルタイム決済と資金到着の予測可能性を担保する設計だ。またCiti（USDC<sup>6</sup>試験、2025年11月）やHSBC（トークン預金<sup>7</sup>実証、2025年12月）との取り組みを経て、デジタル資産との相互運用性も路線に組み込まれている。日系メガバンクが参加行に含まれるかどうかはまだ公表されていない点に注目したい。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>SWIFT gpi（Global Payments Innovation）</strong>：SWIFTが2017年に開始した高速・追跡可能なコーポレート国際送金サービス。</li>
+          <li><strong>SME（Small and Medium-sized Enterprises）</strong>：中小企業。</li>
+          <li><strong>コリドー</strong>：送金の「出発国→到着国」のルートのこと。例）日→米コリドー。</li>
+          <li><strong>SWIFTメッセージング</strong>：銀行間で財務情報を交換するためのSWIFTの標準電文フォーマット（MT/MX）。</li>
+          <li><strong>ブロックチェーン共有台帳</strong>：複数の参加者が同一の取引記録を分散して保持・検証する仕組み。</li>
+          <li><strong>USDC</strong>：Circle社が発行する米ドル連動のステーブルコイン。1USDC≒1USD。</li>
+          <li><strong>トークン預金（Tokenized Deposit）</strong>：銀行が自行預金をブロックチェーン上でトークン化したもの。現金同等の法的安定性を持つ次世代決済手段として注目される。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-4 -->
+    <article class="article">
+      <p class="article-number">1 / 4</p>
+      <h2 class="article-headline">Stitch、銀行レガシー<sup>1</sup>基盤の置き換えを目指しa16z<sup>2</sup>主導で2,500万ドルのシリーズA調達</h2>
+      <p class="article-source">Fintech Global &ensp;·&ensp; 2026年5月14日</p>
+      <p class="article-recap">
+        金融機関のコア<sup>3</sup>バンキングシステムは1960〜80年代に構築されたCOBOL<sup>4</sup>資産が残存し、近代化コストと移行リスクが経営の懸案として長く続いてきた。クラウドネイティブ<sup>5</sup>の代替ソリューション市場は2020年代に入り活性化している。
+      </p>
+      <div class="article-body">
+        <p>クラウドネイティブOSとして金融機関の分断したレガシーインフラを一元置き換えするプラットフォームを開発するStitchが、a16z（Andreessen Horowitz）<sup>2</sup>主導のシリーズA<sup>6</sup>ラウンドで2,500万ドルを調達した。</p>
+        <p>同社の主張は「銀行のインフラ債務<sup>7</sup>は臨界点に近づいている」というものだ。API<sup>8</sup>ファーストの設計でプログラマブルな資金移動と機械可読なトランザクション状態<sup>9</sup>を提供し、エージェンティックAIが直接呼び出せるインフラを志向する。日本のメガバンクも勘定系<sup>10</sup>老朽化問題を抱えており、海外での置き換え事例として注視する価値がある。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>レガシー基盤</strong>：旧世代の技術で構築された古いシステム。保守性・拡張性に課題を抱えることが多い。</li>
+          <li><strong>a16z（Andreessen Horowitz）</strong>：シリコンバレーの著名VC（ベンチャーキャピタル）。AIとフィンテックへの積極投資で知られる。</li>
+          <li><strong>コアバンキングシステム</strong>：銀行の勘定元帳・預金・融資・為替等の基幹業務を処理する中心的なITシステム。</li>
+          <li><strong>COBOL</strong>：1959年に開発された事務処理向けプログラミング言語。銀行の基幹システムに今も広く使われている。</li>
+          <li><strong>クラウドネイティブ</strong>：クラウド環境を前提に設計されたシステム。スケーラビリティやデプロイ速度に優れる。</li>
+          <li><strong>シリーズA</strong>：スタートアップの資金調達ラウンドの段階名。製品実証後の本格事業拡大フェーズに対応。</li>
+          <li><strong>インフラ債務（Infrastructure Debt）</strong>：技術的負債のうちインフラ層に蓄積したもの。老朽化・パッチ適用の遅延等を含む。</li>
+          <li><strong>API</strong>：Application Programming Interface。システム間接続の標準インターフェース。</li>
+          <li><strong>機械可読なトランザクション状態</strong>：AIエージェントが取引の現在状態を構造化データとして直接読み取れること。</li>
+          <li><strong>勘定系</strong>：銀行の口座残高・入出金等を管理するコアシステム（日本語の業界用語）。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-5 -->
+    <article class="article">
+      <p class="article-number">1 / 5</p>
+      <h2 class="article-headline">Nvidia、Q1 FY2027で売上816億ドル（前年比+85%）——データセンター収益ほぼ倍増、株価は下落</h2>
+      <p class="article-source">CNBC / Intellectia.ai &ensp;·&ensp; 2026年5月20〜24日</p>
+      <p class="article-recap">
+        NvidiaはAIブームを背景に2023年以降の急成長を続け、GPU<sup>1</sup>データセンター向け売上がコンシューマー部門を大きく逆転。時価総額はAppleを超える局面もあった。しかし「好決算＝株売り」という逆説的な市場反応が繰り返されている。
+      </p>
+      <div class="article-body">
+        <p>Nvidiaは2026年4月末締めの第1四半期（FY2027 Q1）で売上高816億ドルを記録、前年同期比85%増・前四半期比20%増という過去最高を更新した。データセンター部門<sup>2</sup>の収益はほぼ倍増。同社は800億ドルの自社株買い枠追加と、四半期配当を0.01ドル→0.25ドルへの大幅増配を発表した。</p>
+        <p>ただしNVDA株はこの好決算にもかかわらず発表翌日に下落。「期待が高すぎて好材料出尽くし」という定番の反応だ。銀行システム開発視点では、Nvidiaが提供するH100/Blackwellシリーズ<sup>3</sup>GPUがAI推論<sup>4</sup>インフラの中核となっており、各行のクラウド調達コストや生成AI投資の前提条件として引き続き注視する必要がある。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>GPU（Graphics Processing Unit）</strong>：元来は画像処理用プロセッサだが、並列演算能力を活かしAI学習・推論に不可欠なチップとなった。</li>
+          <li><strong>データセンター部門</strong>：NvidiaのクラウドプロバイダーやAI企業向けGPU・ネットワーク機器販売事業。全売上の約8割を占める。</li>
+          <li><strong>H100/Blackwellシリーズ</strong>：Nvidiaの最新世代AI向けGPUファミリー。各クラウド・金融機関が大量導入中。</li>
+          <li><strong>AI推論</strong>：学習済みAIモデルを使って実際に予測・生成を行うプロセス。学習（Training）と区別される。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 2: 第三者ベンダー動向
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 2 &mdash; 第三者ベンダー動向</p>
+
+    <!-- Article 2-1 -->
+    <article class="article">
+      <p class="article-number">2 / 1</p>
+      <h2 class="article-headline">Mastercardがステーブルコイン<sup>1</sup>インフラのBVNK<sup>2</sup>を18億ドルで買収——B2Bクロスボーダー決済に布石</h2>
+      <p class="article-source">Forrester / Finxtech &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        Mastercardは従来、自社カードにステーブルコイン決済を紐付けるパイロットを実施してきた。2025年時点でステーブルコインの年間決済総額は33兆ドルに達し、VisaとMastercardの合計を超えた。主要カードネットワークによる買収が業界予測に上がっていた。
+      </p>
+      <div class="article-body">
+        <p>Mastercardはロンドン拠点のステーブルコインインフラスタートアップBVNK<sup>2</sup>を18億ドルで買収することを発表した。BVNKはブロックチェーンベースのB2B<sup>3</sup>クロスボーダー決済を専門とし、企業間のステーブルコイン送金・決済清算基盤を提供している。</p>
+        <p>この買収によりMastercardは既存のカードレール<sup>4</sup>にオンチェーン決済を組み込む能力を大幅強化する。SWIFT新スキームとの競合軸としても機能する可能性があり、B2B送金における「ステーブルコイン vs 銀行預金トークン<sup>5</sup> vs 従来電文送金」の三巴が鮮明になってきた。日本のトランザクションバンキング部門にとっても、法人顧客の海外送金手段としてのステーブルコイン需要増加を前提とした対応策を考える時期が近づいている。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>ステーブルコイン</strong>：米ドル等の法定通貨に価値を連動させた暗号資産。USDCやUSDTが代表例。価格変動が小さいため決済・送金手段として活用されている。</li>
+          <li><strong>BVNK</strong>：ロンドン拠点のフィンテック企業。企業間のステーブルコイン決済・資金管理インフラを提供。</li>
+          <li><strong>B2B（Business to Business）</strong>：企業間取引。消費者向け（B2C）と区別される。</li>
+          <li><strong>カードレール</strong>：VisaやMastercardが構築した決済処理ネットワークと処理インフラの総称。</li>
+          <li><strong>銀行預金トークン（Bank Deposit Token）</strong>：銀行が既存の法定通貨建て預金をブロックチェーン上でトークン化したもの。ステーブルコインとは異なり銀行の負債として規制される。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 2-2 -->
+    <article class="article">
+      <p class="article-number">2 / 2</p>
+      <h2 class="article-headline">ステーブルコイン決済額、2025年に33兆ドル達成——VisaとMastercardの合計を超え2026年5兆ドル超えへ</h2>
+      <p class="article-source">crypto.news / 0xProcessing &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        2024年のステーブルコイン決済額は約15兆ドルだったが、B2B取引の急伸により2025年は倍以上の33兆ドルへ拡大した。McKinseyとArtemis Analyticsが2025年のデータを分析した結果、B2B取引の前年比伸び率は733%という驚異的な数字だ。
+      </p>
+      <div class="article-body">
+        <p>2025年にステーブルコイン（主にUSDTとUSDC）が処理した決済総額は33兆ドルで、VisaとMastercardの年間処理額合計を初めて超えた。2026年には50兆ドル超が予測されている。この急成長の主因は、SWIFTに比べてコストと着金速度で優位なB2B国際送金への採用拡大だ。</p>
+        <p>Visaは自社カードに4種のステーブルコインを紐付け可能にし、Visa Tokenized Asset Platform<sup>1</sup>経由で金融機関が自前のステーブルコインを発行できる環境を整えている。法整備では米国GENIUS Act<sup>2</sup>が審議中で、規制の明確化によりさらなる機関投資家参入が見込まれる。銀行がコルレスモデルを維持しながらステーブルコインをどう取り込むかが、2026年の最大テーマの一つとなっている。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>Visa Tokenized Asset Platform（VTAP）</strong>：金融機関が自行のステーブルコインやトークン化預金を発行・管理するためのVisaのインフラ基盤。</li>
+          <li><strong>GENIUS Act</strong>：米国議会で審議中のステーブルコイン規制法案。発行体に準備資産の保有を義務付け、連邦・州の二重規制体系を定める。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 3: 外銀TB速報
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 3 &mdash; 外銀TB速報</p>
+
+    <!-- Article 3-1 -->
+    <article class="article">
+      <p class="article-number">3 / 1</p>
+      <h2 class="article-headline">JPMorgan、Kinexys<sup>1</sup>の日次決済50億ドル超を維持——CEO「AI普及で銀行員削減は長期的に不可避」</h2>
+      <p class="article-source">PYMNTS / American Banker / Seoul Economic Daily &ensp;·&ensp; 2026年5月21日</p>
+      <p class="article-recap">
+        JPMorganは2023年にJPM Coin（現Kinexys）を本格稼働させ、デポジットトークン<sup>2</sup>による機関間決済で実績を積んできた。年間テクノロジー投資は200億ドルに達し、フィンテック業界との競争でも攻勢をかけている。
+      </p>
+      <div class="article-body">
+        <p>JPMorgan CEOジェイミー・ダイモン氏は5月21日の上海サミットで「長期的には銀行員の職は減少する。AIスペシャリストを増やし、従来のバンカーを減らす結果として生産性が向上する」と明言した。同社のKinexysはデポジットトークンで日次50億ドル超を処理中。同プラットフォームはブロックチェーンを用いた企業間リアルタイム決済を担い、将来的にはエージェンティックAIによる自律資金移動との統合が視野に入っている。</p>
+        <p>200億ドル規模の年次テクノロジー投資が継続され、クラウドネイティブインフラと決済API整備に資金が向かっている。日系企業のJPMorganコルレス依存度を考えると、Kinexysの機能拡張は邦銀の海外送金業務に影響しうる。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>Kinexys</strong>：JPMorgan Chaseのブロックチェーン決済プラットフォーム。旧称「JPM Coin」。機関顧客間のデポジットトークン決済を処理。</li>
+          <li><strong>デポジットトークン</strong>：銀行が自行の預金をブロックチェーン上で表現したトークン。ステーブルコインと異なり銀行の債務として位置付けられる。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 3-2 -->
+    <article class="article">
+      <p class="article-number">3 / 2</p>
+      <h2 class="article-headline">Citi、AIエージェント基盤「Arc」拡充とCoinbase<sup>1</sup>提携でトークン決済の二正面展開</h2>
+      <p class="article-source">PYMNTS / efinancialcareers &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        Citiは2022年からCiti Token Services<sup>2</sup>の開発を続け、SWIFTとの連携実証（2025年11月のUSDCトライアル）を経て機関向けデジタル決済基盤の整備を加速してきた。並行して社内AI化も進め、2026年インベスターデイでは「銀行業務の50%超がAIまたは関連技術に代替される」と表明した。
+      </p>
+      <div class="article-body">
+        <p>Citiは社内AIエージェントプラットフォーム「Arc」を通じポートフォリオ分析・リスクシミュレーション等に自律エージェントを本格展開中。同時に暗号資産取引所Coinbaseとの提携によりオンチェーン決済サービスを拡充、Citi Token Servicesとの組み合わせで機関顧客向けトークン決済の受け皿を拡大している。トランザクションバンキング部門では「プラットフォーム化」が旗印で、キャッシュマネジメント・貿易金融・FX<sup>3</sup>を一体提供するリアルタイムトレジャリー<sup>4</sup>基盤への投資が続いている。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>Coinbase</strong>：米国最大手の暗号資産取引所。機関投資家向けカストディ・決済サービスも提供。</li>
+          <li><strong>Citi Token Services</strong>：Citiが開発したトークン化預金・スマートコントラクトを活用した機関向け決済・貿易金融サービス。</li>
+          <li><strong>FX（Foreign Exchange）</strong>：外国為替取引。</li>
+          <li><strong>リアルタイムトレジャリー</strong>：企業の資金繰り・キャッシュポジション管理をリアルタイムで行う財務機能。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 4: 国内政治
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 4 &mdash; 国内政治</p>
+
+    <!-- Article 4-1 -->
+    <article class="article">
+      <p class="article-number">4 / 1</p>
+      <h2 class="article-headline">高市首相、3兆円超の補正予算案を来週提出——電気・ガス代7〜9月に5,000円支援、国債増発なし</h2>
+      <p class="article-source">NHKニュース / Bloomberg JP &ensp;·&ensp; 2026年5月25日</p>
+      <p class="article-recap">
+        高市早苗首相は就任以来、通例的な補正予算編成からの脱却を掲げていた。しかし2026年春以降の中東情勢悪化に伴うエネルギー・資材価格の高騰が国内物価を直撃し、与野党の間で財政出動を求める声が高まっていた。
+      </p>
+      <div class="article-body">
+        <p>高市首相は5月25日、中東情勢への対応として2026年度補正予算案（3兆円超）を来週国会へ提出する方針を正式に表明した。電気・ガス料金については、使用量が増える7〜9月に標準世帯あたり計5,000円程度の支援を行うと明言。財源は赤字国債<sup>1</sup>で賄うが、市中発行額<sup>2</sup>は増やさない方針だ。5月26日の閣議で2026年度予算の予備費<sup>3</sup>から5,000億円の支出も決定される見通し。</p>
+        <p>金融市場への直接影響は限定的だが、国債需給への影響と、エネルギーコスト上昇が続く中での消費・企業業績への波及効果が引き続き注目される。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>赤字国債</strong>：税収不足を補うために発行される国債。財政法上は特例措置として毎年度の特例公債法により発行が認められる。</li>
+          <li><strong>市中発行額</strong>：民間金融機関・一般投資家向けに市場で国債を売り出す金額。日銀の保有分とは別。</li>
+          <li><strong>予備費</strong>：予算成立後に発生した予見し難い支出に充てるため内閣が管理する予算の予備枠。国会の議決なしに支出できる。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 4-2 -->
+    <article class="article">
+      <p class="article-number">4 / 2</p>
+      <h2 class="article-headline">茂木外相、インド訪問——エネルギー安保・経済安全保障での協力を確認</h2>
+      <p class="article-source">NHKニュース &ensp;·&ensp; 2026年5月25日</p>
+      <p class="article-recap">
+        中東情勢の不安定化でホルムズ海峡<sup>1</sup>経由のエネルギー供給に不確実性が増す中、日本はエネルギー輸入先の多角化と経済安全保障<sup>2</sup>の強化を外交課題と位置付けている。インドは日本にとって「自由で開かれたインド太平洋」戦略の中核パートナー国だ。
+      </p>
+      <div class="article-body">
+        <p>茂木敏充外相は5月25日にインドを訪問し、ジャイシャンカル外相と会談した。議題はエネルギー供給の安定化、半導体・重要鉱物等のサプライチェーン<sup>3</sup>強化、経済安全保障分野での協力枠組み拡大など。中東緊張が長期化する中でのエネルギー代替調達先としてのインドとの関係深化が主眼だ。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>ホルムズ海峡</strong>：ペルシャ湾とオマーン湾を結ぶ狭い海峡。世界の石油輸送量の約2割が通過する戦略的要衝。</li>
+          <li><strong>経済安全保障</strong>：重要物資・技術・インフラを外部からの遮断リスクから守るための政策体系。日本では2022年に経済安全保障推進法が成立。</li>
+          <li><strong>サプライチェーン</strong>：原材料の調達から製品製造・流通・消費者への届けまでの一連の供給連鎖。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 5: 海外政治
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 5 &mdash; 海外政治</p>
+
+    <!-- Article 5-1 -->
+    <article class="article">
+      <p class="article-number">5 / 1</p>
+      <h2 class="article-headline">米・イラン停戦「生命維持」状態——ホルムズ海峡封鎖とイラン制裁が世界サプライチェーンを圧迫</h2>
+      <p class="article-source">Wikipedia（2026 Iran war ceasefire） / Thomson Reuters Institute / Congress.gov &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        2026年初頭に勃発した米・イラン軍事衝突は4月8日に停戦が成立したが、その後も散発的な交戦が続いている。イランはホルムズ海峡を事実上封鎖し、米国はイラン船舶への封鎖で対抗。核・ミサイル問題を巡る外交交渉は膠着状態にある。
+      </p>
+      <div class="article-body">
+        <p>トランプ大統領は停戦を「生命維持装置<sup>1</sup>」と表現し、交渉が進展しなければ再拡大の可能性を示唆している。5月7日にも米軍艦がホルムズ海峡を通過する際に交戦が発生。イランのインターネット遮断（87日間）は解除されたが、ドーハでの和平協議は進展が見えない状況だ。米議会では戦争権限決議<sup>2</sup>が採決に向け動いており、上院で予備投票を通過した。</p>
+        <p>エネルギー価格の高止まり・貿易ルートの混乱が金融機関のリスク管理・貿易金融<sup>3</sup>業務に直撃しており、邦銀のコモディティ<sup>4</sup>関連与信とLCビジネス<sup>5</sup>への影響を引き続き注視する必要がある。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>生命維持装置（life support）</strong>：ここでは「かろうじて維持されている」という比喩的表現。トランプ大統領の発言。</li>
+          <li><strong>戦争権限決議（War Powers Resolution）</strong>：米国大統領の軍事行動を議会が承認・制限できる米法律。60日以内に議会の承認がなければ撤退を義務付ける。</li>
+          <li><strong>貿易金融（Trade Finance）</strong>：輸出入取引に伴う代金決済リスクをカバーする金融サービス。信用状（L/C）・輸出手形・荷為替等を含む。</li>
+          <li><strong>コモディティ</strong>：石油・天然ガス・金属・農産物等の一次産品・商品。</li>
+          <li><strong>LCビジネス（Letter of Credit）</strong>：信用状を用いた貿易決済ビジネス。銀行が輸入者に代わり輸出者への支払いを保証する。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 5-2 -->
+    <article class="article">
+      <p class="article-number">5 / 2</p>
+      <h2 class="article-headline">イラン、87日ぶりにインターネット遮断を解除——ドーハで和平協議も、停戦の恒久化は不透明</h2>
+      <p class="article-source">Reuters / Wikipedia &ensp;·&ensp; 2026年5月25日</p>
+      <p class="article-recap">
+        イランは衝突勃発後、国内向けインターネットを遮断し情報統制を強化していた。国際社会からは通信インフラの復旧と対話再開を求める声が続いていた。
+      </p>
+      <div class="article-body">
+        <p>イランのペゼシュキアン大統領は国内インターネットの全面復旧を命令し、87日ぶりに規制が解除された。また議会議長モハンマド・バゲル・ガリバフ氏と外相アラグチ氏が率いる代表団がカタールのドーハで和平協議に入った。ただし核問題・ミサイル問題での米・イランの溝は深く、包括合意には程遠いとの評価が支配的だ。今後の動向次第ではエネルギー市場のボラティリティが再燃するリスクがある。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>ボラティリティ</strong>：価格変動の激しさを示す指標。ボラティリティが高いほどリスクが大きい。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 6: 国内企業動向
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 6 &mdash; 国内企業動向</p>
+
+    <!-- Article 6-1 -->
+    <article class="article">
+      <p class="article-number">6 / 1</p>
+      <h2 class="article-headline">トヨタ2026年3月期、売上高50兆円超え初達成——営業利益は21.5%減、中東・関税圧迫で</h2>
+      <p class="article-source">ライブドアニュース / トヨタIR &ensp;·&ensp; 2026年5月8日</p>
+      <p class="article-recap">
+        トヨタは2021年度以降、コロナ後の自動車需要回復と円安を追い風に売上・利益ともに過去最高を更新し続けてきた。2025年度は北米・欧州での関税引き上げや中東情勢による資材高が収益の重石となっていた。
+      </p>
+      <div class="article-body">
+        <p>トヨタ自動車の2026年3月期（FY2026）決算は、売上高が前年比5.5%増の50兆6,849億円となり初めて50兆円の大台を突破した。一方で営業利益は21.5%減の3兆7,662億円、純利益は19.2%減の3兆8,480億円と大幅減益となった。中東情勢に起因するエネルギー・部品コストの上昇と、米国による関税引き上げが主因だ。</p>
+        <p>台湾での日本向け主力車生産を10月から開始し、逆輸入で納期短縮を図る計画も発表済みで、サプライチェーン再編が継続している。銀行融資・サプライチェーンファイナンス<sup>1</sup>の観点から、完成車メーカーの収益低下と資金繰り動向は注目ポイントだ。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>サプライチェーンファイナンス</strong>：大手企業（買い手）の信用力を活用して、サプライヤー（売り手）が早期に売掛金を資金化できる金融スキーム。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 6-2 -->
+    <article class="article">
+      <p class="article-number">6 / 2</p>
+      <h2 class="article-headline">ソニーG、最終利益1兆308億円で着地——翌期12.5%増見通しと自社株買いで株価は上昇</h2>
+      <p class="article-source">Yahoo!ファイナンス / ソニーIR &ensp;·&ensp; 2026年5月8日</p>
+      <p class="article-recap">
+        ソニーグループは映像センサー・エンタメ・金融の多角経営でコロナ後に業績を伸ばしてきた。金融子会社のソニーフィナンシャルグループ<sup>1</sup>は上場後も連結中で、グループ全体の利益貢献が続いている。
+      </p>
+      <div class="article-body">
+        <p>ソニーグループの2026年3月期連結最終利益は前期比9.7%減の1兆308億円と小幅減益となったが、2027年3月期は前期比12.5%増の1兆1,600億円へ拡大する見通しを示した。同日に発表した自社株買い・自社株消却が好感され株価は上昇。トヨタと対照的な市場反応となった。AI活用コンテンツ制作の効率化やイメージセンサー<sup>2</sup>需要の回復が翌期業績改善の牽引役として期待されている。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>ソニーフィナンシャルグループ</strong>：ソニーグループの金融子会社持株会社。生命保険・損害保険・銀行（ソニー銀行）等を傘下に持つ。</li>
+          <li><strong>イメージセンサー</strong>：カメラやスマートフォンで光を電気信号に変換する半導体部品。ソニーは世界シェア首位。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SECTION 7: 海外企業動向
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <p class="section-label">Section 7 &mdash; 海外企業動向</p>
+
+    <!-- Article 7-1 -->
+    <article class="article">
+      <p class="article-number">7 / 1</p>
+      <h2 class="article-headline">Adyen、ロイヤルティソフトのTalon.Oneを7.5億ユーロで買収——マーチャント<sup>1</sup>向けプラットフォーム統合加速</h2>
+      <p class="article-source">Fintech Futures &ensp;·&ensp; 2026年5月</p>
+      <p class="article-recap">
+        オランダの決済プロセッサAdyenは2010年代後半から欧米の大手小売・プラットフォーム企業を顧客に急成長してきた。近年は決済処理だけでなくマーチャント向けの金融サービス一体提供（エンベデッドファイナンス<sup>2</sup>）へのシフトを進めている。
+      </p>
+      <div class="article-body">
+        <p>Adyenはベルリン拠点の顧客ロイヤルティ<sup>3</sup>ソフトウェア企業Talon.Oneを7.5億ユーロ（約1,200億円）で買収する最終合意を締結、H2 2026年中のクローズを見込む。ポイント・クーポン・メンバーシップ等のロイヤルティ機能を決済プラットフォームと統合することで、小売・ECのオムニチャネル<sup>4</sup>戦略を支援するワンストップ提供を目指す。</p>
+        <p>決済ベンダーのM&amp;Aが活発な中、日系銀行のアクワイアリング<sup>5</sup>ビジネスや提携決済ベンダー戦略にも影響が及ぶ可能性がある。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>マーチャント</strong>：Adyenなどの決済プロセッサにとっての顧客である加盟店・販売者。</li>
+          <li><strong>エンベデッドファイナンス</strong>：非金融企業のプラットフォームやサービスに金融機能（融資・保険・決済等）を組み込む手法。</li>
+          <li><strong>ロイヤルティ（Loyalty）</strong>：顧客の継続的な取引・ブランド支持を促す仕組み。ポイントプログラム等。</li>
+          <li><strong>オムニチャネル</strong>：実店舗・EC・モバイルアプリ等の複数チャネルをシームレスに統合した顧客体験。</li>
+          <li><strong>アクワイアリング</strong>：加盟店（マーチャント）向けにカード決済を受け付ける業務・サービス。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 7-2 -->
+    <article class="article">
+      <p class="article-number">7 / 2</p>
+      <h2 class="article-headline">PayPal、3事業部制に再編——15億ドルのコスト削減で収益構造の立て直しへ</h2>
+      <p class="article-source">Hipther / Fintech Futures &ensp;·&ensp; 2026年5月22日</p>
+      <p class="article-recap">
+        PayPalは2023年以降、AppleやGoogleのウォレット機能拡充と、BNPLプレイヤーやCashAppとの競争激化を受け、成長鈍化と株価低迷が続いていた。経営陣交代後の再建策が矢継ぎ早に打ち出されている。
+      </p>
+      <div class="article-body">
+        <p>PayPalは2〜3年で15億ドルのコスト削減を目標に、事業を3つの明確な部門（コンシューマー・マーチャントサービス・新興事業）に再編する大規模組織変革を発表した。決済領域での競争激化に対応しながら、AI活用によるパーソナライズドペイメント<sup>1</sup>と法人向けサービス強化に注力する方針だ。Venmo<sup>2</sup>の収益化加速も重要課題となっている。</p>
+      </div>
+      <details class="annotations">
+        <summary class="annotations">注釈</summary>
+        <ol>
+          <li><strong>パーソナライズドペイメント</strong>：個人の購買行動・嗜好・信用情報に基づいてカスタマイズされた決済オファー・機能。</li>
+          <li><strong>Venmo</strong>：PayPal傘下のP2P（個人間）送金アプリ。米国の若年層に広く普及しているが単体では収益化が課題だった。</li>
+        </ol>
+      </details>
+    </article>
+
+    <div class="section-divider">· · ·</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>THE MORNING BRIEF &ensp;·&ensp; Transaction Banking Intelligence</p>
+    <p style="margin-top:4px;">© 2026 &ensp;·&ensp; 情報基準：2026-05-25 EST 23:00 &ensp;·&ensp; 本資料は情報提供のみを目的としています</p>
+  </footer>
+
+</div>
+</body>
+</html>
