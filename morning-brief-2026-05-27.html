@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MORNING BRIEF - 2026年5月27日（水）</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: #f4f1ec;
+            color: #1a1a1a;
+            font-size: 15px;
+            line-height: 1.78;
+        }
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 18px 48px;
+        }
+        /* ── Masthead ── */
+        .masthead {
+            text-align: center;
+            padding: 30px 0 18px;
+            border-bottom: 3px double #1a1a1a;
+            margin-bottom: 2px;
+        }
+        .masthead-kicker {
+            font-size: 9.5px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 6px;
+        }
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            line-height: 1.05;
+        }
+        .masthead-rule {
+            border: none;
+            border-top: 1px solid #d0c9b8;
+            margin: 10px auto;
+            width: 80%;
+        }
+        .masthead-sub {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #666;
+        }
+        .masthead-date {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 12.5px;
+            color: #444;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* ── Section ── */
+        .section {
+            margin-top: 36px;
+        }
+        .section-header {
+            border-top: 2.5px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding: 5px 0 6px;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+        .section-number {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .section-badge {
+            margin-left: auto;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            background: #1a1a1a;
+            color: #f4f1ec;
+            padding: 2px 7px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+        /* ── Article ── */
+        .article {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #d0c9b8;
+        }
+        .article:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .article-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 19.5px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+        .article-meta {
+            font-size: 10px;
+            color: #888;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            border-left: 3px solid #d0c9b8;
+            padding-left: 8px;
+        }
+        .article-recap {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            background: #ede9e0;
+            border-radius: 3px;
+            padding: 10px 13px;
+            margin-bottom: 14px;
+            line-height: 1.68;
+        }
+        .article-recap-label {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #999;
+            display: block;
+            margin-bottom: 5px;
+            font-style: normal;
+        }
+        .article-body {
+            font-size: 14.5px;
+            line-height: 1.82;
+        }
+        .article-body p {
+            margin-bottom: 9px;
+        }
+        /* ── Footnotes ── */
+        details {
+            margin-top: 14px;
+        }
+        summary {
+            cursor: pointer;
+            color: #888;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            user-select: none;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::before {
+            content: '▸';
+            font-size: 9px;
+            color: #bbb;
+            display: inline-block;
+            transition: transform 0.15s;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+        .footnotes {
+            background: #ede9e0;
+            border-left: 3px solid #d0c9b8;
+            border-radius: 0 3px 3px 0;
+            padding: 10px 14px;
+            margin-top: 7px;
+            font-size: 12px;
+            line-height: 1.65;
+        }
+        .footnotes ol {
+            padding-left: 18px;
+        }
+        .footnotes li {
+            margin-bottom: 5px;
+            color: #444;
+        }
+        /* ── No news ── */
+        .no-news {
+            font-style: italic;
+            color: #999;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            margin-top: 44px;
+            padding-top: 16px;
+            border-top: 3px double #1a1a1a;
+            font-size: 9.5px;
+            color: #aaa;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- ═══ MASTHEAD ═══ -->
+    <header class="masthead">
+        <div class="masthead-kicker">Transaction Banking Intelligence Daily</div>
+        <div class="masthead-title">THE MORNING BRIEF</div>
+        <hr class="masthead-rule">
+        <div class="masthead-sub">金融システム開発者向け デイリーインテリジェンス</div>
+        <div class="masthead-date">2026年5月27日（水）&ensp;·&ensp;情報基準：5月26日 EST 23:00</div>
+    </header>
+
+
+    <!-- ═══ SECTION 1: 技術トレンド ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 01</span>
+            <span class="section-title">技術トレンド</span>
+            <span class="section-badge">厚め · 4本</span>
+        </div>
+
+        <!-- 1-1 -->
+        <div class="article">
+            <div class="article-headline">Fiserv、バンキング向けエージェント型AI OS「agentOS」を5月14日リリース ―― OpenAI・AWS Bedrock基盤、8月に一般提供</div>
+            <div class="article-meta">Fiserv プレスリリース · GlobeNewswire &nbsp;|&nbsp; 2026年5月14日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                フィンテック基盤大手Fiservは2024年からOpenAIとの戦略的協業を進め、生成AIの本番統合を加速してきた。銀行業界では2025年後半にAIエージェントの複数パイロットが相次ぎ、2026年に入って「実験から本番」フェーズへの移行が本格化。Fiserv自身も複数の金融機関との共同開発を通じてプラットフォーム化を準備していた。
+            </div>
+            <div class="article-body">
+                <p>Fiservは5月14日、銀行・信用組合がAIエージェントを組織的に展開・管理・スケールするための基盤「agentOS」を正式公開した。同プラットフォームはFiservのコア・ペイメント・イシュアープロセッシング<sup>※1</sup>・サービシング各レイヤーにネイティブ統合され、ポリシー制御・監査証跡・人間による監督機能を設計段階から内包する点が特徴だ。</p>
+                <p>初期提供エージェントは①商業融資オンボーディング、②日次業務分析・レポーティング、③エージェント型預金インテリジェンス、④エージェント型AMLトリアージ<sup>※2</sup>分析の4種。加えてagentOS Marketplaceに9社のサードパーティが参画し、顧客エンゲージメント・金融犯罪コンプライアンス・照合・論争管理などのユースケースを追加提供する。</p>
+                <p>インフラはAmazon Bedrock AgentCore<sup>※3</sup>上で稼働。FirstInterstate銀行とBoulder Damクレジットユニオンがベータパイロット中で、一般提供は2026年8月を予定。金融システム開発担当者には「接続先が整備されたAIエージェント基盤」として内製コストを大幅に抑制できる選択肢となり得る。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (4件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>Fiserv</strong>：世界100ヵ国以上の金融機関に勘定系・決済・カード発行・サービシングを提供する米国最大級のフィンテック基盤企業（NYSE: FISV）。</li>
+                        <li><strong>イシュアープロセッシング</strong>：クレジット・デビットカードを発行する金融機関の取引処理業務を代行するサービス。オーソリゼーション・決済・明細生成などを含む。</li>
+                        <li><strong>AMLトリアージ</strong>：Anti-Money Laundering（マネーロンダリング対策）においてシステムが生成した多数のアラートを重要度・緊急度に応じて優先度付けし、調査リソースを効率配分する工程。</li>
+                        <li><strong>Amazon Bedrock AgentCore</strong>：AWSが2026年に提供開始したエージェント型AIのオーケストレーション基盤。セキュアな実行環境・メモリ管理・マルチエージェント連携を提供する。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 1-2 -->
+        <div class="article">
+            <div class="article-headline">トランプ政権、FinTech・暗号資産のFedwire/FedNowアクセス障壁撤廃を指示する大統領令に署名 ―― FRBに6ヵ月以内の回答を要求</div>
+            <div class="article-meta">ホワイトハウス公式 · CoinDesk · PYMNTS &nbsp;|&nbsp; 2026年5月19日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                2024年末のトランプ再選後、暗号資産・フィンテックへの規制姿勢は急転換。2025年はSEC<sup>※1</sup>が複数の仮想通貨ETFを承認し、2026年前半にはGENIUS法<sup>※2</sup>（ステーブルコイン規制枠組み）が議会通過。今回の大統領令はその延長線として決済インフラへの直接参入規制を対象とした。
+            </div>
+            <div class="article-body">
+                <p>「金融技術イノベーションの規制枠組みへの統合」と題する大統領令が5月19日に署名された。主要指示は①連邦金融規制当局に対しイノベーション阻害規制・監督実務・申請プロセスの見直しを指示、②FRB<sup>※3</sup>に対し無保険預金機関やノンバンクフィンテックへの準備預金口座・決済サービス開放の法的障壁と拡張オプションを評価するよう指示の2点。</p>
+                <p>FedNow<sup>※4</sup>やFedwire<sup>※5</sup>等の決済レール<sup>※6</sup>へのフィンテック直接アクセスをめぐる構造的議論に火がついた形だ。FRBが今後6〜12ヵ月で出す回答内容は、決済業界の競争構造を左右する分岐点になるとみられる。国内の金融システム担当者にとっては、自行の決済ゲートウェイAPI戦略が変化するシグナルとして注視が必要だ。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (6件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>SEC</strong>：米国証券取引委員会（Securities and Exchange Commission）。</li>
+                        <li><strong>GENIUS法</strong>：Guiding and Establishing National Innovation for US Stablecoins Act。米ドル連動ステーブルコインの発行・準備金要件・監督体制を定める法律。2026年前半に議会通過。</li>
+                        <li><strong>FRB</strong>：連邦準備制度理事会（Federal Reserve Board）。米国の中央銀行機能を担う。</li>
+                        <li><strong>FedNow</strong>：FRBが2023年に開始した即時決済サービス。24時間365日・数秒以内の個人・法人送金を可能にする。</li>
+                        <li><strong>Fedwire</strong>：FRBが運営する大口即時グロス決済（RTGS）システム。金融機関間の高額資金振替に使用される米国の根幹決済インフラ。</li>
+                        <li><strong>決済レール</strong>：資金が金融機関間を流れる際に使用するインフラ・ネットワークの総称。FedNow・Fedwire・CHIPS<sup>（注：銀行間清算システム）</sup>等が含まれる。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 1-3 -->
+        <div class="article">
+            <div class="article-headline">GitHub Trending: TradingAgentsがv0.2.5公開 ―― GPT-5.5・中国語LLM対応追加でマルチエージェント金融フレームワークが加速</div>
+            <div class="article-meta">GitHub / TauricResearch &nbsp;|&nbsp; 2026年5月（継続更新）</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                LLM<sup>※1</sup>を活用した金融向けOSSは2025年後半から急増。AI4Finance-FoundationのFinRobotが先鞭をつけ、「awesome-ai-agents-2026」系のキュレーションリポジトリが複数Trendingを席巻している。同月Goldman Sachsが自社開発者全員へのAIエージェント展開を完了したとの報道も重なり、業界の関心が高まっている。
+            </div>
+            <div class="article-body">
+                <p>TauricResearchが開発するOSSフレームワーク「TradingAgents」がGitHub Trendingで高スターを維持。実際のトレーディングファームの意思決定プロセスをアナリスト・リスクマネージャー・ポートフォリオマネージャー・ファンドマネージャーの役割でAIエージェント化したマルチエージェント構成が特徴だ。</p>
+                <p>v0.2.5ではOpenAIのGPT-5.5<sup>※2</sup>サポート、中国語LLM（Qwen・GLM・MiniMax）へのデュアルリージョン対応、セキュリティハードニングが追加された。金融システム開発者には「本番採用に近づきつつあるリファレンス実装」として参考価値が高まっている。</p>
+                <p>別報として、Goldman Sachsが自社の1万2,000人規模の開発者全員に自律型ソフトウェアエンジニアリングエージェント「Devin<sup>※3</sup>」を展開し、従来比3〜4倍の生産性向上を達成したことが報じられた。金融機関における開発者向けAIエージェントの本番採用が確実に進んでいる。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (3件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>LLM</strong>：Large Language Model（大規模言語モデル）。GPT、Claude等に代表される大規模なニューラルネットワーク型自然言語処理モデル。</li>
+                        <li><strong>GPT-5.5</strong>：OpenAIが2026年に提供開始したモデル。推論精度・長文処理能力がGPT-5からさらに向上。</li>
+                        <li><strong>Devin</strong>：Cognition AIが開発した自律型AIソフトウェアエンジニア。コード作成・デバッグ・テストをエンドツーエンドで自律実行できる。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 1-4 -->
+        <div class="article">
+            <div class="article-headline">SWIFTのブロックチェーン共有台帳MVPがEVM互換・Hyperledger Besuで構築中 ―― 40以上の金融機関が参画、2026年中に実取引へ</div>
+            <div class="article-meta">SWIFT公式ニュース · Ledger Insights &nbsp;|&nbsp; 2026年1〜5月（継続報道）</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                SWIFTは2015年前後からDLT<sup>※1</sup>実験を続けてきたが、スケーラビリティ・相互運用性の課題で本番化は遅れた。2024年後半に「デジタル資産の相互運用性」を戦略重点に定め、2026年1月にはBNPパリバSecurities ServicesとのトークンD債券<sup>※2</sup>実証（フィアット・デジタル通貨両建て決済）を完了。設計フェーズを経て現在MVP<sup>※3</sup>構築中。
+            </div>
+            <div class="article-body">
+                <p>SWIFTは「ブロックチェーンベースの共有台帳」のアーキテクチャとしてEVM<sup>※4</sup>互換のHyperledger Besu<sup>※5</sup>をベースとしたオープンソース基盤を採用し、MVPの実装を進めていることを公式確認した。目標は銀行間トークン化預金<sup>※6</sup>の相互運用性確保と24時間365日クロスボーダー決済の実現だ。</p>
+                <p>世界40以上の金融機関が設計フェーズに参画。MVPは2026年中に実取引を処理する計画で、機能ロードマップは国際的な銀行コミュニティと並行策定中だ。トランザクションバンキング担当者には、既存のSWIFT接続インフラ（SWIFTNet、Alliance Access等）との統合テストを視野に入れるフェーズに入ったことを意味する。ISO 20022との相互補完も鍵になる。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (6件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>DLT</strong>：Distributed Ledger Technology（分散台帳技術）。複数の参加者がデータのコピーを共有・同期管理する技術の総称。ブロックチェーンはその一形態。</li>
+                        <li><strong>トークン化債券</strong>：ブロックチェーン上でトークンとして発行・記録・決済される債券。スマートコントラクトにより利払い・償還が自動化され、DvP<sup>（Delivery vs. Payment：資産引渡しと資金支払いの同時決済）</sup>が容易になる。</li>
+                        <li><strong>MVP</strong>：Minimum Viable Product。最低限の機能を持つ初期稼働版。本番化への最初のマイルストーン。</li>
+                        <li><strong>EVM（Ethereum Virtual Machine）</strong>：Ethereumのスマートコントラクトを実行する仮想マシン。EVMと互換性を持つ独自チェーンはEthereumの開発ツール・エコシステムをそのまま利用できる。</li>
+                        <li><strong>Hyperledger Besu</strong>：Linux Foundation傘下のHyperledgerプロジェクトが開発するEVM互換のエンタープライズ向けブロックチェーンクライアント。許可型ネットワーク構築に広く使用される。</li>
+                        <li><strong>トークン化預金</strong>：ブロックチェーン上でトークンとして表現された銀行預金。決済時にスマートコントラクトで自動執行されるため、クロスボーダー決済の原子的決済（Atomic Settlement）を実現できる。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 2: 第三者ベンダー動向 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 02</span>
+            <span class="section-title">第三者ベンダー動向</span>
+            <span class="section-badge">厚め · 2本</span>
+        </div>
+
+        <!-- 2-1 -->
+        <div class="article">
+            <div class="article-headline">MastercardがBVNKを最大18億ドルで買収合意 ―― ステーブルコインと法定通貨レールを130ヵ国で融合</div>
+            <div class="article-meta">Mastercard プレスリリース · CNBC · Fortune · S&amp;P Global &nbsp;|&nbsp; 2026年3月17日発表（統合作業継続中）</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                ステーブルコインをめぐる大手決済ネットワークのM&A競争は2024年末のトランプ再選を機に激化。BVNK（2021年創業、ロンドン）はCoinbaseも入札参加したとされる争奪戦を経てMastercardが獲得。2025年のステーブルコイン本物取引量は前年比2倍超（McKinsey・Artemis Analyticsが$3,900億と試算）であり、B2B決済での利用急増が買収の直接的な背景にある。
+            </div>
+            <div class="article-body">
+                <p>Mastercardは3月17日、ロンドンを拠点とするステーブルコインインフラ企業BVNKを最大18億ドル（うち3億ドルはパフォーマンスマイルストーン連動条件）で買収することに合意、2026年中の成立を見込む。BVNKは130ヵ国以上の全主要ブロックチェーンネットワークでフィアット<sup>※1</sup>⇔ステーブルコイン変換・送受金インフラを提供している。</p>
+                <p>統合後は①Mastercardの決済エンドポイント全体にステーブルコイン決済機能を組み込み、プロセッサー・アクワイアラー<sup>※2</sup>向けに24時間ステーブルコイン決済を提供、②BVNKにはMastercardのプッシュtoカード・口座・ウォレットのグローバルフィアットインフラを供与する相互補完構造が設計されている。</p>
+                <p>国内の金融システム担当者には、Mastercardネットワーク接続行として将来的に国際決済APIのスキーマ変更（ステーブルコイン建て決済フィールドの追加等）が降りてくる可能性を念頭に置く必要がある。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (2件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>フィアット（Fiat）</strong>：法定通貨の総称（円・ドル・ユーロ等）。ステーブルコインとの対比で使われる。</li>
+                        <li><strong>アクワイアラー</strong>：加盟店に代わりカード決済処理を行う金融機関・決済代行業者。加盟店管理・取引承認・資金精算を担う。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 2-2 -->
+        <div class="article">
+            <div class="article-headline">JPMorgan Kinexys、JPMコイン（JPMD）をCanton Networkに展開 ―― トークン化財務省ファンドもSECへ申請、日次50億ドル処理体制</div>
+            <div class="article-meta">JPMorgan Kinexys公式 · American Banker · Yahoo Finance &nbsp;|&nbsp; 2026年5月</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                JPMorganは2020年に「Onyx」としてデジタル資産・決済実験を開始、2024年11月に「Kinexys<sup>※1</sup>」として事業範囲を拡張しリブランド。2025年末時点で累計処理額3兆ドル超を達成。2026年はプログラマブル決済<sup>※2</sup>のユーザー企業拡大とオンチェーンFX<sup>※3</sup>の本番化に注力している。
+            </div>
+            <div class="article-body">
+                <p>JPMorganは5月、Kinexys Digital AssetsがUSD建てJPMコイン（JPMD）をCanton Network<sup>※4</sup>にネイティブ展開すると発表。Canton Networkはプライバシー保護型エンタープライズブロックチェーンで、これによりJPMDが直接利用可能になる。</p>
+                <p>同月、KinexysはGENIUS法下のステーブルコイン発行者向け準備資産要件を満たすトークン化財務省ファンドをSECに申請したことも明らかになった。パートナーシップでは三菱商事・BMW Group・FirstRand銀行とのプログラマブル決済連携や、B2C2・シーメンスとのオンチェーンFXが進行中。日次平均処理額は50億ドルに達している。</p>
+                <p>メガバンクのトランザクションバンキング担当者にとって、JPMorganの動向は「グローバルコルレス関係でのブロックチェーン決済要求が具体化しうる」という現実的なシグナルだ。接続仕様・メッセージングフォーマットの変化を先行して把握しておくことが求められる。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (4件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>Kinexys</strong>：JPMorganのデジタル資産・決済・研究部門の統合ブランド名（旧Onyx、2024年11月リブランド）。JPMコイン・Onyx Digital Assets・Kinexys Digital Paymentsを包括する。</li>
+                        <li><strong>プログラマブル決済</strong>：スマートコントラクトにより特定の条件充足時に自動で支払いを実行する決済方式。受発注連動・在庫連動・KPIトリガー払いなどが実用化されている。</li>
+                        <li><strong>オンチェーンFX</strong>：ブロックチェーン上で行われる外国為替取引。スマートコントラクトにより即時・原子的決済（Atomic Settlement）が可能。</li>
+                        <li><strong>Canton Network</strong>：Digital Asset社が構築するプライバシー保護型エンタープライズブロックチェーン。Goldman Sachs、JPMorgan等主要金融機関が参加するコンソーシアム型ネットワーク。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 3: 外銀TB速報 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 03</span>
+            <span class="section-title">外銀 TB 速報</span>
+            <span class="section-badge">薄め · 1本</span>
+        </div>
+
+        <!-- 3-1 -->
+        <div class="article">
+            <div class="article-headline">Mastercard、HSBC・DBS・Citi・Standard Charteredと香港で初の「ライブ・エージェント取引」を実行 ―― AIが人介在なく決済プロセスを完結</div>
+            <div class="article-meta">Mastercard Newsroom (Hong Kong) · The Paypers &nbsp;|&nbsp; 2026年5月</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                AIエージェントによる自律的な金融取引の実証は2025年後半から各所で試みられてきたが、実際の発行カードを用いたライブ取引の完了は業界初の部類に入る。香港・シンガポールはHKMA・MASの前向きな姿勢から実証拠点に選ばれやすい。ISO 20022の完全移行（2026年が実質的最終年度）と相まって、構造化データを活用した自動照合・自動決済の実用化が加速している。
+            </div>
+            <div class="article-body">
+                <p>Mastercardは香港で初の「ライブ・エージェント取引」を完了したと発表。HSBC香港・DBS香港が発行するMastercardカードを通じた取引が完了し、Citi香港・Standard Chartered香港発行カードでも同様の取引が確認された。AIエージェントが人間の介在なしにカード決済プロセスを完結させる実証で、B2BおよびB2C決済自動化への重要マイルストーンと位置付けられる。</p>
+                <p>一方、HSBCはISO 20022<sup>※1</sup>が2026年に「本当の変曲点」を迎えると強調。エンドツーエンドの構造化データが揃うことで照合自動化・リアルタイム可視性・加速決済処理が初めて実現可能になるとしており、TB担当者は自行の受信側ISO 20022対応の最終確認が急務だ。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>ISO 20022</strong>：国際標準化機構（ISO）が策定した金融メッセージング標準。従来のSWIFT MTフォーマット（MT103・MT202等）を置き換え、豊富な構造化データの送受信を可能にする。2025〜2026年がSWIFT完全移行の最終期間。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 4: 国内政治 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 04</span>
+            <span class="section-title">国内政治</span>
+            <span class="section-badge">薄め · 2本</span>
+        </div>
+
+        <!-- 4-1 -->
+        <div class="article">
+            <div class="article-headline">高市首相、中東情勢受け3兆円超の補正予算案を来週にも国会提出へ ―― 7〜9月の電気・ガス支援を再開、国債発行の有無が焦点</div>
+            <div class="article-meta">NHKニュース · Bloomberg Japan · 時事ドットコム &nbsp;|&nbsp; 2026年5月18〜25日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                高市早苗首相は2024年秋の自民党総裁選で財政規律重視を掲げ、就任後「定例的な補正予算慣行からの脱却」を表明していた。しかし2025年末以降の中東緊張激化（イラン有事<sup>※1</sup>）によるエネルギー価格急騰が家計・産業を直撃し、与野党双方から対策要求が高まった。5月25日のYouTube生中継では補正予算編成を事実上表明した。
+            </div>
+            <div class="article-body">
+                <p>高市首相は5月18日、政府・与党連絡会議で片山財務相ら関係閣僚に補正予算編成の検討を正式に指示し、慎重姿勢を転換した。補正予算の規模は3兆円超が見込まれ、来週にも国会提出の見通し。</p>
+                <p>主施策は7〜9月の電気・ガス料金支援で、標準家庭の負担を前年水準以下に抑えることを目標（1世帯あたり月約5,000円の軽減効果）とする。財源として国債を発行するか否かが財政論争の焦点だ。金融システム担当者への直接影響は限定的だが、長期金利・円相場の変動要因として予算規模を注視する必要がある。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>イラン有事</strong>：2025年末〜2026年上半期に激化した中東緊張。イランでの87日間のインターネット遮断を伴い、ペルシャ湾岸諸国との緊張が高まり原油・LNG価格の急騰を招いた。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 4-2 -->
+        <div class="article">
+            <div class="article-headline">悠仁親王、フィリピン大統領夫妻の宮中晩さん会に初出席 ―― 成年皇族として国賓外交行事に初参加</div>
+            <div class="article-meta">NHKニュース · 宮内庁関連報道 &nbsp;|&nbsp; 2026年5月27日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                フィリピンはASEAN経済統合の要として日本との経済・安全保障関係を強化しており、2026年は複数の国賓招待が続いている。悠仁親王は成年皇族として公務への参加機会を段階的に広げており、今回の対外行事への初参加は皇室の世代継承において節目となる出来事。
+            </div>
+            <div class="article-body">
+                <p>5月27日夜、フィリピン大統領夫妻を迎えた宮中晩さん会に悠仁親王が初めて出席した。皇室外交の担い手として公式の場に立つことへの注目が高まっている。</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 5: 海外政治 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 05</span>
+            <span class="section-title">海外政治</span>
+            <span class="section-badge">薄め · 2本</span>
+        </div>
+
+        <!-- 5-1 -->
+        <div class="article">
+            <div class="article-headline">米最高裁、IEEPA<sup>※1</sup>根拠の関税を違憲と判決 ―― トランプ政権が代替措置として10%グローバル関税を発動、7月24日まで</div>
+            <div class="article-meta">Tax Foundation · Wikipedia (Trump tariffs) &nbsp;|&nbsp; 2026年2〜5月</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                2025年1〜4月、トランプ政権はIEEPAを根拠に広範な輸入関税を実施し、米国の実効関税率は2.5%から27%へ急騰（1世紀超ぶりの高水準）。2025年5月以降は一部猶予・交渉を経て調整されていたが、2026年2月に最高裁が6対3でIEEPA緊急権限に基づく関税を違法と判断。徴収済みの1,660億ドル超の還付が求められる事態となった。
+            </div>
+            <div class="article-body">
+                <p>最高裁判決を受け、トランプ政権は通商法122条<sup>※2</sup>を根拠とした10%のグローバル関税を代替措置として発動（有効期間7月24日まで、150日間）。一方、セクション232<sup>※3</sup>に基づく自動車・鉄鋼・アルミニウム・銅の関税は最大50%水準を維持。2026年4月時点の米国実効平均関税率は約11.8%と推計される。</p>
+                <p>金融機関にとっては、貿易決済・貿易金融<sup>※4</sup>ポートフォリオへの影響、主要輸出国の為替ボラティリティ、クライアント企業のサプライチェーン再編に伴う決済フロー変化を継続的にモニタリングする必要がある。7月24日以降の政策動向が次の焦点だ。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (4件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>IEEPA</strong>：International Emergency Economic Powers Act（国際緊急経済権限法）。大統領が国家安全保障上の緊急事態を宣言した場合、広範な経済制裁・輸出入規制を実施できる権限を付与する米国法。</li>
+                        <li><strong>通商法122条</strong>：Trade Act of 1974 Section 122。米国の国際収支が著しく悪化した場合に大統領が最大15%の輸入課徴金を最長150日間課す権限を規定する。</li>
+                        <li><strong>セクション232</strong>：1962年通商拡大法232条。国家安全保障上の理由で輸入品に関税を課す権限。自動車・鉄鋼・アルミニウムに対して引き続き適用中。</li>
+                        <li><strong>貿易金融</strong>：Trade Finance。輸出入取引に付随する融資・与信・保証サービスの総称。信用状（L/C）・輸出手形買取・サプライチェーンファイナンス等を含む。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 5-2 -->
+        <div class="article">
+            <div class="article-headline">イラン大統領、87日間のインターネット遮断を終了 ―― 中東緊張の一部緩和でペルシャ湾岸の決済・貿易フローが正常化へ</div>
+            <div class="article-meta">Wikipedia (Portal: Current Events) &nbsp;|&nbsp; 2026年5月（直近確認）</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                イランでは2025年秋以降の軍事的緊張を背景に政府がインターネット接続を段階的に制限。87日間に及ぶ広範な遮断は企業の決済・通信に深刻な影響を与え、コルレス銀行<sup>※1</sup>業務への波及も一部報告された。中東情勢の緊張緩和を受け解除に至った。
+            </div>
+            <div class="article-body">
+                <p>ペゼシュキャン大統領がイランのインターネット規制解除を命令し、87日間続いた遮断が終了した。ペルシャ湾岸諸国との貿易・決済フローの正常化が期待される。エネルギー供給見通しの改善は原油価格の緩やかな低下圧力となり得る。</p>
+                <p>ただし国際的な対イラン制裁体制は継続されており、コルレス銀行業務の完全正常化には至っていない。貿易金融担当者はロールオーバー条件の再確認、エネルギー関連クライアントのヘッジ方針見直しを検討するタイミングだ。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>コルレス銀行</strong>：Correspondent Bank。自行が直接営業していない国・地域での決済・送金・口座管理サービスを他行に代行してもらう関係。国際決済の基盤となるネットワーク。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 6: 国内企業動向 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 06</span>
+            <span class="section-title">国内企業動向</span>
+            <span class="section-badge">薄め · 2本</span>
+        </div>
+
+        <!-- 6-1 -->
+        <div class="article">
+            <div class="article-headline">日経平均、5月27日に前日比820円高の65,816円 ―― 取引時間中に史上初の66,000円台、米半導体高が牽引</div>
+            <div class="article-meta">日本経済新聞 &nbsp;|&nbsp; 2026年5月25〜27日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                日経平均は2024年夏に4万円を突破後、日銀利上げ観測・米国市場調整で一時調整した。2025年秋から再上昇トレンドに入り、5月25日には終値で史上初の65,000円台（65,158円）を記録。企業業績の拡大・外国人投資家の買い越し・デフレ完全脱却への期待が主な上昇要因として挙げられている。
+            </div>
+            <div class="article-body">
+                <p>5月27日の東京株式市場で日経平均株価は前日比820円53銭高の65,816円62銭で反発し、取引時間中に史上初めて66,000円台（一時）に到達した。TOPIXも3日続伸し3月最高値を約3ヵ月ぶりに更新。米国市場でのエヌビディア等半導体株高が起点となり、中東情勢緩和期待が補完材料となった。</p>
+                <p>銀行株・保険株も堅調。上半期のIT予算見直し局面で投資優先度に変化が生じる可能性があり、システム投資計画策定における与件として把握しておきたい。</p>
+            </div>
+        </div>
+
+        <!-- 6-2 -->
+        <div class="article">
+            <div class="article-headline">トヨタ、台湾工場で日本向け主力車の生産を10月開始 ―― 逆輸入で北米向け国内生産能力を確保</div>
+            <div class="article-meta">日本経済新聞 &nbsp;|&nbsp; 2026年5月</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                トヨタは2025年後半以降、米国の自動車関税（セクション232、最大50%水準）への対応として日本国内生産能力を北米輸出向けに振り向ける一方、日本向け車両の調達先多様化を模索してきた。台湾での生産はトヨタとして異例であり、米中関税戦争が製造拠点再編を加速させた典型例として注目される。
+            </div>
+            <div class="article-body">
+                <p>トヨタ自動車は台湾の生産拠点で日本市場向け主力車種の生産を10月から開始し、逆輸入で供給する方針を固めた。北米向け国内生産能力を確保しつつ日本国内の供給を安定させる狙い。</p>
+                <p>金融機関のトレードファイナンス部門にとっては、国内製造拠点からの輸出手形フローが減少し逆に輸入L/C<sup>※1</sup>・貿易決済ニーズが増加する可能性がある。主要自動車メーカー顧客の物流ルート変更をモニタリングし、貿易金融スキームを適時見直すことが求められる。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>輸入L/C</strong>：Letter of Credit（信用状）。輸入企業の依頼で開設される支払い保証書。輸出者が船積み書類を提出することで銀行経由での代金支払いが保証される。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ SECTION 7: 海外企業動向 ═══ -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-number">§ 07</span>
+            <span class="section-title">海外企業動向</span>
+            <span class="section-badge">薄め · 2本</span>
+        </div>
+
+        <!-- 7-1 -->
+        <div class="article">
+            <div class="article-headline">OpenAI、ChatGPT内に広告プラットフォーム「Ads Manager」を統合 ―― 2026年に広告収入25億ドル、2030年に年1,000億ドルを目標</div>
+            <div class="article-meta">imfounder · MarketingProfs &nbsp;|&nbsp; 2026年5月</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                OpenAIはAPIライセンス収入に次ぐ収益柱としてChatGPTの直接マネタイズを2025年後半から本格化。月間アクティブユーザー6億人超のプラットフォームへの広告統合はGoogleの広告収益モデルとの正面衝突を意味する。AI検索・AIアシスタントへのシフトが広告業界の構造変化を加速している。
+            </div>
+            <div class="article-body">
+                <p>OpenAIはChatGPT内で広告出稿を可能にするセルフサーブ型プラットフォーム「Ads Manager」をローンチ。2026年の広告目標収入は25億ドル、2030年には年間1,000億ドルの広告収入を目指す。</p>
+                <p>また、リアルタイム音声AIモデルを3種追加リリース：①GPT-Realtime-2（会話エージェント向け）、②GPT-Realtime-Translate（70言語超のリアルタイム翻訳）、③GPT-Realtime-Whisper（ライブ文字起こし）。これらは金融機関のコールセンター・KYC<sup>※1</sup>ヒアリング・多言語顧客対応の自動化に直結するユースケースを持ち、実装検討フェーズに入ったと言える。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>KYC</strong>：Know Your Customer。本人確認・顧客デューデリジェンスの実務プロセス。口座開設時や継続的な顧客管理に使用され、マネーロンダリング対策（AML）の根幹をなす。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+        <!-- 7-2 -->
+        <div class="article">
+            <div class="article-headline">米国防総省、Microsoft・Google・OpenAI・NVIDIAら8社とAIパートナーシップ拡大 ―― 政府がリリース前にAIモデルを安全性テスト</div>
+            <div class="article-meta">CNN Business &nbsp;|&nbsp; 2026年5月1〜5日</div>
+            <div class="article-recap">
+                <span class="article-recap-label">◂ 背景・経緯</span>
+                米国防総省は2024年末からAI活用を大幅に拡大し、2025年にはMicrosoft・Googleとの大型契約を締結。Anthropicとの協議も続いていた。2026年5月は政府主導のAI安全性テスト体制の公式化という業界の節目にあたる。
+            </div>
+            <div class="article-body">
+                <p>米国防総省は8大テック企業（Microsoft、Google、OpenAI、NVIDIA等）との新たなAIパートナーシップを締結し、防衛・インテリジェンス領域へのAI展開を加速すると発表。並行してGoogleDeepMind・Microsoft・xAIのAIモデルを対象に、リリース前の安全性評価プログラムを開始。評価対象はサイバーセキュリティ・生物安全性・インフラ・誤使用脆弱性とする。</p>
+                <p>金融機関にとっては、大手AIプロバイダーが政府主導の安全性評価を受けることが将来的にソフトウェア調達・クラウド利用判断のデュアルユース評価基準として参照される可能性がある。社内のAI・クラウドガバナンスフレームワーク<sup>※1</sup>を定期的に見直す際の外部シグナルとして留意したい。</p>
+            </div>
+            <details>
+                <summary>用語注釈 (1件)</summary>
+                <div class="footnotes">
+                    <ol>
+                        <li><strong>AIガバナンスフレームワーク</strong>：AIシステムの開発・調達・運用における倫理・安全性・説明責任・リスク管理の基準を定めた組織内規程。金融庁は2025年以降、金融機関向けAIガバナンス指針の整備を進めている。</li>
+                    </ol>
+                </div>
+            </details>
+        </div>
+
+    </section>
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <p>THE MORNING BRIEF &mdash; Transaction Banking Intelligence</p>
+        <p>2026年5月27日（水）発行 &ensp;|&ensp; 情報基準：2026年5月26日 EST 23:00</p>
+        <p style="margin-top:4px;font-size:8.5px;">本資料は情報提供を目的として作成されたものであり、投資助言・法律助言・売買推奨を構成するものではありません。</p>
+    </footer>
+
+</div>
+</body>
+</html>
