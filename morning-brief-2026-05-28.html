@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF – 2026年5月28日（木）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      padding: 0 0 60px;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* ── Masthead ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      text-align: center;
+      padding: 22px 18px 14px;
+      margin-bottom: 0;
+    }
+    .masthead-eyebrow {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .masthead-subtitle {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: #555;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .masthead-date {
+      font-family: 'Source Serif 4', serif;
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* ── Dateline bar ── */
+    .dateline-bar {
+      border-bottom: 2px solid #1a1a1a;
+      border-top: 1px solid #d0c9b8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 18px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 28px;
+    }
+
+    /* ── Section header ── */
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-header {
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 1px solid #d0c9b8;
+      padding: 7px 0 5px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      letter-spacing: 0.1em;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+
+    /* ── Article ── */
+    .article {
+      margin-bottom: 26px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 5px;
+    }
+    .article-meta {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.07em;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .article-recap {
+      font-size: 13px;
+      color: #555;
+      font-style: italic;
+      border-left: 3px solid #d0c9b8;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+    .article-body {
+      font-size: 15px;
+      line-height: 1.78;
+    }
+    .article-body p {
+      margin-bottom: 8px;
+    }
+
+    /* ── Footnote accordion ── */
+    details.footnotes {
+      margin-top: 12px;
+      border: 1px solid #d0c9b8;
+      border-radius: 4px;
+      background: #ede9e0;
+    }
+    details.footnotes summary {
+      cursor: pointer;
+      padding: 7px 12px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #555;
+      list-style: none;
+      user-select: none;
+    }
+    details.footnotes summary::after {
+      content: ' ▾';
+    }
+    details.footnotes[open] summary::after {
+      content: ' ▴';
+    }
+    details.footnotes ol {
+      padding: 0 14px 12px 30px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid #1a1a1a;
+      margin-top: 40px;
+      padding-top: 14px;
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
+
+    sup {
+      font-size: 10px;
+      color: #888;
+      vertical-align: super;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ MASTHEAD ══════════ -->
+<div class="masthead">
+  <div class="masthead-eyebrow">トランザクションバンキング部署向け 金融システム開発インテリジェンス</div>
+  <div class="masthead-title">THE MORNING BRIEF</div>
+  <div class="masthead-subtitle">Transaction Banking &amp; Financial Systems Edition</div>
+  <div class="masthead-date">2026年5月28日（木曜日）</div>
+</div>
+<div class="dateline-bar">
+  <span>情報基準：2026年5月27日 EST 23:00時点</span>
+  <span>平日版 Vol.148</span>
+</div>
+
+<div class="wrapper">
+
+<!-- ══════════ SECTION 1: 技術トレンド ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <span class="section-title">技術トレンド</span>
+  </div>
+
+  <!-- Article 1-1 -->
+  <div class="article">
+    <div class="article-headline">Fiserv、銀行業務向けエージェントAI基盤「agentOS」を正式ローンチ——OpenAI・AWSと協業、8月に本格展開へ</div>
+    <div class="article-meta">Fiserv 公式プレスリリース / GlobeNewsWire ｜ 2026年5月14日</div>
+    <div class="article-recap">
+      金融コアシステム最大手のFiserv<sup>1</sup>は2024年以降、AIエージェント統合の開発を加速。2025年後半にOpenAIとのパートナーシップを締結し、大手行6行とのコ開発体制を構築。2026年5月14日、Fiserv Connect 2026カンファレンスにて正式ローンチを発表した。
+    </div>
+    <div class="article-body">
+      <p>agentOS<sup>2</sup>は、金融機関がコア・決済・カード発行・ローンサービシング等の既存Fiserv基盤上でAIエージェントをデプロイ・管理・スケールするための統合OS。現時点でベータ稼働中の2行を含む6行がコ開発パートナーとして参加しており、一般提供は2026年8月を予定する。</p>
+      <p>初期搭載エージェントは4本：①商業ローンオンボーディング、②日次業務分析・レポート、③エージェント型預金インテリジェンス、④エージェント型AML<sup>3</sup>トリアージ分析。加えてサードパーティ9社がagentOS Marketplaceを通じて、KYC<sup>4</sup>・不正検知・規制コンプライアンス・照合等のユースケースを提供予定。</p>
+      <p>設計上の特徴として「ガバナンス・バイ・デザイン」を明示：ID結合型実行、ポリシー適用、オブザーバビリティ<sup>5</sup>、トレーサビリティを標準装備する。銀行システム開発の観点では、単体エージェントPoC<sup>6</sup>からエンタープライズグレードの多エージェント協調基盤へのシフトを示す重要なマイルストーンといえる。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>Fiserv</strong>：米国最大級の金融テクノロジー企業。世界1万社超の金融機関にコア勘定系・決済・カード等のプラットフォームを提供。</li>
+        <li><strong>agentOS</strong>：Fiserv が開発したエージェント型AIのオペレーティングシステム。複数のAIエージェントを銀行業務全体で統合管理するための基盤ソフトウェア。</li>
+        <li><strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング対策。疑わしい取引の検知・報告を義務付ける規制対応業務の総称。</li>
+        <li><strong>KYC（Know Your Customer）</strong>：顧客確認。口座開設・取引開始時に顧客の本人確認・リスク評価を行う法的義務プロセス。</li>
+        <li><strong>オブザーバビリティ（Observability）</strong>：システムの内部状態を外部出力（ログ・メトリクス・トレース）から把握できる度合い。AIエージェントの動作監査に必須。</li>
+        <li><strong>PoC（Proof of Concept）</strong>：概念実証。新技術・システムの実現可能性を小規模に検証する取り組み。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 1-2 -->
+  <div class="article">
+    <div class="article-headline">Anthropic、金融サービス向け10種AIエージェントをリリース——Goldman・Visa・Citiが早期採用、$15億ドルJV<sup>1</sup>も発表</div>
+    <div class="article-meta">Fortune / Bloomberg / Anthropic 公式 ｜ 2026年5月5日</div>
+    <div class="article-recap">
+      Anthropicは2025年末から金融セクターを「テクノロジーに次ぐ第二の主力セグメント」と位置づけ投資を強化。2026年4月にはClaude Opus 4.7を公開し、5月初旬の大型発表へ向けた布石を打ってきた。
+    </div>
+    <div class="article-body">
+      <p>2026年5月5日、Anthropicは金融機関向けに10種類のAIエージェントテンプレートを発表した。対象業務はピッチブック<sup>2</sup>作成、KYCスクリーニング、月次決算クローズ、財務モデル構築、アーニングスレビュー、バリュエーション検証など。各エージェントはClaude Cowork・Claude Codeへのプラグイン形式、またはClaude Managed Agents<sup>3</sup>のクックブックとして提供され、「数ヶ月ではなく数日」で実業務に適用できる設計。</p>
+      <p>同時に発表されたMicrosoft 365連携（Excel・PowerPoint・Word・Outlookでコンテキスト共有）と、Moodyʼsのデータパートナーシップは、金融ワークフロー全体へのClaude統合を一段と具体化させた。さらに、Blackstone・Hellman &amp; Friedman・Goldman Sachsとの15億ドル規模のJVによるAIネイティブ企業サービス会社の設立も合わせて公表された。</p>
+      <p>国内金融機関システム部門への示唆：AnthropicとOpenAIが金融AIインフラを競って取り込む構造が明確化しており、クラウドベンダー選定とAIエージェントフレームワーク選定の交差点として今後の動向が要注目。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（3語）</summary>
+      <ol>
+        <li><strong>JV（Joint Venture）</strong>：合弁会社。複数の企業が共同出資・共同経営する事業体。</li>
+        <li><strong>ピッチブック（Pitchbook）</strong>：投資銀行やコンサルが作成する案件提案資料。財務データ・市場分析・バリュエーション等をまとめたプレゼン文書。</li>
+        <li><strong>Claude Managed Agents</strong>：Anthropicが提供するエージェントオーケストレーション基盤。複数のClaudeエージェントが協調して複雑なタスクを実行できる管理サービス。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 1-3 -->
+  <div class="article">
+    <div class="article-headline">Microsoft、エージェントAIのセキュリティ試験FW「RAMPART」をOSS公開——CI/CDパイプラインへの組み込みを想定</div>
+    <div class="article-meta">GitHub / beSpacific ｜ 2026年5月20日</div>
+    <div class="article-recap">
+      Microsoftは2025年にPyRIT<sup>1</sup>（レッドチーム用AIセキュリティツール）をOSSとして公開。エージェントAIの本番導入が進む2026年に入り、開発者向けのホワイトボックス型補完ツールの必要性が高まっていた。
+    </div>
+    <div class="article-body">
+      <p>RAMPARTはpytest<sup>2</sup>ネイティブの安全性・セキュリティ試験フレームワークで、クロスプロンプトインジェクション<sup>3</sup>プローブをはじめとするエージェントAI固有の攻撃ベクタに対する防御テストをCI/CDパイプラインに直接組み込むことができる。</p>
+      <p>金融システム文脈での重要性：LLMを行内ワークフローに組み込む際、外部ユーザーや他エージェントからのインジェクション攻撃によって、口座操作・不正送金命令の実行リスクが生じる。RAMPARTはこれをユニットテスト感覚で検証できる点で、コンプライアンス担当者とシステム開発者の共通言語となりうる。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（3語）</summary>
+      <ol>
+        <li><strong>PyRIT（Python Risk Identification Toolkit）</strong>：MicrosoftがOSS公開したAIシステム向けレッドチームツール。悪意ある入力でモデルの脆弱性を自動的に探索する。</li>
+        <li><strong>pytest</strong>：Python標準的なユニットテストフレームワーク。テストコードを簡潔に書けるため、CI/CDへの組み込みが容易。</li>
+        <li><strong>クロスプロンプトインジェクション（Cross-Prompt Injection）</strong>：外部コンテンツや他エージェントの出力にLLMへの命令を埋め込み、意図しない動作を引き起こす攻撃手法。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 1-4 -->
+  <div class="article">
+    <div class="article-headline">Andrej Karpathyの「CLAUDE.md」がGitHub Trending 28連続首位——AIコーディングのコーパス管理に新標準</div>
+    <div class="article-meta">GitHub Trending / pasqualepillitteri.it ｜ 2026年5月</div>
+    <div class="article-recap">
+      2026年1月26日、元Tesla AIディレクターでOpenAI共同創業者のAndrej Karpathyが、エージェント型AIコーディングにおけるLLM特有の悪習を矯正する4つの観察をXに投稿。開発者Forrest Changがそれを70行のCLAUDE.mdファイルに蒸留し、GitHub上に公開した。
+    </div>
+    <div class="article-body">
+      <p>CLAUDE.mdは公開から3ヶ月超で11万スターを突破し、GitHub週次Trendingで28週連続1位を維持している。内容はAIコーディングエージェントがコードベース全体の文脈を保持するための「コンテキスト設計ガイド」であり、プロジェクト構造・命名規則・禁止パターンを記述する。</p>
+      <p>金融システム開発との関連：大規模モノリシック勘定系<sup>1</sup>のリファクタリングや、マイクロサービス<sup>2</sup>移行にAIコーディングエージェントを活用する場合、このようなコンテキストガイドの整備が生産性と品質の鍵となる。CLAUDE.mdは事実上の業界標準になりつつある。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>勘定系</strong>：銀行の中核システム。預金・融資・為替などの取引を処理・記録するシステム群。</li>
+        <li><strong>マイクロサービス</strong>：システムを機能ごとに小さな独立したサービスに分割するアーキテクチャ手法。各サービスはAPIで連携。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 1-5 -->
+  <div class="article">
+    <div class="article-headline">「銀行は今や全部AIだ」——コアバンキング<sup>1</sup>のクラウド契約がAI時代の新要件に追いつけず、再交渉ラッシュ</div>
+    <div class="article-meta">PYMNTS.com ｜ 2026年5月</div>
+    <div class="article-recap">
+      2022〜2024年にかけて締結された多くのクラウドコアバンキング契約は、AIワークロードのデータ転送量・APIコール数・GPU利用を前提としていなかった。AIの本番展開が加速した2025年後半から、契約上限超過と追加費用の問題が顕在化してきた。
+    </div>
+    <div class="article-body">
+      <p>PYMNTSの調査によれば、主要金融機関の多くが2026年に入ってクラウドベンダーとの既存契約を見直している。AI推論<sup>2</sup>ワークロードは通常の取引処理とはトラフィックパターンが全く異なり、夜間バッチ<sup>3</sup>型の旧モデルが契約単位となっていた場合に特に摩擦が生じる。</p>
+      <p>AWS・Azureともに金融機関専用のAIワークロード向けコミットメントパッケージを新設しており、2026年の契約更改シーズンに向けた提案が相次いでいる。国内でもクラウドファーストを採用した地方銀行・信託銀行でAI導入コストの再試算が求められる局面に差し掛かっている。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（3語）</summary>
+      <ol>
+        <li><strong>コアバンキング（Core Banking）</strong>：銀行業務の中核となるシステム群（勘定系・チャネル系・情報系）を指す。クラウド移行が進む。</li>
+        <li><strong>AI推論（AI Inference）</strong>：学習済みAIモデルが新しいデータに対して予測・回答を生成するプロセス。学習（トレーニング）とは区別される。</li>
+        <li><strong>夜間バッチ</strong>：取引終了後の夜間に一括処理するバッチジョブ。勘定更新・日次集計・レポート生成などに使われる伝統的な処理方式。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 1 -->
+
+
+<!-- ══════════ SECTION 2: 第三者ベンダー動向 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <span class="section-title">第三者ベンダー動向</span>
+  </div>
+
+  <!-- Article 2-1 -->
+  <div class="article">
+    <div class="article-headline">SWIFT、BNPパリバ等3行とのトークン化債券DvP決済<sup>1</sup>トライアルを完了——法定通貨とステーブルコイン双方で実証</div>
+    <div class="article-meta">PYMNTS.com / Finextra ｜ 2026年1月（5月現在の最新動向として引用）</div>
+    <div class="article-recap">
+      SWIFTは2022年から複数のブロックチェーン相互運用性パイロットを実施してきた。2024年には共有台帳（Shared Ledger）構築計画を発表し、30行超との協議を開始。2026年初頭のDvP実証はその集大成となった。
+    </div>
+    <div class="article-body">
+      <p>今回のトライアルはSWIFT、BNPパリバ・セキュリティーズ・サービス<sup>2</sup>、インテサ・サンパオロ<sup>3</sup>、SG-Forge<sup>4</sup>の4者が参加。SG-Forgeが発行するユーロ建てステーブルコインEURCV<sup>5</sup>を用いてトークン化債券のDvP決済を実行し、利息支払いや償還といったライフサイクルイベントも含む形で「シングル・コーディネーテッド・プロセス」としての動作を初めて実証した。</p>
+      <p>次のステップとして、SWIFTは24/7リアルタイムクロスボーダー決済を実現するブロックチェーン台帳のインフラへの組み込みを進める。TB担当者への示唆：SWIFTが新旧インフラの架け橋として機能しつつあり、コルレス<sup>6</sup>決済の構造変化が現実的なタイムラインに近づいた。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（6語）</summary>
+      <ol>
+        <li><strong>DvP（Delivery vs Payment）</strong>：証券引渡しと代金支払いを同時に行う決済方式。決済リスクを排除するための標準手法。</li>
+        <li><strong>BNPパリバ・セキュリティーズ・サービス</strong>：BNPパリバ傘下の有価証券管理・保管・決済業務専門子会社。</li>
+        <li><strong>インテサ・サンパオロ（Intesa Sanpaolo）</strong>：イタリア最大の銀行グループ。</li>
+        <li><strong>SG-Forge</strong>：ソシエテ・ジェネラル（フランス大手銀行）のブロックチェーン特化子会社。デジタルアセット発行・管理を担う。</li>
+        <li><strong>EURCV</strong>：SG-Forgeが発行するユーロ連動型ステーブルコイン。EU規制（MiCA）準拠で設計されている。</li>
+        <li><strong>コルレス（Correspondent Banking）</strong>：コルレス銀行。他行の代理として送金・決済を仲介する銀行間の関係。国際送金の基幹インフラ。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 2-2 -->
+  <div class="article">
+    <div class="article-headline">Visa・Mastercardがステーブルコイン決済を同時拡大——Visa は50ヶ国でカード発行、MastercardはBVNK提携で障壁分析</div>
+    <div class="article-meta">PYMNTS.com / Finextra ｜ 2026年5月</div>
+    <div class="article-recap">
+      両社は2024年のステーブルコイン実験フェーズを経て、2025年にVisaが米国での決済実運用を開始。Mastercardは2025年末にBVNK（ステーブルコイン決済インフラ企業）との提携を締結し、B2B<sup>1</sup>決済への本格展開を準備してきた。
+    </div>
+    <div class="article-body">
+      <p>Visaはステーブルコインを通じた年換算グローバル決済額が46億ドルに達したと公表し、50ヶ国超でステーブルコインカード発行が可能になったと報告。クロスボーダーB2B送金と法人トレジャリー<sup>2</sup>運用が主要ユースケースとして台頭している。</p>
+      <p>Mastercardは2026年Q1決算でアジェンティック<sup>3</sup>コマースへの注力を表明し、SoFi TechnologiesとともにSoFiUSDを用いたカード取引のステーブルコイン決済実証を実施。B2B支払いの非効率性（複数の中間機関・T+2以上の決済遅延・為替コスト）をステーブルコインで解消する議論が国際決済の主流に浮上している。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（3語）</summary>
+      <ol>
+        <li><strong>B2B（Business to Business）</strong>：企業間取引。個人向け（B2C）に対して、企業が企業に対して行う決済・取引。</li>
+        <li><strong>法人トレジャリー（Corporate Treasury）</strong>：企業の資金調達・運用・流動性管理・リスクヘッジを担う財務部門または機能。</li>
+        <li><strong>アジェンティック（Agentic）</strong>：AIエージェントが自律的に複数ステップを実行する特性を指す形容詞。「アジェンティックコマース」はAIが代理で購買・決済を完結する形態。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 2 -->
+
+
+<!-- ══════════ SECTION 3: 外銀TB速報 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <span class="section-title">外銀TB速報</span>
+  </div>
+
+  <!-- Article 3-1 -->
+  <div class="article">
+    <div class="article-headline">JPMorganとCiti、ブロックチェーン決済レールで直接激突——Kinexys<sup>1</sup>は日次5,000億円超処理、Citiは「技術として」拡張</div>
+    <div class="article-meta">Bloomberg / PYMNTS.com ｜ 2026年4月〜5月</div>
+    <div class="article-recap">
+      JPMorganは2019年にJPM Coinを発行し、2022年以降Kinexys（旧Onyx）プラットフォームで機関投資家向けトークン決済を実運用。CitiはCiti Token Services<sup>2</sup>を2023年に立ち上げ、2025年にCoinbaseと提携し決済ネットワークを拡張してきた。
+    </div>
+    <div class="article-body">
+      <p>2026年4月の対談（Bloomberg配信）でJPMorganのUmar FarooqとCitiのShahmir Khaliqが直接討論。JPMorganはKinexysを通じた日次5,000億円超のJPM Coin（デポジットトークン<sup>3</sup>）決済実績を武器に「インハウス一貫型」を押し出す。対するCitiはCoinbase連携でのオープンなブロックチェーンインフラ活用を標榜する「テクノロジー拡張型」で差別化を図る。</p>
+      <p>TB担当者への示唆：メガバンクのコルレス決済がブロックチェーンレールに移行するシナリオで、既存のSWIFT MX<sup>4</sup>接続とどう共存させるかが国内行にとっての喫緊の設計課題となる。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>Kinexys（旧Onyx）</strong>：JPMorganのブロックチェーン金融サービス部門。JPM Coinによるデポジットトークン決済やデジタルアセット取引を提供。</li>
+        <li><strong>Citi Token Services</strong>：Citiがトークン化された預金と決済を企業顧客に提供するプラットフォーム。貿易金融・トレジャリー向けが主軸。</li>
+        <li><strong>デポジットトークン（Deposit Token）</strong>：銀行預金をブロックチェーン上でトークン化したデジタル表現。ステーブルコインと異なり銀行の負債として裏付けされる。</li>
+        <li><strong>SWIFT MX（ISO 20022）</strong>：SWIFTが推進する次世代メッセージング標準。旧来のMT形式から移行中で、リッチなデータ構造と多目的情報の伝達を可能にする。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 3-2 -->
+  <div class="article">
+    <div class="article-headline">JPMorgan、ドイツでリテールバンクを正式開設——欧州最大市場への本格参入で「トップランク」狙う</div>
+    <div class="article-meta">Bloomberg ｜ 2026年5月20日</div>
+    <div class="article-recap">
+      JPMorganは英国ではChaseブランドでデジタルリテールバンクを2021年に開設し、累計100万口座を突破。欧州大陸への展開を模索し、ドイツ市場を次の拠点として2025年から準備を進めてきた。
+    </div>
+    <div class="article-body">
+      <p>JPMorganは5月20日（現地時間）、ドイツでのリテール銀行業務を開始したと発表。英国Chase同様、スマートフォン完結型のデジタルバンキングモデルを採用し、欧州最大の経済圏であるドイツ市場で既存メガバンクとの競争に挑む。ジェイミー・ダイモンCEOは「トップランクを目指す」と宣言している。</p>
+      <p>TBへの関連性：リテール展開を通じた法人顧客の獲得と決済フローの囲い込みは、法人TB部門（CIB<sup>1</sup>）にとってもクロスセルの基盤となる。ドイツは輸出主導型製造業が強く、SCF<sup>2</sup>ニーズが高い市場でもある。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>CIB（Corporate &amp; Investment Banking）</strong>：法人・投資銀行部門。大企業向け融資・M&amp;A・資本市場・トランザクションバンキングを包括する事業部門。</li>
+        <li><strong>SCF（Supply Chain Finance）</strong>：サプライチェーンファイナンス。バイヤーの信用力を活用して、サプライヤーが売掛債権を早期に現金化する金融スキーム。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 3 -->
+
+
+<!-- ══════════ SECTION 4: 国内政治 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <span class="section-title">国内政治</span>
+  </div>
+
+  <!-- Article 4-1 -->
+  <div class="article">
+    <div class="article-headline">高市首相とマルコス比大統領が首脳会談——防衛・エネルギー・通商の包括的戦略パートナーシップへ格上げ</div>
+    <div class="article-meta">Philstar.com / Japan Times / context.ph ｜ 2026年5月26〜27日</div>
+    <div class="article-recap">
+      2024年の相互アクセス協定<sup>1</sup>締結以降、日本とフィリピンは南シナ海情勢を背景に急速に防衛関係を深化。高市政権は2025年末から「アジア・エネルギー強靭化」を外交の柱に掲げ、フィリピンを重点パートナー国に位置づけてきた。
+    </div>
+    <div class="article-body">
+      <p>マルコス大統領（5月26〜29日の日本公式訪問）と高市首相の首脳会談では、①2024年相互アクセス協定の本格履行、②自衛隊・フィリピン軍の物品役務相互提供協定推進、③高市首相が4月に立ち上げた100億ドル規模のエネルギーファンド「POWERR Asia<sup>2</sup>」へのフィリピンのアクセス確保について協議。</p>
+      <p>新たに通商・投資協定と、日本在住フィリピン人（約34万人）に関わる人材協定への署名も行われた。中東情勢によるホルムズ海峡<sup>3</sup>リスクが高まる中、エネルギー供給多様化の観点でASEAN<sup>4</sup>連携強化は国内金融機関のカントリーリスク管理にも影響する。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>相互アクセス協定</strong>：自衛隊と外国軍が互いの施設を訓練・補給目的で利用できる協定。日本はオーストラリア・英国・フィリピン等と締結済み。</li>
+        <li><strong>POWERR Asia</strong>：Partnership on Wide Energy and Resources Resilience。高市首相が2026年4月15日に立ち上げた100億ドル規模のアジア向けエネルギー資金調達・供給安定化ファンド。</li>
+        <li><strong>ホルムズ海峡</strong>：ペルシャ湾とオマーン湾を結ぶ戦略的な海峡。世界の石油・LNG輸送の約2割が通過する。</li>
+        <li><strong>ASEAN（東南アジア諸国連合）</strong>：東南アジア10ヶ国が加盟する地域機構。経済・安全保障・文化協力を推進。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 4-2 -->
+  <div class="article">
+    <div class="article-headline">日銀が2026年度成長見通しを大幅下方修正——中東情勢と円安が同時に実体経済を圧迫</div>
+    <div class="article-meta">CNBC / Daiichi Life Research Institute ｜ 2026年5月19日・5月</div>
+    <div class="article-recap">
+      2026年Q1GDP成長率は年率換算2.1%と予想を上回ったものの、日銀は5月7日の政策決定会合で2026年度の成長見通しを1.0%から0.5%へ大幅引き下げ。中東紛争が原油・LNG輸入コストを押し上げ、企業収益と実質家計所得の双方を圧迫している。
+    </div>
+    <div class="article-body">
+      <p>日銀はコアインフレ<sup>1</sup>見通しを1.9%から2.8%へ大幅に上方修正した一方、成長見通しは半減以下に切り下げた「スタグフレーション<sup>2</sup>的」な環境を明示。トヨタ・スズキ・ホンダなど主要製造業は米関税とエネルギーコスト上昇の二重要因で今期純利益の大幅減益を予告している。</p>
+      <p>金融機関の実務への影響：国内長期金利<sup>3</sup>の上昇局面と成長鈍化が並存するため、貸出金利戦略・ALM<sup>4</sup>管理・デリバティブヘッジの見直しが求められる。また円相場の不透明感が続く中、企業向け外貨送金ニーズへの対応も課題となる。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>コアインフレ</strong>：生鮮食品・エネルギーを除いた物価上昇率。日銀が政策判断に用いる代表的指標。</li>
+        <li><strong>スタグフレーション</strong>：景気停滞（Stagnation）とインフレ（Inflation）が同時進行する経済状況。景気対策と物価抑制が相反するため政策対応が困難。</li>
+        <li><strong>長期金利</strong>：主に10年物国債利回りを指す。銀行の貸出金利・住宅ローン金利の基準となる。</li>
+        <li><strong>ALM（Asset Liability Management）</strong>：資産負債管理。金利リスク・流動性リスクを管理するため、資産と負債の満期・金利感応度をマッチングさせる管理手法。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 4 -->
+
+
+<!-- ══════════ SECTION 5: 海外政治 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <span class="section-title">海外政治</span>
+  </div>
+
+  <!-- Article 5-1 -->
+  <div class="article">
+    <div class="article-headline">米・イラン軍事衝突が継続——ホルムズ海峡付近で新たな攻撃、カタールで停戦協議進行中</div>
+    <div class="article-meta">CNN / Al Jazeera / ABC News ｜ 2026年5月25〜27日</div>
+    <div class="article-recap">
+      2026年3月、米国・イスラエル連合によるイランへの空爆で始まった紛争は3ヶ月目に突入。イランはホルムズ海峡の封鎖を示唆し、国際原油市場と保険市場に大きな混乱をもたらしてきた。複数回の停戦合意が試みられたが、互いの条件の乖離から決裂を繰り返している。
+    </div>
+    <div class="article-body">
+      <p>5月25日、米軍はホルムズ海峡付近のイラン軍ミサイル発射基地と船艇を「自衛目的の打撃」として攻撃。イラン革命防衛隊<sup>1</sup>は米軍基地への報復攻撃で応じ、互いが停戦違反を主張する状況が継続している。一方、カタールを仲介とした外交協議は継続中であり、ルビオ国務長官は「数日以内に初期MOU<sup>2</sup>合意の可能性がある」と発言した。</p>
+      <p>88日間のインターネット遮断後に部分的な通信回復が観測されており、米国はこれをイランの交渉意欲のシグナルとして解釈。金融市場への影響：ホルムズ海峡を通過するLNG・原油輸送の停滞が続けば、日本の輸入コスト・電力価格・製造業収益に連鎖的な影響を及ぼし、国内金融機関のポートフォリオリスク管理に直結する。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>イラン革命防衛隊（IRGC）</strong>：1979年のイスラム革命後に設立されたイランの精鋭軍事組織。正規軍と並立し、核・ミサイル開発や対外工作を担う。米国はテロ組織に指定。</li>
+        <li><strong>MOU（Memorandum of Understanding）</strong>：基本合意書。法的拘束力を持たないが、合意の骨格を示す外交・商業文書。本格的な条約・契約締結前の前段階として使われる。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 5-2 -->
+  <div class="article">
+    <div class="article-headline">中国、神舟23号<sup>1</sup>を打ち上げ——宇宙飛行士1名が1年間滞在で長期宇宙適応を研究</div>
+    <div class="article-meta">NPR / ABC News ｜ 2026年5月27日</div>
+    <div class="article-recap">
+      中国は2021年に天宮<sup>2</sup>宇宙ステーションの中核モジュールを打ち上げ、同年末から有人常駐を開始。神舟ミッションは年2回ペースで乗組員を交代させており、神舟23号はその最新ミッション。
+    </div>
+    <div class="article-body">
+      <p>神舟23号は3名の宇宙飛行士を乗せ天宮ステーションへ向けて打ち上げられた。特徴的なのは、乗組員のうち1名が1年間の長期滞在を行う点で、中国として初の「1年ミッション」となる。長期宇宙滞在が人体に与える影響の解明が主目的であり、将来の月・火星有人探査に向けた医学的データ蓄積を狙う。</p>
+      <p>米中宇宙開発競争が激化する中、中国の宇宙産業への投資は宇宙スタートアップ・人工衛星事業・関連サプライチェーンにも波及しており、投資銀行・産業金融を担うTB部門でも宇宙セクターの法人顧客動向として注視が必要な分野となってきた。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>神舟（Shenzhou）</strong>：中国の有人宇宙船シリーズ。「神の船」を意味し、1999年の初打ち上げ以来、中国独自の有人宇宙飛行を担ってきた。</li>
+        <li><strong>天宮（Tiangong）</strong>：中国が独自に建設・運用する宇宙ステーション。2021年より建設開始し、現在3モジュール構成で完成。ISSから独立した宇宙開発拠点。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 5 -->
+
+
+<!-- ══════════ SECTION 6: 国内企業動向 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">06</span>
+    <span class="section-title">国内企業動向</span>
+  </div>
+
+  <!-- Article 6-1 -->
+  <div class="article">
+    <div class="article-headline">トヨタ、FY2026<sup>1</sup>の営業利益21.5%減を予告——米関税・エネルギーコストの二重打撃で北米収益が蒸発</div>
+    <div class="article-meta">CNBC / Japan Times ｜ 2026年5月</div>
+    <div class="article-recap">
+      トヨタは2025年度に記録的な売上高を達成したものの、米トランプ政権による自動車関税25%の発動が2026年度の収益構造を直撃。エネルギーコスト上昇と重なり、国内製造業全体の業績見通しを大きく下押しする展開となっている。
+    </div>
+    <div class="article-body">
+      <p>トヨタが発表したFY2026業績見通しでは、営業利益が21.5%減、純利益が19.2%減。売上高は前年比5.5%増と過去最高を更新する見込みにもかかわらず、関税コストと原材料・エネルギーコストの上昇が利益を大きく削り取る構図。スズキ・ホンダなど国内主要自動車メーカーも同様の減益見通しを公表しており、国内産業への波及が広がっている。</p>
+      <p>金融機関への関連：大手製造業の収益悪化は、設備投資ローン・社債引受・SCFプログラムの信用リスク評価に直接影響する。また輸出産業を中心とした為替ヘッジ需要の増大が、法人FX<sup>2</sup>デスクへの問い合わせ増につながっている。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>FY2026</strong>：2026年度（日本企業の場合、多くは2026年4月〜2027年3月）。Toyota等の会計年度は3月末締め。</li>
+        <li><strong>法人FX（Foreign Exchange）</strong>：企業向け外国為替サービス。輸出入企業が為替リスクをヘッジするために利用するフォワード・オプション等の取引。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 6-2 -->
+  <div class="article">
+    <div class="article-headline">国内半導体・装置株が連日の高値更新——Advantest 5.3%高、東京エレクトロン3.8%高でNikkei<sup>1</sup>が65,800超え</div>
+    <div class="article-meta">Yahoo Finance / Nikkei Asia ｜ 2026年5月27日</div>
+    <div class="article-recap">
+      AI需要を背景とした半導体装置・材料の旺盛な設備投資サイクルが2025年から継続中。Kioxia<sup>2</sup>の東証上場後の株価上昇がセクター全体の注目度を高め、Advantest・東京エレクトロン・Lasertecが国際的な機関投資家から買いを集めている。
+    </div>
+    <div class="article-body">
+      <p>5月27日の東京市場でNikkei225は1.3%上昇し65,800を突破。けん引役は半導体関連で、Advantestが5.3%高、東京エレクトロンが3.8%高、Kioxiaが2.1%高、Fujikuraが2.4%高の上昇を記録した。前日のウォール街でのテック株高を引き継いだ形。</p>
+      <p>産業分析：AI向け先端半導体の需要は2026年も旺盛で、TSMCへの製造委託増に伴う日本製露光装置・テスト装置・材料の受注拡大が続く見通し。ただしトランプ関税による輸出規制強化の行方が不確実要因として残存する。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（2語）</summary>
+      <ol>
+        <li><strong>Nikkei225（日経平均株価）</strong>：東京証券取引所プライム市場に上場する225銘柄で構成される日本の代表的な株価指数。</li>
+        <li><strong>Kioxia（キオクシア）</strong>：東芝メモリを前身とする世界大手のNANDフラッシュメモリ半導体メーカー。2024年に東証に上場。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 6 -->
+
+
+<!-- ══════════ SECTION 7: 海外企業動向 ══════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-number">07</span>
+    <span class="section-title">海外企業動向</span>
+  </div>
+
+  <!-- Article 7-1 -->
+  <div class="article">
+    <div class="article-headline">Foxconn<sup>1</sup>が大規模サイバー攻撃被害——Apple・Nvidia・Googleら顧客データ1,100万ファイル流出か</div>
+    <div class="article-meta">TechCrunch ｜ 2026年5月13日</div>
+    <div class="article-recap">
+      Foxconnは世界最大のEMS<sup>2</sup>（電子機器受託製造）企業として、Apple製品・Nvidia GPU・Google機器など主要テック企業のデバイス製造を担う。2021年にもランサムウェア<sup>3</sup>被害を受けており、製造業のサイバー脆弱性が繰り返し指摘されてきた。
+    </div>
+    <div class="article-body">
+      <p>ランサムウェア攻撃グループがFoxconnのネットワークへの侵入を主張し、Apple・Dell・Google・Intel・Nvidiaの機密情報を含む1,100万ファイル以上を窃取したと公表。Foxconnはサイバー攻撃の事実を認め、一部工場の稼働に影響が出たことを確認した。流出データにはサプライヤー契約書・製品設計情報・顧客仕様書が含まれるとされる。</p>
+      <p>金融システムへの示唆：グローバルサプライチェーンのサイバーリスクが上流から金融機関まで波及する「第三者リスク<sup>4</sup>」の典型例。取引先の格付・信用リスク評価にサプライチェーン全体のサイバーセキュリティ評価を組み込む必要性が改めて浮き彫りになった。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>Foxconn（富士康科技集団）</strong>：台湾に本社を置く世界最大の電子機器EMS企業。従業員100万人超。AppleのiPhoneをはじめ多数の製品を受託製造。</li>
+        <li><strong>EMS（Electronics Manufacturing Services）</strong>：電子機器の設計・製造・試験・物流を一括して受託するサービス。OEMブランドは持たず、顧客企業仕様で製造する。</li>
+        <li><strong>ランサムウェア（Ransomware）</strong>：感染した端末・ネットワークのデータを暗号化し、復号と引き換えに身代金を要求するマルウェア。近年はデータ窃取と組み合わせた「二重脅迫」が主流。</li>
+        <li><strong>第三者リスク（Third-Party Risk）</strong>：取引先・委託先・サプライヤーなど外部業者のセキュリティや業務継続の問題が、自社に波及するリスク。金融機関では規制当局が管理を義務付けている。</li>
+      </ol>
+    </details>
+  </div>
+
+  <!-- Article 7-2 -->
+  <div class="article">
+    <div class="article-headline">米テック大手の2026年AIインフラ投資、合計7,250億ドル超に——MSは1,900億ドル・Amazonは前四半期比40%増のチップ収益</div>
+    <div class="article-meta">Yahoo Finance / CNBC ｜ 2026年5月</div>
+    <div class="article-recap">
+      2025年末からAI投資に対するROI<sup>1</sup>の問いが高まり、2026年Q1決算では各社がAI資本支出の「証拠」を示すことを迫られた。MicrosoftはMaia 200チップ<sup>2</sup>、AmazonはTrainium<sup>3</sup>で独自チップを量産し、外部GPU<sup>4</sup>依存からの脱却を加速している。
+    </div>
+    <div class="article-body">
+      <p>S&amp;P 500の2026年Q1純利益率が過去最高の13.4%を記録し、IT部門は29.1%と突出した収益率を誇示。しかしMicrosoft株は記録的決算にもかかわらず年初来14%下落し、Alphabet（+23.1%）・Amazon（+16.4%）に大きく劣後する。投資家はAI設備投資の規模よりも「1トークン当たりのコスト改善」などの収益化指標を重視するように変化している。</p>
+      <p>MicrosoftのMaia 200チップは主要データセンター2拠点で稼働し、トークン生成コストを30%改善と報告。Amazonの独自チップ（Trainium/Inferentia）の年換算収益は200億ドルを超え、前四半期比40%増となった。金融機関のクラウドAI戦略においてGPU調達コストとカスタムチップ選択肢の動向は、インフラコスト予測に直結する。</p>
+    </div>
+    <details class="footnotes">
+      <summary>用語注釈（4語）</summary>
+      <ol>
+        <li><strong>ROI（Return on Investment）</strong>：投資収益率。投資した費用に対してどれだけのリターンを得られたかを示す指標。</li>
+        <li><strong>Maia 200</strong>：MicrosoftがAI推論に特化して独自開発したカスタムシリコンチップ。Azure上でのAI処理コスト削減を目的とする。</li>
+        <li><strong>Trainium</strong>：AmazonがAI学習（Training）に特化して開発したカスタムチップ。AWS上でのAIトレーニングコストを削減。Inferentiaは推論用の対応チップ。</li>
+        <li><strong>GPU（Graphics Processing Unit）</strong>：元来は画像処理用だが、並列演算能力の高さからAI学習・推論に多用される半導体。NvidiaのH100/H200が業界標準。</li>
+      </ol>
+    </details>
+  </div>
+</div><!-- /section 7 -->
+
+<footer>
+  本ブリーフは公開情報に基づく情報提供を目的としており、投資助言・法的助言を構成するものではありません。<br>
+  情報基準時点：2026年5月27日 EST 23:00 ／ 発行：トランザクションバンキング部署 金融システムインテリジェンス担当
+</footer>
+
+</div><!-- /wrapper -->
+</body>
+</html>
