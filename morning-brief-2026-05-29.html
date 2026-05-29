@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年5月29日</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    .masthead {
+      text-align: center;
+      padding: 32px 0 16px;
+      border-bottom: 3px double #1a1a1a;
+      margin-bottom: 6px;
+    }
+    .masthead-kicker {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .masthead-tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .masthead-meta {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #666;
+      border-top: 1px solid #d0c9b8;
+      border-bottom: 1px solid #d0c9b8;
+      padding: 6px 0;
+    }
+    .section { margin-top: 36px; }
+    .section-header {
+      border-top: 3px solid #1a1a1a;
+      border-bottom: 1px solid #d0c9b8;
+      padding: 5px 0 4px;
+      margin-bottom: 22px;
+    }
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+    }
+    .article {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child { border-bottom: none; }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .article-thin .article-headline { font-size: 17px; }
+    .article-source {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .article-recap {
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.65;
+      border-left: 3px solid #d0c9b8;
+      padding-left: 12px;
+      margin-bottom: 13px;
+    }
+    .article-body { font-size: 15px; line-height: 1.8; }
+    .article-body p { margin-bottom: 10px; }
+    sup.anno {
+      font-size: 10px;
+      color: #999;
+      vertical-align: super;
+      line-height: 0;
+    }
+    details.annotations {
+      margin-top: 14px;
+      border: 1px solid #d0c9b8;
+      border-radius: 3px;
+      background: #faf8f4;
+    }
+    details.annotations summary {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      padding: 8px 12px;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+    }
+    details.annotations summary::-webkit-details-marker { display: none; }
+    details.annotations summary::before { content: '▶ '; font-size: 8px; }
+    details.annotations[open] summary::before { content: '▼ '; }
+    .annotations-body {
+      padding: 10px 14px 14px;
+      border-top: 1px solid #d0c9b8;
+    }
+    .annotations-body ol { padding-left: 18px; }
+    .annotations-body li {
+      font-size: 12px;
+      line-height: 1.65;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #bbb;
+      margin-top: 52px;
+      padding-top: 16px;
+      border-top: 1px solid #d0c9b8;
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-kicker">Transaction Banking Intelligence</div>
+  <div class="masthead-title">THE MORNING BRIEF</div>
+  <div class="masthead-tagline">金融システム開発者のための朝刊</div>
+  <div class="masthead-meta">2026年5月29日（金）&nbsp;｜&nbsp; 平日版 &nbsp;｜&nbsp; 情報基準：前日 EST 23:00</div>
+</header>
+
+<!-- ═══ SECTION 1: 技術トレンド ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 1</div>
+    <div class="section-title">技術トレンド</div>
+  </div>
+
+  <article class="article">
+    <h2 class="article-headline">GPT-5.5 ＆ Gemini 3.1 Ultra 相次ぎ投入——フロンティアAIがエージェント実行に軸足を移す</h2>
+    <div class="article-source">AI Updates Today / OpenAI / Google Cloud Blog &nbsp;｜&nbsp; 2026年4〜5月</div>
+    <div class="article-recap">OpenAIは2024年にGPT-4oをリリースし、その後GPT-5、GPT-5.5と急ピッチで世代交代を繰り返してきた。Googleも2025年のGemini 2.0シリーズからマルチモーダル性能を大幅向上させており、両社の競争は激化の一途をたどっている。</div>
+    <div class="article-body">
+      <p>OpenAIは4月23日、<strong>GPT-5.5</strong><sup class="anno">[1]</sup>をPlus・Pro・Business・Enterprise向けにロールアウトした。「最もスマートで直感的なモデル」と位置づけ、エージェント型コーディング・コンピューター操作・知識業務・科学研究に特化した設計を強調している。</p>
+      <p>Googleは同時期に<strong>Gemini 3.1 Ultra</strong><sup class="anno">[2]</sup>をリリース。動画・音声・テキストを転写工程なしに同時処理する「真のマルチモーダル」を初めて商用規模で実現した。コード実行サンドボックスが標準装備され、モデルが会話中に自律的にコードを書き・実行・テストするワークフローが可能になった。軽量版のGemini 3.1 Flash-Liteは200万トークンコンテキストを$0.25/Mトークンで提供する。</p>
+      <p>金融システム開発への示唆は大きい。照合処理・取引監視・契約審査といったルーティンワークの自動化精度が跳ね上がり、AIがシステムを直接操作する<strong>コンピューターユース</strong><sup class="anno">[3]</sup>機能は勘定系周辺のRPA代替に使える可能性を秘める。ただし機密データ処理における<strong>自社ホスティング</strong><sup class="anno">[4]</sup>対応の検討が急務となる。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>GPT-5.5</strong>：OpenAIが開発した大規模言語モデルの第5.5世代。推論・コーディング・マルチモーダル処理能力を高め、エージェント型タスクに最適化。</li>
+          <li><strong>Gemini 3.1 Ultra</strong>：Googleのフロンティア言語モデル。テキスト・画像・音声・動画を統合処理するマルチモーダル能力が特徴。</li>
+          <li><strong>コンピューターユース（Computer Use）</strong>：AIが人間のようにGUIを操作してWebブラウジング・アプリ操作などを行う機能。Anthropicが2024年に一般公開し各社が追随している。</li>
+          <li><strong>自社ホスティング（Self-hosting）</strong>：クラウドAPIを使わず、自社インフラ上でモデルを稼働させること。外部へのデータ送出を避けたい金融機関で特に重要。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article">
+    <h2 class="article-headline">OpenAI × NVIDIA、10GW規模の次世代AIインフラ戦略提携——NVIDIA最大1,000億ドル投資</h2>
+    <div class="article-source">NVIDIA Newsroom / OpenAI &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">生成AIの需要急増を受け、NVIDIAのGPUは2023〜2024年にかけて慢性的な品不足に陥り、データセンター投資競争が世界規模で激化してきた。OpenAIはMicrosoftとの提携に加え、独自インフラ整備を加速させてきた。</div>
+    <div class="article-body">
+      <p>OpenAIとNVIDIAは次世代AIインフラとして<strong>10GW</strong><sup class="anno">[1]</sup>規模のNVIDIAシステム展開で合意した。NVIDIAはOpenAIへ最大<strong>1,000億ドル</strong>を投資する方針も示した。この規模は小型原子力発電所約10基分に相当する電力消費量を意味する。</p>
+      <p>副次効果として<strong>OpenAI Codex</strong><sup class="anno">[2]</sup>がGPT-5.5基盤に移行し、NVIDIA GPU上で稼働するコーディングエージェントの処理速度が向上。金融コア系システムのコード生成・テスト自動化ツールとしての実用性が増している。長期的にはモデル利用コストの下落圧力が維持される一方、電力・環境負荷コストが新たなリスク要因として顕在化しつつある。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>10GW（ギガワット）</strong>：電力の単位。10億ワット。日本の全データセンター消費電力合計は現在約20〜30GW規模とされる。</li>
+          <li><strong>OpenAI Codex</strong>：OpenAIが提供するコーディング専門AIエージェント。コード生成・デバッグ・テスト自動化に特化し、CLIやAPIから利用可能。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article">
+    <h2 class="article-headline">AIエージェントフレームワーク群が爆発的拡張——OpenClawが210,000スター超、金融特化型TradingAgentsも登場</h2>
+    <div class="article-source">GitHub Trending / OSSInsight / AIToolly &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">2024年末頃からAnthropicが公開したMCP（Model Context Protocol）標準が普及し始め、AIエージェントがシステムを横断して情報取得・操作できる「マルチエージェント」アーキテクチャが2025〜2026年の開発トレンドになっている。</div>
+    <div class="article-body">
+      <p><strong>OpenClaw</strong>は2026年1月末に数日で9,000スターから210,000スターへ急拡大し、「GitHub史上最速成長のOSSプロジェクトの一つ」と呼ばれる。マルチエージェント型の汎用タスク自動化フレームワークで、ツール統合の容易さが評価されている。</p>
+      <p>金融AIエージェントでは<strong>TradingAgents</strong><sup class="anno">[1]</sup>が注目を集めている。ファンダメンタル分析・センチメント分析・テクニカル分析・トレーダー・リスクマネージャーなど役割を分担した複数エージェントが連携し、実際の取引ファームの動態を模倣する。</p>
+      <p>開発ツールでは<strong>DSPy</strong><sup class="anno">[2]</sup>（プロンプトを機械学習で最適化）、<strong>LangGraph</strong><sup class="anno">[3]</sup>（ステートフルなグラフ型エージェントワークフロー）、<strong>Browser Use</strong><sup class="anno">[4]</sup>（AI向けWebブラウザ操作）が実務採用を広げている。金融システム開発者にとっては、レガシーAPIラッパー生成・ドキュメント検索・テスト生成での活用が現実的な入口となっている。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>TradingAgents</strong>：複数のAIエージェントを役割分担させ、金融市場での意思決定プロセスを模倣するオープンソースフレームワーク。研究・バックテスト目的での利用が主。</li>
+          <li><strong>DSPy</strong>：スタンフォード大学発のフレームワーク。手動プロンプトエンジニアリングの代わりに機械学習でプロンプトを最適化する。</li>
+          <li><strong>LangGraph</strong>：LangChainが開発したエンタープライズ向けエージェントフレームワーク。ステート管理とグラフ型ワークフローに特化し、複雑なビジネスロジックを表現できる。</li>
+          <li><strong>Browser Use</strong>：AIエージェントがWebブラウザを操作するためのライブラリ。人間がブラウザでできる操作を自動化する。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article">
+    <h2 class="article-headline">ISO 20022、2026年11月が「本当のデッドライン」——非構造化アドレスは全面拒否へ</h2>
+    <div class="article-source">SWIFT公式 / Kyriba / The Paypers / Finextra &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">SWIFTのISO 20022移行計画ではMT/MX共存（コエグジステンス）期が2025年11月に終了した。日本の主要行を含む多くの金融機関がインフロー翻訳に依存したまま事実上の延命を続けてきた経緯がある。</div>
+    <div class="article-body">
+      <p>2026年11月14日から、SWIFTは照会・調査（E&amp;I）メッセージをMX形式（<strong>camt.110 / camt.111</strong><sup class="anno">[1]</sup>）での受信を全金融機関に義務付ける。同日付で<strong>非構造化アドレス</strong><sup class="anno">[2]</sup>を含む支払いが自動的に拒否されるようになり、構造化国コード・都市名の必須化が実施される。</p>
+      <p>2026年1月からは<strong>コンティンジェンシー処理</strong><sup class="anno">[3]</sup>およびインフロー翻訳サービス<sup class="anno">[4]</sup>への追加課金がすでに始まっており、移行先延ばしには財務コストが発生している。Bank of Americaの決済プロダクト責任者は「ISO 20022は今日の決済業界で最も難しいトピック」と述べており、エンドツーエンドでの構造化データ保持が業界課題のままであることを示している。</p>
+      <p>国内の金融システム開発チームは、<strong>コルレス銀行</strong><sup class="anno">[5]</sup>チェーン全体での構造化データ維持に向けたシステム改修の優先度を今一度確認すべき時期にある。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>camt.110 / camt.111</strong>：ISO 20022のMX（XML形式）メッセージタイプ。camt（Cash Management）系は口座照会・通知・調査に使用。旧MT形式のMT110等に相当。</li>
+          <li><strong>非構造化アドレス</strong>：受取人住所を自由テキストで入力したもの。ISO 20022では国コード・都市名・番地を別フィールドに分割した「構造化アドレス」が必須となる。</li>
+          <li><strong>コンティンジェンシー処理（Contingency Processing）</strong>：MX形式送信ができない金融機関が緊急的に旧MT形式を使い続けるための暫定サービス。SWIFTが追加手数料を課している。</li>
+          <li><strong>インフロー翻訳サービス（In-flow Translation Service）</strong>：受信したMT形式メッセージを自動的にMX形式へ変換するSWIFTのサービス。受信行が未移行の場合の救済措置だが、2026年1月から有料化。</li>
+          <li><strong>コルレス銀行（Correspondent Bank）</strong>：国際送金において送金銀行と受取銀行の間を仲介する銀行。クロスボーダー送金は通常、複数のコルレス銀行を経由する。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article">
+    <h2 class="article-headline">リアルタイム決済×ISO 20022 APIがB2Bトレジャリーを変革——2026年が「真の変曲点」</h2>
+    <div class="article-source">Finextra / The Paypers / FRB Services &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">米国のFedNow（2023年稼働）、英国のFaster Payments、欧州のSEPA Instantなどリアルタイム決済（RTP）インフラが各地に整備されてきた。しかし企業財務（トレジャリー）への本格適用は遅れており、24/7の即時確認・リアルタイム不正対応が課題となってきた。</div>
+    <div class="article-body">
+      <p>ISO 20022のエンドツーエンド構造化データとオープンバンキングAPIが組み合わさることで、異なるRTPプラットフォーム間の相互運用性が現実的になりつつある。専門家は「2026年が実際の変曲点」と位置づけ、自動照合・即時流動性把握・リアルタイム不正検知の三機能が同時実現するシナリオを描く。</p>
+      <p>金融システム開発者の観点では、<strong>バッチ処理</strong><sup class="anno">[1]</sup>からリアルタイム処理へのパラダイムシフトへの対応として<strong>イベント駆動アーキテクチャ</strong><sup class="anno">[2]</sup>への移行とレイテンシ要件の再定義が開発優先課題として浮上している。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>バッチ処理</strong>：一定期間（例：1日）に溜まったトランザクションを一括処理する方式。夜間バッチが典型例。リアルタイム処理の対義語。</li>
+          <li><strong>イベント駆動アーキテクチャ（Event-Driven Architecture）</strong>：取引発生などの「イベント」を即座に検知し、それをトリガーとして処理を連鎖させるシステム設計。KafkaなどのメッセージブローカーがI基盤を担う。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 2: 第三者ベンダー動向 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 2</div>
+    <div class="section-title">第三者ベンダー動向</div>
+  </div>
+
+  <article class="article">
+    <h2 class="article-headline">Mastercard、ステーブルコインインフラのBVNKを18億ドルで買収——B2Bクロスボーダー決済に本格参入</h2>
+    <div class="article-source">Mastercard IR / CNBC / Forrester / Fortune &nbsp;｜&nbsp; 2026年3月17日発表</div>
+    <div class="article-recap">Mastercardは従来からトークン化資産への関心を示してきたが、2025年にステーブルコインのB2B決済での存在感が急拡大。B2Bステーブルコイン取引は前年比733%増加し、ステーブルコイン決済全体の約60%を占めるに至った。</div>
+    <div class="article-body">
+      <p>Mastercardは3月17日、ロンドン拠点の<strong>BVNK</strong><sup class="anno">[1]</sup>を最大18億ドル（うち3億ドルはパフォーマンス連動型）で買収することで合意した。BVNKは130カ国以上でステーブルコイン取引を可能にするインフラを保有する。</p>
+      <p>戦略的狙いは「オンチェーン決済と<strong>フィアット</strong><sup class="anno">[2]</sup>レールの接続」。B2B送金・クロスボーダー送金・リミッタンスにおいて、ステーブルコインをMastercardのグローバルfiatネットワーク上で法定決済手段として扱えるようにする。Forresterはこれを「B2Cカード処理の構造的陳腐化へのヘッジ」と分析している。</p>
+      <p>買収完了は2026年後半の予定。BVNK統合後はMastercardの<strong>トークン化資産プラットフォーム</strong><sup class="anno">[3]</sup>に組み込まれる見通し。日本の銀行にとっては、MastercardとのコルレスTBサービスが中長期的に変質するリスク・機会として継続注視が必要。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>BVNK</strong>：2021年創業のロンドン拠点フィンテック。企業向けステーブルコイン決済インフラを提供し、130カ国以上でUSDC・USDTなどのステーブルコイン取引を支援。</li>
+          <li><strong>フィアット（Fiat）</strong>：法定通貨のこと。円・ドル・ユーロなど各国政府が発行する通貨。ステーブルコイン（デジタル資産）と対比して使われる。</li>
+          <li><strong>トークン化資産プラットフォーム（Mastercard Tokenized Asset Platform）</strong>：Mastercardが金融機関向けに提供するプラットフォーム。自社ステーブルコインやトークン化預金の発行・管理機能を提供する。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article">
+    <h2 class="article-headline">Visa、ステーブルコイン決済を本格展開——カード紐付け・法人ペイアウト・独自発行プラットフォームの三本柱</h2>
+    <div class="article-source">FinXTech / AlphaPoint &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">Visaは2023〜2024年にかけてステーブルコインの決済インフラ接続を段階的に実証してきた。2025年以降は法人・B2B用途への応用が急速に広がっている。</div>
+    <div class="article-body">
+      <p>Visaは現在、（1）カードをデジタルウォレットに接続し4種類のステーブルコインで決済可能にするサービス、（2）<strong>Visa Direct</strong><sup class="anno">[1]</sup>を活用した米国企業向けデジタルウォレットへの直接ペイアウト・パイロット、（3）金融機関が自社ステーブルコインやトークン化預金を発行・管理できる<strong>Visa Tokenized Asset Platform</strong><sup class="anno">[2]</sup>の三本柱でステーブルコイン展開を進めている。</p>
+      <p>MastercardのBVNK買収と並び、主要カードネットワーク2社がステーブルコインを「正規の決済通貨」として扱う体制を整えつつある。TB担当者は、法人決済・給与支払い・サプライヤー支払いにおける自行の対応ロードマップを再点検する必要がある。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>Visa Direct</strong>：VisaのリアルタイムP2P・B2B送金サービス。デビットカード・銀行口座・デジタルウォレットへの即時入金を可能にする。</li>
+          <li><strong>Visa Tokenized Asset Platform（VTAP）</strong>：VisaがStandardized APIで金融機関に提供するインフラ。ステーブルコイン・トークン化預金の発行・移転・管理機能をブロックチェーン上で提供する。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 3: 外銀TB速報 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 3</div>
+    <div class="section-title">外銀TB速報</div>
+  </div>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">Standard Chartered、TBグローバル幹部を大量採用——HSBC・BNP・DBSから引き抜き</h2>
+    <div class="article-source">Treasury Management International / WebWire &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">Standard Charteredは2024年以降、アジア・中東・アフリカ圏でのTB事業拡大を最重要戦略に位置づけ、ステーブルコイン活用やESG連動キャッシュアカウントの展開を加速してきた。</div>
+    <div class="article-body">
+      <p>同行はグローバル・リージョナル<strong>TB</strong><sup class="anno">[1]</sup>チームをHSBC・BNP Paribas・Deutsche Bankで率いた経験を持つ幹部を採用。さらにDBSのGroup Head of Sales（Global Transaction Services）も移籍した。採用と同時にステーブルコイン決済サービスの拡充と<strong>ESG連動型キャッシュアカウント</strong><sup class="anno">[2]</sup>を強化。アジアTB受賞と合わせ、競合行との差別化を人材・サービス両面で加速している。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>TB（Transaction Banking）</strong>：キャッシュマネジメント・貿易金融・証券決済・サプライヤーファイナンスなどの企業向け銀行サービスの総称。投資銀行（IB）部門と並ぶ主要収益源。</li>
+          <li><strong>ESG連動型キャッシュアカウント</strong>：預入額や取引条件がESG（環境・社会・ガバナンス）指標に連動して金利や手数料が変動する企業向け決済口座。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">Triple A Treasurise Awards 2026——BNP ParibasがESG TB、StanChartがキャッシュ管理でアジア最優秀賞</h2>
+    <div class="article-source">The Asset（香港）&nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">The Assetが香港で毎年開催する「Triple A Treasurise Awards」はアジアのTB・キャッシュマネジメント分野における権威ある業界表彰。BNP Paribas・Standard Charteredは近年アジアでのTB強化を最優先課題にしてきた。</div>
+    <div class="article-body">
+      <p><strong>BNP Paribas</strong>が「Best ESG Transaction Bank in Asia」を受賞。<strong>Standard Chartered</strong>は「Best Treasury &amp; Cash Management Bank in Asia」を獲得した。</p>
+      <p>両行とも日本法人経由でのアジア周辺クロスボーダー取引において日系大手企業の主要<strong>コルレスバンク</strong><sup class="anno">[1]</sup>として機能しており、日本のTB担当者は受賞サービスの内容変化を継続ウォッチすることが推奨される。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>コルレスバンク（Correspondent Bank）</strong>：国際送金・外為取引で仲介役を担う銀行。日系企業のクロスボーダー決済では外銀コルレスネットワークを通じることが多い。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 4: 国内政治 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 4</div>
+    <div class="section-title">国内政治</div>
+  </div>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">日銀、政策金利0.75%を維持——イラン情勢でインフレ見通しを上方修正</h2>
+    <div class="article-source">日本経済新聞 / 日本銀行 &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">日銀は2025年12月に30年ぶりとなる0.5%→0.75%への利上げを実施した。2026年1月の衆議院解散・総選挙後も高市政権が継続し、「責任ある積極財政」路線を維持している。</div>
+    <div class="article-body">
+      <p>日銀の4月政策決定会合では金利を0.75%に据え置いた。イラン戦争に伴う原油高がインフレ押し上げ要因となっており、インフレ見通しは上方修正。副総裁は「中東情勢の経済波及を見極めつつも、追加利上げ継続の方針は変わらない」と発言した。6月利上げは「実現可能なシナリオ」との見方も出ている。</p>
+      <p>東京23区5月CPIは前年比1.3%上昇（水道代無償化措置で伸び率を抑制）。<strong>長期金利</strong><sup class="anno">[1]</sup>の上昇トレンドが続く中、金融システムの<strong>ALM</strong><sup class="anno">[2]</sup>リスク管理が一段と重要になっている。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>長期金利</strong>：主に10年物国債利回りを指す。日銀の利上げ・量的緩和縮小と連動して上昇圧力がかかっている。</li>
+          <li><strong>ALM（Asset Liability Management）</strong>：資産負債管理。銀行が保有資産（貸出・債券等）と負債（預金・調達）の金利・期間ギャップを管理し、金利変動リスクを制御する管理手法。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">日本の総人口1億2,304万人——5年で309万人減、労働力不足が金融DXを後押し</h2>
+    <div class="article-source">総務省統計局 / 共同通信 &nbsp;｜&nbsp; 2026年5月29日</div>
+    <div class="article-recap">日本の人口は2008年をピークに長期減少局面にある。少子高齢化の進展は金融サービスの需要構造と人材市場の双方に変化をもたらしてきた。</div>
+    <div class="article-body">
+      <p>5年間で309万人（年平均62万人）の減少。4月の<strong>有効求人倍率</strong><sup class="anno">[1]</sup>は1.18倍で横ばい、完全失業率2.5%と低水準を維持するも絶対的な労働力不足が深刻化。銀行の店舗統廃合・デジタルチャネルシフトが加速する中、TB部門のシステム開発リソース確保競争も激しさを増している。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>有効求人倍率</strong>：ハローワークに登録された求人数を求職者数で割った指標。1.18倍は求職者1人に対して1.18の求人があることを意味し、継続的な労働力不足を示す。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 5: 海外政治 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 5</div>
+    <div class="section-title">海外政治</div>
+  </div>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">米中関税交渉、トランプ・習近平会談後に最終調整——今夏の調査結論が次の焦点</h2>
+    <div class="article-source">Reuters / Trade Compliance Resource Hub &nbsp;｜&nbsp; 2026年5月28日</div>
+    <div class="article-recap">2025年10月の釜山（Busan）米中首脳会談で1年間の貿易停戦が成立。Section 301調査の再開と旧関税率への回帰が議論されてきたが、6月に停戦期限が到来する。</div>
+    <div class="article-body">
+      <p>5月19日にベッセント財務長官がReuters取材で「旧関税率への回帰に中国が応じる見込み（水準が上がらない限り）」と発言。中国<strong>商務省</strong><sup class="anno">[1]</sup>は5月20日に「合意水準を超えないよう米国が約束を守ることを期待」と牽制した。両国間の<strong>Section 301調査</strong><sup class="anno">[2]</sup>の結論は今夏の予定。米中貿易摩擦の行方は円相場・輸出企業収益・クロスボーダー決済フローに直結するため継続注視が必要。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>商務省（MOFCOM：Ministry of Commerce）</strong>：中国の貿易・対外経済政策を管轄する省庁。貿易摩擦時の公式声明を担う。</li>
+          <li><strong>Section 301調査</strong>：米国通商法301条に基づく調査。不公正な貿易慣行を持つ国に対して米国が報復関税を課すための法的根拠。トランプ政権が対中関税の主要手段として使用。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">イラン戦争・ホルムズ封鎖で世界精製能力の9%喪失——エネルギー価格高騰が国債利回り急騰を招く</h2>
+    <div class="article-source">Reuters / Wikipedia Current Events / Bloomberg &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">2026年2月に発生したイラン戦争により、中東における石油精製・輸送インフラへの攻撃が相次ぎ、ウクライナ戦争と並行した複合的なエネルギー供給危機が生じている。</div>
+    <div class="article-body">
+      <p>イランとウクライナ（ロシアNovoros​siysk石油ターミナルへのドローン攻撃）の複合的な精製施設被害が、世界の精製能力の約9%を失わせたと推計されている。米国は<strong>IRGC</strong><sup class="anno">[1]</sup>海軍によるタンカー拿捕事件を受け、<strong>ホルムズ海峡庁</strong><sup class="anno">[2]</sup>に制裁を発動した。</p>
+      <p>エネルギー価格高騰によるインフレ懸念が世界的な国債利回り急騰を招き、各国中央銀行の利上げ加速観測が高まっている。日系金融機関の外債ポートフォリオおよびALM管理における金利リスク再評価が求められる局面。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>IRGC（Islamic Revolutionary Guard Corps）</strong>：イラン革命防衛隊。イランの精鋭軍事組織で、米国はテロ支援組織に指定している。</li>
+          <li><strong>ホルムズ海峡庁（Persian Gulf Strait Authority）</strong>：イランがホルムズ海峡の通航を管理するために設置した機関。世界の石油輸出の約20%がこの海峡を通過する。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 6: 国内企業動向 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 6</div>
+    <div class="section-title">国内企業動向</div>
+  </div>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">生成AIが「業務インフラ」化——経産省・総務省ガイドラインを前提にした運用整備が本格化</h2>
+    <div class="article-source">DESIGN STUDIO garden / note.com &nbsp;｜&nbsp; 2026年5月第2週</div>
+    <div class="article-recap">2024年に経産省・総務省が生成AIに関するガイドラインを相次ぎ公表し、企業のリスク管理フレームワーク整備が加速。2025年には「導入するか否か」から「いかに安全に運用するか」へと議論の軸が移動した。</div>
+    <div class="article-body">
+      <p>2026年5月時点で、生成AIを「アプリとして使う」段階から「業務インフラの中で動く<strong>AIエージェント</strong><sup class="anno">[1]</sup>として統合する」段階へ移行した企業が増えている。特に大手行・保険会社でのコンプライアンス文書処理・<strong>AML</strong><sup class="anno">[2]</sup>スクリーニング補助・コード生成への活用が報告されている。</p>
+      <p>金融システム開発者にとっては、AIの判断プロセスの<strong>監査可能性</strong><sup class="anno">[3]</sup>（オーディタビリティ）をシステム設計段階から組み込む必要性が高まっている。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>AIエージェント</strong>：目標を与えると自律的に計画・ツール利用・実行・修正を繰り返すAIシステム。複数ステップの業務タスクを自律的にこなす点でチャットボットと異なる。</li>
+          <li><strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング（資金洗浄）対策。金融機関は犯収法に基づき疑わしい取引の検知・報告義務を負う。</li>
+          <li><strong>監査可能性（Auditability）</strong>：AIの判断根拠・判断プロセスを事後的に追跡・検証できる性質。金融規制上、アルゴリズムの説明責任として監督当局から要求される。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">4月鉱工業生産指数、0.8%上昇——3カ月ぶりのプラス転換</h2>
+    <div class="article-source">経済産業省 / 共同通信 &nbsp;｜&nbsp; 2026年5月29日</div>
+    <div class="article-recap">国内製造業は米中貿易停戦の恩恵と円安の継続で輸出が底堅く推移してきたが、イラン情勢に伴うエネルギーコスト上昇が製造コストに影響しつつある。</div>
+    <div class="article-body">
+      <p>4月の<strong>鉱工業生産指数</strong><sup class="anno">[1]</sup>は前月比0.8%上昇と3カ月ぶりのプラス。自動車・半導体関連の生産回復が寄与した。電力コスト上昇の影響が今後の指数に織り込まれるかが次の注目点。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>鉱工業生産指数</strong>：製造業・鉱業の生産活動水準を示す経済産業省の月次統計。景気の先行指標として金融市場でも注視される。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- ═══ SECTION 7: 海外企業動向 ═══ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">Section 7</div>
+    <div class="section-title">海外企業動向</div>
+  </div>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">JPMorgan、ドイツでデジタルリテール銀行を開業——欧州第2の個人市場に参入</h2>
+    <div class="article-source">Banking Dive / eFinancialCareers &nbsp;｜&nbsp; 2026年</div>
+    <div class="article-recap">JPMorganは2021年に英国でChaseブランドのデジタルリテールバンクを開業し、欧州個人市場の開拓を進めてきた。Q1 2026はM&A収益82%増・ECM46%増と好調な一方、コスト圧力に直面している。</div>
+    <div class="article-body">
+      <p>JPMorganはドイツでChaseブランドの<strong>デジタルリテールバンク</strong><sup class="anno">[1]</sup>を2026年中に開業予定。TB部門ではコスト抑制に向けたAI活用・業務自動化が明言されており、TB関連システムの合理化が一段と進む見通し。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>デジタルリテールバンク</strong>：実店舗を持たず、スマートフォンアプリ・Webを中心に個人向け銀行サービスを提供する形態。欧州では「ネオバンク」とも呼ばれる。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+
+  <article class="article article-thin">
+    <h2 class="article-headline">EU、米関税と中国輸出攻勢の「二重圧力」——2026年輸出は関税影響だけで4.6%減の見通し</h2>
+    <div class="article-source">ING Think / Euronews / Bloomberg &nbsp;｜&nbsp; 2026年5月</div>
+    <div class="article-recap">2025年に本格化したトランプ政権の関税2.0によりEUの対米輸出が大幅な打撃を受けてきた。同時に中国が欧州市場に低価格製品を大量流入させ、EU製造業は板挟みの状態になっている。</div>
+    <div class="article-body">
+      <p>2026年のEUの対米輸出は関税要因だけで約4.6%の減少見込み。米国はデジタル規制（EU AI規制・<strong>DMA</strong><sup class="anno">[1]</sup>）の緩和を鉄鋼・アルミ関税引き下げの条件として要求しており、外交交渉が長期化している。ドイツのメルツ首相は7,800億ユーロ規模の債務拡大型再軍備計画を発表する一方、EU共同債には反対姿勢を示した。EU系銀行（BNP Paribas・Deutsche Bank等）の収益見通しにも影響が波及している。</p>
+    </div>
+    <details class="annotations">
+      <summary>注釈を開く</summary>
+      <div class="annotations-body">
+        <ol>
+          <li><strong>DMA（Digital Markets Act）</strong>：EU「デジタル市場法」。大手テクノロジープラットフォームを「ゲートキーパー」として規制し、公正な競争を確保することを目的とする。GAFAMが主な対象。</li>
+        </ol>
+      </div>
+    </details>
+  </article>
+</section>
+
+<footer>
+  <p>THE MORNING BRIEF は前日 EST 23:00 時点の情報を基に自動生成されます。</p>
+  <p style="margin-top:4px;">© 2026 Transaction Banking Intelligence &nbsp;｜&nbsp; 無断転載禁止</p>
+</footer>
+
+</body>
+</html>
