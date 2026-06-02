@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月2日（火）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 18px 60px;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      padding: 20px 0 14px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .masthead-eyebrow {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #5a5448;
+      margin-bottom: 8px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(32px, 9vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      color: #1a1a1a;
+    }
+    .masthead-subtitle {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #5a5448;
+      margin-top: 8px;
+    }
+    .masthead-dateline {
+      border-top: 1px solid #d0c9b8;
+      margin-top: 12px;
+      padding-top: 10px;
+      font-size: 11px;
+      color: #5a5448;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      border-top: 3px solid #1a1a1a;
+      margin-top: 36px;
+      padding-top: 10px;
+    }
+    .section-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 9px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #5a5448;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      color: #1a1a1a;
+    }
+
+    /* ── ARTICLE ── */
+    .article {
+      border-bottom: 1px solid #d0c9b8;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    .article:last-child { border-bottom: none; }
+
+    .article-meta {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a7060;
+      margin-bottom: 6px;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.28;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+    .article-headline.small {
+      font-size: 17px;
+    }
+    .article-recap {
+      background: #ede9e1;
+      border-left: 3px solid #d0c9b8;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      font-style: italic;
+      color: #4a4438;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .article-body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a1a;
+    }
+    .article-body p { margin-bottom: 10px; }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    /* Thin-section articles (smaller headline) */
+    .thin .article-headline { font-size: 17px; }
+
+    /* ── ANNOTATION ACCORDION ── */
+    .annotation-block {
+      margin-top: 14px;
+    }
+    .annotation-block summary {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a7060;
+      cursor: pointer;
+      user-select: none;
+      padding: 6px 0;
+      border-top: 1px dashed #d0c9b8;
+      list-style: none;
+    }
+    .annotation-block summary::marker,
+    .annotation-block summary::-webkit-details-marker { display: none; }
+    .annotation-block summary::before {
+      content: "▶ ";
+      font-size: 9px;
+    }
+    details[open] .annotation-block summary::before { content: "▼ "; }
+    .annotation-list {
+      margin-top: 8px;
+      padding-left: 0;
+      list-style: none;
+    }
+    .annotation-list li {
+      font-size: 12.5px;
+      color: #4a4438;
+      padding: 4px 0 4px 18px;
+      position: relative;
+      border-bottom: 1px dotted #d0c9b8;
+      line-height: 1.55;
+    }
+    .annotation-list li:last-child { border-bottom: none; }
+    .annotation-list li::before {
+      content: attr(data-num);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      color: #1a1a1a;
+      font-size: 11px;
+    }
+    sup.ref {
+      font-size: 9px;
+      color: #7a7060;
+      font-weight: 600;
+      vertical-align: super;
+      line-height: 0;
+      margin-left: 1px;
+    }
+
+    /* ── FOOTER ── */
+    .brief-footer {
+      margin-top: 48px;
+      border-top: 2px solid #1a1a1a;
+      padding-top: 14px;
+      font-size: 11px;
+      color: #7a7060;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .no-news {
+      font-style: italic;
+      color: #7a7060;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ MASTHEAD ══════════════ -->
+<header class="masthead">
+  <p class="masthead-eyebrow">Transaction Banking Intelligence</p>
+  <h1 class="masthead-title">THE MORNING BRIEF</h1>
+  <p class="masthead-subtitle">For Financial Systems Professionals</p>
+  <div class="masthead-dateline">
+    <span>2026年6月2日（火曜日）</span>
+    <span>平日版</span>
+    <span>情報基準：前日EST 23:00時点</span>
+  </div>
+</header>
+
+
+<!-- ══════════════ §1 技術トレンド ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 1</p>
+  <h2 class="section-title">技術トレンド</h2>
+</section>
+
+<!-- Article 1-1 -->
+<article class="article">
+  <p class="article-meta">Finextra / FIS Press Release — 2026年5月4日</p>
+  <h3 class="article-headline">FIS × Anthropic、エージェント型AIをバンキングに投入—AMLアラート処理を「数日から数分」へ短縮</h3>
+  <div class="article-recap">
+    金融インフラ大手FISは長年、コアバンキング・決済・リスク管理において世界最大級のシステム基盤を提供してきた。2024年ごろからAI組み込みの本格化が業界全体で加速し、FISも生成AIをプロダクトに統合する動きを強化。2025年にはAnthropicとの戦略的提携交渉が進展し、2026年に入って具体的な共同プロダクトが発表された。
+  </div>
+  <div class="article-body">
+    <p>FISは2026年5月4日、Anthropicと連携してバンキング向けエージェント型AI<sup class="ref">1</sup>の提供を開始すると発表し、第一弾として「Financial Crimes AI Agent<sup class="ref">2</sup>」をリリースした。同エージェントはAML<sup class="ref">3</sup>アラートのトリアージからケース調査までをエンドツーエンドで自律実行し、従来数日を要していた処理を数分に圧縮するとしている。BMOとAmalgamated Bankが開発参加中で、一般提供は2026年下半期を予定している。</p>
+    <p>【分析】金融犯罪対応は規制当局への報告義務を伴う極めて高リスクな領域だが、FISがAnthropicのClaudeを選んだ背景には、Constitutional AI<sup class="ref">4</sup>による安全性フレームワークへの信頼がある。邦銀においても不正検知の自動化ニーズは高く、AML業務の一次スクリーニングにエージェントを導入する実証実験が現実的な選択肢に浮上してきた。日本の外為取引モニタリングへの応用可能性を今から検討しておく価値がある。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="1">エージェント型AI（Agentic AI）：単純な回答生成ではなく、目標を与えられると複数ステップのタスクを自律的に計画・実行するAIシステム。承認・実行・修正を繰り返す「エージェントループ」が核心。</li>
+        <li data-num="2">Financial Crimes AI Agent：FISとAnthropicが共同開発した金融犯罪対応専用エージェント。AMLアラートの評価、ケース分類、SAR（疑わしい取引報告書）草案作成などを自動化する。</li>
+        <li data-num="3">AML（Anti-Money Laundering）：マネーロンダリング（資金洗浄）防止のための規制・業務体系。金融機関は疑わしい取引を当局へ報告する義務（SAR提出）を負う。</li>
+        <li data-num="4">Constitutional AI：Anthropicが開発したAI安全性手法。AIが守るべき原則（"constitution"）を明示的に設定し、有害な出力を内部フィードバックで自動抑制する設計。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 1-2 -->
+<article class="article">
+  <p class="article-meta">Fiserv Press Release / Finextra — 2026年5月〜6月</p>
+  <h3 class="article-headline">Fiserv、銀行向けエージェントAI基盤「agentOS」を正式発表—リスク管理・規制レポートを自動化</h3>
+  <div class="article-recap">
+    Fiservは決済・コアバンキングの世界的プロバイダーであり、北米を中心に数千の金融機関にシステムを提供する。2024年後半から金融機関向けAIプラットフォーム整備を急加速させており、競合FIS・Jack Henry等との差別化としてエージェント型AIのOS（基盤）化を目指してきた。
+  </div>
+  <div class="article-body">
+    <p>Fiservは「agentOS」を正式ローンチした。金融機関がAIエージェントを展開・管理・スケールさせるためのオペレーティングシステムと位置付け、2026年8月に広範提供を開始する予定。初期マーケットプレイスにはFiserv製エージェント4種と、サードパーティ製エージェント9種が並ぶ。カバー領域はリスク管理、規制レポーティング<sup class="ref">5</sup>、預金オペレーション、バックオフィス照合業務にわたる。</p>
+    <p>【分析】agentOSが目指すのは「銀行向けエージェントのApp Store」だ。特定業務ごとに独立したエージェントを組み合わせて使えるモジュラー設計は、日本の大手銀行が抱える複数ベンダー混在環境でも採用しやすい。バックオフィス照合業務の自動化は特に、トランザクションバンキング部門での直接的な恩恵が見込まれる。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="5">規制レポーティング（Regulatory Reporting）：金融機関が法令に基づき監督当局（金融庁、FRB等）に提出する各種報告書。自己資本比率、流動性比率、大口与信などが対象。手作業が多く自動化ニーズが高い。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 1-3 -->
+<article class="article">
+  <p class="article-meta">CNBC / TechXplore / Al Jazeera — 2026年6月1日</p>
+  <h3 class="article-headline">NvidiaがComputex 2026でPCチップ「RTX Spark」を発表—AIをエッジ端末に直接展開する新時代へ</h3>
+  <div class="article-recap">
+    NvidiaはデータセンターGPUで生成AIブームを牽引し、時価総額で世界トップ争いを続けてきた。一方、PC向けプロセッサ市場ではIntelとAMDが長年二強を形成し、AppleがArmベースのM系チップで独自路線を拓いた。NvidiaはこれまでPC向けSoC<sup class="ref">6</sup>市場に本格参入しておらず、今回の発表はその戦略的転換点となる。
+  </div>
+  <div class="article-body">
+    <p>Jensen Huang CEOはComputex 2026（台北、6月1日）の基調講演で、Armベースの新型PCチップ「RTX Spark」を発表した。CPU+GPUを統合したスーパーチップであり、TSMC<sup class="ref">7</sup>の3nmプロセスで製造される。性能はNvidiaのRTX 5070ラップトップGPU相当とされ、Microsoft・Dell・HP・ASUS・Lenovo・MSIからのラップトップが秋以降に発売予定。株価は翌日6%超上昇し、S&P 500を新高値（7,599）に押し上げた。</p>
+    <p>【金融システムへの含意】端末AI（エッジAI<sup class="ref">8</sup>）の性能向上は、ディーラー端末やトレーディングルームでのリアルタイム推論を可能にする。クラウド依存を減らせるため、機密データをオンプレミスで処理したい金融機関にとって有力な選択肢となり得る。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="6">SoC（System on Chip）：CPU・GPU・メモリコントローラ等を1チップに集積した半導体。スマートフォンやAppleのMシリーズがその代表例。消費電力効率が高い。</li>
+        <li data-num="7">TSMC（台湾積体電路製造）：世界最大の半導体受託製造（ファウンドリ）企業。3nmプロセスは最先端世代の一つで、微細化によりトランジスタ密度と電力効率を大幅に向上させる。</li>
+        <li data-num="8">エッジAI（Edge AI）：クラウドサーバーではなく、ユーザーの手元にある端末（エッジ）でAIモデルを実行する方式。遅延が少なく、ネットワーク不要で推論できる利点がある。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 1-4 -->
+<article class="article">
+  <p class="article-meta">PYMNTS / IMF Working Paper — 2026年5〜6月</p>
+  <h3 class="article-headline">IMFが警告：エージェントAIがKYC・多要素認証の「設計前提」を破壊—決済業界に制度的空白</h3>
+  <div class="article-recap">
+    AIエージェントが自律的に決済を実行できるようになると、従来「人間が承認する」という前提で設計された本人確認・認証システムとの整合性が問われる。規制当局や業界団体は2025年後半からこの問題を議論し始めており、IMFが正式に論文として警鐘を鳴らすのは初めてとなる。
+  </div>
+  <div class="article-body">
+    <p>IMFのワーキングペーパーは、自律的に決済を実行できるAIエージェントが、KYC<sup class="ref">9</sup>や多要素認証<sup class="ref">10</sup>など既存のセキュリティプロトコルに「設計上のギャップ」をもたらすと指摘した。現行の認証基盤は「人が操作する」という前提で構築されており、AIエージェントが起点の取引への対応が不十分という問題だ。PYMNTSの分析によると、銀行は「エージェントが署名するとは何を意味するか」を再定義する必要に迫られている。</p>
+    <p>【分析】トランザクションバンキング部門は、法人決済の自動化でエージェントAI導入を検討する最前線に立つ。エージェントへの認可付与（Authorization）・監査証跡設計・コンプライアンス責任所在の明確化は、システム開発の初期段階から織り込む必要がある。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="9">KYC（Know Your Customer）：顧客の本人確認・属性把握義務。金融機関がマネロン・テロ資金供与防止のため、取引開始時および継続的に顧客情報を確認・更新する規制要件。</li>
+        <li data-num="10">多要素認証（MFA：Multi-Factor Authentication）：パスワードに加え、SMSコードや生体情報など複数要素で本人確認を行う認証方式。人を前提としているため、AIエージェントが取引を起動する場合の適用が技術的・制度的に課題となる。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+
+<!-- ══════════════ §2 第三者ベンダー動向 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 2</p>
+  <h2 class="section-title">第三者ベンダー動向</h2>
+</section>
+
+<!-- Article 2-1 -->
+<article class="article">
+  <p class="article-meta">CoinDesk / Finextra / Blockhead — 2026年5月27日</p>
+  <h3 class="article-headline">Mastercardがニューヨーク州BitLicenseを取得—BVNK買収（18億ドル）と合わせ、ステーブルコイン決済インフラを本格整備</h3>
+  <div class="article-recap">
+    Mastercardは2024〜2025年にかけて、デジタルウォレットへのステーブルコイン連携、法人向けB2Bステーブルコイン払いパイロット、個人向けペイアウト機能を段階的に展開。2026年3月、英国のステーブルコイン決済スタートアップBVNK<sup class="ref">11</sup>を18億ドルで買収すると発表し、業界内での決意を明示した。
+  </div>
+  <div class="article-body">
+    <p>ニューヨーク州金融サービス局（NYDFS<sup class="ref">12</sup>）は5月27日、Mastercardに対し「BitLicense<sup class="ref">13</sup>」を交付した。米国最も厳格な暗号資産規制の下でデジタル資産事業を合法的に運営する権限を得たことで、Mastercardはステーブルコインによる決済・精算インフラをニューヨーク市場で本格展開できる。同ライセンス取得は2026年では機関投資家向け暗号資産会社GalaxyおよびBitcoin決済会社Strikeに続く事例。</p>
+    <p>【分析】Mastercardが描くのは、カード・ウォレット・ステーブルコイン・トークン化預金を一つの決済レールで束ねるエコシステムだ。B2B決済でSWIFT gpiやMastercard Track<sup class="ref">14</sup>と競合するステーブルコイン精算が、2〜3年以内に主流のオプションとなる可能性がある。邦銀の国際送金・貿易金融部門は代替ルートの存在を念頭にロードマップを再検討すべき時期に来ている。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="11">BVNK：英国ロンドン拠点のステーブルコイン決済フィンテック。企業が複数のステーブルコイン（USDC・USDTなど）を使って即時国際決済・精算を行えるAPIインフラを提供。2026年3月にMastercardが18億ドルで買収を合意。</li>
+        <li data-num="12">NYDFS（New York State Department of Financial Services）：ニューヨーク州の金融規制機関。銀行・保険・暗号資産事業者を管轄し、厳格な消費者保護・AML規制を適用する。</li>
+        <li data-num="13">BitLicense：NYDFSが2015年に創設した暗号資産事業者向けライセンス制度。NY州でのビットコイン等デジタル資産の売買・送金・管理事業に必須。審査が厳格で取得難易度が高い。</li>
+        <li data-num="14">Mastercard Track：Mastercardが提供するB2B決済・サプライチェーン向けグローバル決済プラットフォーム。請求書照合、動的ディスカウント、ネッティングなどを統合提供する。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 2-2 -->
+<article class="article">
+  <p class="article-meta">SWIFT公式 / PYMNTS / The Asian Banker — 2026年5〜6月</p>
+  <h3 class="article-headline">SWIFTが個人向け越境決済の新スキームを6月末に立ち上げ—25行超が参加、即時精算も視野</h3>
+  <div class="article-recap">
+    SWIFTはコルレス銀行<sup class="ref">15</sup>ネットワークによる越境決済の標準として数十年君臨してきたが、Visa Direct・Mastercard Move・ステーブルコインといった新興即時決済レールの台頭により、特に小口・個人向け送金領域で圧力が高まってきた。対応策としてSWIFT gpiの拡張と並行し、新たな「リテール決済スキーム」の構築を進めていた。
+  </div>
+  <div class="article-body">
+    <p>SWIFTは6月末を目途に新リテール越境決済フレームワークを本格稼働させると発表。初期参加行は25行超で、オーストラリア・バングラデシュ・カナダ・中国・ドイツ・インド・パキスタン・スペイン・タイ・英国・米国向け送金コリドーをカバー。送金者への「コスト確実性・全額送付・エンドツーエンドの追跡可能性・最速精算（即時も含む）」を保証する。50行超が既にサインアップ済み。</p>
+    <p>戦略的には2本柱を採用：①新リテールスキーム、②ブロックチェーン共有台帳による24時間365日リアルタイム越境決済。これにより消費者・中小企業向けから機関間取引まで全層をカバーする体制を整える。</p>
+    <p>【分析】SWIFTの動きはdefensiveな性格が強いが、同時にインフラとしての強みを活かしたupgradeでもある。ステーブルコインへのシフトを牽制しつつ、既存のメッセージング標準（ISO 20022<sup class="ref">16</sup>）を活用する点が邦銀にとって移行コストの低い選択肢となり得る。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="15">コルレス銀行（Correspondent Bank）：異なる通貨・国をまたぐ決済を仲介する銀行間ネットワーク。SWIFTはこのネットワーク間のメッセージ標準として機能してきた。</li>
+        <li data-num="16">ISO 20022：国際標準化機構が策定した金融メッセージング標準。従来のMT（SWIFT旧フォーマット）より豊富な構造化データを格納でき、AMLや照合精度向上に寄与する。日本でも全銀EDIシステム等が採用。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+
+<!-- ══════════════ §3 外銀TB速報 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 3</p>
+  <h2 class="section-title">外銀TB速報</h2>
+</section>
+
+<!-- Article 3-1 -->
+<article class="article thin">
+  <p class="article-meta">eFinancialCareers / Finextra — 2026年5〜6月</p>
+  <h3 class="article-headline small">HSBCが「JPMorgan超え」を宣言—トランザクションサービス・決済で世界首位CIBを目指す</h3>
+  <div class="article-recap">
+    HSBCはアジア・中東・欧州を跨ぐコルレスネットワークの強みを持ち、CIB（企業・機関向け銀行業務）の中核にトランザクションバンキングを位置付けてきた。2024〜2025年にかけてMD（マネージングディレクター）を25%削減するリストラを行い、その後のリカバリーフェーズに入っている。
+  </div>
+  <div class="article-body">
+    <p>HSBCの経営陣は、決済・トランザクションサービス分野でJPMorganと最も激しく競合できると明言。「グローバルNo.1 CIBになる」という目標を改めて強調し、アジア〜中東〜欧州の決済コリドーでの存在感を前面に打ち出している。Q1 2026決算では全体的に堅調な結果を残し、トランザクション関連フィー収入が回復基調にある。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="17">CIB（Corporate &amp; Institutional Banking）：企業顧客・機関投資家向けの総合銀行業務。トランザクションバンキング・投資銀行・マーケッツを包含する事業部門区分。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 3-2 -->
+<article class="article thin">
+  <p class="article-meta">Banking Dive — 2026年初報</p>
+  <h3 class="article-headline small">JPMorganがドイツでデジタルリテール銀行を2026年内に開設—欧州TB基盤の拡充を図る</h3>
+  <div class="article-recap">
+    JPMorganはチェイスブランドのデジタルリテール銀行を英国で2021年に展開し、その後欧州拡大の検討を続けてきた。ドイツは欧州最大の経済圏であり、決済・送金インフラの近代化が急速に進んでいることから、トランザクションバンキング強化の戦略的拠点として選ばれた。
+  </div>
+  <div class="article-body">
+    <p>JPMorgan Chaseは2026年内にドイツでデジタルリテール銀行を開設する計画を正式に表明。Chase<sup class="ref">18</sup>ブランドでの法人・個人向け預金吸収と決済サービス展開を通じ、欧州全体のトランザクションバンキング・エコシステムへの足場を固める意図がある。Q1 2026決算は全体として好調で、フィーインカムの拡大余地が強調された。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="18">Chase：JPMorgan Chaseのリテール（個人・中小企業向け）バンキングブランド名。米国では最大の小売銀行ネットワークを持ち、英国・欧州ではデジタル専業銀行として展開中。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+
+<!-- ══════════════ §4 国内政治 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 4</p>
+  <h2 class="section-title">国内政治</h2>
+</section>
+
+<!-- Article 4-1 -->
+<article class="article thin">
+  <p class="article-meta">YouTube 国会中継 / 共同通信 — 2026年6月1日</p>
+  <h3 class="article-headline small">参院決算委員会で令和6年度決算の省庁別審査が進行—会期末（6月21日）に向け審議が山場へ</h3>
+  <div class="article-recap">
+    2026年の通常国会は1月23日に召集され、会期は6月21日まで（150日間）。政府は26年度予算案・税制改正法案など61本を提出しており、会期末に向けた攻防が続いている。参議院では6月1日から省庁別の決算審査が始まった。
+  </div>
+  <div class="article-body">
+    <p>参議院決算委員会は6月1日、令和6年度決算の省庁別審査を開始した。金融庁・財務省関連の審議では、マクロ経済政策や金融規制改正に関する質疑が行われる見通し。6月21日の会期末に向け、残り3週間で各法案の採決が集中する。金融システム関連では、決済サービス法改正案や外為法施行規則改正の進捗も注目される。</p>
+  </div>
+</article>
+
+<!-- Article 4-2 -->
+<article class="article thin">
+  <p class="article-meta">日本経済新聞 / NHK — 2026年6月1日</p>
+  <h3 class="article-headline small">内閣府、5月の消費者態度指数が3カ月ぶり改善—33.6に回復も「悪い」水準は継続</h3>
+  <div class="article-recap">
+    日本の消費者マインドは2025年の関税・物価上昇局面で悪化が続いており、2026年春闘での賃上げ5%超（3年連続）がその改善要因として注目されてきた。
+  </div>
+  <div class="article-body">
+    <p>内閣府発表の5月消費動向調査では、消費者態度指数が前月比1.4ポイント上昇の33.6を記録し、3カ月ぶりの改善となった。ただし消費者態度指数50が中立点であり、33台は依然として「悲観的」水準だ。2026年6月には調味料を中心に450品目の値上げが予定されており、消費マインドの本格回復には不透明感が残る。</p>
+  </div>
+</article>
+
+
+<!-- ══════════════ §5 海外政治 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 5</p>
+  <h2 class="section-title">海外政治</h2>
+</section>
+
+<!-- Article 5-1 -->
+<article class="article thin">
+  <p class="article-meta">BBC / Reuters — 2026年6月1〜2日</p>
+  <h3 class="article-headline small">ロシア製ドローンがルーマニア・ガラツィの民間建物に墜落—NATO加盟国への直接被害でEU・NATO当局が強く非難</h3>
+  <div class="article-recap">
+    ロシアのウクライナ全面侵攻（2022年2月）以来、ロシア製ドローンが黒海沿岸諸国に度々流入・墜落する事案が続いており、NATO東方回廊の安全保障上のリスクが高まっていた。ルーマニアはEU・NATO加盟国であり、今回の事案はロシアとNATOの緊張を一段と高めた。
+  </div>
+  <div class="article-body">
+    <p>ルーマニア当局は、ロシア製ドローンが黒海沿岸の主要港湾都市ガラツィ<sup class="ref">19</sup>の住宅建物に墜落し、火災が発生・2人が負傷したと発表した。ルーマニアのNicușor Dan大統領は「2022年2月以来、NATO領域で最も深刻な安全保障事案」と表現。NATO・EU指導者は「ロシアの無謀な行為」として強く非難し、対応を協議中。金融市場への直接影響は今のところ限定的だが、欧州のエネルギー・物流リスクプレミアムが再び上昇する可能性がある。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="19">ガラツィ（Galați）：ルーマニア東部、ドナウ川河口近くに位置する主要港湾都市。ウクライナ国境に近く、黒海貿易の要衝。NATO加盟国の民間地域へのドローン着弾は政治的影響が大きい。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 5-2 -->
+<article class="article thin">
+  <p class="article-meta">Reuters / BBC — 2026年6月1日</p>
+  <h3 class="article-headline small">コロンビア大統領選：強硬派デラエスプリエヤが首位—現職ペトロ路線との対立構図で決選投票へ</h3>
+  <div class="article-recap">
+    コロンビアは資源輸出・新興市場として中南米の重要な経済圏。現職グスタボ・ペトロ大統領（左派）は、資源国有化・格差是正を掲げてきたが、治安悪化・財政懸念もあり支持率が低迷していた。
+  </div>
+  <div class="article-body">
+    <p>6月1日（日曜日）の第1回投票で、治安強硬派の新人アベラルド・デラエスプリエヤが首位に立ち、ペトロ大統領の同盟者イバン・セペダと決選投票に進む見通しとなった。強硬な治安政策と既存エスタブリッシュメントへの批判を掲げたデラエスプリエヤが台頭したことで、コロンビアの経済・外資政策の方向性は決選投票後まで不透明。資源輸出・外資規制の動向を注視する必要がある。</p>
+  </div>
+</article>
+
+
+<!-- ══════════════ §6 国内企業動向 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 6</p>
+  <h2 class="section-title">国内企業動向</h2>
+</section>
+
+<!-- Article 6-1 -->
+<article class="article thin">
+  <p class="article-meta">日本経済新聞 / Bloomberg JP / NHK — 2026年6月1日</p>
+  <h3 class="article-headline small">ソフトバンクG、時価総額49兆円でトヨタを抜き国内首位に—ARM好決算・欧州AIデータセンター1.3兆円投資が牽引</h3>
+  <div class="article-recap">
+    トヨタ自動車は2004年から約22年間、日本の時価総額首位を守ってきた。ソフトバンクグループ（SBG）は孫正義会長が主導するAI・半導体投資ファンド「Vision Fund」を通じ、2020年代にAI分野への集中投資を加速させてきた。傘下の英半導体設計大手ARMは2023年にNY市場で再上場し、AI需要拡大とともに株価が急騰していた。
+  </div>
+  <div class="article-body">
+    <p>6月1日の東証終値で、SBGの時価総額は一時49兆円超に達しトヨタ（45.9兆円）を上回り、約22年ぶりの国内首位交代となった。主な上昇要因は①ARM<sup class="ref">20</sup>の好決算（AI半導体需要の恩恵）、②5月31日にフランスで最大750億ユーロ（約1.39兆円）規模のAI向けデータセンター建設投資を発表したこと。投資家のAIシフトを象徴的に映す一幕となった。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="20">ARM（Arm Holdings）：英国ケンブリッジを本拠とする半導体IPライセンス企業。スマートフォン向けCPUアーキテクチャで世界の99%超のシェアを持ち、AI時代にはエッジチップやデータセンター向けへ拡大中。SBGが筆頭株主。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+<!-- Article 6-2 -->
+<article class="article thin">
+  <p class="article-meta">帝国データバンク / 日本経済新聞 — 2026年6月</p>
+  <h3 class="article-headline small">6月に450品目が値上げ—5年連続で年間1万品目超が確実視、調味料中心に家計・法人コスト圧迫続く</h3>
+  <div class="article-recap">
+    2022年以降の円安・資源高・原材料高騰に端を発した食品・日用品の値上げラッシュは、日本で5年連続の「大値上げ年」をもたらしている。2026年通年では年間1万品目超の値上げが5年連続で確実視されており、企業の調達コスト・経費管理にも影響が広がっている。
+  </div>
+  <div class="article-body">
+    <p>帝国データバンクの調査によると、6月は主に調味料を中心に450品目超が値上げされる。2026年通年では前年から高止まりの傾向が続いており、食品メーカー・流通各社のコスト転嫁圧力が継続。法人向けには、キャッシュフロー管理や仕入れ代金決済スケジュールの最適化ニーズが高まっており、トランザクションバンキング部門への法人顧客からの相談案件が増加傾向にある。</p>
+  </div>
+</article>
+
+
+<!-- ══════════════ §7 海外企業動向 ══════════════ -->
+<section class="section-header">
+  <p class="section-label">Section 7</p>
+  <h2 class="section-title">海外企業動向</h2>
+</section>
+
+<!-- Article 7-1 -->
+<article class="article thin">
+  <p class="article-meta">CNBC / Bloomberg — 2026年6月1日</p>
+  <h3 class="article-headline small">S&amp;P 500が新高値7,600超—NvidiaのRTX Spark発表後6%高がテック株全体を牽引</h3>
+  <div class="article-recap">
+    米国株式市場は2026年4月のトランプ政権による関税ショック後から急回復し、S&P 500は5月に相次ぎ史上最高値を更新してきた。AI・半導体セクターが牽引役で、Nvidiaは時価総額で世界最大級の企業として市場全体への影響力が大きい。
+  </div>
+  <div class="article-body">
+    <p>6月1日（月）の米国市場は、NvidiaのComputex基調講演（RTX Spark発表）を受け、同社株が6%超上昇。Dell Technologies（+10%超）、HP Inc.（+8%超）が追随し、S&P 500は0.26%上昇して終値7,599.96と史上最高値を更新した。3指数が同日に日中・終値ともに新高値を記録するのは稀なケース。Q1決算では85%のS&P 500構成企業が予想超えを達成（過去5年平均78%を大幅上回り）、強気環境が継続。</p>
+  </div>
+</article>
+
+<!-- Article 7-2 -->
+<article class="article thin">
+  <p class="article-meta">Bloomberg / WSJ — 2026年6月1日</p>
+  <h3 class="article-headline small">SaaS<sup class="ref">21</sup>ETFが4月10日比で40%超回復—「AIがSaaSを破壊する」という懸念が後退</h3>
+  <div class="article-recap">
+    2026年前半、ChatGPTなどのAIが企業向けSaaSの代替となりソフトウェア市場を破壊するという懸念が広まり、SaaS関連株は大幅安を経験した。しかし企業のAI導入が「SaaS廃止」ではなく「SaaSとAIの併存」に向かうとの見方が強まり始めた。
+  </div>
+  <div class="article-body">
+    <p>SaaS ETFが4月10日の底値から40%超のリバウンドを達成。AIと既存SaaSの共存・統合モデルが市場のコンセンサスとして形成されつつある。銀行向けSaaSプロバイダー（コアバンキング・リスク管理・コンプライアンスツール）の株価も連れ高となり、金融システム開発における既存SaaSベンダーとのパートナーシップ維持の重要性が再認識された格好。</p>
+  </div>
+  <details>
+    <div class="annotation-block">
+      <summary>用語注釈</summary>
+      <ul class="annotation-list">
+        <li data-num="21">SaaS（Software as a Service）：ソフトウェアをクラウド経由でサブスクリプション提供するビジネスモデル。銀行システム分野ではCRM・コンプライアンス・リスク管理・会計など多くの機能がSaaS化されている。</li>
+      </ul>
+    </div>
+  </details>
+</article>
+
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="brief-footer">
+  <p><strong>THE MORNING BRIEF</strong> — Transaction Banking Intelligence</p>
+  <p>2026年6月2日（火）平日版 ／ 情報基準：2026年6月1日 EST 23:00時点</p>
+  <p style="margin-top:8px;">本ブリーフは公開情報をもとに自動生成されたものです。<br>投資判断・個別案件の意思決定の根拠としての利用はご遠慮ください。</p>
+</footer>
+
+</body>
+</html>
