@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月23日</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+
+    /* ── Masthead ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 20px 0 14px;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .masthead-eyebrow {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #5a5446;
+      margin-bottom: 6px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: #1a1a1a;
+    }
+    .masthead-sub {
+      font-family: 'Source Serif 4', serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #5a5446;
+      margin-top: 8px;
+    }
+    .masthead-meta {
+      border-top: 1px solid #d0c9b8;
+      margin-top: 12px;
+      padding-top: 10px;
+      font-size: 11px;
+      color: #5a5446;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── Section Header ── */
+    .section-header {
+      border-top: 3px solid #1a1a1a;
+      border-bottom: 1px solid #d0c9b8;
+      margin: 32px 0 20px;
+      padding: 6px 0 6px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #8a7f6e;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+    .section-badge {
+      margin-left: auto;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: #8a7f6e;
+      background: #e8e3d8;
+      padding: 1px 7px;
+      border-radius: 2px;
+    }
+
+    /* ── Article ── */
+    .article {
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child {
+      border-bottom: none;
+    }
+    .article-meta {
+      font-size: 10.5px;
+      color: #7a6f5e;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.45;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .article-label {
+      display: inline-block;
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f4f1ec;
+      background: #5a5446;
+      padding: 1px 6px;
+      margin-bottom: 8px;
+      border-radius: 1px;
+    }
+    .article-body p {
+      margin-bottom: 10px;
+      font-size: 14.5px;
+    }
+    .recap-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a7f6e;
+      margin-bottom: 4px;
+    }
+    .recap {
+      border-left: 2px solid #d0c9b8;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      font-size: 13.5px;
+      font-style: italic;
+      color: #3a3028;
+      line-height: 1.7;
+    }
+
+    /* ── Footnote accordion ── */
+    .footnote-block {
+      margin-top: 12px;
+    }
+    details {
+      border: 1px solid #d0c9b8;
+      border-radius: 3px;
+      background: #edeae3;
+    }
+    summary {
+      cursor: pointer;
+      padding: 7px 12px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #5a5446;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    summary::before {
+      content: '▶';
+      font-size: 8px;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    summary::-webkit-details-marker { display: none; }
+    .footnote-list {
+      padding: 6px 12px 12px;
+      border-top: 1px solid #d0c9b8;
+    }
+    .footnote-item {
+      font-size: 12px;
+      line-height: 1.65;
+      color: #3a3028;
+      margin-bottom: 6px;
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+    }
+    .fn-num {
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-right: 4px;
+    }
+
+    /* ── Divider ── */
+    .rule {
+      border: none;
+      border-top: 1px solid #d0c9b8;
+      margin: 10px 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 3px double #1a1a1a;
+      margin-top: 40px;
+      padding-top: 14px;
+      font-size: 10.5px;
+      color: #8a7f6e;
+      text-align: center;
+      line-height: 1.9;
+    }
+
+    /* ── Ref superscript ── */
+    sup.ref {
+      font-size: 9px;
+      color: #8a7f6e;
+      vertical-align: super;
+      margin-left: 1px;
+    }
+
+    @media (max-width: 400px) {
+      .masthead-title { font-size: 28px; }
+      .article-headline { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ─── MASTHEAD ─── -->
+  <header class="masthead">
+    <p class="masthead-eyebrow">Transaction Banking Division · Financial Systems</p>
+    <h1 class="masthead-title">THE MORNING BRIEF</h1>
+    <p class="masthead-sub">For the Professional in Global Finance &amp; Banking Technology</p>
+    <div class="masthead-meta">
+      <span>2026年6月23日（火）</span>
+      <span>情報基準：前日EST 23:00</span>
+      <span>平日版</span>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 : 技術トレンド
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">01</span>
+    <span class="section-title">技術トレンド</span>
+    <span class="section-badge">厚 · 4本</span>
+  </div>
+
+  <!-- 記事 1-1 -->
+  <article class="article">
+    <div class="article-meta">Finextra / Finastra / Oracle / Capgemini — 2026年</div>
+    <span class="article-label">Agentic AI</span>
+    <h2 class="article-headline">エージェント型AIが銀行バックオフィスへ本格実装、業務効率20%向上・市場シェア15%拡大の見通し</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">生成AIは2023〜2025年にかけて金融業界で多数の実証実験が行われてきた。Mastercardが2026年3月に小規模事業者向け「Virtual C-Suite」を発表したのを筆頭に、大手行は資金繰り最適化・ローン審査・顧客対応ルーティング等へのAIエージェント導入を加速している。</p>
+      <p>2026年はエージェント型AI<sup class="ref">[1]</sup>が実証実験（PoC）フェーズを卒業し、企業規模での本格展開フェーズへと移行する年と位置付けられている。調査会社Wolters Kluwer によれば、企業財務チームの44%以上が今年エージェント型AIを導入し、前年比600%超の増加が見込まれる。</p>
+      <p>KPMGは、エージェント型AIが企業全体の生産性を年間3兆ドル押し上げ、平均EBITDA<sup class="ref">[2]</sup>を5.4%改善すると試算する。銀行業界全体では業務効率20%向上・市場シェア15%拡大が期待されており、Capgemini調査では金融機関の約50%がすでにAIエージェント監督のための専任ポストを設けている。</p>
+      <p>Finextraが指摘するように、次の局面は「銀行はかつて規制当局のためにAPI<sup class="ref">[3]</sup>を整備したが、今後はAIエージェントのためにAPIを整備する」時代だ。自律エージェントがリアルタイムで既存システムAPIを呼び出して業務を完遂する設計が求められ、金融システム開発部門はアーキテクチャの見直しを迫られる。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（3語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[1]</span>Agentic AI（エージェント型AI）：ツール使用・判断・実行を自律的に行うAIシステム。生成AIが「問いに答える」のに対し、エージェント型は「タスクを連続実行する」。複数ステップの業務を自律的に処理する。</p>
+          <p class="footnote-item"><span class="fn-num">[2]</span>EBITDA（イービットダ）：Earnings Before Interest, Taxes, Depreciation and Amortization。利払い・税金・償却控除前の利益。企業の事業収益力を示す国際的な財務指標。</p>
+          <p class="footnote-item"><span class="fn-num">[3]</span>API（Application Programming Interface）：ソフトウェア間でデータや機能を共有するための接続仕様・窓口。金融機関間・フィンテックとの連携に不可欠。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 記事 1-2 -->
+  <article class="article">
+    <div class="article-meta">White House / Sullivan &amp; Cromwell / Mayer Brown — 2026年5月19日〜6月</div>
+    <span class="article-label">規制改革</span>
+    <h2 class="article-headline">トランプ大統領令「フィンテック規制統合」：FRBにノンバンクの決済アカウント開放を要請、コメント期限は7月27日</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">トランプ政権は2025年より仮想通貨・フィンテック規制の段階的緩和を推進。2026年5月19日に金融規制抜本改革を求める大統領令「フィンテック・イノベーションの規制フレームワークへの統合」に署名した。その後FRB<sup class="ref">[4]</sup>が関連する規制提案を公表し、パブリックコメント手続きが進行中だ。</p>
+      <p>同大統領令はFRB・FDIC・OCC等の連邦金融監督当局に対し、90日以内（8月中旬）に既存規制を包括レビューし、180日以内（11月15日）に競争促進改革を実施するよう命じた。</p>
+      <p>特に注目されるのが、FRBへの「Payment Account（ペイメントアカウント）」創設検討の指示だ。実現すれば、ノンバンク金融機関<sup class="ref">[7]</sup>（フィンテック・仮想通貨企業等）がFedwire<sup class="ref">[5]</sup>およびFedNow<sup class="ref">[6]</sup>へ直接アクセス可能になる。一方、割引窓口<sup class="ref">[8]</sup>・イントラデイクレジット・FedACH<sup class="ref">[9]</sup>へのアクセスは除外され、残高上限も10億ドルとなる見通しだ。</p>
+      <p>日系メガバンクのトランザクションバンキング部門にとっては、米国での送金決済インフラをめぐる競合環境が激変しうる動向として要注意だ。パブリックコメント期限は<strong>2026年7月27日</strong>。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（6語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[4]</span>FRB（Federal Reserve Board）：米連邦準備制度理事会。米国の中央銀行機能を担い、金融政策・銀行監督・決済インフラの運営を行う。</p>
+          <p class="footnote-item"><span class="fn-num">[5]</span>Fedwire Funds Service：FRBが運営する即時グロス決済（RTGS）システム。主に大口の銀行間資金決済に使用され、1日平均5兆ドル超を処理する。</p>
+          <p class="footnote-item"><span class="fn-num">[6]</span>FedNow：FRBが2023年に開始した24時間365日対応の即時決済サービス（IPS）。消費者・中小企業向けの即時送金に対応。</p>
+          <p class="footnote-item"><span class="fn-num">[7]</span>ノンバンク金融機関：銀行免許を持たずに預金以外の金融サービスを提供する事業者。フィンテック企業・決済事業者・仮想通貨取引所等が含まれる。</p>
+          <p class="footnote-item"><span class="fn-num">[8]</span>割引窓口（ディスカウントウィンドウ）：FRBが加盟銀行に対して緊急時に短期資金を貸し付ける「最後の貸し手」機能。従来ノンバンクは原則アクセス不可だった。</p>
+          <p class="footnote-item"><span class="fn-num">[9]</span>FedACH：FRBが運営する口座振替（ACH）ネットワーク。給与支払い・公共料金引き落とし等の少額定期取引に使用。今回の提案では除外対象。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 記事 1-3 -->
+  <article class="article">
+    <div class="article-meta">The Quantum Insider / IBM / McKinsey / BIS — 2026年</div>
+    <span class="article-label">量子コンピューティング</span>
+    <h2 class="article-headline">IBM・Google、NISQ時代からFTQC時代への転換を宣言：金融機関で後量子暗号への移行プログラムが本格化</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">量子コンピューティングは2010年代後半から実験段階が続いてきたが、IBMとGoogleが2026年に入り相次いで技術マイルストーンを達成。業界の焦点は「ノイズある量子デバイス（NISQ<sup class="ref">[11]</sup>）」の時代から「耐障害性量子コンピューティング（FTQC<sup class="ref">[12]</sup>）」の時代への移行期に移っている。</p>
+      <p>IBMは「2026年末までに量子優位性<sup class="ref">[10]</span>を実現する」と宣言。Googleは誤り訂正<sup class="ref">[14]</sup>手法であるサーフェスコード<sup class="ref">[13]</sup>において、物理量子ビット数を増やすほど全体誤り率が低下することを実証し、「完璧でない部品から完璧なコンピュータを構築できる」ことを示した。</p>
+      <p>金融応用では、HSBCがIBMとの連携で量子強化モデルによる社債トレーディング予測精度の向上を実証。Vanguardはポートフォリオ構成アルゴリズムの量子最適化を試験中だ。15以上のグローバル大手行が量子技術を探索中とされる。</p>
+      <p>金融システム部門が最も急ぎ対応すべきは<strong>後量子暗号（PQC<sup class="ref">[16]</sup>）への移行</strong>だ。現在の金融システムで広く使われるRSA/ECC<sup class="ref">[15]</sup>暗号は将来の大規模量子コンピュータによる解読リスクを持つ。NIST<sup class="ref">[17]</sup>が2024年に標準アルゴリズムを公表しており、各行は多年度移行プログラムを本格化させている。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（8語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[10]</span>量子優位性（Quantum Advantage）：量子コンピュータが特定タスクで古典コンピュータを速度・精度・コストで上回ることが実証された状態。</p>
+          <p class="footnote-item"><span class="fn-num">[11]</span>NISQ（Noisy Intermediate-Scale Quantum）：量子ビット数が数十〜数百個でノイズが無視できない中規模量子デバイスの技術段階。2010〜2020年代前半の主要フェーズ。</p>
+          <p class="footnote-item"><span class="fn-num">[12]</span>FTQC（Fault-Tolerant Quantum Computing）：誤り訂正を実装し高信頼性で動作できる量子コンピュータ。量子コンピューティングの「次世代フェーズ」であり、商業利用に向けた究極目標。</p>
+          <p class="footnote-item"><span class="fn-num">[13]</span>サーフェスコード（Surface Code）：量子誤り訂正の主流手法。物理量子ビットを格子状に配置し、その相互作用で論理量子ビットを保護する。</p>
+          <p class="footnote-item"><span class="fn-num">[14]</span>誤り訂正（Error Correction）：量子ビットのデコヒーレンスやゲートエラーを検出・修正する技術。FTQCの実現に不可欠。</p>
+          <p class="footnote-item"><span class="fn-num">[15]</span>RSA/ECC：現在広く普及する公開鍵暗号方式。RSAは素因数分解、ECCは楕円曲線離散対数問題を安全性の根拠とするが、将来の量子コンピュータによる解読リスクが指摘されている。</p>
+          <p class="footnote-item"><span class="fn-num">[16]</span>PQC（Post-Quantum Cryptography：ポスト量子暗号）：量子コンピュータの攻撃に耐性を持つ暗号アルゴリズム群。金融機関の通信・認証・署名システムへの段階的移行が急務。</p>
+          <p class="footnote-item"><span class="fn-num">[17]</span>NIST（National Institute of Standards and Technology）：米国立標準技術研究所。PQCの国際標準化を主導し、2024年にML-KEM等の標準アルゴリズムを公表した。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 記事 1-4 -->
+  <article class="article">
+    <div class="article-meta">crypto.news / alphapoint / Finovate — 2026年</div>
+    <span class="article-label">ステーブルコイン</span>
+    <h2 class="article-headline">ステーブルコイン処理額がVisa・Mastercard合算を超え2025年33兆ドル——2026年は50兆ドル突破も：B2B決済の60%がオンチェーンへ</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">ステーブルコイン<sup class="ref">[18]</sup>は2020〜2022年の市場拡大を経て、2025年には年間処理額33兆ドルに達し、Visa・Mastercardの合算を初めて上回った。法人向けB2B<sup class="ref">[19]</sup>決済での活用が特に急増しており、従来のコルレス銀行<sup class="ref">[20]</sup>体制の一部を代替しつつある。</p>
+      <p>2025年実績33兆ドルを踏まえ、業界予測では2026年に50兆ドル突破が見込まれている。全決済フローの約60%がすでにB2B用途（越境送金・サプライヤー支払い・調達決済）であり、金融機関の90%がステーブルコインを実利用または試験中と報告されている。</p>
+      <p>ネットワーク面でも動きが加速している。Stripe・Visa・Mastercardがステルスのステーブルコインプラットフォームをバックアップしており、Coinbaseも参画を検討中とされる。従来のSWIFT/コルレス体制と並行する決済インフラとして定着するシナリオが現実味を増している。</p>
+      <p>トランザクションバンキング部門にとっては、ドル建て越境送金における自行の競争ポジションの再評価が急務だ。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（3語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[18]</span>ステーブルコイン（Stablecoin）：ドル等の法定通貨や資産に価格を1:1で連動させた暗号資産。主要なものにUSDC（Circle）・USDT（Tether）・PYUSD（PayPal）がある。</p>
+          <p class="footnote-item"><span class="fn-num">[19]</span>B2B（Business to Business）：企業間取引。消費者向けB2Cと対比される。ステーブルコイン利用の約60%がB2B越境決済とされる。</p>
+          <p class="footnote-item"><span class="fn-num">[20]</span>コルレス銀行（Correspondent Bank）：他国に拠点を持たない銀行が、その国の銀行に口座を開設して国際送金・決済を行う仕組み。SWIFTネットワークを通じて接続される。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 : 第三者ベンダー動向
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">02</span>
+    <span class="section-title">第三者ベンダー動向</span>
+    <span class="section-badge">1本</span>
+  </div>
+
+  <!-- 記事 2-1 -->
+  <article class="article">
+    <div class="article-meta">Mastercard公式プレスリリース / CoinDesk / Ledger Insights — 2026年6月3日</div>
+    <span class="article-label">Mastercard</span>
+    <h2 class="article-headline">MastercardがステーブルコインによるB2B決済を拡大：USDC等6種・8ブロックチェーン対応で24/7決済体制へ</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">Mastercardは数年来ブロックチェーン決済への対応を段階的に拡張してきた。2026年3月、VisaとBridgeがステーブルコイン連動カードプログラムを100カ国超に拡大したのに続き、SoFiとMastercardもSoFiUSDステーブルコインによるMastercardネットワーク内決済に対応した。</p>
+      <p>2026年6月3日、Mastercardはオンチェーン決済拡張を正式発表した。対応するステーブルコインはUSDC<sup class="ref">[21]</sup>・RLUSD<sup class="ref">[22]</sup>・PYUSD<sup class="ref">[23]</sup>・USDG・USDP・SoFiUSDの6種、対応ブロックチェーンはEthereum・Solana<sup class="ref">[24]</sup>・Polygon・Base<sup class="ref">[25]</sup>・Arbitrum<sup class="ref">[26]</sup>・XRPLなど8チェーンだ。</p>
+      <p>これまで営業日・営業時間内に限られていたイシュアー<sup class="ref">[28]</sup>‐アクワイアラー<sup class="ref">[29]</sup>間の資金決済を、日中複数回・週末・祝日を含む実質24/7対応に拡大するのが最大の変更点だ。コンシューマーの購買フロー（カード決済体験）は変わらず、バックオフィス側の資金移動がステーブルコインレールで行われる設計となる。</p>
+      <p>米国・中南米向けにARQ（旧DolarApp）・CBW Bank・Cross River・Lead Bank・Nuveiが先行対応予定で、2026年中の順次拡大が計画されている。日本の決済システムへの影響としては、国際カード決済のバックエンド（FX決済・コルレス決済）がオンチェーン化されるケースが増加することで、対応する決済インフラとの連携が将来的に変化しうる。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（7語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[21]</span>USDC（USD Coin）：Circle社が発行する米ドル連動型ステーブルコイン。規制準拠性が高く、機関投資家・法人利用に強い。</p>
+          <p class="footnote-item"><span class="fn-num">[22]</span>RLUSD（Ripple USD）：Ripple社が発行する米ドル連動型ステーブルコイン。XRPL上での高速越境決済に特化。</p>
+          <p class="footnote-item"><span class="fn-num">[23]</span>PYUSD（PayPal USD）：PayPal社が発行する米ドル連動型ステーブルコイン。PayPalの既存ユーザー・加盟店基盤を活かした普及を図る。</p>
+          <p class="footnote-item"><span class="fn-num">[24]</span>Solana（ソラナ）：高速・低コストを特徴とするブロックチェーン。秒間数万件のトランザクション処理が可能で、決済アプリに広く採用。</p>
+          <p class="footnote-item"><span class="fn-num">[25]</span>Base：Coinbaseが開発したEthereum L2（レイヤー2）ブロックチェーン。メインチェーン比で低コスト・高速な取引を実現。</p>
+          <p class="footnote-item"><span class="fn-num">[26]</span>Arbitrum（アービトラム）：Ethereum L2の主要チェーンのひとつ。スマートコントラクト実行のコスト削減とスピード向上を実現。</p>
+          <p class="footnote-item"><span class="fn-num">[27]</span>XRPL（XRP Ledger）：Ripple社が開発した分散型台帳。3〜5秒で決済が完了し、クロスボーダー決済に特化した設計。</p>
+          <p class="footnote-item"><span class="fn-num">[28]</span>イシュアー（Issuer）：クレジット・デビットカードを顧客向けに発行する金融機関。</p>
+          <p class="footnote-item"><span class="fn-num">[29]</span>アクワイアラー（Acquirer）：加盟店側でカード決済を承認・回収処理する金融機関。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 : 外銀TB速報
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">03</span>
+    <span class="section-title">外銀TB速報</span>
+    <span class="section-badge">1本</span>
+  </div>
+
+  <!-- 記事 3-1 -->
+  <article class="article">
+    <div class="article-meta">American Banker / CoinDesk / Unchained Crypto — 2026年6月5日</div>
+    <span class="article-label">JPMorgan · Citi · HSBC 他</span>
+    <h2 class="article-headline">The Clearing House、米大手12行がトークン預金ネットワーク構築を発表：ステーブルコインへの組織的対抗、2027年上半期稼働目標</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">JPMorgan（Onyx<sup class="ref">[34]</sup>）・Citiらは2022年以降、個別にブロックチェーン決済実証実験を進めてきた。しかしステーブルコインが法人決済の主要インフラへと台頭するなか、分断された取組みでは競争力を維持できないとの判断から、業界統一インフラの議論が2025年末より本格化した。</p>
+      <p>2026年6月5日、The Clearing House<sup class="ref">[30]</sup>は米大手12行によるトークン化預金<sup class="ref">[35]</sup>ネットワーク構築計画を正式発表した。参加行はJPMorgan Chase・Citigroup・Bank of America・Wells Fargo・BNY・HSBC・PNC・U.S. Bank・Truist・Santander・TD・Regionsの12行。</p>
+      <p>同ネットワークは既存の即時決済レールRTP<sup class="ref">[31]</sup>・大口決済システムCHIPS<sup class="ref">[32]</sup>と接続し、トークン化した商業銀行預金を24時間365日即時移動・決済できる共有インターバンクレイヤー<sup class="ref">[33]</sup>を目指す。2027年上半期稼働を目標とするが、2026年6月時点でブロックチェーン基盤の選定・ルールブック・価格体系はいまだ未確定だ。</p>
+      <p>本イニシアティブはUSDC・USDT等のステーブルコインへの組織的対抗として位置付けられており、「規制下銀行マネーの競争力維持」が名目上の目的だ。ただし主要パラメータが未決定のまま発表された点は、競合より先に旗を立てる戦略的コミュニケーションとも読める。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（6語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[30]</span>The Clearing House（ザ・クリアリングハウス）：1853年設立の米銀行業界団体兼金融インフラ運営機関。RTPとCHIPSを運営し、米国の決済インフラの中核を担う。</p>
+          <p class="footnote-item"><span class="fn-num">[31]</span>RTP（Real-Time Payments）：The Clearing Houseが2017年に開始した米国の即時決済ネットワーク。24時間365日対応、上限100万ドル。即時着金が特徴。</p>
+          <p class="footnote-item"><span class="fn-num">[32]</span>CHIPS（Clearing House Interbank Payments System）：The Clearing Houseが運営する大口ドル建て国際決済システム。1日平均1.8兆ドルを処理し、SWIFTと連携してクロスボーダー大口決済を担う。</p>
+          <p class="footnote-item"><span class="fn-num">[33]</span>インターバンクレイヤー（Interbank Layer）：銀行間で資金を清算・決済するための共有インフラ基盤。</p>
+          <p class="footnote-item"><span class="fn-num">[34]</span>JPMorgan Onyx：JPMorgan Chaseが開発したブロックチェーン・デジタル資産プラットフォーム。Liink（旧IIN：銀行間情報ネットワーク）やJPM Coinを含む。</p>
+          <p class="footnote-item"><span class="fn-num">[35]</span>トークン化預金（Tokenized Deposit）：商業銀行の預金をブロックチェーン上でトークンとして表現したもの。法定通貨と1:1で裏付けられ、銀行の預金保険・規制下で保護される点でステーブルコインと異なる。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 : 国内政治
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">04</span>
+    <span class="section-title">国内政治</span>
+    <span class="section-badge">薄 · 2本</span>
+  </div>
+
+  <!-- 記事 4-1 -->
+  <article class="article">
+    <div class="article-meta">NHK / 時事ドットコム — 2026年6月23日</div>
+    <span class="article-label">国会</span>
+    <h2 class="article-headline">連立会議が「副首都」法案を修正可決、野党は首相秘書官の参考人招致と集中審議を要求</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">東京一極集中の是正を目的とした「副首都」構想は2010年代より議論が続いてきた。2026年2月の衆院選で自民党が316議席（戦後最多）を獲得したことを受け、連立政権は同構想の法制化を優先課題に位置付けた。</p>
+      <p>2026年6月23日、自民・公明の連立会議は「副首都」法案の修正案を可決した。住民投票条項に修正を加えた形での承認となった。</p>
+      <p>一方、野党（立憲民主党等）は週刊誌報道を根拠に首相秘書官の参考人招致<sup class="ref">[37]</sup>と集中審議の開催を求めており、今後の国会審議に影響を与える可能性がある。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（2語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[36]</span>副首都構想：東京一極集中を是正し首都機能の一部（緊急時機能等）を他都市へ分散させる国家的計画。大阪府・市が主要候補地として活動している。</p>
+          <p class="footnote-item"><span class="fn-num">[37]</span>参考人招致：国会が特定事項に関して民間人・専門家を招き証言を求める制度。証人喚問と異なり宣誓・偽証罪の適用がなく、拘束力が弱い。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 記事 4-2 -->
+  <article class="article">
+    <div class="article-meta">時事ドットコム — 2026年6月23日 12:35</div>
+    <span class="article-label">為替・財務省</span>
+    <h2 class="article-headline">財務大臣「円相場に断固対応、日米合意は不変」——円安牽制発言で市場は引き締め姿勢を確認</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">日銀は2026年6月の金融政策決定会合で政策金利を1.0%に引き上げた（31年ぶりの高水準）。しかし利上げ後も円相場の不安定な動きが続いており、政府・日銀の対応姿勢が市場の注目を集めている。</p>
+      <p>片山財務大臣は6月23日正午過ぎ、「円相場の動向に対し断固として対応する。日米間の為替に関する合意は揺るぎない」と発言した。日米首脳・財務当局間で為替安定に向けた合意が維持されていることを強調し、投機的な円売りへの牽制と市場は受け止めている。</p>
+      <p>金融システム開発の観点からは、FX決済・為替ヘッジシステムの処理量や利用パターンが変化する可能性がある。</p>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5 : 海外政治
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">05</span>
+    <span class="section-title">海外政治</span>
+    <span class="section-badge">薄 · 2本</span>
+  </div>
+
+  <!-- 記事 5-1 -->
+  <article class="article">
+    <div class="article-meta">NPR / Al Jazeera / CNN — 2026年6月18日</div>
+    <span class="article-label">ウクライナ・ロシア</span>
+    <h2 class="article-headline">ウクライナが過去最大規模のドローンでモスクワ製油所を直撃——ロシアは即日「精密報復」を宣言</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">ロシアのウクライナ侵攻（2022年2月開始）は4年以上が経過した。ウクライナは2024年以降、中距離ドローンによるロシア国内エネルギーインフラへの攻撃を本格化させており、製油所・燃料施設を繰り返し標的にしてロシアの物流・燃料供給に打撃を与える戦略をとっている。</p>
+      <p>2026年6月18日（木）、ウクライナは過去最大規模のドローン攻撃をモスクワ方面に展開した。モスクワ市長によると約200機が首都に向けて飛来し、ロシア防空部隊がそのほとんどを撃墜したが、数機がモスクワ製油所を直撃した。SNS動画では製油所が炎上する様子が確認され、郊外ショッピングモールにも墜落ドローンが衝突し炎上した。死者は確認されず、負傷者17人。モスクワ4空港が一時運航停止となった。</p>
+      <p>ロシア国防省は即日、ウクライナの国防・エネルギー施設への「精密打撃」を実施したと発表した。エネルギー市場（原油・天然ガス）への影響は限定的だが、エスカレーション動向は継続注視が必要だ。</p>
+    </div>
+  </article>
+
+  <!-- 記事 5-2 -->
+  <article class="article">
+    <div class="article-meta">Wikipedia Portal:Current Events — 2026年6月</div>
+    <span class="article-label">英国政治</span>
+    <h2 class="article-headline">英国スターマー首相、3閣僚から辞任時期の提示を要求される——党内求心力の低下が鮮明に</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">英国労働党政権は2024年7月に14年ぶりの政権交代で発足した。しかし経済政策・移民政策をめぐる党内対立が続いており、2026年初頭より閣内の路線対立が表面化していた。</p>
+      <p>内務大臣Shabana Mahmood・エネルギー大臣Ed Miliband・交通大臣Heidi Alexanderの3閣僚がキア・スターマー首相と会談し、辞任スケジュールの表明を求めたと伝えられた。明確な時間軸を示していない首相への不満が閣内に広がっており、政権の求心力維持が今後の焦点となる。英国の政治的不安定化は欧州金融市場・ポンド相場にも影響しうる。</p>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 6 : 国内企業動向
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">06</span>
+    <span class="section-title">国内企業動向</span>
+    <span class="section-badge">薄 · 2本</span>
+  </div>
+
+  <!-- 記事 6-1 -->
+  <article class="article">
+    <div class="article-meta">日本経済新聞 / 日経CNBC — 2026年6月</div>
+    <span class="article-label">株式市場</span>
+    <h2 class="article-headline">日経平均が史上初の7万円台突破——日銀1%利上げ通過でリスクオン、野村は年末7万500円超を試算</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">日経平均株価は2024年2月に初めて4万円を突破し上昇傾向を維持。企業のROE改善・円安・米中関係緩和が牽引力となってきた。2026年6月、日銀が政策金利を1.0%に引き上げた（31年ぶり）が、市場は「金利不確実性の解消」としてポジティブに受け止めた。</p>
+      <p>2026年6月16〜17日にかけて、日経平均株価は取引時間中に史上初の7万円大台に到達した（一時7万0020円）。日中は利益確定売りに押される場面もあったが、最終的に6万9404円で引け、史上最高値を連日更新した。</p>
+      <p>野村証券のストラテジストは上振れシナリオとして2026年末の日経平均7万500円超を試算しており、銀行・保険等の金融セクターを中心に資金流入が続いている。日銀の次回追加利上げについては、年内の追加実施を見込む市場参加者が多数派となっている。</p>
+    </div>
+  </article>
+
+  <!-- 記事 6-2 -->
+  <article class="article">
+    <div class="article-meta">日本経済新聞 — 2026年6月</div>
+    <span class="article-label">物価・労働市場</span>
+    <h2 class="article-headline">食品値上げ2026年通年で5年連続1万品目超——春闘ベースアップ平均2万円弱が中小採用市場を直撃</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">食品値上げは2022年の原材料・エネルギー価格高騰を機に急増し、2022〜2025年連続で年間1万品目超の値上げが実施されてきた。春闘における賃上げも2024年以降3年連続で5%超となっており、コスト構造の変化が企業経営全般に影響している。</p>
+      <p>ニップンが家庭用冷凍食品を最大15%値上げすると発表（包材価格の急騰が理由）し、2026年通年での値上げ品目数は5年連続で1万品目を超えることが確実視されている。</p>
+      <p>一方、経団連の春闘集計では3年連続で5%超・平均2万円弱のベースアップが確定した。賃金上昇による購買力向上は内需を支える一方、中小企業の採用コスト増加が人材確保の難易度を高めており、金融機関のリテール・SME部門では顧客の資金ニーズ変化として把握が必要だ。</p>
+    </div>
+  </article>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 7 : 海外企業動向
+  ══════════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-number">07</span>
+    <span class="section-title">海外企業動向</span>
+    <span class="section-badge">薄 · 2本</span>
+  </div>
+
+  <!-- 記事 7-1 -->
+  <article class="article">
+    <div class="article-meta">Bloomberg — 2026年6月</div>
+    <span class="article-label">米連邦準備制度</span>
+    <h2 class="article-headline">FRB新議長Warsh、初会合でインフレ3年ぶり高水準を確認・金利据え置き——次の一手は「利上げ」の可能性を示唆</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">Kevin Warshは2006〜2011年にFRB理事を務めた後、民間に転じた。タカ派<sup class="ref">[39]</sup>として知られ、インフレ抑制を最優先とする姿勢で知られる。パウエル議長の後任として2026年に就任し、6月のFOMC<sup class="ref">[38]</sup>が初の議長主宰会合となった。</p>
+      <p>2026年6月のFOMC（連邦公開市場委員会）でWarsh議長は政策金利の据え置きを決定した。しかしインフレ率が3年ぶりの高水準に達しており、声明では次の一手が「利上げ」になりうることが示唆された。</p>
+      <p>市場はWarsh議長のタカ派スタンスを既に相当程度織り込んでおり、長期金利には上昇圧力がかかっている。日系金融機関のドル資金調達コストの上昇・米国債ポートフォリオの評価損に加え、ドル建て取引決済コストの変動リスクとしても注視が必要だ。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（2語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[38]</span>FOMC（Federal Open Market Committee）：連邦公開市場委員会。FRBの政策金利（フェデラルファンドレート）を決定する意思決定機関。年8回開催。</p>
+          <p class="footnote-item"><span class="fn-num">[39]</span>タカ派/ハト派：金融政策の用語。タカ派はインフレ抑制を重視し利上げ志向、ハト派は景気・雇用を重視し低金利・利下げ志向。Warsh議長はタカ派の代表的人物とされる。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 記事 7-2 -->
+  <article class="article">
+    <div class="article-meta">Bloomberg — 2026年6月20日</div>
+    <span class="article-label">インド・大型IPO</span>
+    <h2 class="article-headline">インドJio Platforms、IPO調達資金でドル建て有利子負債30億ドル削減へ——アジア太平洋最大級の案件として注目</h2>
+    <div class="article-body">
+      <p class="recap-label">経緯</p>
+      <p class="recap">インドRelianceグループ傘下のJio Platformsは、2016年の通信事業参入以来、急速なネットワーク展開と顧客獲得のために大規模な設備投資を続けてきた。Metaやモルガン・スタンレー等から大型出資を受けたが、累積負債の圧縮が財務上の課題となっていた。</p>
+      <p>2026年6月20日、Jio PlatformsはIPO<sup class="ref">[40]</sup>（新規株式公開）による調達資金の一部を充て、ドル建て有利子負債を最大30億ドル削減する計画を明らかにした。インド市場の高成長期待を背景に機関投資家の関心は高い一方、米金利上昇局面での負債圧縮を優先する財務戦略が鮮明となった。</p>
+      <p>グローバル大手投資銀行がリード主幹事<sup class="ref">[41]</sup>候補として浮上している。アジア太平洋地域最大級のIPO案件として、引受業務・資本市場案件への波及を注視したい。</p>
+    </div>
+    <div class="footnote-block">
+      <details>
+        <summary>注釈を開く（2語）</summary>
+        <div class="footnote-list">
+          <p class="footnote-item"><span class="fn-num">[40]</span>IPO（Initial Public Offering：新規株式公開）：未上場企業が初めて株式を証券取引所に上場し、一般投資家向けに株式を公開・売り出すこと。</p>
+          <p class="footnote-item"><span class="fn-num">[41]</span>リード主幹事（Lead Underwriter / Bookrunner）：IPO等において発行体と引受シンジケート団を統括し、需要把握・価格決定・投資家向け販売を主導する証券会社。</p>
+        </div>
+      </details>
+    </div>
+  </article>
+
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <p><strong>THE MORNING BRIEF</strong></p>
+    <p>トランザクションバンキング部 金融システム開発者向け</p>
+    <p>情報基準：2026年6月22日（月）EST 23:00時点 ／ 自動生成</p>
+    <p style="margin-top:8px;font-size:9.5px;">本ブリーフは情報提供を目的としており、投資勧誘・法的助言を構成するものではありません。</p>
+  </footer>
+
+</div>
+</body>
+</html>
