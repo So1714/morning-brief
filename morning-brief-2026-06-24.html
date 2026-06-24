@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月24日（水）</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── Masthead ── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      text-align: center;
+      padding: 18px 0 14px;
+      margin-bottom: 6px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2.4rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .masthead-sub {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #555;
+      margin-top: 6px;
+    }
+    .masthead-date {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: 4px;
+      color: #444;
+    }
+    .masthead-rule {
+      border: none;
+      border-top: 1px solid #d0c9b8;
+      margin: 10px 0 4px;
+    }
+    .masthead-tagline {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    /* ── Section header ── */
+    .section {
+      margin-top: 32px;
+    }
+    .section-header {
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 1px solid #d0c9b8;
+      padding: 6px 0 5px;
+      margin-bottom: 20px;
+    }
+    .section-label {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #888;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+
+    /* ── Article ── */
+    .article {
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child {
+      border-bottom: none;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .article-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .article-recap {
+      background: #ede9e0;
+      border-left: 3px solid #d0c9b8;
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .article-body {
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+    .article-body p + p { margin-top: 0.75em; }
+
+    .note-ref {
+      font-size: 0.72rem;
+      vertical-align: super;
+      color: #888;
+      font-style: normal;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    /* ── Accordion notes ── */
+    details.notes {
+      margin-top: 12px;
+      border: 1px solid #d0c9b8;
+      border-radius: 4px;
+    }
+    details.notes summary {
+      background: #ede9e0;
+      padding: 7px 12px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    details.notes summary::before {
+      content: '▶';
+      font-size: 0.6rem;
+      transition: transform 0.2s;
+    }
+    details.notes[open] summary::before { transform: rotate(90deg); }
+    details.notes ol {
+      padding: 10px 14px 10px 30px;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: #444;
+    }
+    details.notes ol li + li { margin-top: 4px; }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 40px;
+      border-top: 2px solid #1a1a1a;
+      padding-top: 14px;
+      text-align: center;
+      font-size: 0.72rem;
+      color: #888;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════
+       MASTHEAD
+  ═══════════════════════════════════════════ -->
+  <header class="masthead">
+    <div class="masthead-title">The Morning Brief</div>
+    <hr class="masthead-rule">
+    <div class="masthead-tagline">Transaction Banking Edition</div>
+    <div class="masthead-date">2026年6月24日（水曜日）&ensp;|&ensp;情報基準：2026年6月23日 EST 23:00</div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: 技術トレンド
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 1</div>
+      <div class="section-title">技術トレンド</div>
+    </div>
+
+    <!-- Article 1-1 -->
+    <article class="article">
+      <h2 class="article-headline">エージェント型AI、金融犯罪対策から銀行コア業務へ——FIS×Anthropicが火付け役に</h2>
+      <div class="article-meta">Fintech Futures / FIS Press Release &nbsp;|&nbsp; 2026年6月</div>
+      <div class="article-recap">
+        2023〜2024年にかけて銀行各行は生成AIを顧客対応や文書要約などの補助ツールとして試験導入。2025年に入り「自律実行型」へのシフトが加速し、2026年は業界全体で本格稼働フェーズへ移行しつつある。
+      </div>
+      <div class="article-body">
+        <p>フィンテック大手FIS<span class="note-ref">[1]</span>は6月、AI大手Anthropicと共同でAML<span class="note-ref">[2]</span>専用の「Financial Crimes AI Agent」を開発し、2026年下半期に一般提供を開始すると発表した。同エージェントはAMLアラートと事案調査を従来の数日から数分に短縮し、誤検知率の低減と調査品質の向上を両立するという。</p>
+        <p>同時期、信用情報大手Experianはエージェント型AIを安全にスケールする基盤「Agent Operating System™」<span class="note-ref">[3]</span>をMoney20/20 Europe（2026年6月2日）で発表。ServiceNowを皮切りに、クライアントやパートナーのAIエージェントが共通の信頼・セマンティクス・オーケストレーション層を通じて連携できる仕組みを提供する。</p>
+        <p>市場調査によれば2026年にエージェント型AIを活用する金融チームは前年比600%超増の44%に達する見込みで、導入行は非導入行比で15%高い市場シェアを獲得するとの推計もある。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>FIS（Fidelity National Information Services）</strong>：世界最大級の金融サービス向けITソリューションプロバイダー。決済・コアバンキング・資本市場向けシステムを広く提供。</li>
+          <li><strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング防止。疑わしい取引を検知・報告する規制上の義務を指す。</li>
+          <li><strong>Agent Operating System™</strong>：Experianが開発した、複数のAIエージェントを安全に連携・制御するためのオーケストレーション基盤。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-2 -->
+    <article class="article">
+      <h2 class="article-headline">米大手行4行、The Clearing Houseを通じた「トークン化預金ネットワーク」を2027年上半期に始動へ</h2>
+      <div class="article-meta">The Block / PYMNTS / Ledger Insights &nbsp;|&nbsp; 2026年6月</div>
+      <div class="article-recap">
+        ステーブルコインが2025年に約33兆ドルのオンチェーン決済量（Visa・Mastercard合計の約1.3倍）を処理したことを受け、伝統的銀行はシステム対応を迫られていた。JPMorganのOnyx等の独自ブロックチェーン実験を経て、業界横断の共同基盤構築へと戦略が転換した。
+      </div>
+      <div class="article-body">
+        <p>JPMorgan Chase、Citigroup、Bank of America、Wells Fargoの4行は、米国の決済インフラ事業者The Clearing House<span class="note-ref">[1]</span>を通じたトークン化預金ネットワーク<span class="note-ref">[2]</span>の構築に合意した。WSJが報じた計画では2027年前半の稼働を目標としており、銀行預金をブロックチェーン上のデジタルトークンに変換することで24時間365日のリアルタイム決済を実現する。</p>
+        <p>利用するブロックチェーンベンダーは未定だが、このネットワークは暗号資産を新たに創出するものではなく、既存の銀行規制の枠内で機能する。ステーブルコインに対する伝統的銀行の組織的反撃として注目されており、業界アナリストは「法的・規制的確実性においてステーブルコインより優位」と評価する。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>The Clearing House（TCH）</strong>：JPMorgan・BofA等の米国主要銀行が共同所有する決済インフラ・クリアリングハウス。リアルタイム決済レール「RTP」の運営主体でもある。</li>
+          <li><strong>トークン化預金（Tokenized Deposits）</strong>：銀行預金をブロックチェーン上で流通可能なデジタルトークンとして表現する仕組み。法定通貨建てで規制の枠内に留まる点でステーブルコインと区別される。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-3 -->
+    <article class="article">
+      <h2 class="article-headline">MicrosoftのGitHubオープンソースに不正アクセス——AI開発者パスワード窃取マルウェアが混入</h2>
+      <div class="article-meta">TechCrunch &nbsp;|&nbsp; 2026年6月8日</div>
+      <div class="article-recap">
+        ソフトウェアサプライチェーン攻撃は2020年のSolarWinds事件以降、金融機関の重大リスクとして認識され続けている。オープンソースパッケージへの悪意あるコード混入は特に摘発が難しく、2025年にはnpmエコシステムを標的とした複数の事案が報告された。
+      </div>
+      <div class="article-body">
+        <p>Microsoftは6月8日、同社がGitHub上でホストする複数のオープンソースプロジェクトへの不正アクセスを受け、攻撃者がパスワード窃取マルウェアをコードに混入させた疑いがあると発表した。調査の過程で当該プロジェクトへのアクセスを停止する措置をとった。</p>
+        <p>狙われたのは主にAI開発者向けのツール群で、開発者の認証情報が詐取された場合、金融機関の本番環境へのアクセス権が連鎖的に侵害されるリスクがある。金融システム開発者は依存パッケージのハッシュ検証、SBOM<span class="note-ref">[1]</span>管理の徹底、CI/CDパイプラインでの署名検証を再点検することが急務だ。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>SBOM（Software Bill of Materials）</strong>：ソフトウェアの構成部品リスト。利用するオープンソースライブラリのバージョンや脆弱性情報を一元管理するために使用される。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-4 -->
+    <article class="article">
+      <h2 class="article-headline">東証アローヘッド、今秋に処理能力を約1.8倍——1日15億件体制へ過去最大の増強</h2>
+      <div class="article-meta">日本経済新聞 &nbsp;|&nbsp; 2026年5〜6月</div>
+      <div class="article-recap">
+        2010年にアローヘッドが稼働して以来、東証は段階的に処理速度と容量を引き上げてきた。2024年11月には「arrowhead4.0」への刷新でレジリエンス強化と取引時間延長を実施。2025〜2026年にかけて海外投資家マネーが日本株市場に大量流入し、注文件数が急増している。
+      </div>
+      <div class="article-body">
+        <p>東京証券取引所は2026年11月を目処に、株式注文処理システム「arrowhead<span class="note-ref">[1]</span>」の処理能力を現行の1日あたり8億3000万件から約15億件へと増強する。増加幅は約80%に達し、同システム史上最大の容量拡張となる。</p>
+        <p>背景には外国人投資家の急増がある。日経平均が「異次元」と称される高値圏を推移するなか、高速アルゴリズム取引の注文量が既存キャパシティを圧迫しはじめており、取引システムのトラブルを未然に防ぐ対応として実施される。金融システム開発者には、接続システムの注文数上限設定の見直しと大容量対応のテストが求められる。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>arrowhead（アローヘッド）</strong>：東京証券取引所と富士通が共同開発した現物株式の売買注文処理システム。世界最高水準の低レイテンシを誇り、注文受付から売買成立まで数百マイクロ秒で処理する。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 1-5 -->
+    <article class="article">
+      <h2 class="article-headline">GitHubトレンド：マルチエージェントLLMで「仮想トレーディングファーム」を再現するOSSが急上昇</h2>
+      <div class="article-meta">Ultra Lab Blog / GitHub Trending &nbsp;|&nbsp; 2026年6月</div>
+      <div class="article-recap">
+        LLMを金融業務に適用する試みは2023年のChatGPT登場後から活発化。2024〜2025年にかけてシングルエージェントのPoC<span class="note-ref">[1]</span>が普及し、2026年はマルチエージェント協調という次の段階に入っている。
+      </div>
+      <div class="article-body">
+        <p>GitHubトレンドで急上昇中のOSSプロジェクトが、証券会社の意思決定プロセス全体を複数のLLMエージェントで再現するフレームワークだ。アナリスト、リスクマネージャー、ポートフォリオマネージャー、ファンドマネージャーをそれぞれ独立したAIエージェントとして実装し、エージェント間の協議を経て最終投資判断を下す。</p>
+        <p>2026年第1四半期だけでAI主導フィンテックへのVCマネーは21億ドルを超え、この種のフレームワークは実際の資産運用・リスク管理・コンプライアンス業務への応用研究が進んでいる。トランザクションバンキング分野でも、トレードファイナンスの書類審査やキャッシュ管理の最適化エージェントへの転用が議論されている。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>PoC（Proof of Concept）</strong>：概念実証。新技術や新手法が実際に機能するかを小規模に検証する取り組み。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: 第三者ベンダー動向
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 2</div>
+      <div class="section-title">第三者ベンダー動向</div>
+    </div>
+
+    <!-- Article 2-1 -->
+    <article class="article">
+      <h2 class="article-headline">Mastercard、ステーブルコイン決済を6通貨×8ブロックチェーンに拡大——週末・祝日も「即日清算」実現</h2>
+      <div class="article-meta">Mastercard Press Release / CoinDesk / Ledger Insights &nbsp;|&nbsp; 2026年6月3日</div>
+      <div class="article-recap">
+        Mastercardは2021年頃から暗号資産カードへの対応を開始し、2023〜2024年にかけてステーブルコインを用いた決済実験を複数実施。2025年にはCircleやRippleとの連携を深め、2026年に入りオンチェーン清算の正式商用展開へと舵を切った。
+      </div>
+      <div class="article-body">
+        <p>Mastercardは6月3日、カード決済の清算（セトルメント）にステーブルコイン<span class="note-ref">[1]</span>を使用する新枠組みを発表した。対応通貨はUSDS<span class="note-ref">[2]</span>・RLUSD<span class="note-ref">[3]</span>・PYUSD<span class="note-ref">[4]</span>・USDG・USDP・SoFiUSDの6種類、対応チェーンはEthereum・Solana・Polygon・Base・Arbitrum・XRPLほか合計8チェーン。</p>
+        <p>最大の意義は「営業日の制約の撤廃」だ。従来のWire決済は銀行の営業時間に縛られ、週末・祝日は翌営業日まで資金が浮いていた（フロート）。ステーブルコインにより常時稼働（Always-on）モデルへの移行が現実となる。ショッパーの支払い体験は変わらず、バックオフィスの資金移動のみがオンチェーンレールに乗る設計で、規制上のリスクを最小化する。初期パートナーとしてARQ（旧DolarApp）、CBW Bank、Cross River、Lead Bank、Nuveiが名を連ね、米国・中南米で先行展開される。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>ステーブルコイン</strong>：米ドル等の法定通貨に価値を連動させた暗号資産。価格変動リスクが低く、決済・清算での実用性が高い。</li>
+          <li><strong>USDC</strong>：Circle社が発行するドル連動ステーブルコイン。米規制当局の監督下にある主要ステーブルコインの一つ。</li>
+          <li><strong>RLUSD</strong>：Ripple社が発行するドル連動ステーブルコイン。XRPLおよびEthereum上で流通。</li>
+          <li><strong>PYUSD</strong>：PayPalが発行するドル連動ステーブルコイン。2023年に発行開始。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 2-2 -->
+    <article class="article">
+      <h2 class="article-headline">Stripe・Visa・Mastercard・Coinbase、ステルスなステーブルコインプラットフォームを共同準備中と報道</h2>
+      <div class="article-meta">CoinDesk / PYMNTS &nbsp;|&nbsp; 2026年6月3日</div>
+      <div class="article-recap">
+        決済ネットワーク各社は2022〜2024年にかけて個別にステーブルコイン対応を進めてきたが、2025年以降は連携強化へシフト。ステーブルコインの送金量がVisaとMastercardの合算を初めて超えた（2025年実績：約33兆ドル対25.5兆ドル）という事実が業界全体の危機感を高めた。
+      </div>
+      <div class="article-body">
+        <p>CoinDeskが6月3日に報じたところによると、Stripe、Visa、Mastercardはまもなく登場するステーブルコインプラットフォームの「支持者（Backer）」であり、Coinbaseも参加を検討中だという。プラットフォームの詳細や名称は未公表（ステルス状態）だが、複数の大手決済企業が連合体を形成しようとしている点が注目される。</p>
+        <p>ステーブルコインのB2B<span class="note-ref">[1]</span>取引量は前年比733%増と急成長しており、SWIFTへの対抗軸として機能する可能性がある。銀行の立場からは、既存の国際送金インフラの役割が段階的に置き換えられるシナリオを想定したリスク管理が不可欠となりつつある。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>B2B（Business to Business）</strong>：企業間取引。個人消費者を相手にするB2Cと区別し、企業同士の決済・資金移動を指す。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: 外銀TB速報
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 3</div>
+      <div class="section-title">外銀TB速報</div>
+    </div>
+
+    <!-- Article 3-1 -->
+    <article class="article">
+      <h2 class="article-headline">JPMorgan・Citi主導の大手4行連合、TCH経由でトークン化預金ネットワーク始動——2027年前半稼働目標</h2>
+      <div class="article-meta">The Block / American Banker / Ledger Insights &nbsp;|&nbsp; 2026年6月</div>
+      <div class="article-recap">
+        JPMorganはOnyx（現Kinexys）プラットフォームで独自のブロックチェーン決済を2020年代前半から展開。Citiも複数のCBDC<span class="note-ref">[1]</span>パイロットに参加してきた。しかし個別展開には相互運用性の限界があり、業界横断ネットワークの必要性が認識されていた。
+      </div>
+      <div class="article-body">
+        <p>JPMorgan Chase、Citigroup、Bank of America、Wells Fargoの4行はThe Clearing Houseを通じたトークン化預金ネットワーク構築に合意したと報じられた。ネットワークは銀行預金をブロックチェーン上のデジタルトークンに変換し、参加行間で24/365のリアルタイム清算を実現することを目指す。使用するブロックチェーン基盤は現時点で未選定。</p>
+        <p>TBの観点からは、このネットワークがスムーズに立ち上がれば、コルレス銀行<span class="note-ref">[2]</span>経由の国際送金モデルを補完・代替し得る。特に非営業日の流動性管理や、SWIFTメッセージ送信後の実際の資金着金ラグの解消に効果が期待される。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>CBDC（Central Bank Digital Currency）</strong>：中央銀行デジタル通貨。各国中央銀行が発行するデジタル形式の法定通貨。</li>
+          <li><strong>コルレス銀行（Correspondent Bank）</strong>：国際送金において、送金銀行と受取銀行の間に介在し決済を仲介する銀行。SWIFTネットワークを通じたノストロ・ボストロ口座管理が中心的な役割。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: 国内政治
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 4</div>
+      <div class="section-title">国内政治</div>
+    </div>
+
+    <!-- Article 4-1 -->
+    <article class="article">
+      <h2 class="article-headline">政府、AI・半導体など戦略17分野に官民370兆円超の投資計画——2040年度目標を正式策定</h2>
+      <div class="article-meta">NHKニュース / 日本経済新聞 / 時事通信 &nbsp;|&nbsp; 2026年6月24日</div>
+      <div class="article-recap">
+        高市政権は発足以来「強い経済」を最優先政策に掲げ、半導体・AI分野への集中投資を推進。2025年には半導体補助金を複数の国内工場に投下し、TSMC熊本工場（第1弾・第2弾）への公的支援も継続している。
+      </div>
+      <div class="article-body">
+        <p>日本政府は6月24日、AI・半導体・造船・防衛など戦略17分野を対象に2040年度までの「官民投資計画」を正式に取りまとめた。官民合計の投資規模は370兆円超で、うち民間が230兆円超を占める。</p>
+        <p>目玉のAI・半導体分野では、ロボット等を自律制御する「フィジカルAI<span class="note-ref">[1]</span>」の育成に10.5兆円、半導体の開発・量産能力確保に68兆円を見込む。高市首相は「各国が財政支出を伴う産業政策を展開するなか、日本も国が一歩踏み込む」と説明。金融システム分野への波及として、デジタル金融インフラへの公的投資や関連規制のアップデートが進むとみられる。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>フィジカルAI</strong>：AIによってロボットや自動車、製造設備など現実世界（物理空間）の機器を自律的に制御・操作する技術の総称。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 4-2 -->
+    <article class="article">
+      <h2 class="article-headline">日経平均、一時1,300円安——AI・半導体株の世界的調整が波及</h2>
+      <div class="article-meta">株探ニュース / Yahoo!ファイナンス &nbsp;|&nbsp; 2026年6月24日</div>
+      <div class="article-recap">
+        日経平均は2025〜2026年にかけて「異次元の活況」と評される上昇相場が続き、海外投資家の買い越しが続いていた。一方でAI・半導体株の高値警戒感は以前から指摘されていた。
+      </div>
+      <div class="article-body">
+        <p>6月24日の東京市場は、米国株の下落と世界的なAI関連株の高値波乱を嫌気し、日経平均が一時前日比1,300円超安まで急落。終値は前日比613円安の6万9,174円となった。東京エレクトロンなど指数寄与度の高い半導体関連銘柄の売りが目立った。</p>
+        <p>金融システム開発者の観点では、株式市場の急変動が東証の注文処理システムに負荷をかける点に注意が必要だ。上述のアローヘッド増強計画の背景には、こうした急落局面での注文殺到への備えも含まれる。</p>
+      </div>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: 海外政治
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 5</div>
+      <div class="section-title">海外政治</div>
+    </div>
+
+    <!-- Article 5-1 -->
+    <article class="article">
+      <h2 class="article-headline">英国スターマー首相が辞任——7年間で7人目の首相誕生へ、後継はバーナム大マンチェスター市長が有力</h2>
+      <div class="article-meta">CNN / Bloomberg / Reuters &nbsp;|&nbsp; 2026年6月22日</div>
+      <div class="article-recap">
+        スターマー党首は2024年総選挙で歴史的大勝を収め首相に就任したが、2025年5月の地方選でLabour<span class="note-ref">[1]</span>が惨敗。改革党（Reform UK）の台頭とウェス・ストリーティング保健相の辞任（5月14日）を経て、党内からの辞任圧力が高まっていた。
+      </div>
+      <div class="article-body">
+        <p>キア・スターマー英首相は6月22日、ダウニング街前で辞任を表明した。党員・議員の信頼を失ったとして「快く身を引く（with good grace）」と述べ、7月9日から党首選の候補者受付を開始、9月の議会再開前に新指導者を選出する見通し。</p>
+        <p>後継に最も名前が挙がるのはアンディ・バーナム大マンチェスター市長で、ストリーティング前保健相も支持を表明した。金融市場では英ポンドの短期的な不安定化が予想され、ロンドン金融市場を主要ハブとする外銀各行の事業環境に影響する可能性がある。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>Labour（労働党）</strong>：英国の主要野党→2024年政権交代で与党となった中道左派政党。スターマー辞任により新指導者選出が急務となっている。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 5-2 -->
+    <article class="article">
+      <h2 class="article-headline">米国防総省、イラン戦費として緊急補正800億ドルを議会に要請——正式予算請求を上回る規模</h2>
+      <div class="article-meta">Bloomberg Government / AP / The Hill &nbsp;|&nbsp; 2026年6月22〜23日</div>
+      <div class="article-recap">
+        トランプ政権は2026年度の国防予算として約1.5兆ドル（現行比約50%増）を要求する異例の方針を打ち出していた。同政権によるイランへの軍事作戦は2026年春頃に開始されたとされ、費用の膨らみが問題視されていた。
+      </div>
+      <div class="article-body">
+        <p>スティーブン・ファインバーグ国防副長官は先週、上院複数議員との電話会議でイラン戦費として約800億ドルの緊急補正予算が必要と説明し、議会委員会にも通知した。ヘグセス国防長官が先月議会証言で示した290億ドルの見積もりを大幅に上回り、正式な予算請求書はまだOMB<span class="note-ref">[1]</span>に提出されていない。</p>
+        <p>市場関係者の間では、米財政赤字の拡大による長期金利の上昇圧力への警戒感が高まっている。TB業務でのドル建て決済やトレードファイナンスのコスト計算において金利動向は直接影響するため、引き続き注視が必要だ。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>OMB（Office of Management and Budget）</strong>：米国行政管理予算局。ホワイトハウスの傘下にある連邦予算の編成・管理を担う機関。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: 国内企業動向
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 6</div>
+      <div class="section-title">国内企業動向</div>
+    </div>
+
+    <!-- Article 6-1 -->
+    <article class="article">
+      <h2 class="article-headline">東証、アローヘッド処理能力を11月に15億件/日へ——「過去最大」の増強で急増注文に備え</h2>
+      <div class="article-meta">日本経済新聞 &nbsp;|&nbsp; 2026年5〜6月（詳細は Section 1 参照）</div>
+      <div class="article-body">
+        <p>（本件の詳細はSection 1・第4記事を参照。ここでは国内企業の観点から補記。）東証を運営する日本取引所グループ（JPX）が今秋に予定するインフラ増強は、金融機関の取引システム接続仕様の更新を伴う可能性がある。接続ベンダーや自社開発システムの最大注文数上限・帯域設定について、事前の確認と実環境テストを推奨する。</p>
+      </div>
+    </article>
+
+    <!-- Article 6-2 -->
+    <article class="article">
+      <h2 class="article-headline">ソフトバンクグループ、定時株主総会開催——株価3倍も時価総額はNAV比50%割れが続く</h2>
+      <div class="article-meta">Yahoo!ファイナンス / 株探ニュース &nbsp;|&nbsp; 2026年6月24日</div>
+      <div class="article-recap">
+        SBGはビジョンファンドによる大型テック投資で2020年代前半に大きな損失を計上したが、AI銘柄の回復とARM株の上昇により2024〜2026年にかけて株価が急回復した。
+      </div>
+      <div class="article-body">
+        <p>ソフトバンクグループ（SBG）は6月24日、定時株主総会を開催した。2025〜2026年の株価は1年前比で約3倍に達したが、保有資産純額（NAV<span class="note-ref">[1]</span>）に対して時価総額は依然として約50%のディスカウントで推移しており、「SBGディスカウント」の解消が課題として残る。トランザクションバンキング面では、SBGへの融資・保証エクスポージャーを持つ邦銀各行にとって、株価ボラティリティとNAV変動のモニタリングが引き続き重要。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>NAV（Net Asset Value）</strong>：純資産価値。保有資産の市場価値合計から負債を差し引いた値。コングロマリットや持株会社の株価評価指標として用いられる。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7: 海外企業動向
+  ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Section 7</div>
+      <div class="section-title">海外企業動向</div>
+    </div>
+
+    <!-- Article 7-1 -->
+    <article class="article">
+      <h2 class="article-headline">Micron Technology、2026年に株価270%超の急騰後に12%急落——AIメモリ需要の持続性に市場が疑問符</h2>
+      <div class="article-meta">TheStreet / Bloomberg &nbsp;|&nbsp; 2026年6月24日</div>
+      <div class="article-recap">
+        Micronは2024〜2025年にAIサーバー向けHBM<span class="note-ref">[1]</span>メモリの需要急増を追い風に業績が急回復。NvidiaのGPUサーバー向けHBM供給企業として注目を集め、2026年入り後も株価が継続上昇していた。
+      </div>
+      <div class="article-body">
+        <p>Micron Technologyは6月24日（現地時間）に2026会計年度第3四半期決算を発表する予定だが、直前に株価が12%超の急落を記録した。2026年初来では依然として270%超の上昇を維持しているものの、AIとテック株全般の高値調整、外国人投資家の利益確定売り、レバレッジETF<span class="note-ref">[2]</span>に対する規制懸念が売り材料として重なった。</p>
+        <p>金融機関の観点からは、AIインフラ投資の持続性に対する市場センチメントの変化がクレジット審査や担保評価に影響しうる点に注意が必要だ。また、AIサーバーを担保とするストラクチャードファイナンスにおける資産価値の見直しも論点となり得る。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>HBM（High Bandwidth Memory）</strong>：高帯域幅メモリ。AIモデルの学習・推論に使うGPUに搭載される高速・大容量メモリ。Micron・SK Hynix・Samsungが主要供給メーカー。</li>
+          <li><strong>レバレッジETF</strong>：指数の日次騰落率の2〜3倍の収益を目指すETF。特定銘柄の動向を増幅させ市場ボラティリティを拡大させる要因となり得るとして規制当局の注視を受けている。</li>
+        </ol>
+      </details>
+    </article>
+
+    <!-- Article 7-2 -->
+    <article class="article">
+      <h2 class="article-headline">カナダ・AtkinsRealis、AIデータセンター電力供給に向けた小型原子炉（SMR）の米国認可を申請</h2>
+      <div class="article-meta">Bloomberg &nbsp;|&nbsp; 2026年6月</div>
+      <div class="article-recap">
+        生成AIの急普及によるデータセンター電力需要は2025〜2026年にかけて急増。再エネだけでは需要を賄えないとの認識が広まり、各国でSMRへの関心が高まっている。Microsoft・Googleなどが既にSMR開発企業との電力購入契約を締結している。
+      </div>
+      <div class="article-body">
+        <p>カナダの原子力・エンジニアリング大手AtkinsRealisは、AIデータセンター向け電力供給を目的として、同社のSMR<span class="note-ref">[1]</span>技術の米国規制認可（NRC<span class="note-ref">[2]</span>承認）を申請したとBloombergが伝えた。</p>
+        <p>TBの観点では、エネルギーインフラへのプロジェクトファイナンスが新たな商機として浮上している。SMRはリードタイム・建設コスト・規制不確実性が高いが、AI電力需要という強固な需要サイドが融資判断の追い風となりつつある。</p>
+      </div>
+      <details class="notes">
+        <summary>注釈</summary>
+        <ol>
+          <li><strong>SMR（Small Modular Reactor）</strong>：小型モジュール炉。出力300MWe以下の小型原子炉で、工場生産によるコスト低減と迅速な導入が期待される次世代原子力技術。</li>
+          <li><strong>NRC（Nuclear Regulatory Commission）</strong>：米国原子力規制委員会。原子炉の設計認証・運転許可を管轄する独立規制機関。</li>
+        </ol>
+      </details>
+    </article>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>THE MORNING BRIEF &ensp;|&ensp; Transaction Banking Edition</p>
+    <p style="margin-top:4px;">© 2026 &ensp;·&ensp; 情報基準：2026年6月23日 EST 23:00 &ensp;·&ensp; 自動生成ブリーフィング</p>
+  </footer>
+
+</div>
+</body>
+</html>
