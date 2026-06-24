@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE MORNING BRIEF — 2026年6月17日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f4f1ec;
+    color: #1a1a1a;
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    line-height: 1.75;
+    padding: 0 0 60px;
+  }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ── Masthead ── */
+  .masthead {
+    border-top: 4px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    text-align: center;
+    padding: 24px 20px 16px;
+    margin-bottom: 6px;
+  }
+  .masthead-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .masthead-sub {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 6px;
+  }
+  .masthead-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    border-top: 1px solid #d0c9b8;
+    padding-top: 8px;
+  }
+
+  /* ── Section header ── */
+  .section {
+    margin-top: 36px;
+  }
+  .section-header {
+    border-top: 3px double #1a1a1a;
+    padding-top: 8px;
+    margin-bottom: 20px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #888;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* ── Article ── */
+  .article {
+    border-bottom: 1px solid #d0c9b8;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  .article:last-child {
+    border-bottom: none;
+  }
+  .article-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .article-meta {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .recap {
+    background: #ede9e0;
+    border-left: 3px solid #d0c9b8;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.65;
+  }
+  .body-text {
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+  .body-text p { margin-bottom: 10px; }
+  .body-text p:last-child { margin-bottom: 0; }
+
+  sup.note-ref {
+    color: #8a7d6a;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 1px;
+    cursor: default;
+  }
+
+  /* ── Accordion glossary ── */
+  .glossary {
+    margin-top: 14px;
+  }
+  .glossary summary {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a7d6a;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .glossary summary::before {
+    content: '▸';
+    font-size: 10px;
+    transition: transform 0.2s;
+  }
+  .glossary[open] summary::before {
+    transform: rotate(90deg);
+  }
+  .glossary-body {
+    margin-top: 10px;
+    border: 1px solid #d0c9b8;
+    background: #faf8f4;
+    padding: 12px 14px;
+    border-radius: 2px;
+  }
+  .glossary-body ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .glossary-body li {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .glossary-body li:last-child { margin-bottom: 0; }
+
+  /* ── No news placeholder ── */
+  .no-news {
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+    padding: 10px 0;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 48px;
+    border-top: 1px solid #d0c9b8;
+    padding-top: 16px;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-title">THE MORNING BRIEF</div>
+  <div class="masthead-sub">Transaction Banking Edition — For Financial Systems Professionals</div>
+  <div class="masthead-date">2026年6月17日（水）&ensp;|&ensp;情報基準：前日 EST 23:00</div>
+</div>
+
+<div class="container">
+
+<!-- ════════════════════════════════════════
+     SECTION 1: 技術トレンド
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 01</div>
+    <div class="section-title">技術トレンド</div>
+  </div>
+
+  <!-- Article 1-1 -->
+  <div class="article">
+    <div class="article-headline">FIS × Anthropic、銀行初の「エージェンティックAI」でAML調査を数日から数分へ圧縮</div>
+    <div class="article-meta">Fintech Global / BusinessWire &ensp;|&ensp; 2026年5月4日</div>
+    <div class="recap">
+      金融犯罪コンプライアンスにおけるAI活用は、2020年代前半に自然言語処理による文書要約が主流だった。2024〜25年にかけてLLM<sup class="note-ref">1</sup>を組み込んだパターン検出が試験段階に入り、2026年には銀行向け中核システムベンダーが生成AIをコアワークフローに組み込む段階へ移行した。
+    </div>
+    <div class="body-text">
+      <p>フィンテック大手FIS<sup class="note-ref">2</sup>は5月4日、Anthropicとの提携によりバンキング向け「エージェンティックAI<sup class="note-ref">3</sup>」を開発・展開すると発表した。第一弾はAML<sup class="note-ref">4</sup>向け「金融犯罪AIエージェント」で、アラート調査にかかる時間を従来の数日から数分に短縮することを目指す。</p>
+      <p>エージェントは銀行のコアシステム（FIS管理・銀行自社管轄を問わず）に安全接続し、証拠を自動収集。既知の犯罪手口との照合、SAR<sup class="note-ref">5</sup>ナラティブの草稿生成まで一括して実行する。Amalgamated Bank<sup class="note-ref">6</sup>とBMOが先行開発中で、一般提供は2026年下半期の予定。</p>
+      <p>【分析】金融機関のAML対応コストは業界全体で年間約400億ドル（約6兆円）と推計される。FIS-Anthropic連携は単一エージェントの限定公開に過ぎないが、「時間削減→調査員が高度判断に集中→偽陽性率低下」という好循環を実証できれば、競合ベンダーの追随を促し、業界全体のAIエージェント導入を加速させる転換点となりうる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>LLM（大規模言語モデル）</strong>：GPT・Claudeのような大量テキストで訓練された生成AIモデルの総称。</li>
+          <li><strong>FIS（Fidelity National Information Services）</strong>：世界最大規模の金融向けITサービス企業。コアバンキングや決済処理インフラを多数の金融機関に提供。</li>
+          <li><strong>エージェンティックAI（Agentic AI）</strong>：指示に答えるだけでなく、複数のシステムに能動的にアクセスし、判断・実行を自律的に連鎖させるAI。通常のチャットAIとは異なり「タスクを完遂する」設計。</li>
+          <li><strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング防止。金融機関が不正資金の流通を検知・報告する義務を負う規制領域。</li>
+          <li><strong>SAR（Suspicious Activity Report）</strong>：不審取引報告書。金融機関がFinCENなどの規制当局に提出する法定文書。</li>
+          <li><strong>Amalgamated Bank</strong>：米国の労働組合系商業銀行。社会的責任投資に注力する中規模金融機関。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-2 -->
+  <div class="article">
+    <div class="article-headline">米大手12行が「トークン化預金ネットワーク」構築へ——ステーブルコインへの銀行側反撃</div>
+    <div class="article-meta">CoinDesk / The Block / WSJ &ensp;|&ensp; 2026年6月5日</div>
+    <div class="recap">
+      ステーブルコイン<sup class="note-ref">1</sup>の台頭は2021〜22年のDeFiブームで加速し、2025年にはGENIUS法<sup class="note-ref">2</sup>成立で米国内の法的地位が整備された。既存銀行は預金流出リスクに晒される一方、ブロックチェーン上での資金移動の利便性を無視できなくなっていた。
+    </div>
+    <div class="body-text">
+      <p>JPMorgan Chase、Citigroup、Bank of America、Wells Fargo、HSBC、BNYら計12行は6月5日、共同で「トークン化預金ネットワーク」を構築すると正式発表した（WSJ報道）。運営主体はTCH<sup class="note-ref">3</sup>で、2027年上半期の稼働を目指す。</p>
+      <p>仕組みは、銀行預金をブロックチェーン上のトークンに変換し、24時間365日即時送金を実現するもの。資金は規制銀行システム内に留まり、ステーブルコインのように発行体リスクを取る必要がない点を差別化要素とする。現時点でブロックチェーン基盤の選定と規則集（ルールブック）の策定は未完了。</p>
+      <p>【分析】GENIUS法の成立で非銀行がステーブルコイン発行の道を得たことへの、既存銀行の組織的回答が今回の連合体だ。日系のトランザクションバンキング担当者にとっては、コルレス先<sup class="note-ref">4</sup>の決済インフラが2027年以降にブロックチェーンベースへ移行する可能性を意味しており、自行の接続準備を中期計画に組み込む必要がある。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>ステーブルコイン</strong>：価値が特定の法定通貨（主に米ドル）や資産に連動するよう設計された暗号資産。USDCやPayPal USDなどが代表例。</li>
+          <li><strong>GENIUS法（Guiding and Establishing National Innovation for U.S. Stablecoins Act）</strong>：2025年成立の米国ステーブルコイン規制法。発行体に準備資産保有・AML義務などを課す。</li>
+          <li><strong>TCH（The Clearing House）</strong>：JPMorgan、Citi、BofAなど大手米銀が共同所有する決済インフラ会社。RTPリアルタイム決済ネットワークも運営。</li>
+          <li><strong>コルレス先（Correspondent Bank）</strong>：外国為替・国際送金において、自行の代理として資金の受払いを行う相手銀行。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-3 -->
+  <div class="article">
+    <div class="article-headline">欧州決済主権の本命「Wero」が130万人<wbr>→1.3億人規模へ——VISAとの決別に向けた最大の賭け</div>
+    <div class="article-meta">European Business Magazine / ITIF &ensp;|&ensp; 2026年2月・3月</div>
+    <div class="recap">
+      欧州はVISA・Mastercardの年間24兆ドル規模の決済網に依存し、取引データが域外に流出することを長年の安全保障上の弱点と認識してきた。2023年にEPI<sup class="note-ref">1</sup>がWeroをリリースしたが、利用可能国は限定的だった。ECBのラガルド総裁が2026年1月に「緊急の対応が必要」と発言し、政治的機運が高まった。
+    </div>
+    <div class="body-text">
+      <p>2026年2月2日、EPIとEuroPAアライアンス<sup class="note-ref">2</sup>が連携協定に署名。イタリアのBancomat、スペインのBizum、ポルトガルのMB WAY、北欧のVipps MobilePayが束になり、瞬時に約1億3,000万人のユーザー基盤・EU人口比72%・13カ国を包含するネットワークが誕生した。</p>
+      <p>国境を越えたP2P送金は2026年内に開始、Eコマース・POSへの展開は2027年の予定。送金は電話番号だけで完結し、IBAN<sup class="note-ref">3</sup>入力不要。10秒以内に銀行口座間で直接着金する。</p>
+      <p>【分析】24兆ドルのカード決済がEUから流出するデータの問題は、エネルギー依存と同列に扱われるまでに政治課題化した。日系金融機関としてはEU圏における加盟店・法人顧客向けの決済手段選択肢の変化を注視すべきで、Weroがクロスボーダー法人決済にまで広がるかどうかが中長期の分岐点となる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>EPI（European Payments Initiative）</strong>：欧州の銀行・決済機関が主導する泛欧州決済サービス。Weroアプリを運営。</li>
+          <li><strong>EuroPA Alliance</strong>：EPI以外の欧州各国独自決済システム（Bizum・Bancomat等）の連合体。EPI連携により欧州全域をカバー。</li>
+          <li><strong>IBAN（International Bank Account Number）</strong>：欧州標準の国際銀行口座番号。最大34桁の英数字で口座を一意に識別する。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-4 -->
+  <div class="article">
+    <div class="article-headline">GitHubトレンド：AIリポジトリが前年比178%増——開発者ツールはAI統合が「デフォルト」に</div>
+    <div class="article-meta">OSSInsight / Medium (Data Science Collective) &ensp;|&ensp; 2026年6月</div>
+    <div class="recap">
+      2024年にGitHub Copilotが急拡大し、2025年にはCursorをはじめとするAI統合エディタが台頭。2026年に入り「AIを後から足す」ではなく「最初からAI前提で設計する」開発ツールの流れが決定的になった。
+    </div>
+    <div class="body-text">
+      <p>GitHubに登録されるAI関連リポジトリ数が前年比178%増・累計430万件超に達したことがOSSInsightの6月時点の集計で明らかになった。注目トレンドは3つ：①PerplexityAI製のサプライチェーンスキャナー「Bumblebee<sup class="note-ref">1</sup>」（npm・PyPI・MCPサーバ<sup class="note-ref">2</sup>・VSCode拡張を一括検査）、②Rustベースのネイティブエディタ「Zed」（2026年の急成長株）、③AI前提設計のエージェントフレームワーク群。</p>
+      <p>Bumblebeeは金融機関のソフトウェアサプライチェーン管理に直接関係する。外部ライブラリ・MCPサーバの悪意あるパッケージ混入リスクをCI/CDパイプラインで自動検査できるため、金融システム開発における採用検討の価値がある。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>Bumblebee</strong>：Perplexity AIが開発したオープンソースのサプライチェーンスキャナ。依存パッケージ・MCPサーバ・ブラウザ拡張機能を読み取り専用で検査し、不審なコードを検出する。</li>
+          <li><strong>MCPサーバ（Model Context Protocol Server）</strong>：AIエージェントが外部ツール・データベースに接続するための標準インターフェース。Anthropicが策定し業界標準化が進む。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 1-5 -->
+  <div class="article">
+    <div class="article-headline">「エージェンティック時代」の金融：ファイナンスチームの44%が2026年中にAIエージェント導入へ</div>
+    <div class="article-meta">Lloyds Banking Group / WEF / Finastra &ensp;|&ensp; 2026年1〜2月</div>
+    <div class="recap">
+      AIの金融活用は2022〜23年のチャットボット・文書要約から始まり、2024〜25年にワークフロー自動化へ進化した。2026年はLloydsが「エンタープライズ全社展開の年」と位置づけ、WEFも「バンキングはエージェンティック時代に入った」と宣言した。
+    </div>
+    <div class="body-text">
+      <p>KPMGの推計ではエージェンティックAIへの世界市場支出は2025年時点で500億ドル。2026年にはファイナンスチームの44%が導入（前年比600%増）と見込まれる。投資回収期間は平均13カ月、ROIは2.3倍。</p>
+      <p>金融システム開発への示唆：カスタマーサービス・与信審査・オンボーディング・詐欺検知の各領域で「AIエージェントへのAPI接続」がシステム要件として浮上する。既存の業務フローを「エージェントが操作できるか」の観点で見直す設計圧力が高まる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>ROI（Return on Investment）</strong>：投資対効果。投資額に対して得られた利益の割合。</li>
+          <li><strong>API（Application Programming Interface）</strong>：ソフトウェア同士が機能を呼び出し合うための接続仕様。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</div><!-- /section 1 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 2: 第三者ベンダー動向
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 02</div>
+    <div class="section-title">第三者ベンダー動向</div>
+  </div>
+
+  <!-- Article 2-1 -->
+  <div class="article">
+    <div class="article-headline">SWIFTの個人越境送金フレームワーク、6月末に25行超が稼働——11カ国・リミタンス主要市場を網羅</div>
+    <div class="article-meta">SWIFT 公式 / PYMNTS / American Banker &ensp;|&ensp; 2026年6月</div>
+    <div class="recap">
+      SWIFTは2023年の「SWIFT Go」でSME向け少額国際送金を開始し、2024〜25年にかけてISO 20022<sup class="note-ref">1</sup>への全面移行を推進。個人向けリミタンス<sup class="note-ref">2</sup>市場での存在感は薄かったが、FinTech・Wiseなどの台頭を受け個人向けフレームワークの整備に着手した。
+    </div>
+    <div class="body-text">
+      <p>SWIFT主導の「個人越境送金フレームワーク」に25行超が参加し、6月末を目処に稼働する。BofA、JPMorgan、HSBC、Deutsche Bank、BNP Paribas、Standard Chartered、インドのHDFC・ICICI・State Bank of India、オーストラリアのANZ・CBAなどが対象コリドー<sup class="note-ref">3</sup>で処理を開始する。</p>
+      <p>利用者へのメリットは3点：①送金前の手数料明示、②受取人への全額着金（途中控除なし）、③エンドツーエンドの追跡。対象11カ国にはインド・パキスタン・バングラデシュ・中国・タイと世界トップ10のリミタンス市場5カ国が含まれる。年末までに対象国をさらに拡大予定。</p>
+      <p>【分析】日系金融機関のトランザクションバンキング部門にとっては、コルレス先がSWIFTフレームワーク対応を表明しているかを確認するタイミング。対応遅れは競合他行にビジネスを奪われるリスクに直結する。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>ISO 20022</strong>：金融取引の電文標準。XML形式でリッチなデータを扱えるため、AML・不正検知精度向上やリコンサイル自動化に有効。SWIFTは2025年11月に旧MT電文から完全移行完了。</li>
+          <li><strong>リミタンス（Remittance）</strong>：在外労働者が本国の家族へ送る個人送金。年間約8,000億ドルの市場規模を持ち、途上国のGDPに占める割合が大きい。</li>
+          <li><strong>コリドー（Payment Corridor）</strong>：送金元国と送金先国の組み合わせ。例：米国→インドなど。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 2-2 -->
+  <div class="article">
+    <div class="article-headline">米財務省、GENIUS法のAML規則を最終化へ——ステーブルコイン発行体が「金融機関」に格上げ</div>
+    <div class="article-meta">US Department of the Treasury / Federal Register / Mayer Brown &ensp;|&ensp; 2026年4〜6月</div>
+    <div class="recap">
+      GENIUS法は2025年に成立し、米国初のステーブルコイン包括規制を確立した。OCC<sup class="note-ref">1</sup>は2026年3月にステーブルコイン発行に関するガイダンスを公表。4月には財務省FinCEN<sup class="note-ref">2</sup>・OFAC<sup class="note-ref">3</sup>が共同でAML/CFT<sup class="note-ref">4</sup>義務の規則提案を公表し、6月にパブコメ期間が終了した。
+    </div>
+    <div class="body-text">
+      <p>財務省FinCEN・OFACの提案規則は、ステーブルコイン発行体を銀行秘密法<sup class="note-ref">5</sup>上の「金融機関」として規制する内容。カスタマーデュー・デリジェンス（KYC）、SAR提出義務、制裁対象リストのスクリーニングが課される。コメント期限は6月9日に終了し、最終化は12カ月以内の予定。</p>
+      <p>州監督との調整規則（GENIUS法上の「実質的同等性」判定基準）も6月2日にコメント締め切りを迎えており、連邦・州二層規制の全体像が固まりつつある。</p>
+      <p>【分析】GENIUS法の完全実施により、ステーブルコインは「グレーゾーンの暗号資産」から規制金融商品に移行する。前項の米大手銀トークン化預金ネットワークが目指す「銀行預金の利便性向上」は、この規制整備を追い風として受けている。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>OCC（Office of the Comptroller of the Currency）</strong>：米国国法銀行の監督機関。財務省傘下。</li>
+          <li><strong>FinCEN（Financial Crimes Enforcement Network）</strong>：米財務省の金融情報機関。マネロン・テロ資金供与対策規制の策定・執行を担う。</li>
+          <li><strong>OFAC（Office of Foreign Assets Control）</strong>：米財務省の制裁管理機関。SDNリストを管理し金融制裁を執行。</li>
+          <li><strong>AML/CFT</strong>：Anti-Money Laundering / Countering the Financing of Terrorism。マネーロンダリング防止とテロ資金供与対策の総称。</li>
+          <li><strong>銀行秘密法（Bank Secrecy Act / BSA）</strong>：1970年制定の米国連邦法。金融機関に疑わしい取引の報告義務を課す。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</div><!-- /section 2 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 3: 外銀TB速報
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 03</div>
+    <div class="section-title">外銀TB速報</div>
+  </div>
+
+  <!-- Article 3-1 -->
+  <div class="article">
+    <div class="article-headline">JPMorgan・Citi主導の12行連合、TCH経由でブロックチェーン決済網を構築——TB部門の戦略転換を示唆</div>
+    <div class="article-meta">CoinDesk / The Block &ensp;|&ensp; 2026年6月5日</div>
+    <div class="recap">
+      JPMorganは2019年にJPM Coinで内部トークン決済の実験を先行させ、2023年にはOnyx<sup class="note-ref">1</sup>ブランドで機関投資家向けブロックチェーンを展開。Citiも2024年にCiti Token Services<sup class="note-ref">2</sup>を立ち上げ、貿易金融分野でトークン化を試みてきた。
+    </div>
+    <div class="body-text">
+      <p>今回の12行連合（Section 2参照）はJPMorgan・Citiの個別ブロックチェーン実験とは異なり、業界共通インフラとしてのトークン化預金を標準化しようとする試みだ。TCH（The Clearing House）が運営することで既存のクリアリングハウス<sup class="note-ref">3</sup>インフラとの連続性が確保される。</p>
+      <p>現状の課題：ブロックチェーン基盤未選定・規則集（ルールブック）未完成・参加行間の利害調整。稼働目標は2027年上半期。HSBCも12行に名を連ねており、TB事業での競争力強化が狙いとみられる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>Onyx by JPMorgan</strong>：JPMorganのブロックチェーン・デジタル資産事業ブランド。JPM Coin（機関向け即時決済）やデジタル資産サービスを提供。</li>
+          <li><strong>Citi Token Services</strong>：CitiのトークンベースのTB（トランザクションバンキング）サービス。貿易金融・キャッシュマネジメントへのブロックチェーン適用を試みる。</li>
+          <li><strong>クリアリングハウス（Clearing House）</strong>：取引の清算・決済を集中管理する機関。TCHはACH（自動決済機構）やRTPリアルタイム決済を運営する米国最大のクリアリングハウス。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 3-2 -->
+  <div class="article">
+    <div class="article-headline">HSBCがドイツのカストディ事業から撤退——「簡素化計画」の一環で非中核領域を整理</div>
+    <div class="article-meta">Finviz / Bloomberg &ensp;|&ensp; 2026年6月</div>
+    <div class="recap">
+      HSBCは2023〜24年にCEOノエル・クイン体制下でカナダ・米国地域銀行事業の大規模売却を実施。2025年に就任したMichael Robertsは「JPMorganと最も激しく競えるのはペイメントとTBだ」と宣言し、非中核事業の絞り込みを加速させた。
+    </div>
+    <div class="body-text">
+      <p>HSBCのアセットマネジメント部門がドイツのカストディ<sup class="note-ref">1</sup>事業から撤退する方針を固めた。欧州大陸における事業ポートフォリオ見直しの一環で、資本と人材をTB・ペイメント分野に集中させる戦略的選択だ。</p>
+      <p>TB競合他行への示唆：カストディ撤退はHSBCがバックオフィス系ビジネスより決済・資金移動サービスを優先することを示し、同行が提携するコルレス先・カストディアンの選定を迫られる金融機関が生じる可能性がある。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>カストディ（Custody）</strong>：有価証券の保管・管理・決済を代行する金融サービス。グローバルカストディアンは機関投資家の資産を複数国にわたり管理する。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</div><!-- /section 3 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 4: 国内政治
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 04</div>
+    <div class="section-title">国内政治</div>
+  </div>
+
+  <!-- Article 4-1 -->
+  <div class="article">
+    <div class="article-headline">通常国会、6月21日会期末を目前——高市政権「骨太方針2026」の最終調整局面に</div>
+    <div class="article-meta">日本経済新聞 / 時事通信 &ensp;|&ensp; 2026年6月</div>
+    <div class="recap">
+      2026年2月8日に実施された第51回衆議院総選挙で自由民主党が戦後最多316議席を獲得し、高市早苗首相が第2次内閣を発足させた。4月に2026年度予算（122.3兆円、過去最大）が成立し、通常国会の会期は6月21日まで。
+    </div>
+    <div class="body-text">
+      <p>通常国会の会期末（6月21日）が迫る中、政府は「骨太方針2026年」の閣議決定に向けた最終調整を進めている。焦点は「責任ある積極財政」の旗印を掲げながら、財政健全化目標をどう位置づけるかだ。コロナ以降に常態化した大規模補正予算の在り方についても見直しが議論されている。</p>
+      <p>金融システムへの関連：「新技術立国」政策の下、若手研究者の海外派遣（2026〜30年度に累計3万人）や半導体投資支援が継続される見込み。Rapidus支援（後述）はその象徴的事業となっている。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>骨太方針</strong>：「経済財政運営と改革の基本方針」の通称。毎年夏前に閣議決定され、翌年度以降の予算・政策の大枠を示す。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 4-2 -->
+  <div class="article">
+    <div class="article-headline">参院選は8月30日投票予定——高市政権「黄金の3年」か大型選挙への審判か</div>
+    <div class="article-meta">時事ドットコム / 選挙ドットコム &ensp;|&ensp; 2026年</div>
+    <div class="recap">
+      衆院選での圧勝を受け、高市政権は向こう3〜4年に国政選挙がない「政治的空白期」を享受できる可能性が高まった。ただし参院選（8月13日告示・30日投票予定）では衆院の3分の2超勢力を参院でも確立できるかが焦点となる。
+    </div>
+    <div class="body-text">
+      <p>参議院議員通常選挙は8月13日告示・8月30日投票の日程が固まっており、高市政権にとって最初の大型選挙となる。衆院圧勝時の株価上昇（日経平均6万8,000円台）が民意に追い風となるか、インフレ・円安による家計圧迫が逆風となるかが鍵となる。</p>
+      <p>金融規制への示唆：選挙後の政権基盤次第で、「新技術立国」政策の継続・強化（デジタル円<sup class="note-ref">1</sup>、金融デジタル化推進）への力入れ具合が変わりうる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>デジタル円</strong>：日本銀行が研究・実証実験を進めるCBDC（中央銀行デジタル通貨）。現金と同等の法的地位を持つデジタル形式の円を指す。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</div><!-- /section 4 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 5: 海外政治
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 05</div>
+    <div class="section-title">海外政治</div>
+  </div>
+
+  <!-- Article 5-1 -->
+  <div class="article">
+    <div class="article-headline">英国防相ヒーリー氏が辞任——国防費拡充めぐる政府内対立が表面化、スターマー政権に打撃</div>
+    <div class="article-meta">Bloomberg / The Quint / UK Parliament &ensp;|&ensp; 2026年6月11日</div>
+    <div class="recap">
+      NATOはGDP比2%の国防費目標を掲げてきたが、英国はウクライナ侵攻以降も未達が続いていた。2025年のスターマー首相就任後、防衛費拡充をめぐりMoD（国防省）と財務省の間で長期にわたる内部対立が続いていた。
+    </div>
+    <div class="body-text">
+      <p>英国防相ジョン・ヒーリー氏は6月11日、「政府が必要な資源を確保できていない」との理由で辞任を表明した。MoDは4年間で280億ポンドの追加資金を要求していたが、政府が用意したのは135億ポンド増に留まった。ヒーリー氏の辞表には「増大する国際的脅威の時代に国の安全保障をリスクにさらしている」と記された。武装軍次官のAl Carns氏も数時間後に連鎖辞任した。</p>
+      <p>スターマー政権にとって、NATO首脳会議直前かつ重要補欠選挙前のタイミングでの閣内崩壊は大きな政治的打撃。英国のポンド相場と国債市場への短期的影響に注視が必要。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>MoD（Ministry of Defence）</strong>：英国国防省。</li>
+          <li><strong>NATO（北大西洋条約機構）</strong>：米国・欧州など32カ国が加盟する集団防衛機構。GDP比2%の国防費目標を加盟国に求める。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 5-2 -->
+  <div class="article">
+    <div class="article-headline">タイ、2015年バンコク爆弾テロのウイグル人2人に死刑判決——15年越しの司法決着</div>
+    <div class="article-meta">Wikipedia Current Events &ensp;|&ensp; 2026年6月</div>
+    <div class="recap">
+      2015年8月のバンコク・エラワン廟爆発では20人が死亡、120人以上が負傷した。タイ当局は中国・新疆ウイグル自治区出身の容疑者数人を逮捕したが、事件の背後関係・動機をめぐる捜査は難航していた。
+    </div>
+    <div class="body-text">
+      <p>タイ刑事裁判所は中国系ウイグル人被告2名に対し、2015年のエラワン廟爆弾テロへの関与を認定し死刑を言い渡した。判決は地政学的な中国・タイ・トルコ間の複雑な関係を背景に、東南アジアにおける中国の影響力問題として国際社会の注目を集めている。</p>
+      <p>ASEANへのビジネスエクスポージャーを持つ金融機関にとって、タイの政治的安定と外資誘致環境への影響を引き続き確認する必要がある。</p>
+    </div>
+  </div>
+</div><!-- /section 5 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 6: 国内企業動向
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 06</div>
+    <div class="section-title">国内企業動向</div>
+  </div>
+
+  <!-- Article 6-1 -->
+  <div class="article">
+    <div class="article-headline">Rapidus、政府から1,500億円を追加調達——2nm量産に向け累計4,249億円規模に</div>
+    <div class="article-meta">Rapidus 公式 / DigiTimes / PRNewswire &ensp;|&ensp; 2026年6月5日</div>
+    <div class="recap">
+      Rapidusは2022年にトヨタ・ソニー・SoftBankら民間8社と経産省が共同設立した国産半導体ファブ企業。2025年に北海道・千歳に工場を着工し、IBMと2nmプロセス技術の共同開発を進めてきた。政府は2nm国産化を「経済安全保障の要」と位置づけ、累次にわたり公的資金を投入している。
+    </div>
+    <div class="body-text">
+      <p>Rapidusは6月5日、IPA（情報処理推進機構）<sup class="note-ref">1</sup>から1,500億円の追加調達を完了したと発表した。これにより累計調達額は4,249億円超に達した。既存の民間32社（Fujitsu・NTT・SoftBank・Sony等）からの出資は1,676億円。</p>
+      <p>今回の資金は研究開発段階から2nm量産（2027年目標）への移行を支援する。さらに1.4nmプロセスの研究も継続する計画で、日本の半導体自給率向上と経済安全保障強化の観点から政府の強力なバックアップが続く。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>IPA（情報処理推進機構）</strong>：経済産業省所管の独立行政法人。IT人材育成・セキュリティ対策・半導体関連投資の支援を行う。</li>
+          <li><strong>2nm（2ナノメートル）</strong>：半導体チップの製造プロセスの微細度を示す指標。数値が小さいほど高性能・省電力。現在の先端品はTSMCの3nmが主流で、2nmは次世代の最先端。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 6-2 -->
+  <div class="article">
+    <div class="article-headline">富士通×住友ゴム、AIサロゲートモデルでタイヤ性能予測——製造業DXの最前線</div>
+    <div class="article-meta">Japan Industry News / 富士通プレスリリース &ensp;|&ensp; 2026年6月17日</div>
+    <div class="recap">
+      富士通は「ご用聞きITベンダー」からの脱却を掲げ、製造業向けAIソリューション提供を収益の柱にする変革を2023年頃から加速させてきた。住友ゴムもタイヤ開発における実車試験コスト・期間の削減を長年の課題としていた。
+    </div>
+    <div class="body-text">
+      <p>富士通と住友ゴムは、AIサロゲートモデル<sup class="note-ref">1</sup>を使ったタイヤ性能予測システムを共同開発し、6月17日付で成果を公表した。従来の物理シミュレーションや実車試験に代わり、AIが性能値（グリップ力・耐摩耗性等）を高速予測することで開発期間・コストの大幅短縮を狙う。</p>
+      <p>富士通は2035年度をめどに「ご用聞き型」受託開発事業のゼロ化を目指しており、本件はその方向性に沿う産業AI事業の典型例。金融分野でも同様のAIモデリング×業務コンサルアプローチが問われる。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>サロゲートモデル（Surrogate Model）</strong>：複雑な物理シミュレーションや実験の代替として機能するAIモデル。計算コストを大幅に削減しながら近似精度の高い結果を得られる。「代理モデル」とも呼ぶ。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</div><!-- /section 6 -->
+
+<!-- ════════════════════════════════════════
+     SECTION 7: 海外企業動向
+     ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-label">Section 07</div>
+    <div class="section-title">海外企業動向</div>
+  </div>
+
+  <!-- Article 7-1 -->
+  <div class="article">
+    <div class="article-headline">世界のジャンク債市場がスタグフレーション警戒——中東紛争が投資家心理を直撃</div>
+    <div class="article-meta">Bloomberg &ensp;|&ensp; 2026年6月10日</div>
+    <div class="recap">
+      2024〜25年のインフレ局面では「ソフトランディング」への期待が市場を支えたが、2026年に入り中東情勢の緊張再燃とエネルギー価格の上振れリスクが顕在化。「スタグフレーション<sup class="note-ref">1</sup>」（景気停滞＋インフレ）への懸念が投資家の間で浮上している。
+    </div>
+    <div class="body-text">
+      <p>ブルームバーグによれば、世界のジャンク債<sup class="note-ref">2</sup>市場でCCC格<sup class="note-ref">3</sup>の社債スプレッドが14カ月ぶりの高水準（約640bp）に達した。中東紛争がエネルギーコストを押し上げるとの懸念から、信用力の低い企業債への投資家のリスク回避姿勢が強まっている。</p>
+      <p>金融システム担当者へのインプリケーション：クレジットラインの見直し・貸出先格付けモニタリングの強化、トレジャリー部門での為替・金利ヘッジ戦略の再点検が求められる局面。</p>
+    </div>
+    <details class="glossary">
+      <summary>用語注釈</summary>
+      <div class="glossary-body">
+        <ol>
+          <li><strong>スタグフレーション（Stagflation）</strong>：経済停滞（Stagnation）とインフレーション（Inflation）の合成語。景気後退とインフレが同時進行する最も対処困難な経済状況。</li>
+          <li><strong>ジャンク債（High-Yield Bond / Junk Bond）</strong>：信用格付けがBB以下の高利回り社債。リターンは高いが倒産リスクも高い。</li>
+          <li><strong>CCC格</strong>：信用格付けの段階で投資適格（BBB以上）を大きく下回る「投機的格付け」の中でも特にリスクが高い区分。S&P・Fitch基準ではCCC、Moody'sではCaaに相当。</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- Article 7-2 -->
+  <div class="article">
+    <div class="article-headline">欧州、Wero連携でVISA・Mastercardへの依存脱却へ本腰——EPI130万人基盤でクロスボーダー展開</div>
+    <div class="article-meta">European Business Magazine / Yahoo Finance &ensp;|&ensp; 2026年2〜3月</div>
+    <div class="recap">
+      VISAとMastercardは欧州で年間約24兆ドルの決済を処理し、データが米国企業の管理下に置かれることが長年の課題とされてきた。ECBのラガルド総裁が2026年1月に「依存脱却が緊急課題」と公言し、EU規制当局も危機感を共有している（Section 1, Article 3参照）。
+    </div>
+    <div class="body-text">
+      <p>EPI・EuroPA連携（Section 1詳報参照）により、欧州の独自決済ネットワークは2026年内に13カ国・1.3億人規模でのP2P送金を実現する。2027年にはEコマース・POSへ拡大する計画だ。</p>
+      <p>欧州委員会は「決済主権」をエネルギー安全保障と同等の戦略的優先事項に位置づけており、規制面でのVISA・Mastercard優遇廃止や手数料規制の強化も議論されている。欧州拠点を持つ日系金融機関は、加盟店・法人顧客への提案において決済手段の多様化対応を迫られる可能性がある。</p>
+    </div>
+  </div>
+</div><!-- /section 7 -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>THE MORNING BRIEF &ensp;|&ensp; トランザクションバンキング部署向け自動生成レポート</p>
+  <p style="margin-top:4px;">情報基準：2026年6月16日 EST 23:00 &ensp;|&ensp; 翻訳・要約はAIが生成。投資判断の根拠としない。</p>
+</div>
+
+</div><!-- /.container -->
+</body>
+</html>
