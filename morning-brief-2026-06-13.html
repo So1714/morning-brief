@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月13日（土）</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --text: #1a1a1a;
+      --accent: #d0c9b8;
+      --muted: #6b6560;
+      --card-bg: #ede9e0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 18px 48px;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      text-align: center;
+      border-top: 4px double var(--text);
+      border-bottom: 4px double var(--text);
+      padding: 18px 0 14px;
+      margin: 24px 0 8px;
+    }
+    .masthead-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .masthead h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+    .masthead-dateline {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .edition-tag {
+      display: inline-block;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      margin-top: 10px;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      border-top: 2px solid var(--text);
+      margin: 36px 0 20px;
+      padding-top: 8px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── SATURDAY SPECIAL HEADER ── */
+    .section-header.saturday {
+      border-top: 3px solid var(--text);
+      background: var(--text);
+      color: var(--bg);
+      margin: 40px -18px 20px;
+      padding: 10px 18px 8px;
+    }
+    .section-header.saturday .section-num { color: var(--accent); }
+    .section-header.saturday h2 { color: var(--bg); }
+
+    /* ── ARTICLE ── */
+    article {
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--accent);
+    }
+    article:last-of-type { border-bottom: none; }
+    article h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+    .source-line {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .recap {
+      font-style: italic;
+      color: #4a4540;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 12px;
+      margin-bottom: 12px;
+    }
+    .body-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .body-text sup {
+      font-size: 0.65rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ── FOOTNOTE ACCORDION ── */
+    details.footnotes {
+      background: var(--card-bg);
+      border-radius: 3px;
+      padding: 8px 14px;
+      margin-top: 14px;
+    }
+    details.footnotes summary {
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    details.footnotes summary::before {
+      content: '▶';
+      font-size: 0.55rem;
+      transition: transform 0.15s;
+    }
+    details.footnotes[open] summary::before { transform: rotate(90deg); }
+    details.footnotes ol {
+      margin: 10px 0 4px 18px;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: #3a3530;
+    }
+    details.footnotes li { margin-bottom: 5px; }
+
+    /* ── ANALYSIS BOX (Saturday Deep Dive) ── */
+    .analysis-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--text);
+      padding: 12px 16px;
+      margin: 14px 0;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+    .analysis-box .label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    /* ── NEXT WEEK BOX ── */
+    .next-week {
+      background: var(--text);
+      color: var(--bg);
+      padding: 14px 16px;
+      margin-top: 28px;
+      border-radius: 2px;
+    }
+    .next-week h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    .next-week ul {
+      margin-left: 18px;
+      font-size: 0.85rem;
+      line-height: 1.9;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      padding: 24px 0 0;
+      border-top: 2px solid var(--accent);
+      margin-top: 40px;
+      line-height: 1.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <p class="masthead-sub">Transaction Banking Intelligence</p>
+    <h1>The Morning Brief</h1>
+    <p class="masthead-dateline">2026年6月13日（土曜日）&nbsp;｜&nbsp; Vol. 2026-113</p>
+    <span class="edition-tag">Saturday Edition + Weekly Deep Dive</span>
+  </header>
+
+  <!-- ════════════════════════════════
+       SECTION 1: 技術トレンド
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 01</span>
+    <h2>技術トレンド</h2>
+  </div>
+
+  <!-- Article 1-1 -->
+  <article>
+    <h3>MicrosoftがエージェンティックAIで量子コンピュータ開発を加速——Majorana量子ビット材料設計の性能が2倍超に向上</h3>
+    <p class="source-line">The Quantum Insider / Computer Weekly &nbsp;|&nbsp; 2026年6月3日</p>
+    <p class="recap">MicrosoftはMajorana位相論理型量子ビットの研究を長年推進してきた。2026年5月のBuild Conferenceでは初世代チップ「Majorana 1」の実現を発表し、競合のGoogle・IBMとは異なるアーキテクチャでの量子優位性確立を目指してきた。今回はその後継として、AI主導の材料設計・実験自動化が量子開発ロードマップを前倒しにしつつある。</p>
+    <p class="body-text">Microsoftは6月3日、量子コンピュータ開発の加速にエージェンティックAI<sup>①</sup>を活用していることを明らかにした。アップデートされたMajorana量子ビット<sup>②</sup>の材料スタックにはLeadとAntimonyを採用し、臨界位相論理ギャップ<sup>③</sup>が2倍以上に拡大。パリティライフタイムが20秒、スイッチング信頼性が1000倍向上した。AIエージェントは20年近くの研究データを横断的に解析して材料設計を自動化し、製造上の問題を早期発見する役割を担う。同社はこれにより2029年までのスケーラブルな量子コンピュータ実現を目指している。金融システム開発の観点では、量子耐性暗号（PQC）<sup>④</sup>への移行計画の前倒し策定が急務として再認識される動向だ。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（4件）</summary>
+      <ol>
+        <li><strong>エージェンティックAI</strong>：タスクを自律的に計画・実行し、外部ツールを呼び出せる次世代AIシステム。従来のチャットボット型AIと異なり、複数ステップの複雑な業務を人間の介入なく遂行する。</li>
+        <li><strong>Majorana量子ビット</strong>：位相論理（トポロジカル）に基づく量子ビット設計。ノイズ耐性が高く、スケーラブルな量子コンピュータ実現に有利とされる。MicrosoftはIBM（超伝導型）・Google（超伝導型）と異なるアプローチを採用している。</li>
+        <li><strong>臨界位相論理ギャップ</strong>：量子ビットが位相論理的性質を維持するために必要なエネルギー差の指標。大きいほど外部ノイズへの安定性が高い。</li>
+        <li><strong>量子耐性暗号（PQC: Post-Quantum Cryptography）</strong>：量子コンピュータによる解読攻撃に耐えられる新世代暗号アルゴリズム。NISTが2024年に標準化を完了し、金融機関への移行義務化が各国で議論されている。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 1-2 -->
+  <article>
+    <h3>AnthropicがSECにIPO目論見書を機密提出——評価額965億ドル・年間収益ランレート470億ドルで兆ドル上場に現実味</h3>
+    <p class="source-line">CNBC / TechCrunch &nbsp;|&nbsp; 2026年6月1日</p>
+    <p class="recap">2021年設立のAnthropicは元OpenAI幹部のDario・Daniela Amodei姉弟が創業。Claudeシリーズの大規模言語モデル（LLM）で急成長し、2025年末時点で年間収益100億ドルを達成した。2026年5月には650億ドルのシリーズH<sup>①</sup>調達を完了し、評価額965億ドルに達していた。</p>
+    <p class="body-text">Anthropicは6月1日、米証券取引委員会（SEC）<sup>②</sup>にIPO目論見書を機密提出したことを発表した。年間収益ランレートは470億ドルと前年比約5倍に急増。同週にはDeepSeekが外部資金調達70億ドル超を確保しており、中国AI勢がOpenAI・Anthropicを価格面で最大9倍下回る水準で競合するという厳しい競争環境が上場後の焦点となっている。SpaceX・OpenAIとならんで2026年の兆ドル級上場<sup>③</sup>として位置づけられており、AI産業の資本市場における存在感が一段と高まった。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>シリーズH</strong>：スタートアップの資金調達ラウンドを示す段階。AからHまでのアルファベットで進行段階を表し、Hは後期の大規模調達を意味する。</li>
+        <li><strong>SEC（Securities and Exchange Commission）</strong>：米国証券取引委員会。株式公開（IPO）を含む有価証券の発行・取引を監督する連邦機関。機密提出（Confidential Filing）は公開前に当局レビューを進める制度。</li>
+        <li><strong>兆ドル級上場</strong>：評価額1兆ドル（約155兆円）以上での株式公開。Apple・Microsoft・Nvidiaなど既存の兆ドル企業に次ぐ新規参入として市場で注目される。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 1-3 -->
+  <article>
+    <h3>GitHubトレンド2026年6月：AIエージェント・MCP・LLMツールが上位を独占、金融システム開発への応用拡大</h3>
+    <p class="source-line">OSSInsight / Trendshift &nbsp;|&nbsp; 2026年6月</p>
+    <p class="recap">2024年以降、生成AI・LLMの急速な普及を背景にGitHub上のAI関連オープンソース開発が爆発的に増加。2025年はRAGフレームワークやLLM推論エンジンが台頭し、2026年はAIエージェントとMCPサーバー<sup>①</sup>周辺のエコシステムが中心的なトレンドとなった。</p>
+    <p class="body-text">2026年6月時点のGitHubトレンドでは、「Understand-Anything」が週間スター約2,000件を獲得してトップに急浮上。上位リポジトリにはMCPサーバー・RAGフレームワーク<sup>②</sup>・推論エンジン・ベクターデータベース<sup>③</sup>が並ぶ。Microsoft MarkItDown（ドキュメント変換）・codegraph・build-your-own-xなど、金融ドキュメント処理・コードベース分析への応用が期待されるツールも上位に登場。金融システム開発においてはAIを活用したコード生成・レビュー・内部ドキュメント検索の実装が開発サイクル短縮に直結しており、PoC<sup>④</sup>段階を超えて本番適用に移行する動きが加速している。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（4件）</summary>
+      <ol>
+        <li><strong>MCPサーバー（Model Context Protocol）</strong>：AIモデルが外部ツールやデータソースに安全に接続するための標準プロトコル。Anthropicが策定・公開し、2025年以降急速に普及した。</li>
+        <li><strong>RAGフレームワーク（Retrieval-Augmented Generation）</strong>：外部データベースから関連情報を取得してLLMの回答精度を向上させるアーキテクチャ。社内ドキュメント・規制文書への適用が金融機関で進んでいる。</li>
+        <li><strong>ベクターデータベース</strong>：テキストや画像を数値ベクトルとして保存・検索するデータベース。意味的類似性検索に使われ、RAGの基盤技術として普及している。</li>
+        <li><strong>PoC（Proof of Concept）</strong>：概念実証。新技術の実現可能性を小規模で検証する取り組み。金融機関でのAI導入はこのPoC段階から全行展開への移行が2026年の主要課題となっている。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 1-4 -->
+  <article>
+    <h3>銀行AIが「実験」から「基幹インフラ」へ——AML・KYC・KYBへの組み込みが加速、規制当局は説明可能性を要求</h3>
+    <p class="source-line">PYMNTS / Finastra / IBM / Wolters Kluwer &nbsp;|&nbsp; 2026年6月</p>
+    <p class="recap">2023〜2024年は大手金融機関がLLMのPoC（概念実証）に取り組む「実験期」だった。2025年に入り各行が特定業務への限定適用を開始し、2026年は全行展開・業務基幹化が本格的に進む転換点と位置づけられている。</p>
+    <p class="body-text">2026年6月時点で、大手金融機関のAI活用はPoC段階から業務基幹インフラとしての本番展開フェーズへ移行した。主要応用領域は、①AML<sup>①</sup>・KYC<sup>②</sup>・KYB<sup>③</sup>への組み込みツール、②会議準備・コーディング・設計レビュー・内部タスク圧縮など行員業務の効率化、③取引監視・不正検知のエージェンティックAI化——の三層構造だ。規制当局の最大懸念は「説明可能性・透明性」と「偏見・差別リスク」（Q1 2026のWolters Kluwer調査より）。金融システム開発の観点では、AIによるコード生成・テスト・ドキュメント自動生成がリリースサイクルを圧縮している反面、AIが生成したコードのガバナンス<sup>④</sup>設計が急務となっている。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（4件）</summary>
+      <ol>
+        <li><strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング（資金洗浄）防止のための規制・監視業務。不審取引の検知・報告義務が金融機関に課される。</li>
+        <li><strong>KYC（Know Your Customer）</strong>：顧客の本人確認・身元調査プロセス。口座開設や取引時に義務付けられる規制対応業務。</li>
+        <li><strong>KYB（Know Your Business）</strong>：法人顧客の実態調査プロセス。法人の実質的支配者（UBO）の特定など、KYCの法人版として重要性が増している。</li>
+        <li><strong>ガバナンス（AI Governance）</strong>：AI利用に関するルール・監督・説明責任・リスク管理体制のこと。EU AI法の施行（2025年）以降、金融機関での整備が義務化方向にある。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 1-5 -->
+  <article>
+    <h3>欧州量子スタートアップが1週間で9.61億ドル調達——Keyfactorは機械IDと量子耐性証明書の一元管理基盤を発表</h3>
+    <p class="source-line">StartupHub.ai / The Quantum Insider &nbsp;|&nbsp; 2026年6月9日</p>
+    <p class="recap">2023年以降、量子コンピュータの商用化タイムラインが「10〜15年先」から「2〜5年先」に前倒しされるとの観測が広がり、ベンチャー資本の量子投資が急増。欧州は政府補助金も活用しながら、米国勢（Google・IBM・Microsoft）との競争力強化を図っている。</p>
+    <p class="body-text">AnthropicのIPO申請と同じ週、欧州の量子コンピュータ関連スタートアップ4社が合計9.61億ドルの資金調達を完了した。金融分野では量子コンピュータによるポートフォリオ最適化・リスク計算・暗号アルゴリズムの刷新への期待が高まっている。同じ6月9日、Keyfactorは機械ID<sup>①</sup>・鍵・証明書を一元管理する「Trust Control Plane」を発表。AIエージェントとIoTデバイスの爆発的な普及による「ID乱立問題」への対応策として注目を集めており、金融システムのゼロトラスト<sup>②</sup>アーキテクチャ整備と量子耐性証明書<sup>③</sup>への移行を統合的に管理できる点が評価されている。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>機械ID（Machine Identity）</strong>：クラウド上のサーバー・コンテナ・APIなどの非人間エンティティを識別・認証するための証明書・鍵など。AIエージェントとマイクロサービスの普及で管理対象が爆発的に増加している。</li>
+        <li><strong>ゼロトラスト（Zero Trust）</strong>：「社内ネットワークだから安全」という従来の前提を捨て、すべてのアクセスを都度検証するセキュリティアーキテクチャ。金融機関でのクラウド移行と並行して採用が急増している。</li>
+        <li><strong>量子耐性証明書</strong>：量子コンピュータによる解読に耐えられるアルゴリズムで生成された公開鍵証明書。NIST標準化（2024年完了）のアルゴリズムへの移行が国際的に求められている。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 2: 第三者ベンダー動向
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 02</span>
+    <h2>第三者ベンダー動向</h2>
+  </div>
+
+  <!-- Article 2-1 -->
+  <article>
+    <h3>JPMorgan・Citi・BofA・Wells Fargoら16行超、The Clearing House経由のトークン化預金ネットワークを発表——ステーブルコイン対抗策の決定版</h3>
+    <p class="source-line">CoinDesk / Ledger Insights / PYMNTS &nbsp;|&nbsp; 2026年6月5日</p>
+    <p class="recap">2021年以降、PayPal USD（PYUSD）やUSDCなどのステーブルコインが企業間決済に浸透し始め、既存銀行の決済収益が脅かされる懸念が高まってきた。JPMorganはJPM Coin・Onyxを通じた自社ブロックチェーン決済を先行展開してきたが、業界共通インフラの必要性が認識されていた。</p>
+    <p class="body-text">6月5日、JPMorgan Chase・Citigroup・Bank of America・Wells Fargoを中核とする16行超が、The Clearing House（TCH）<sup>①</sup>を運用主体とするブロックチェーン決済ネットワーク構築計画を発表した。参加行はBNY・BMO・HSBC・Citizens・Fifth Third・Huntington・PNC・Santander・TD Bank・Truistなどを含む。ネットワークは2027年上半期の稼働を目標とし、参加銀行が顧客のトークン化預金<sup>②</sup>を24時間365日リアルタイムで送金・清算・決済できる仕組みを提供する。TCHはすでにCHIPS<sup>③</sup>・EPN・RTP<sup>④</sup>を運営しており、「既存の規制・運用・清算フレームワークとブロックチェーンの互換性を保ちながらステーブルコインに対抗する、銀行業界の最大規模の協調反撃」と位置づけられる。ブロックチェーン技術ベンダーは未選定。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（4件）</summary>
+      <ol>
+        <li><strong>The Clearing House（TCH）</strong>：米国最大の民間決済インフラ運営機関。25の大手銀行が共同所有し、CHIPS・EPN・RTPなど主要決済システムを運営する。</li>
+        <li><strong>トークン化預金</strong>：ブロックチェーン上にデジタル表現した銀行預金。法定通貨に裏付けられた点はステーブルコインと似るが、既存の預金保険・規制フレームワークの対象となる点が異なる。</li>
+        <li><strong>CHIPS（Clearing House Interbank Payments System）</strong>：大口・高額のドル建て銀行間決済を処理するシステム。FedWireとならんで米国大口決済の2大インフラの一つ。</li>
+        <li><strong>RTP（Real-Time Payments）</strong>：TCHが2017年に開始した24/7リアルタイム決済ネットワーク。米国版即時振込インフラとして普及が進んでいる。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 2-2 -->
+  <article>
+    <h3>SWIFTの新個人送金フレームワーク、6月末に25行超が本稼働予定——ブロックチェーン台帳もMVPフェーズへ</h3>
+    <p class="source-line">The Paypers / 247 Wall St &nbsp;|&nbsp; 2026年6月</p>
+    <p class="recap">SWIFTはG20が設定するクロスボーダー決済改善目標（2027年達成目標）に対応するため、2024年から新しい個人向け送金フレームワークの設計を開始。2025年にMVP（最小実行可能プロダクト）<sup>①</sup>フェーズに入り、ブロックチェーン台帳の実装と参加行の拡大が進んでいる。</p>
+    <p class="body-text">SWIFTの新決済スキームはネットワーク史上最大の個人送金改革として位置付けられ、50行以上が署名・25行超が6月末時点での本稼働を目指す。対象地域はインド・パキスタン・バングラデシュ・中国・タイ（世界上位10送金市場のうち5カ国）＋英国・米国・豪州・カナダ・ドイツ・スペイン。並行してThunes<sup>②</sup>はSWIFT接続の11,500行向けに「Pay-to-Stablecoin-Wallets」を展開しており、USDC<sup>③</sup>・USDTを活用した140カ国・5億超のウォレットへのリアルタイム送金が可能となった。SWIFTのブロックチェーン台帳はトークン化資産と既存SWIFT連結性を活かした「断片化なきトークン決済」の実現を目指している。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>MVP（Minimum Viable Product）</strong>：最小限の機能で市場検証を行うための製品・システムの初期版。本番環境での実証とフィードバック収集を目的とする。</li>
+        <li><strong>Thunes</strong>：シンガポール拠点のクロスボーダー決済インフラプロバイダ。SWIFTネットワークとステーブルコインウォレットの橋渡し役として急成長している。</li>
+        <li><strong>USDC/USDT</strong>：それぞれCircle社（USDC）・Tether社（USDT）が発行する米ドルペッグのステーブルコイン。B2B送金での採用が企業・銀行の間で拡大している。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 3: 外銀TB速報
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2>外銀TB速報</h2>
+  </div>
+
+  <!-- Article 3-1 -->
+  <article>
+    <h3>JPMorgan・HSBC・Standard Chartered、香港HKMA主導のトークン化債券専門家グループに参加——アジア制度設計に外銀が直接関与</h3>
+    <p class="source-line">CoinMarketCap / crypto.news &nbsp;|&nbsp; 2026年6月5日</p>
+    <p class="recap">香港金融管理局（HKMA）<sup>①</sup>は2022年頃からデジタル証券・トークン化資産の実証実験を積極的に推進。2023〜2024年にかけてProject Orionなど政府発行のトークン化債券を実施し、民間ベースの拡大を目指して専門家グループの設立を準備してきた。</p>
+    <p class="body-text">HKMAは6月5日、トークン化債券<sup>②</sup>市場の普及・拡張を目的とした専門家グループの設立を発表した。参加機関はJPMorgan Securities・HSBC・Standard Chartered Bank・UBS・Ant Digital・HashKey Group<sup>③</sup>など。同グループは政策・市場慣行・技術イノベーションの3側面から調査・提言を行う。主要外銀がアジア主要市場の制度設計に直接関与することで、将来的な東京市場でのトークン化証券インフラ整備にも波及する動向として注視が必要だ。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>HKMA（Hong Kong Monetary Authority）</strong>：香港金融管理局。香港の中央銀行機能と金融規制機能を担う当局。</li>
+        <li><strong>トークン化債券</strong>：ブロックチェーン上にデジタル表現した債券。二次流通の効率化・分散保有・スマートコントラクトによる自動クーポン支払いなどが特徴。</li>
+        <li><strong>HashKey Group</strong>：香港拠点の暗号資産・ブロックチェーン金融グループ。香港SFC（証券先物委員会）の認可を受けた取引所を運営する。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 3-2 -->
+  <article>
+    <h3>Citi Token Services、スケール稼働を公式確認——24/7 USDクリアリングとトークン化流動性の統合でクロスボーダー即時決済が現実に</h3>
+    <p class="source-line">PR Newswire / Markets Media &nbsp;|&nbsp; 2026年6月5日</p>
+    <p class="recap">CitiはCiti Token Servicesを2023年に初公開し、2024〜2025年に複数の企業顧客向けパイロットを実施した。トークン化流動性による国際送金の自動化・即時決済化を目指す取り組みとして業界内で注目されてきたが、スケール展開については不透明な部分があった。</p>
+    <p class="body-text">Citi Services部門グローバルヘッドのShahmir Khaliq氏は6月5日のイベントで、「Citi Token Servicesは現在稼働中かつスケール<sup>①</sup>段階にある」と明言した。同サービスはトークン化流動性と24/7 USDクリアリング<sup>②</sup>を統合したクロスボーダー即時決済基盤であり、企業顧客が時間・地域を問わず資金移動を実行できる。The Clearing Houseが主導するトークン化預金ネットワーク（2027年稼働目標）との接続性が実現すれば、国際送金インフラとしての存在感がさらに増す見通しだ。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>スケール段階（at Scale）</strong>：パイロット・PoC（概念実証）を超え、商業規模での本番運用が開始されている状態。単一顧客の実験ではなく、複数の商業顧客に対して継続的に提供されている段階を指す。</li>
+        <li><strong>24/7 USDクリアリング</strong>：従来は平日の限られた時間帯のみ稼働していた米ドル清算処理を、土日祝日含む24時間365日に拡張した決済インフラ。即時グローバル決済の実現に不可欠な要素。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 4: 国内政治
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 04</span>
+    <h2>国内政治</h2>
+  </div>
+
+  <!-- Article 4-1 -->
+  <article>
+    <h3>高市首相が欧州へ出発——G7エビアン・サミット初参加でエネルギー安全保障3原則を提唱へ</h3>
+    <p class="source-line">日本経済新聞 / 時事ドットコム &nbsp;|&nbsp; 2026年6月11〜13日</p>
+    <p class="recap">高市早苗内閣は2025年の総選挙を経て発足。中東情勢の緊迫化に伴う原油価格高騰とエネルギー安全保障が国内政策の最重要課題の一つとなっている。今回のG7サミット（6月15〜17日、フランス・エビアン）は高市首相にとって初の首脳会議参加となる。</p>
+    <p class="body-text">高市早苗首相は6月13日、欧州歴訪（英国・イタリア・フランス、13〜18日）のため羽田空港を出発した。G7サミット<sup>①</sup>では事前にエネルギー安全保障に関する3原則——①自由で透明な貿易の確保、②アジアなどでの石油備蓄強化支援とIEA<sup>②</sup>との連携促進、③産油国と消費国の連携強化——を提唱すると発表している。中東情勢の緊迫化を背景とした原油高への国際協調が主要議題となる見込み。金融市場にとっては原油価格の行方が2026年下半期のインフレ・金利政策に直結するだけに、首脳外交の結果が注目される。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>G7サミット</strong>：日本・米国・英国・ドイツ・フランス・イタリア・カナダの先進7カ国首脳会議。2026年はフランス・エビアンで開催（6月15〜17日）。EU代表も参加する。</li>
+        <li><strong>IEA（International Energy Agency）</strong>：国際エネルギー機関。加盟国間の石油備蓄共有・エネルギー安保政策を調整するOECD傘下の国際機関。緊急時の協調放出メカニズムを運営する。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 4-2 -->
+  <article>
+    <h3>小泉防衛相とインドネシアが防衛協力協定（DCA）に署名、「統合防衛対話メカニズム」を新設</h3>
+    <p class="source-line">防衛省・自衛隊公式サイト / NHKニュース &nbsp;|&nbsp; 2026年6月5日</p>
+    <p class="recap">日本はインド太平洋地域の安全保障強化のため、クアッド（日米豪印）加盟国以外の東南アジア諸国との防衛関係深化を進めてきた。インドネシアは東南アジア最大の人口・経済規模を持ち、南シナ海をめぐる安保環境での戦略的重要性が高まっている。</p>
+    <p class="body-text">小泉防衛大臣は6月5日、シャフリィ・インドネシア国防大臣と東京で会談し、防衛協力協定（DCA）<sup>①</sup>に署名した。合わせて「統合防衛対話メカニズム」の創設を確認し、政策面は事務次官級・運用面は統合幕僚長<sup>②</sup>級での対話を予定する。両大臣は軍事情報保護の在り方に関する議論を前進させることでも一致。今後のGSOMIA<sup>③</sup>類似協定締結に向けた布石と見られる。金融システムの観点では、防衛産業・政府調達のサイバーセキュリティ要件強化が日本の金融機関のサプライチェーンリスク管理にも間接的な影響を及ぼしうる。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>DCA（Defence Cooperation Agreement）</strong>：防衛協力協定。自衛隊と相手国軍の共同訓練・装備協力・情報共有の枠組みを規定する2国間協定。</li>
+        <li><strong>統合幕僚長</strong>：陸海空自衛隊を一元指揮する統合幕僚監部のトップ。米軍の統合参謀本部議長に相当する職位。</li>
+        <li><strong>GSOMIA（General Security of Military Information Agreement）</strong>：軍事情報保護協定。秘密軍事情報を2国間で共有・保護するための基準と手続きを規定する協定。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 5: 海外政治
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 05</span>
+    <h2>海外政治</h2>
+  </div>
+
+  <!-- Article 5-1 -->
+  <article>
+    <h3>韓国・尹錫悦前大統領に懲役30年の実刑判決——戒厳令事件で有罪、6月21日大統領選を前に政治的混乱</h3>
+    <p class="source-line">Reuters / Wikipedia Current Events &nbsp;|&nbsp; 2026年6月12日</p>
+    <p class="recap">2024年12月、尹錫悦韓国大統領が突如として戒厳令<sup>①</sup>を宣布し数時間で解除される事態が発生。国会による弾劾訴追<sup>②</sup>・権限停止を経て、2025年に憲法裁判所が罷免を確定した。2024年にドローンを平壌に飛行させ北朝鮮との緊張を高めたとの刑事疑惑も同時進行していた。</p>
+    <p class="body-text">韓国ソウル中央地裁は6月12日、尹錫悦前大統領に懲役30年の実刑判決を言い渡した。元国防相も同様の量刑を受けた。判決は「北朝鮮との緊張を意図的に高めることで戒厳令布告の口実を作ろうとした」という構成を採用。6月21日に予定されている次期大統領選挙を前に韓国の政治リスクを改めて浮上させた形で、投資家・市場参加者が注視している。ウォン安懸念が韓国の輸出企業や日本の輸出競争力にも影響する点で経済的インパクトも続く。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>戒厳令</strong>：国家緊急事態において軍が行政・司法権限を掌握する非常措置。韓国憲法では国会の過半数決議で即時解除できる。</li>
+        <li><strong>弾劾訴追</strong>：国会が大統領などの高位公務員を職務から罷免するための訴追手続き。韓国では国会可決後に憲法裁判所が最終判断を行う。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 5-2 -->
+  <article>
+    <h3>トランプ大統領がイランへの追加攻撃を中止、和平交渉に含み——G7でも中東情勢が最大議題に</h3>
+    <p class="source-line">CFR Daily News Brief / Reuters &nbsp;|&nbsp; 2026年6月12日</p>
+    <p class="recap">2025年末から2026年にかけて、イランの核開発疑惑をめぐり米・イラン関係が急速に悪化。米国による経済制裁強化とイランのウラン濃縮加速が繰り返され、中東地域全体の地政学リスク<sup>①</sup>が高まっていた。これが原油価格高騰と世界のジャンク債スプレッド拡大の主因となっている。</p>
+    <p class="body-text">トランプ米大統領は6月12日、計画されていたイランへの新たな軍事攻撃をキャンセルし、和平合意の可能性を示唆した。イラン側は「最終確定していない」との立場を維持しており不確実性が残る。中東情勢の緊迫化は原油価格の高止まりを通じて世界的なスタグフレーション<sup>②</sup>懸念を増幅させており、G7サミット（6月15〜17日）でも主要議題の一つとなる見込みだ。金融機関のリスク管理においては地政学リスクの比重が高まっており、トレジャリー部門ではオイルヘッジ戦略の見直しが急務となっている。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>地政学リスク</strong>：国家間の政治・軍事的緊張や紛争が金融市場・経済活動に与えるリスク。原油価格・為替・資産価格・サプライチェーンに広範な影響を及ぼす。</li>
+        <li><strong>スタグフレーション</strong>：景気停滞（スタグネーション）とインフレが同時に進行する経済状態。金融政策の舵取りが困難で、中央銀行の利上げ・利下げいずれも副作用を伴う。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 6: 国内企業動向
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 06</span>
+    <h2>国内企業動向</h2>
+  </div>
+
+  <!-- Article 6-1 -->
+  <article>
+    <h3>日経平均が週間2,563円安の記録的下落——米ハイテク株急落・米雇用統計・中東リスクの三重ショック</h3>
+    <p class="source-line">note（宮野宏樹）/ Desk Research Design &nbsp;|&nbsp; 2026年6月8日</p>
+    <p class="recap">2025年後半から日本株式市場は米国のAI・ハイテク株高に連動する形で上昇基調を維持し、2026年春には日経平均が66,000〜68,000円台で推移していた。一方でドル円は160円前後の円安基調を維持しており、輸入インフレ圧力が続いていた。</p>
+    <p class="body-text">6月8日（月）、日本の株式市場は複合的なリスクオフ<sup>①</sup>ショックに見舞われ、日経平均株価は前週末比2,563円（-3.85%）という記録的な下落を記録した。要因は①米国ハイテク株の急落（週末の米市場からの連動）、②米雇用統計の想定外の内容、③中東情勢悪化に伴う原油価格高騰——の三重ショックだ。ドル円は160.29円で推移しており、継続的な円安が輸入コスト・インフレ圧力を高めている。金融システムの観点では急激な相場変動に対応するバッチ処理・リスク計算システムへの高負荷が再確認されており、耐障害性設計の見直しが求められる局面だ。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（1件）</summary>
+      <ol>
+        <li><strong>リスクオフ</strong>：投資家がリスクの高い資産（株式・新興国通貨など）を売却し、安全資産（国債・ドル・円など）に資金を移す行動。地政学リスクや経済指標の悪化が引き金となることが多い。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 6-2 -->
+  <article>
+    <h3>日銀6月利上げ観測が浮上——賃金上昇率3.5%と春闘効果がデータに反映、政策金利0.75%からの追加引き上げへ</h3>
+    <p class="source-line">三井住友DSアセットマネジメント / note（宮野宏樹）&nbsp;|&nbsp; 2026年6月</p>
+    <p class="recap">日銀は2024年に17年ぶりのマイナス金利解除・利上げサイクルに入り、2026年前半までに政策金利を0.75%まで段階的に引き上げた。2026年春闘ではベースアップを含む賃上げ率が3.5%に達し、日銀が掲げる「賃金上昇を伴う物価上昇」の条件が整いつつある。</p>
+    <p class="body-text">日銀の6月金融政策決定会合<sup>①</sup>を前に、市場では追加利上げへの観測が高まっている。消費者物価指数（CPI）<sup>②</sup>は1.4%と2%目標を下回るが、賃金上昇率は3.5%に加速し春闘効果のデータへの反映が進んでいる。失業率は2.5%と引き締まった労働市場を示す。一方でドル円の160円台維持は輸入インフレ圧力となっており、利上げによる円高誘導効果を期待する声も一部にある。金融システム開発の観点では、金利上昇に伴うシステム要件（利子計算ロジック変更・変動金利商品のリスク計算パラメータ更新・金利シミュレーション機能の整備）への対応コスト見積もりが急務となっている。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>金融政策決定会合</strong>：日本銀行の政策委員会が金融政策（政策金利・量的緩和等）を決定する会合。年8回開催。結果は市場の金利・為替・株式価格に直接影響する。</li>
+        <li><strong>CPI（Consumer Price Index）</strong>：消費者物価指数。一般消費者が購入するモノ・サービスの価格変動を測る指標。日銀は「前年比+2%」を物価安定目標として設定している。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 7: 海外企業動向
+       ════════════════════════════════ -->
+  <div class="section-header">
+    <span class="section-num">Section 07</span>
+    <h2>海外企業動向</h2>
+  </div>
+
+  <!-- Article 7-1 -->
+  <article>
+    <h3>SpaceX、史上最大のIPOで750億ドル調達——評価額1兆7700億ドル・Nasdaq「SPCX」デビュー</h3>
+    <p class="source-line">CNBC &nbsp;|&nbsp; 2026年6月11〜12日</p>
+    <p class="recap">SpaceXは長年にわたり非公開企業としての地位を維持してきた。2025〜2026年にかけてイーロン・マスクCEOが政府との関係改善を進め、民間宇宙インフラ企業としての事業価値が急上昇。2026年5月にIPO準備を本格化し、Anthropic・OpenAIと並ぶ「超大型上場ラッシュ」の一角を担うことになった。</p>
+    <p class="body-text">SpaceXは6月11日、1株135ドルで5億5560万株を売り出し、史上最大となる750億ドルを調達した。評価額1兆7700億ドルで米国企業時価総額第7位（テスラを上回る）となり、Nasdaq<sup>①</sup>に「SPCX」ティッカーでデビュー。米・イランの緊張緩和の動きが市場センチメントの追い風となった。同週にAnthropicがIPO申請・DeepSeekが70億ドル超の外部資金調達を完了しており、2026年はAI・宇宙テクノロジー企業の「歴史的上場ラッシュの年」として記録される見通しだ。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（1件）</summary>
+      <ol>
+        <li><strong>Nasdaq（ナスダック）</strong>：米国の電子株式取引所。Apple・Microsoft・Google・Amazonなどテクノロジー・成長企業が多く上場する。NYSEと並ぶ米国2大市場の一つ。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 7-2 -->
+  <article>
+    <h3>世界ジャンク債市場にスタグフレーション警戒信号——CCC格スプレッドが14ヶ月ぶり最大、VanguardがBlackRockを抜き米ETF首位に</h3>
+    <p class="source-line">Bloomberg &nbsp;|&nbsp; 2026年6月10日</p>
+    <p class="recap">2020〜2021年の超低金利時代に多くの企業が安価な資金調達を行い、高水準の負債を抱えた状態で2026年を迎えている。2025年後半からの中東緊張・原油高とEl Niño<sup>①</sup>による気候変動的経済ショックが重なり、低格付け債券への懸念が高まっていた。</p>
+    <p class="body-text">Bloombergは6月10日、世界のCCC格<sup>②</sup>ジャンク債と他ジャンク債のスプレッドが6.4%ポイントへと14ヶ月ぶりの最大水準に拡大したと報じた。中東紛争による原油価格高騰と大規模化するEl Niñoによる建設資材・食料品コスト上昇が「スタグフレーション」懸念を引き起こしており、低格付け借り手の返済能力への不信が市場を支配している。また、VanguardがBlackRockの20年間保持していた米国ETF<sup>③</sup>市場首位の座を奪ったことも注目されており、パッシブ運用の覇権争いに変化の兆しが見られる。</p>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>El Niño（エルニーニョ）</strong>：太平洋赤道域の海水温上昇による世界規模の気候異常現象。農業・建設・保険コストに広範な影響をもたらし、経済的損失が数千億ドル規模に達することがある。</li>
+        <li><strong>CCC格</strong>：信用格付け機関（Moody's・S&P・Fitch）による格付けのうち最も低位の部類。デフォルトリスクが極めて高く、投機的格付けの中でも最下層に位置する。</li>
+        <li><strong>ETF（Exchange Traded Fund）</strong>：証券取引所で売買できる投資信託。低コストでインデックスに連動するものが主流で、個人・機関投資家の双方に普及している。BlackRock（iShares）とVanguardが市場を二分してきた。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- ════════════════════════════════
+       SECTION 8: 外銀TB週次深掘り（土曜版追加）
+       ════════════════════════════════ -->
+  <div class="section-header saturday">
+    <span class="section-num">Section 08</span>
+    <h2>外銀TB週次深掘り</h2>
+  </div>
+
+  <!-- Article 8-1 -->
+  <article>
+    <h3>「トークン化預金ネットワーク」週——JPMorgan主導、16行超が一斉動員した2027年稼働計画の戦略的意義</h3>
+    <p class="source-line">CoinDesk / Ledger Insights / American Banker &nbsp;|&nbsp; 2026年6月5日（週次総括）</p>
+    <p class="recap">2022年頃から外銀各行はブロックチェーン活用による決済高速化の実証実験を個別に進めてきた。JPMorganのJPM Coin・Onyx、CitiのToken Services、HSBCのCanton Network活用パイロットなど各行独自の取り組みが並立状態だったが、業界共通インフラの欠如という課題が浮上していた。ステーブルコイン（PYUSD・USDC等）の企業決済採用拡大が銀行収益への直接的脅威として認識されたことが、今回の「協調反撃」を促した。</p>
+    <p class="body-text">今週最大のニュースは6月5日に発表されたThe Clearing House（TCH）主導のトークン化預金ネットワーク計画だ。JPMorgan・Citi・BofA・Wells Fargoの4大行を核に16行超が参加し、2027年上半期の本稼働を目指す。同ネットワークの戦略的意義は3点に整理できる。</p>
+    <div class="analysis-box">
+      <div class="label">週次分析</div>
+      <p><strong>①規制の壁を活用したステーブルコイン包囲戦：</strong>トークン化預金は既存の預金保険・規制フレームワークに準拠するため、無保険のステーブルコインと差別化される。TCHを運用主体とすることで規制上のお墨付きを得た「機関グレードの銀行ブロックチェーン」として位置づける戦略だ。</p>
+      <p style="margin-top:10px;"><strong>②JPM Coin等の個別実装からの「業界統合」：</strong>JPMorgan単独のJPM Coinは参加行が自行顧客に限られるという制約があった。TCH経由のネットワークは参加銀行間の相互決済が可能となり、CHIPS・RTPに次ぐ第3の大口決済インフラとしての可能性を開く。</p>
+      <p style="margin-top:10px;"><strong>③ブロックチェーンベンダー選定が次のバトルフィールド：</strong>技術ベンダー未定の状態で発表されたことは、各行の交渉力を最大化するための意図的な「未確定」戦略と見られる。Canton Network（HSBC・Goldmanが参加）・Ethereum L2・Hyperledger Fabricなどが候補として浮上している。</p>
+    </div>
+    <details class="footnotes">
+      <summary>注釈を展開する（3件）</summary>
+      <ol>
+        <li><strong>Canton Network</strong>：Goldman Sachs・HSBC・BNY Mellonなどが参画するブロックチェーンネットワーク。金融機関間の相互運用性を重視した設計が特徴。</li>
+        <li><strong>Hyperledger Fabric</strong>：Linux Foundation主導のエンタープライズ向けブロックチェーン基盤。許可型（パーミッション型）で金融機関の内部システムへの組み込みに適している。</li>
+        <li><strong>機関グレード（Institutional Grade）</strong>：プロフェッショナルな金融機関が求める水準のセキュリティ・規制準拠・信頼性・運用体制を満たしていることを示す表現。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 8-2 -->
+  <article>
+    <h3>香港HKMA専門家グループ参加を通じた外銀のアジア制度形成戦略——JPMorgan・HSBC・Standard Charteredの狙い</h3>
+    <p class="source-line">crypto.news / CoinMarketCap / HKMA公式リリース &nbsp;|&nbsp; 2026年6月5日（週次総括）</p>
+    <p class="recap">HKMAは2022〜2023年にProject Orion・Project Ensemble等でトークン化資産の実証実験を先行実施し、民間主導への移行フェーズとして2026年の専門家グループ設立を準備してきた。外銀にとって、香港の制度設計に初期段階から参与することは将来的な市場インフラの設計権獲得を意味する。</p>
+    <p class="body-text">HKMAが6月5日に設立した専門家グループにJPMorgan・HSBC・Standard Chartered・UBSが参加を表明した。外銀TB部門の視点では、この参加は単なる「技術実証」ではなく「ルール形成への関与」として捉えるべきだ。</p>
+    <div class="analysis-box">
+      <div class="label">週次分析</div>
+      <p><strong>各行の思惑：</strong><br>
+      JPMorganはOnyx・JPM Coinの実績を活かしトークン化インフラの標準化でイニシアティブを取ることを狙う。HSBCはCanton NetworkパイロットをHKMA認定スキームへ昇格させることで既存投資を回収する戦略。Standard CharteredはアフリカからアジアのネットワークをHKMAトークン化債券インフラと連結し、新興市場向けTBサービスの差別化を図る。</p>
+      <p style="margin-top:10px;"><strong>東京市場への含意：</strong><br>
+      HKMAがリードするトークン化証券制度が東アジアのデファクト標準となれば、東京市場でのJSCC（日本証券クリアリング機構）・証券保管振替機構（JASDEC）との連携要件が生じる可能性がある。国内金融システム開発においてもHKMAの動向を「先行事例」として監視することが重要だ。</p>
+    </div>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>JSCC（Japan Securities Clearing Corporation）</strong>：日本証券クリアリング機構。株式・国債・デリバティブの決済において中央清算機関（CCP）として機能する。</li>
+        <li><strong>JASDEC（Japan Securities Depository Center）</strong>：証券保管振替機構。株式・社債・国債などの有価証券を電子的に保管・移転管理する機関。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 8-3 -->
+  <article>
+    <h3>Citi Token Services・JPM CoinのBase展開——外銀TB「トークン化競争」の今週地図</h3>
+    <p class="source-line">PR Newswire / American Banker / Finextra &nbsp;|&nbsp; 2026年6月第2週（週次総括）</p>
+    <p class="recap">2023年以降、外銀各行はトークン化流動性・決済の独自ソリューション開発に競うように投資を行ってきた。Citi Token ServicesはCiti Servicesの中核として法人決済・トレードファイナンス向けに展開を続けており、JPM CoinはBase（Coinbaseが運用するL2ブロックチェーン）への展開によりパブリックチェーンへの接点を拡大していた。</p>
+    <p class="body-text">今週のTB関連ニュースを整理すると、各行のポジションが鮮明に浮かび上がる。</p>
+    <div class="analysis-box">
+      <div class="label">週次ポジション整理</div>
+      <p><strong>JPMorgan：</strong>JPM CoinをBase（L2）<sup>①</sup>に展開しパブリックチェーンとの接点を確保しつつ、TCH主導の業界共通ネットワークにも中核行として参加。「自社ブロックチェーン」と「業界インフラ」の両輪戦略。</p>
+      <p style="margin-top:8px;"><strong>Citi：</strong>Token Servicesがスケール稼働確認。24/7 USDクリアリングとトークン化流動性の統合という独自ポジションを確立。TCH参加との相補的な位置づけ。</p>
+      <p style="margin-top:8px;"><strong>HSBC：</strong>Canton Networkでのトークン化預金パイロット完了実績を持ち、TCH参加・HKMAグループ参加と複数の業界インフラ整備に関与。</p>
+      <p style="margin-top:8px;"><strong>Standard Chartered：</strong>HKMAグループ参加に加え、新興市場（アフリカ・アジア）特化のTBサービス強化を目的とした人材採用（HSBC・BNP・DB経験者）を続けている。DBS出身者もGlobal Transaction Services部門に加入。</p>
+      <p style="margin-top:8px;"><strong>DBS：</strong>Standard CharteredへのGTS<sup>②</sup>人材流出が確認された一方、香港・シンガポールのデジタル資産インフラ整備では引き続き存在感を発揮。</p>
+    </div>
+    <details class="footnotes">
+      <summary>注釈を展開する（2件）</summary>
+      <ol>
+        <li><strong>L2（Layer 2）ブロックチェーン</strong>：メインチェーン（L1）の上に構築された高速・低コストの決済レイヤー。Baseはa16z出資のCoinbaseが運営するEthereum L2ネットワーク。</li>
+        <li><strong>GTS（Global Transaction Services）</strong>：外銀のトランザクションバンキング部門の一般的な呼称。キャッシュマネジメント・貿易金融・証券サービスを統括する。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- Article 8-4: Next Week Preview -->
+  <article>
+    <h3>来週の注目イベント（6月16〜20日）</h3>
+    <p class="source-line">各種公開日程より &nbsp;|&nbsp; 2026年6月13日時点</p>
+    <p class="body-text">来週はG7サミット結果と日銀の動向がマーケット・TB部門双方にとって最重要イベントとなる。</p>
+    <div class="next-week">
+      <h4>来週の注目イベント</h4>
+      <ul>
+        <li><strong>6月15〜17日</strong>　G7サミット（フランス・エビアン）——中東情勢・エネルギー安保・AI規制が主要議題。高市首相初参加。</li>
+        <li><strong>6月16〜17日（予想）</strong>　日銀 金融政策決定会合——賃上げ・CPI・円安トレンドを踏まえた利上げ判断が焦点。TB部門は金利変更に伴うシステム対応要件の最終確認を推奨。</li>
+        <li><strong>6月18〜19日（予想）</strong>　FOMCミーティング——米国のインフレ・雇用データを踏まえた政策スタンス確認。ドル動向を通じてクロスボーダー決済コストに影響。</li>
+        <li><strong>6月21日</strong>　韓国大統領選挙——尹錫悦前大統領への判決直後の選挙。ウォン動向と韓国向け送金・貿易金融の安定性に注意。</li>
+        <li><strong>随時</strong>　TCHトークン化預金ネットワーク・ブロックチェーンベンダー選定プロセス開始の続報——6月5日発表後の技術調達動向を注視。</li>
+        <li><strong>随時</strong>　SWIFT新フレームワーク6月末本稼働25行超——稼働確認・システム連携への影響を確認。</li>
+      </ul>
+    </div>
+    <details class="footnotes">
+      <summary>注釈を展開する（1件）</summary>
+      <ol>
+        <li><strong>FOMC（Federal Open Market Committee）</strong>：米国連邦公開市場委員会。FRB（連邦準備制度）の政策金利（FFレート）を決定する委員会。年8回開催され、世界の金融市場に最も影響を持つ中央銀行決定機関。</li>
+      </ol>
+    </details>
+  </article>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>THE MORNING BRIEF &nbsp;|&nbsp; Transaction Banking Intelligence</p>
+    <p>情報基準時点：2026年6月12日（金）EST 23:00<br>
+    対象読者：メガバンク・トランザクションバンキング部署および金融システム開発部門</p>
+    <p style="margin-top:8px;">本ブリーフは公開情報に基づく情報提供を目的とし、投資勧誘・法的助言を構成しない。<br>
+    &copy; 2026 The Morning Brief Editorial Team</p>
+  </footer>
+
+</body>
+</html>
