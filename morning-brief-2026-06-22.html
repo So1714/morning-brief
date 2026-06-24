@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月22日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 16px;
+    }
+    .container { max-width: 640px; margin: 0 auto; padding: 24px 0 56px; }
+
+    /* Masthead */
+    .masthead {
+      text-align: center;
+      border-top: 3px solid #1a1a1a;
+      border-bottom: 3px solid #1a1a1a;
+      padding: 20px 0 16px;
+      margin-bottom: 4px;
+    }
+    .masthead-kicker {
+      font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
+      color: #666; margin-bottom: 8px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 44px; font-weight: 900; letter-spacing: 0.03em;
+      line-height: 1; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .masthead-sub {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #666;
+    }
+    .masthead-date {
+      font-size: 13px; color: #666; margin-top: 12px;
+      padding-top: 10px; border-top: 1px solid #d0c9b8;
+    }
+
+    /* Section */
+    .section { margin-top: 40px; }
+    .section-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    }
+    .section-number {
+      font-family: 'Playfair Display', serif; font-size: 13px;
+      font-weight: 700; color: #999; flex-shrink: 0;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: 13px;
+      font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #1a1a1a; flex-shrink: 0;
+    }
+    .section-line { flex: 1; height: 1px; background-color: #d0c9b8; }
+    .section-accent {
+      height: 2px;
+      background: linear-gradient(to right, #1a1a1a 0%, #d0c9b8 100%);
+      margin: 40px 0;
+    }
+
+    /* Article */
+    .article { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid #d0c9b8; }
+    .article:last-child { border-bottom: none; }
+    .article-headline {
+      font-family: 'Playfair Display', serif; font-size: 22px;
+      font-weight: 700; line-height: 1.35; color: #1a1a1a; margin-bottom: 6px;
+    }
+    .article-meta { font-size: 11.5px; color: #888; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .article-recap {
+      font-size: 13.5px; color: #555; font-style: italic;
+      border-left: 3px solid #d0c9b8; padding-left: 12px;
+      margin-bottom: 14px; line-height: 1.65;
+    }
+    .article-body { font-size: 15px; line-height: 1.8; }
+    .article-body p { margin-bottom: 12px; }
+    sup.ref { font-size: 10px; color: #888; font-weight: 700; }
+
+    /* Footnotes accordion */
+    .footnotes { margin-top: 14px; }
+    details.fn { border: 1px solid #d0c9b8; border-radius: 4px; overflow: hidden; }
+    details.fn summary {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #888; padding: 8px 12px;
+      cursor: pointer; background-color: #ede9e1; list-style: none; user-select: none;
+    }
+    details.fn summary::-webkit-details-marker { display: none; }
+    details.fn summary::after { content: ' ▸'; }
+    details.fn[open] summary::after { content: ' ▾'; }
+    .fn-body { padding: 10px 14px; }
+    .fn-item {
+      font-size: 12.5px; line-height: 1.6; color: #444;
+      margin-bottom: 7px; padding-left: 4px;
+    }
+    .fn-item sup { font-size: 10px; font-weight: 700; color: #888; margin-right: 4px; }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px; padding-top: 16px;
+      border-top: 2px solid #1a1a1a; text-align: center;
+    }
+    .footer p { font-size: 11px; color: #888; letter-spacing: 0.08em; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ MASTHEAD ═══ -->
+  <div class="masthead">
+    <div class="masthead-kicker">トランザクションバンキング部 金融システム開発者向け</div>
+    <div class="masthead-title">THE MORNING BRIEF</div>
+    <div class="masthead-sub">Financial Intelligence for Transaction Banking Professionals</div>
+    <div class="masthead-date">2026年6月22日（月曜日）&nbsp;｜&nbsp;情報基準：2026年6月21日 EST 23:00時点</div>
+  </div>
+
+  <!-- ═══ SECTION 1: 技術トレンド ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">技術トレンド</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 1-1 -->
+    <div class="article">
+      <h2 class="article-headline">AIコーディングエージェント戦国時代——OpenCode・OpenClawがGitHubを席巻</h2>
+      <div class="article-meta">情報源：LogRocket Blog / OSSInsight / GitHub Trending｜2026年6月</div>
+      <div class="article-recap">
+        2024年後半からAIコーディングツールの競争が本格化し、Cursor・GitHub Copilotが市場を主導してきた。2025年後半にはClaude Codeが「プロジェクト全体を理解してマルチステップで実行できる」強みで注目を集めた。2026年に入りオープンソースの新鋭が急台頭し、市場は急速に多極化している。
+      </div>
+      <div class="article-body">
+        <p><strong>OpenCode</strong>はGitHub星数16万超・月間アクティブユーザー750万人を記録する<sup class="ref">※1</sup>OSS型エージェントで、75以上のAIプロバイダに対応するモデル非依存設計を採用。<sup class="ref">※2</sup>LSP統合と<sup class="ref">※3</sup>エアギャップ環境への展開をサポートし、コードを外部クラウドに送信できない金融機関の内部開発環境にも適合する。</p>
+        <p><strong>OpenClaw</strong>は星数9,000から21万超へ急伸した今年最注目のOSSプロジェクトだ。「すべてのデバイス上で動作するパーソナルAIアシスタント」として50以上の外部サービスとローカル連携する<sup class="ref">※4</sup>MCPゲートウェイを内蔵し、API秘匿性を保ちながらAI機能を拡張できる。</p>
+        <p>Cursorは引き続き最高品位のフルIDE体験として評価されており、Cursor 3でエージェントファースト設計に刷新された。金融システム開発においてもコード生成・レビュー・テスト自動化を担う「開発補助エージェント」への需要は一段と拡大する見通しだ。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>OSS（Open Source Software）</strong>：ソースコードが公開され誰でも閲覧・改変・再配布可能なソフトウェア。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>LSP（Language Server Protocol）</strong>：コード補完・定義ジャンプ・エラー検出を統一プロトコルで提供するしくみ。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>エアギャップ環境（Air-Gapped）</strong>：インターネットや外部ネットワークから物理的・論理的に切り離されたセキュリティ閉鎖環境。</div>
+            <div class="fn-item"><sup>※4</sup> <strong>MCP（Model Context Protocol）</strong>：AIモデルが外部ツール・サービスと標準インターフェースで連携するためのプロトコル。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1-2 -->
+    <div class="article">
+      <h2 class="article-headline">Agentic AIが金融業務インフラへ本格侵入——ExperianとOracleが相次ぎ商用化</h2>
+      <div class="article-meta">情報源：Experian PLC プレスリリース（2026年6月2日）/ Oracle PR（2026年4月14日）</div>
+      <div class="article-recap">
+        金融分野のAI活用は2023〜2024年にチャットボット・異常検知など単機能型から始まった。2025年以降は「マルチステップの意思決定を自律実行するエージェントAI」へとパラダイムが移行。KPMGは年間3兆ドルの生産性向上効果を試算しており、Wolters Kluwerは2026年に金融チームの44%がエージェントAIを導入すると予測している（前年比+600%超）。
+      </div>
+      <div class="article-body">
+        <p>Experianは6月2日、<sup class="ref">※1</sup>Money20/20 Europeにて<strong>Agent Operating System™（AOS）</strong>を発表した。AOSはExperian Ascend Platform上に構築されたAIエージェント群の「信頼・<sup class="ref">※2</sup>セマンティック・<sup class="ref">※3</sup>オーケストレーション層」で、人間による監視と<sup class="ref">※4</sup>監査証跡を維持しながらスコアリング・本人確認・信用判断を自動実行する。</p>
+        <p>Oracleは4月14日、<sup class="ref">※5</sup>OFSプラットフォームに法人銀行機能を追加。トレジャリー・貿易金融・融資プロセス向けに事前構築型AIエージェントを提供し、与信判断の高速化とコンプライアンス自動化を可能にした。</p>
+        <p>国内メガバンクでも2026年度は法人融資審査・取引モニタリングへのAIエージェント導入検討が活発化している。ベンダー選定においては監査証跡の設計と規制当局への説明可能性が最重要評価軸となるため、インフラ調達プロセスへの早期関与が求められる。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>Money20/20 Europe</strong>：欧州最大級のフィンテック専門カンファレンス。毎年アムステルダムで開催。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>セマンティック層</strong>：データや指示の「意味」を解釈・共有するための中間層。AIエージェント間での文脈共有に使われる。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>オーケストレーション層</strong>：複数のAIエージェントやシステムが協調動作するよう調整・管理する制御レイヤー。</div>
+            <div class="fn-item"><sup>※4</sup> <strong>監査証跡（Audit Trail）</strong>：システムやユーザーの操作・判断内容を時系列で記録したログ。金融規制上の説明責任を果たすために必須。</div>
+            <div class="fn-item"><sup>※5</sup> <strong>OFS（Oracle Financial Services）</strong>：銀行・保険・資産運用向けのOracle製金融業務プラットフォーム群の総称。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1-3 -->
+    <div class="article">
+      <h2 class="article-headline">SWIFTブロックチェーン共有台帳が設計フェーズ完了——MVPバンクが実取引へ</h2>
+      <div class="article-meta">情報源：Swift公式発表（2026年3月30日）/ FinTech Weekly / The Paypers</div>
+      <div class="article-recap">
+        SWIFTは2023年のコネクター実験以降、ブロックチェーン上のトークン化資産と既存の国際決済網をつなぐ技術検討を重ねてきた。2025年には複数銀行とパイロット取引を実施し設計フェーズへ移行。Visa Direct・Mastercard Move・ステーブルコインからの競合圧力が高まる中、2026年は具体的プロダクト化を問われる正念場となっている。
+      </div>
+      <div class="article-body">
+        <p>SWIFTは3月30日、ブロックチェーン共有台帳の設計フェーズ完了を発表した。技術基盤は<sup class="ref">※1</sup>EVM互換の<sup class="ref">※2</sup>Hyperledger Besu上に構築され、既存デジタル資産エコシステムとの統合を想定した設計となっている。</p>
+        <p>次フェーズでは参加銀行（MVPバンク）が<sup class="ref">※3</sup>トークン化預金を用いた実取引を開始し、機関間のリアルタイム決済フローと義務照合を検証する。並行して「Swift Payments Scheme」（新リテール決済スキーム）を6月末までに25行以上で稼働させる計画で、インド・中国・タイ・米英独等の主要送金回廊でのコスト透明性とトレーサビリティを義務化する。</p>
+        <p>業界分析によれば、SWIFTが2027年までにステーブルコイン決済層を開設しなければ、企業間（B2B）月次ボリュームが1,000億ドルに達した時点でオンチェーン代替にシェアを奪われるリスクがある。TB部門として既存SWIFTへの依存度とオンチェーン代替の移行コストを今から定量評価しておく必要がある。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>EVM互換（Ethereum Virtual Machine Compatible）</strong>：イーサリアムのスマートコントラクト実行環境に対応し、既存のイーサリアム系アプリがそのまま動作できる設計。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>Hyperledger Besu</strong>：Linux Foundation管理のエンタープライズ向けEVM互換ブロックチェーン実装。プライベート・パブリック両ネットワークに対応。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>トークン化預金（Tokenized Deposits）</strong>：銀行が保有する預金をブロックチェーン上のデジタルトークンとして表現したもの。法定通貨建てで価値が担保される点がステーブルコインとの主な違い。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1-4 -->
+    <div class="article">
+      <h2 class="article-headline">大手銀行連合がトークン化預金ネットワーク始動——ステーブルコインへの規制内対抗軸</h2>
+      <div class="article-meta">情報源：American Banker / PYMNTS（2026年6月）</div>
+      <div class="article-recap">
+        JPMorgan ChaseはJPM Coin（現Kinexys）を通じて法人向けオンチェーン決済を2020年代前半から実運用。Citiはトークン化サービス（Citi Token Services）を2023年から展開し、HSBCも2023〜2024年に実証実験を完了していた。いずれも本格展開フェーズへ移行しつつある中、Circle・Tetherなどのステーブルコインが法人間決済に浸透し始め、既存銀行は対抗手段確立を迫られている。
+      </div>
+      <div class="article-body">
+        <p><sup class="ref">※1</sup>The Clearing Houseは6月、JPMorgan Chase・Citi・HSBC・BMO・BNYとともにオンチェーン決済と従来型法定通貨決済レールを接続するイニシアチブを発表した。目的はトークン化銀行預金のクリアリングと即日決済の実現で、ステーブルコインが提供する24時間365日の<sup class="ref">※2</sup>プログラマブル決済機能を規制された銀行システムの中で再現することにある。</p>
+        <p>JPMorgan Chase・Bank of America・Citi・Wells Fargo等は2027年上半期にトークン化預金ネットワーク本番稼働を計画しており、現在は<sup class="ref">※3</sup>AML・<sup class="ref">※4</sup>KYCのオンチェーン実装と規制当局との調整が最終段階にある。</p>
+        <p>邦銀のTB部門への含意：米ドル建て清算においてこのネットワークと接続するための技術要件・契約条件が2026年度末から2027年にかけて明確化される見通し。早期のスタンダード策定動向モニタリングを推奨する。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>The Clearing House（TCH）</strong>：JPMorgan・BofA・Citi等の大手銀行が共同出資する米国の民間決済清算機関。RTN（旧RTP）等の銀行間決済インフラを運営。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>プログラマブル（Programmable）</strong>：決済の実行条件・振込先・タイミングをスマートコントラクトで自動化・条件付き実行できる機能。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>AML（Anti-Money Laundering）</strong>：マネーロンダリング防止のための規制・プロセスの総称。取引モニタリングや疑わしい取引の届出が義務付けられている。</div>
+            <div class="fn-item"><sup>※4</sup> <strong>KYC（Know Your Customer）</strong>：顧客本人確認。金融機関が顧客の身元・取引目的・リスクを確認する義務的プロセス。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1-5 -->
+    <div class="article">
+      <h2 class="article-headline">ステーブルコインの年間決済額がVisa＋Mastercard合算を超過——AIエージェントが次の成長エンジンに</h2>
+      <div class="article-meta">情報源：Blockhead / Crypto.news / Fintech Bloom（2026年）</div>
+      <div class="article-recap">
+        2020年にわずか50億ドルだったステーブルコイン市場は2025年末に時価総額3,120億ドル・年間決済額33兆ドルを記録した。フィアット連動型ステーブルコインの供給残高は2026年3月時点で2,730億ドルを突破し、企業の流動性管理や越境決済での実用化が急拡大している。
+      </div>
+      <div class="article-body">
+        <p>ステーブルコインの2025年年間取引量はVisa（約11.6兆ドル）とMastercard（約9.7兆ドル）の合算を大幅に上回る33兆ドルに達した。即時性・コスト・24時間稼働の優位性が法人間送金（B2B）とリテール送金の双方を牽引している。</p>
+        <p>次の成長ドライバーとして注目されるのがAIエージェントによる自律的な資金移動だ。AIエージェントが複数の口座・取引所・スマートコントラクトにまたがって最適な清算経路を自動選択するユースケースが急増しており、APIで直接呼び出せるステーブルコインが「<sup class="ref">※1</sup>AIネイティブ通貨」として機能し始めている。</p>
+        <p>TB部門としての注目点：企業クライアントがトレジャリー運用でステーブルコインを採用した場合、既存の銀行口座・為替送金サービスへの依存度が低下する可能性がある。製品ポートフォリオ上のリスクとして早期の認識が必要だ。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>AIネイティブ通貨</strong>：AI・機械間取引において自律的に使用される、プログラムから直接操作可能な形式のデジタル通貨。ステーブルコインはAPIを通じてAIエージェントが即座に送受金・清算を実行できる点でこの役割に適合する。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+  </div><!-- /section 01 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 2: 第三者ベンダー動向 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第三者ベンダー動向</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 2-1 -->
+    <div class="article">
+      <h2 class="article-headline">Stripe・Visa・Mastercard・Coinbase、ステーブルコインコンソーシアム設立へ——Circle・Tetherの牙城に挑む</h2>
+      <div class="article-meta">情報源：CoinDesk / The Information / PYMNTS（2026年6月3日）</div>
+      <div class="article-recap">
+        Stripeは2024年にBridgeを買収してステーブルコイン決済インフラを獲得。MastercardはBVNKを2025〜2026年に買収し、Visaは2026年4月に対応ブロックチェーンを9チェーンに拡大。ステーブルコイン市場はCircle（USDC）とTether（USDT）で約80%が支配される寡占状態が続いていた。
+      </div>
+      <div class="article-body">
+        <p>6月3日、複数メディアの報道によりStripe・Visa・Mastercard・Coinbaseの4社が新ステーブルコインプラットフォームのコンソーシアム設立に向け協議中であることが明らかになった。詳細なスケジュールや運営形態はまだ非開示だが、「世界最大の決済ネットワーク×最大の暗号資産取引所」という類例のない連合体が意図するのはCircle・Tetherが支配する市場への本格参入だ。</p>
+        <p>Mastercardはすでに6月、米国とラテンアメリカでステーブルコインによる法人決済精算オプションを開始すると発表し、ARQ・CBW Bank・Cross River・Lead Bank・Nuveiが先行パートナーとして名乗りを上げている。</p>
+        <p>邦銀TB部門への含意：Visa・Mastercardが従来のカードレールに加えステーブルコインレールを正式サービス化することで、法人間送金の経路選択肢が多様化する。既存の<sup class="ref">※1</sup>Visa B2B Connect・<sup class="ref">※2</sup>Mastercard Trackとの競合・補完関係の再整理が必要になる可能性がある。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>Visa B2B Connect</strong>：Visaが提供する法人間国際送金プラットフォーム。カードネットワークとは独立した銀行直結型の高額送金向けサービス。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>Mastercard Track</strong>：Mastercardの法人決済・サプライチェーン向けデジタル決済基盤。買掛金・売掛金管理の自動化とデータ連携を提供。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-2 -->
+    <div class="article">
+      <h2 class="article-headline">SWIFTの新リテール決済スキームが6月末に25行以上で本格稼働</h2>
+      <div class="article-meta">情報源：Acceleron Bank Q2 2026レポート / SWIFT公式</div>
+      <div class="article-recap">
+        SWIFTはコルレス銀行ネットワークの透明性・速度・コスト競争力の低下に対応するため、2024年後半から「Swift Payments Scheme」の設計を進めてきた。Visa Direct・Mastercard Sendなどの直接競合やステーブルコイン・FedNowの台頭がその危機感を加速させた。
+      </div>
+      <div class="article-body">
+        <p>SWIFTは6月末までに25行以上で「Swift Payments Scheme」を開始する。対象回廊はインド・中国・タイ・オーストラリア・スペイン・ドイツ・カナダ・英国・米国で、加盟行にコスト開示・エンドツーエンドのトレーサビリティ・可能な限りの即時決済を義務付ける。</p>
+        <p>これはSWIFTが単純なメッセージングネットワークから「決済品質の保証機関」へリポジショニングする動きであり、既存の<sup class="ref">※1</sup>コルレス行契約の内容・手数料体系に再交渉圧力がかかることを意味する。邦銀が主要コルレス行として参加する場合は、6月末の稼働状況を確認の上、自行の越境送金コスト構造への影響を評価すべき段階に入った。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>コルレス行（Correspondent Bank）</strong>：他の金融機関を代理して国際送金の決済・資金管理を行う銀行。邦銀はドル建て送金でJPMorgan等の米銀をコルレス行として利用することが多い。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+  </div><!-- /section 02 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 3: 外銀TB速報 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">外銀TB速報</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 3-1 -->
+    <div class="article">
+      <h2 class="article-headline">JPMorgan・Citi・HSBCが<wbr>The Clearing Houseと協力しオンチェーン決済を推進</h2>
+      <div class="article-meta">情報源：American Banker（2026年6月）</div>
+      <div class="article-recap">
+        JPMorgan ChaseはJPM Coin（現Kinexys）を通じて法人向けオンチェーン決済を2020年代前半から実運用。Citiはトークン化サービス（Citi Token Services）を2023年から展開し、HSBCも2023〜2024年に実証実験を完了していた。いずれも本格展開フェーズへ移行しつつある。
+      </div>
+      <div class="article-body">
+        <p>The Clearing HouseはJPMorgan Chase・Citi・HSBC・BMO・BNYを含む主要行とともに6月、オンチェーン決済と従来型法定通貨レールを接続するイニシアチブを正式に発表した。トークン化銀行預金のクリアリングと即日決済の実現が目標で、<sup class="ref">※1</sup>AML・KYCの枠組みを維持しながらステーブルコインと同等の即時決済利便性を確保する戦略だ。</p>
+        <p>本格稼働は2027年上半期の予定で、現在はオンチェーンでのAML/KYCチェック実装と規制当局との最終調整が進行中。邦銀がこれらの外銀とのコルレス関係を維持・拡大する上では、オンチェーン決済への技術的接続要件（API仕様・ウォレット管理・<sup class="ref">※2</sup>スマートコントラクト監査）を先行して整備する動きが来年度以降に加速する可能性がある。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>AML/KYC</strong>：AML（マネーロンダリング防止）とKYC（顧客本人確認）の組み合わせ。国際送金・決済において金融機関が遵守すべき中核的なコンプライアンス要件。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>スマートコントラクト監査</strong>：ブロックチェーン上に記述された自動実行コード（スマートコントラクト）にバグや脆弱性がないかを専門家が検証するプロセス。金融取引への適用では特に厳密な監査が求められる。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+  </div><!-- /section 03 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 4: 国内政治 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">国内政治</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 4-1 -->
+    <div class="article">
+      <h2 class="article-headline">本日の繰上げ閣議——公正取引委員会の令和8年度年次報告書を決定</h2>
+      <div class="article-meta">情報源：首相官邸（2026年6月22日）</div>
+      <div class="article-recap">
+        公正取引委員会（公取委）は独占禁止法の運用機関であり、デジタル市場における競争規制強化を2023年以降継続的に進めてきた。特に大手プラットフォームとフィンテック事業者の取引慣行に関する調査が活発化しており、オープンバンキングAPIの共有義務化をめぐる議論も進行している。
+      </div>
+      <div class="article-body">
+        <p>6月22日（月）の<sup class="ref">※1</sup>繰上げ閣議では、公正取引委員会の令和8年度年次報告書が決定された。デジタル経済における競争環境の変化、特にAI・データ活用における大手IT企業の行動と金融サービス分野でのプラットフォーム規制動向が記載される見通しだ。</p>
+        <p>金融システム開発との関連では、オープンバンキングAPIや決済インフラにおける独禁法上の論点が同報告書に含まれる可能性があり、ベンダー選定・システム間連携において法的リスクの観点からもフォローが求められる。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>繰上げ閣議</strong>：通常の閣議開催時間（定例は火・金）よりも早く開催される臨時の閣議。翌日以降に議案が集中する場合などに前日夕方や早朝に実施される。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-2 -->
+    <div class="article">
+      <h2 class="article-headline">「副首都」法案で維新の判断が焦点——消費税1%実質ゼロ案も並行審議</h2>
+      <div class="article-meta">情報源：時事通信（2026年6月中旬）</div>
+      <div class="article-recap">
+        自民・公明の連立与党は2026年前半に複数の重要法案を国会に提出した。副首都構想は2025年大阪・関西万博後の広域行政改革の一環として浮上。消費税については食料品税率を実質ゼロにする「給付付き税額控除」方式の議論が国会議長主導で進んでいた。
+      </div>
+      <div class="article-body">
+        <p>「副首都」法案の修正案を与党が提示しており、日本維新の会の対応が国会通過の鍵を握る状況となっている。与党は6月22日前後の党首間協議を通じて維新の合意取り付けを目指しているとされる。</p>
+        <p>一方、食料品消費税率を実質1%（給付措置で実質ゼロ）に引き下げる方針も2027年4月実施を視野に審議されており、財政規律と景気刺激の両立をめぐる与野党の調整が当面の国会の焦点となる見込みだ。</p>
+      </div>
+    </div>
+  </div><!-- /section 04 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 5: 海外政治 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">海外政治</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 5-1 -->
+    <div class="article">
+      <h2 class="article-headline">バンス副大統領がスイスでイランと直接協議——暫定核合意後の60日間交渉フェーズへ</h2>
+      <div class="article-meta">情報源：Reuters / FDD Overnight Brief（2026年6月）</div>
+      <div class="article-recap">
+        2026年春、トランプ政権はイランへの制裁圧力を最高水準に引き上げる一方で外交交渉の窓口を模索していた。6月初旬に暫定的な停戦・核活動制限合意の断片的な報道が出始め、イスラエルはヘズボラとの戦闘を続けながら米国のイラン融和姿勢に強い懸念を示していた。
+      </div>
+      <div class="article-body">
+        <p>JDバンス米副大統領は週末にスイス入りし、イラン当局者との直接協議に臨んだ。米国はこれを60日間の本格交渉フェーズの始まりと位置づけており、イランへの船舶の入出港容認措置が先行して実施されている。</p>
+        <p>イスラエルはトランプ政権のイラン融和方針に閣内で危機感を表明しており、ヘズボラとの戦闘継続と米国との連帯維持の両立に苦慮している。中東情勢の不安定化は原油・エネルギー市場を通じて金融市場全体に波及するリスクがあり、TB部門として為替・商品市場のボラティリティ上昇シナリオを念頭に置く必要がある。</p>
+      </div>
+    </div>
+
+    <!-- 5-2 -->
+    <div class="article">
+      <h2 class="article-headline">ウクライナがモスクワに大規模攻撃——クリミアで民間燃料販売を停止</h2>
+      <div class="article-meta">情報源：Reuters（2026年6月21日）</div>
+      <div class="article-recap">
+        ロシアによるウクライナへの全面侵攻が2022年2月に始まって以来、戦線はドンバス方面で膠着状態が続いてきた。2025〜2026年にかけてウクライナは長距離無人機・ミサイルによるロシア本土への打撃能力を大幅に高め、モスクワ方面への攻撃を断続的に実施している。
+      </div>
+      <div class="article-body">
+        <p>ウクライナは6月21日（日）、侵攻開始以来最大規模とされるモスクワへの攻撃を実施した。同時にロシア占領下のクリミア半島ではウクライナによる燃料供給インフラへの攻撃が相次ぎ、当局が民間向けガソリン販売を停止する事態となった。</p>
+        <p>欧州ではEUがウクライナ・モルドバの加盟交渉を正式に開始（ハンガリー新政府が反対を撤回）。ウクライナの戦時経済とEU加盟プロセスが並走するという稀有な状況が続いており、欧州のエネルギー・穀物市場への中長期的影響は継続してモニタリングが必要だ。</p>
+      </div>
+    </div>
+  </div><!-- /section 05 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 6: 国内企業動向 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">国内企業動向</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 6-1 -->
+    <div class="article">
+      <h2 class="article-headline">キオクシアがトヨタを抜き時価総額で日本首位に——株価はIPO比3,900%超</h2>
+      <div class="article-meta">情報源：Bloomberg / Nikkei Asia（2026年6月12日）</div>
+      <div class="article-recap">
+        キオクシア（旧東芝メモリ）はBain Capitalが2018年に約2兆円で買収し、2024年12月に東証上場を果たした。上場直後から生成AI向けデータセンターのNANDフラッシュ需要が急騰し株価が急伸。一方トヨタはEV競争でBYD等中国勢に押される形で市場評価が伸び悩み、長年守ってきた「日本最大企業」の座を明け渡した。
+      </div>
+      <div class="article-body">
+        <p>6月12日、キオクシアホールディングスの時価総額がトヨタ自動車を上回り、日本企業で初の首位となった。2025年3月期は売上高2兆3,376億円（前年比+37%）・営業利益8,762億円（同+93%）を記録。2026〜2029年の3年間で設備投資・研究開発に2兆1,000億円を投じる計画を公表している。</p>
+        <p>この動きはAIデータセンター投資の波が日本の産業構造そのものを組み換えつつあることを象徴している。金融システムへの関連：キオクシア株の急騰が<sup class="ref">※1</sup>インデックスリバランス需要や機関投資家のポートフォリオ調整を引き起こし、証券・運用・カストディ部門の取引量・決済量に短期的な影響を与えうる。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>インデックスリバランス</strong>：日経225やTOPIXなどの株価指数の構成銘柄・ウェイトが定期的に見直される際、指数連動型ファンドが構成比率を合わせるために行う売買。時価総額の大きな変動が生じると定期外の組み入れ比率見直しが行われることもある。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6-2 -->
+    <div class="article">
+      <h2 class="article-headline">日銀利上げ受けメガバンク3行が普通預金金利0.4%へ——34年ぶりの高水準</h2>
+      <div class="article-meta">情報源：日本経済新聞（2026年6月）</div>
+      <div class="article-recap">
+        日銀は2024年3月にマイナス金利を解除し、同年7月・2025年1月と段階的に利上げを進めてきた。長期のゼロ金利政策の間、メガバンクの普通預金金利は実質ゼロに固定されていたが、2025年後半から引き上げが始まり、2026年の追加利上げを受けて更なる上昇局面に入っている。
+      </div>
+      <div class="article-body">
+        <p>国内3大メガバンクの普通預金金利が0.4%に達し、1992年以来34年ぶりの高水準となった。日銀の追加利上げを受けてさらなる引き上げが続く可能性も市場では織り込まれつつある。</p>
+        <p>TB部門への直接的影響：コーポレートクライアントの余剰資金の運用先として普通預金の魅力が相対的に回復し始めており、<sup class="ref">※1</sup>MMF・短期債・当座預金との比較優位を再評価する企業が増える可能性がある。キャッシュマネジメント提案においてはこの金利環境変化を明示的に織り込んだ資金運用ソリューションの更新が急務だ。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>MMF（Money Market Fund）</strong>：短期の高格付け債券や銀行預金等で運用する投資信託。元本保全性が高く流動性に優れるため、企業の短期余剰資金の運用手段として広く活用されている。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+  </div><!-- /section 06 -->
+
+  <div class="section-accent"></div>
+
+  <!-- ═══ SECTION 7: 海外企業動向 ═══ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <span class="section-title">海外企業動向</span>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- 7-1 -->
+    <div class="article">
+      <h2 class="article-headline">Bain Capital、キオクシア投資で150億ドル超の利益——約20倍の驚異的リターン</h2>
+      <div class="article-meta">情報源：Bloomberg Businessweek（2026年6月）</div>
+      <div class="article-recap">
+        Bain Capitalは2018年、東芝が経営危機で売却した東芝メモリ（現キオクシア）をApple・Dell等と共同で約180億ドルで取得。当初は長期の価値実現が想定されていたが、2024年末のIPO後にAIブームによるNAND需要急増が株価上昇を加速させた。
+      </div>
+      <div class="article-body">
+        <p>Bain Capitalのキオクシア投資が2026年6月時点で150億ドル超の利益を生み出している。株価は2024年12月IPO比で約5,000%上昇しており、<sup class="ref">※1</sup>PE業界でも近年稀にみる大型リターンとなっている。</p>
+        <p>AI関連半導体へのPE投資が突出したパフォーマンスを示したことで、グローバルのPEファンドがAIバリューチェーン（<sup class="ref">※2</sup>HBMメモリ・光インターコネクト・電力インフラ）への資金投下を加速する動きが継続する。TB部門としてはPEファンドの<sup class="ref">※3</sup>ファンドファイナンス・<sup class="ref">※4</sup>レバレッジドローン需要の増加が取引機会を生む可能性がある。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>PE（プライベートエクイティ）</strong>：非公開株式への投資を専門とする投資ファンド。企業の成長支援後に上場（IPO）や売却でリターンを得る。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>HBM（High Bandwidth Memory）</strong>：高帯域幅を持つ積層型DRAM。AI用GPU（演算チップ）に直接搭載され大量データを高速処理するために必要。SKハイニックスがトップシェアを持つ。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>ファンドファイナンス</strong>：PEファンドが投資家への払い戻しや新規投資のつなぎとして銀行から調達するクレジットファシリティ。</div>
+            <div class="fn-item"><sup>※4</sup> <strong>レバレッジドローン（Leveraged Loan）</strong>：高い負債比率を持つ企業（多くはPEバイアウト案件の被買収企業）に対して行われる担保付き融資。高利回りが見込まれる一方でクレジットリスクも高い。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7-2 -->
+    <div class="article">
+      <h2 class="article-headline">SoFiが英フィンテックPrimaryBidを買収——欧州の個人投資家IPOアクセス市場へ進出</h2>
+      <div class="article-meta">情報源：Fintech Bloom / Reuters（2026年）</div>
+      <div class="article-recap">
+        SoFi Technologiesは米国の消費者向けデジタル金融サービス企業で、2022年に銀行免許を取得して以降、総合金融サービス化を進めてきた。PrimaryBidは英国を拠点とするフィンテックで、IPO・公募増資において個人投資家が機関投資家と同条件でアクセスできるプラットフォームを運営していた。
+      </div>
+      <div class="article-body">
+        <p>SoFi TechnologiesがPrimaryBid（英国）を買収した。PrimaryBidは<sup class="ref">※1</sup>FCA登録企業であり、英国・欧州の個人投資家がIPO・<sup class="ref">※2</sup>SEOに機関投資家と同価格でアクセスできるプラットフォームを提供していた。</p>
+        <p>SoFiの欧州進出は「ワンストップデジタル金融サービス」のグローバル展開の第一歩として位置付けられる。フィンテック企業のクロスボーダー<sup class="ref">※3</sup>M&Aが加速する中、TB部門としては国際的なM&Aに伴う決済・<sup class="ref">※4</sup>エスクロー・融資ニーズの取り込みに注目すべきだ。</p>
+        <div class="footnotes">
+          <details class="fn"><summary>注釈</summary><div class="fn-body">
+            <div class="fn-item"><sup>※1</sup> <strong>FCA（Financial Conduct Authority）</strong>：英国の金融行為規制機構。銀行・証券・保険・フィンテックを含む金融サービス全般を監督する独立規制機関。</div>
+            <div class="fn-item"><sup>※2</sup> <strong>SEO（Seasoned Equity Offering）</strong>：既に上場している企業が追加で株式を市場に発行する公募増資。</div>
+            <div class="fn-item"><sup>※3</sup> <strong>M&A（Mergers &amp; Acquisitions）</strong>：企業の合併・買収の総称。</div>
+            <div class="fn-item"><sup>※4</sup> <strong>エスクロー（Escrow）</strong>：M&Aや不動産取引等において、取引完了条件が満たされるまで資金を第三者機関が一時的に預かるしくみ。</div>
+          </div></details>
+        </div>
+      </div>
+    </div>
+  </div><!-- /section 07 -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <p>THE MORNING BRIEF — トランザクションバンキング部 金融システム開発者向け</p>
+    <p>情報基準：2026年6月21日 EST 23:00時点 ｜ 発行：2026年6月22日（月）</p>
+    <p style="margin-top:6px;">本紙は情報提供を目的としており、投資・法律・税務上のアドバイスを構成するものではありません。</p>
+  </div>
+
+</div>
+</body>
+</html>
