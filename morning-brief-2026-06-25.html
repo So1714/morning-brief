@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE MORNING BRIEF — 2026年6月25日（木）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      padding: 0 0 60px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* ─── Masthead ─── */
+    .masthead {
+      border-top: 4px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      text-align: center;
+      padding: 22px 18px 16px;
+      background: #f4f1ec;
+    }
+    .masthead-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #5a5040;
+      margin-bottom: 6px;
+    }
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      color: #1a1a1a;
+    }
+    .masthead-sub {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5a5040;
+      margin-top: 8px;
+      border-top: 1px solid #d0c9b8;
+      padding-top: 8px;
+    }
+    .masthead-date {
+      font-size: 12px;
+      color: #5a5040;
+      margin-top: 4px;
+    }
+
+    /* ─── Section Header ─── */
+    .section-header {
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 1px solid #d0c9b8;
+      margin: 28px 0 18px;
+      padding: 6px 0 5px;
+    }
+    .section-number {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5a5040;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    .section-badge {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: #d0c9b8;
+      color: #1a1a1a;
+      padding: 2px 7px;
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    /* ─── Article ─── */
+    .article {
+      margin-bottom: 26px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #d0c9b8;
+    }
+    .article:last-child { border-bottom: none; }
+    .article-meta {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #7a6e5f;
+      margin-bottom: 5px;
+    }
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .article-body {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: #2a2a2a;
+    }
+    .article-body p { margin-bottom: 10px; }
+    .article-body p:last-child { margin-bottom: 0; }
+    .recap {
+      font-style: italic;
+      color: #4a4040;
+      border-left: 3px solid #d0c9b8;
+      padding-left: 12px;
+      margin-bottom: 12px;
+      font-size: 13.5px;
+      line-height: 1.75;
+    }
+    .analysis-label {
+      font-size: 9.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #7a6e5f;
+      font-style: normal;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ─── Footnote Accordion ─── */
+    details.footnotes {
+      margin-top: 14px;
+      border: 1px solid #d0c9b8;
+      border-radius: 4px;
+      background: #ede9e1;
+    }
+    details.footnotes summary {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #5a5040;
+      cursor: pointer;
+      padding: 8px 12px;
+      user-select: none;
+    }
+    details.footnotes summary::-webkit-details-marker { display: none; }
+    details.footnotes summary::before { content: '▶ '; font-size: 9px; }
+    details[open].footnotes summary::before { content: '▼ '; }
+    .footnotes-body {
+      padding: 6px 12px 12px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #3a3530;
+    }
+    .footnotes-body ol { padding-left: 18px; }
+    .footnotes-body li { margin-bottom: 4px; }
+    .fn { font-size: 10px; vertical-align: super; color: #7a6e5f; }
+
+    /* ─── Footer ─── */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #7a6e5f;
+      padding: 24px 18px 0;
+      border-top: 2px solid #1a1a1a;
+      margin-top: 36px;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-label">Transaction Banking Division — Internal Intelligence</div>
+  <div class="masthead-title">THE MORNING BRIEF</div>
+  <div class="masthead-sub">Financial Systems Edition</div>
+  <div class="masthead-date">2026年6月25日（木）&nbsp;|&nbsp;情報基準：前日 EST 23:00</div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════════════════════════════
+     SECTION 1: 技術トレンド
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 01</div>
+  <div class="section-title">技術トレンド <span class="section-badge">厚・5本</span></div>
+</div>
+
+<!-- 1-A -->
+<div class="article">
+  <div class="article-meta">TechCrunch｜2026年6月24日</div>
+  <div class="article-headline">OpenAI、Broadcom製カスタム推論チップ「Jalapeño」を発表——AI半導体市場でNVIDIAに正面から挑戦</div>
+  <div class="article-body">
+    <div class="recap">
+      2022年以降OpenAIはMicrosoft Azure上でNVIDIA GPUを大量調達し推論・学習インフラを構築してきた。2024年にBroadcomとのカスタムチップ共同開発が報じられ、業界では独自シリコン化による脱NVIDIA依存の動きが注目されていた。
+    </div>
+    <p>
+      OpenAIは6月24日、Broadcomと共同設計した初のカスタム推論プロセッサ（コードネーム「Jalapeño<span class="fn">1</span>」）を正式発表した。事前学習済みモデルの<strong>推論ワークロード</strong>に特化して設計されており、現行NVIDIAソリューション比で大幅なパフォーマンス対消費電力向上を達成したとしている。
+    </p>
+    <p>
+      同日、QualcommはAIスタートアップ「Modular」を40億ドルで買収すると発表。NVIDIAのCUDA<span class="fn">2</span>エコシステムへの対抗手段として独自のMLコンパイラスタックの獲得を目的としている。
+    </p>
+    <p>
+      <span class="analysis-label">金融システムへの示唆</span>
+      リアルタイム不正検知・与信スコアリング・マーケットリスク計算でLLM<span class="fn">3</span>推論を活用するユースケースにおいて、推論コストの低下は直接的なインフラ費用削減につながる。Broadcom製チップの量産スケジュールとクラウドAPI<span class="fn">4</span>での利用可能性を早期に確認することが推奨される。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（4項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>Jalapeño（ハラペーニョ）</strong>：OpenAIの第1世代カスタム推論ASICのコードネーム。推論とは、学習済みモデルを使って入力に対する出力を生成する処理フェーズ。</li>
+      <li><strong>CUDA</strong>：NVIDIAが開発した並列コンピューティングプラットフォーム。AI開発における事実上の業界標準で、NVIDIAエコシステム依存の核心にある。</li>
+      <li><strong>LLM（Large Language Model）</strong>：大規模言語モデル。GPT-4やClaudeなど大量テキストデータで学習した深層学習モデル。</li>
+      <li><strong>API（Application Programming Interface）</strong>：ソフトウェア同士が通信するためのインターフェース規格。クラウドサービスでは所有せずAPIを通じて推論能力を利用できる。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 1-B -->
+<div class="article">
+  <div class="article-meta">Tenable / SANS ISC｜2026年6月 Patch Tuesday</div>
+  <div class="article-headline">Microsoft 過去最大208件のCVEパッチ——Azure KubernetesとWindowsカーネルに深刻なRCE、BitLocker3件バイパスも</div>
+  <div class="article-body">
+    <div class="recap">
+      Microsoftは月次セキュリティアップデート（Patch Tuesday）を毎年12回配信する。金融機関はWindowsおよびAzureへの依存度が高く、重大なゼロデイの影響を直接受ける立場にある。
+    </div>
+    <p>
+      Microsoftは6月のPatch Tuesdayで過去最大となる208件のCVE<span class="fn">1</span>を修正した。特に注視すべき脆弱性：
+    </p>
+    <p>
+      ①&nbsp;<strong>CVE-2026-32193</strong>（CVSS<span class="fn">2</span> 8.8、Critical）：AKS<span class="fn">3</span>における未認証RCE<span class="fn">4</span>。クラウドネイティブな勘定系・決済システムへの影響が広い。②&nbsp;<strong>CVE-2026-45657</strong>（WindowsカーネルRCE）：未認証でSYSTEM権限コードを実行可能。③&nbsp;<strong>YellowKey / Bitskriegほか</strong>計3件のBitLocker<span class="fn">5</span>バイパス：暗号化ディスクの保護を無効化する。
+    </p>
+    <p>Adobe（123件）・Oracle（245件）も同週に大型パッチを公開しており、優先順位付きのパッチ管理が急務。</p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（5項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>CVE（Common Vulnerabilities and Exposures）</strong>：共通脆弱性識別子。MITRE社が管理する脆弱性の公式番号付けシステム。</li>
+      <li><strong>CVSS（Common Vulnerability Scoring System）</strong>：脆弱性の深刻度を0.0〜10.0でスコアリングする業界標準。7.0以上がHigh、9.0以上がCritical。</li>
+      <li><strong>AKS（Azure Kubernetes Service）</strong>：Microsoft Azureのマネージドコンテナオーケストレーションサービス。金融クラウドで広く利用される。</li>
+      <li><strong>RCE（Remote Code Execution）</strong>：遠隔コード実行。攻撃者がネットワーク越しに任意コードをターゲット上で実行できる最も深刻な脆弱性クラスの一つ。</li>
+      <li><strong>BitLocker</strong>：Microsoftが提供するWindowsのフルディスク暗号化機能。金融機関のラップトップ・サーバーのデータ保護に広く採用。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 1-C -->
+<div class="article">
+  <div class="article-meta">GitHub Trending｜2026年6月25日</div>
+  <div class="article-headline">GitHub急上昇：LLM駆動の株式分析ツール「daily_stock_analysis」が1日で1,468スター獲得——金融向けAIエージェント実装の参照設計として注目</div>
+  <div class="article-body">
+    <div class="recap">
+      GitHub Trendingは世界中の開発者が注目するオープンソースプロジェクトのリアルタイムランキング。金融エンジニアリングチームにとってAI活用の実装事例調査として有効なリソース。
+    </div>
+    <p>
+      Python製オープンソース「<strong>daily_stock_analysis</strong>」（ZhuLinsen）が6月25日のGitHub Trendingで2位に急浮上、累計48,891スター（1日増分+1,468）を記録。Aシェア・香港株・米国株に対応したLLMマルチマーケット分析システムで、複数の市場データとリアルタイムニュースを統合し毎日の売買チェックリストをエントリー・エグジットポイント付きで生成する。
+    </p>
+    <p>
+      GitHub Actions上でゼロホスティングコストで動作し、Telegram・メール・WeChat等へプッシュ通知する設計を採っている。
+    </p>
+    <p>
+      <span class="analysis-label">金融システムへの示唆</span>
+      同様のアーキテクチャはマーケットモニタリング・取引先与信アラート・規制変更検知にも転用可能。CI/CD<span class="fn">1</span>ベースの定期実行パターンは低コストな概念実証設計として参考になる。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>CI/CD（Continuous Integration / Continuous Deployment）</strong>：継続的インテグレーション/継続的デプロイメント。コードの変更を自動的にテスト・ビルド・デプロイするプラクティス。GitHub Actionsはこのパイプラインを実行するGitHub提供の自動化プラットフォーム。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 1-D -->
+<div class="article">
+  <div class="article-meta">Novee Security / The Hacker News｜2026年6月24日</div>
+  <div class="article-headline">新型CI/CDサプライチェーン攻撃「Cordyceps」公開——Microsoft・Google・Cloudflareを含む主要OSSリポジトリが影響対象</div>
+  <div class="article-body">
+    <div class="recap">
+      2025年以降GitHub Actionsを悪用したCI/CDパイプライン汚染が急増。2024年のXZ Utils事件<span class="fn">1</span>を契機にOSSサプライチェーンリスクへの業界的関心が高まっていた。
+    </div>
+    <p>
+      Novee Securityは6月24日、GitHub Actionsワークフローを乗っ取る新クラスの脆弱性「<strong>Cordyceps</strong><span class="fn">2</span>」を公開した。主なメカニズムは「pwn request<span class="fn">3</span>」パターン：フォークからのプルリクエストが元リポジトリの機密シークレット（デプロイ鍵・クラウド認証情報）にアクセスできるワークフロー設定の欠陥を悪用する。
+    </p>
+    <p>
+      GitHubは6月18日に<code>actions/checkout</code>アクションを更新し関連パターンをブロック済みだが、<strong>既存ワークフロー設定の見直しは各組織の責任</strong>で行う必要がある。同時期にCisco UCM<span class="fn">4</span>のSSRF<span class="fn">5</span>脆弱性（CVE-2026-20230）の積極的な悪用も確認されており合わせた対応が必要。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（5項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>XZ Utils事件（2024年）</strong>：OSSの圧縮ライブラリにバックドアが埋め込まれた事件。悪意ある貢献者が長期間かけてメンテナー権限を獲得しSSHデーモンへのコード注入を試みた。</li>
+      <li><strong>Cordyceps（コーディセプス）</strong>：昆虫に感染して宿主の行動を操る寄生菌から命名。CI/CDパイプラインを「乗っ取る」性質を比喩している。</li>
+      <li><strong>pwn request</strong>：Pull Requestと「pwn（乗っ取ること）」を組み合わせた造語。外部貢献者のプルリクエストを通じてCI/CDパイプラインを悪用する攻撃手法の俗称。</li>
+      <li><strong>Cisco UCM（Unified Communications Manager）</strong>：CiscoのIPテレフォニー・コミュニケーション管理プラットフォーム。金融機関の社内通信に広く使われている。</li>
+      <li><strong>SSRF（Server-Side Request Forgery）</strong>：サーバーサイドリクエストフォージェリ。攻撃者がサーバー経由で内部ネットワークに不正なリクエストを送信させる脆弱性。クラウド環境でのメタデータ窃取に多用される。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 1-E -->
+<div class="article">
+  <div class="article-meta">LogRocket / AI dev tool rankings｜2026年6月</div>
+  <div class="article-headline">Cursor 3「Glass」リリース——コードエディタからAIエージェント管理コンソールへのパラダイムシフト</div>
+  <div class="article-body">
+    <div class="recap">
+      AIコーディングアシスタント市場はGitHub Copilot・Cursor・Windsurf等が競合。Cursorは2024〜2025年にVS Code<span class="fn">1</span>ベースのAIエディタとして急成長し、エンジニアリングチームへの普及が進んでいた。
+    </div>
+    <p>
+      Cursorはバージョン3（コードネーム「Glass」）をリリース。最大の変更点は<strong>UIの主体がコードエディタからエージェント管理コンソールへ移行</strong>した点——複数のAIエージェントが並列作業するのを監督する場所へのコンセプト転換。
+    </p>
+    <p>
+      主要新機能：① <strong>Cloud Handoff</strong>——ローカルとクラウド間でエージェントセッションを引き継ぎ長時間タスクをサーバー側で継続実行。② <strong>マルチリポジトリワークスペース</strong>。③ 統合エージェント管理——CI/CDやIDEをまたいだエージェントを一元監視。
+    </p>
+    <p>
+      <span class="analysis-label">金融システムへの示唆</span>
+      ISO 20022移行・PCI DSS対応等の大規模コンプライアンス対応リファクタリングで有効。エージェント自律変更はセキュリティレビュープロセスの再設計を促す可能性があり、変更管理ポリシーの先行整備が推奨される。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>VS Code（Visual Studio Code）</strong>：Microsoftが開発した無償のオープンソースコードエディタ。世界で最も広く使われている開発環境の一つ。CursorはVS Codeをフォークして独自機能を追加したAIエディタとして登場した。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 2: 第三者ベンダー動向
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 02</div>
+  <div class="section-title">第三者ベンダー動向 <span class="section-badge">厚・5本</span></div>
+</div>
+
+<!-- 2-A -->
+<div class="article">
+  <div class="article-meta">SWIFT 公式 / PYMNTS / Crowdfund Insider｜2026年6月末稼働</div>
+  <div class="article-headline">SWIFT、小口越境送金の新フレームワークを25行以上で稼働開始——11カ国対応・費用透明性と全額着金を保証</div>
+  <div class="article-body">
+    <div class="recap">
+      SWIFTはこれまで主に金融機関間の大口決済インフラとして機能し、個人・中小企業向けの小口送金市場はPayPal・Wise・Revolut等のフィンテックに侵食されてきた。2026年3月4日の枠組み発表後、銀行の接続準備が進んでいた。
+    </div>
+    <p>
+      SWIFTの新「越境リテール決済フレームワーク」が6月末に<strong>25行以上で本番稼働</strong>を開始した。顧客に対して①送金前の費用確定②中間手数料控除なしの全額着金③リアルタイムの追跡可能性④利用可能な限り即時決済——の4条件を保証する。
+    </p>
+    <p>
+      対応11カ国：オーストラリア・バングラデシュ・カナダ・中国・ドイツ・インド・パキスタン・スペイン・タイ・英国・米国（バングラデシュ・中国・ドイツ・パキスタン・インドはグローバル送金受取国トップ10）。参加機関にはJPMorgan・HSBC・Deutsche Bank・BNP Paribas・Standard Chartered・インド系大手行（SBI・HDFC・ICICI）・オーストラリア系大手行が含まれる。
+    </p>
+    <p>
+      <span class="analysis-label">トランザクションバンキングへの示唆</span>
+      フィンテック各社が優位を持っていた個人送金・中小企業向け越境決済市場にSWIFTが本格参入した。コルレス<span class="fn">1</span>手数料の透明化義務は既存の収益構造を変える可能性があり、自行の参加タイムラインと収益影響を早急に評価する必要がある。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>コルレス（Correspondent Banking）</strong>：コレスポンデントバンキング。ある銀行が別の国・地域の金融機関と代理銀行契約を結び、その機関を通じて外国通貨決済を行う仕組み。国際送金の根幹インフラ。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 2-B -->
+<div class="article">
+  <div class="article-meta">Mastercard 公式 / Fortune / The Block｜2026年6月10日</div>
+  <div class="article-headline">Mastercard、AI-to-AI決済プロトコル「Agent Pay for Machines（AP4M）」を発表——Coinbase・Stripe・Adyenら30社以上が初日参加</div>
+  <div class="article-body">
+    <div class="recap">
+      MastercardはVisa・Amexとともに2024〜2025年にかけてエージェンティック・コマース<span class="fn">1</span>（AIが自律的に購買・支払を行う取引形態）の研究を進めてきた。従来のB2Bカード決済（Mastercard Track BPS）は人間主体の取引を前提として設計されており、AI主体の取引には認証・速度・マイクロトランザクション<span class="fn">2</span>の面で限界があった。
+    </div>
+    <p>
+      Mastercardは6月10日、<strong>Agent Pay for Machines（AP4M）</strong>を正式リリースした。AIエージェントや自動化ソフトウェアが互いに、またはビジネス間でマシンスピードで取引できるマルチレール<span class="fn">3</span>サービス。コンマ以下のマイクロトランザクションを含む幅広い金額帯に対応し、カード・銀行口座・ステーブルコインの3レールをカバーする。
+    </p>
+    <p>
+      AIエージェントの認証（資格情報管理）・利用限度額の強制・決済保証はMastercardのネットワーク経由で実行され、エージェントの権限・資格情報はPolygon・Solana・Baseブロックチェーン上に記録される。初日参加企業はCoinbase・Stripe・Adyenを含む30社以上。
+    </p>
+    <p>
+      <span class="analysis-label">金融システムへの示唆</span>
+      AI主体の自律的な調達・財務・買掛金管理フローが実現すると、TB業務における決済指示の起点が「担当者」から「AIエージェント」へ移行する。エンタープライズ向けのAPIセキュリティポリシー（エージェント認証・権限スコープ）の策定が急務となる。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（3項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>エージェンティック・コマース（Agentic Commerce）</strong>：AIエージェントが人間の代わりに自律的に商品・サービスを選択し購買・支払を実行する取引形態。従来の「人が検索・比較・購買」するeコマースの進化形。</li>
+      <li><strong>マイクロトランザクション（Microtransaction）</strong>：ごく少額の取引。1セント未満、場合によっては1000分の1セント規模の支払いを指す。従来のカード決済インフラでは最低手数料の問題から経済的に成立しにくかった。</li>
+      <li><strong>マルチレール（Multi-Rail）</strong>：単一の決済ネットワークではなく、複数の決済インフラ（カードネットワーク・ACH/口座振替・ブロックチェーン等）を統合的に使い分ける決済アプローチ。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 2-C -->
+<div class="article">
+  <div class="article-meta">SWIFT 公式 / Red Compass Labs｜2026年6月</div>
+  <div class="article-headline">SWIFT ISO 20022、2026年11月に非構造化アドレスを全面排除——残存対応機関に最終警告、ブロックチェーン共有台帳も本番移行へ</div>
+  <div class="article-body">
+    <div class="recap">
+      SWIFTは2025年11月22日をもってMT形式とMX形式の共存期間を終了。2026年1月1日以降、MT形式を使う機関にはコンティンジェンシー処理手数料が課されており、移行への圧力は段階的に強化されてきた。
+    </div>
+    <p>
+      SWIFTは<strong>2026年11月</strong>を「ISO 20022<span class="fn">1</span>最終章」と位置付け、2つの期限を設定：① 非構造化住所を含む決済メッセージの<strong>自動拒否</strong>開始（国コードおよび市区町村名の構造化フィールド必須）。② 2026年11月14日より、全金融機関がcamt.110/camt.111<span class="fn">2</span>形式での照会メッセージ受信能力を持つことが必須化。
+    </p>
+    <p>
+      加えてFinextraが報じたように、SWIFTは<strong>ブロックチェーンベースの共有台帳</strong>を2026年中に本番環境で実取引開始すると確認した。銀行間のトークン化預金ネットワーク間の相互運用レイヤー<span class="fn">3</span>として機能する設計で、既存の伝統的コルレスバンキングモデルとの並行稼働を目指す。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（3項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>ISO 20022</strong>：国際標準化機構（ISO）が定めた金融メッセージングの国際標準。XMLベースで豊富なデータフィールドを持ち、従来のSWIFT MT形式（固定長テキスト）を置き換える。MX形式とも呼ばれる。</li>
+      <li><strong>camt.110 / camt.111</strong>：ISO 20022における照会メッセージの形式名。camt.110は照会送信、camt.111は照会回答に使われる。</li>
+      <li><strong>相互運用レイヤー（Interoperability Layer）</strong>：異なるブロックチェーンネットワークや決済システム間でデータ・価値の交換を可能にする中間的な仕組み。SWIFTはこのレイヤーとして競合するトークン化ネットワーク間の橋渡し役を担おうとしている。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 2-D -->
+<div class="article">
+  <div class="article-meta">OCC / PYMNTS / Bank of England｜2026年6月22〜24日</div>
+  <div class="article-headline">ステーブルコイン規制、グローバル同時進行——米OCC・FinCEN BSA要件を発動、英BOEは£40B「発行上限」で方針転換</div>
+  <div class="article-body">
+    <div class="recap">
+      米国では2025年7月18日にGENIUS法<span class="fn">1</span>が成立し、Treasury・FDIC・OCCが実施規則の策定を進めてきた。英国でもFCAとBOEが独自のステーブルコイン監督枠組みを整備中で、EUのMiCA<span class="fn">2</span>に続く主要法域での規制実装が加速している。
+    </div>
+    <p>
+      <strong>米国（6月22日）</strong>：OCCがGENIUS法に基づく許可ステーブルコイン発行者（PPSI<span class="fn">3</span>）へのBSA<span class="fn">4</span>・AML/CFT<span class="fn">5</span>義務適用の提案規則（NPRM<span class="fn">6</span>）を公表。同日FinCEN・Fed・FDIC・NCUA<span class="fn">7</span>が共同で顧客識別プログラム（CIP）要件のNPRMを公表。Treasury最終規則は<strong>7月目標</strong>。
+    </p>
+    <p>
+      <strong>英国（6月22日）</strong>：イングランド銀行（BOE）が個人の保有上限計画を撤廃し、代わりに各システミック<span class="fn">8</span>ステーブルコインへの<strong>発行総額上限40億ポンド（約7,500億円）</strong>を設定する方針に転換。個人の保有を規制するより発行者レベルで総量を管理する設計。
+    </p>
+    <p>
+      <span class="analysis-label">本邦への含意</span>
+      日本FSAは6月13日に信頼型ステーブルコイン規制をすでに施行。米英の最終規則確定後は日米英間の規制同等性評価が次の論点となり、三菱UFJ・みずほ・SMBCの円建てステーブルコイン計画（2027年3月目標）にも直接影響する。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（8項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>GENIUS法</strong>：Guiding and Establishing National Innovation for US Stablecoins Act。2025年7月成立の米国初の包括的ステーブルコイン規制法。</li>
+      <li><strong>MiCA（Markets in Crypto-Assets Regulation）</strong>：EU の暗号資産市場規制。2024年に全面施行され、ステーブルコイン（電子マネートークン・資産参照トークン）を含む暗号資産を包括的に規制する。</li>
+      <li><strong>PPSI（Permitted Payment Stablecoin Issuer）</strong>：GENIUS法が定める許可支払ステーブルコイン発行者の法的区分。</li>
+      <li><strong>BSA（Bank Secrecy Act）</strong>：銀行秘密法。米国のAML/CFT規制の根拠法。金融機関に疑わしい取引の報告・記録保持・顧客確認を義務付ける。</li>
+      <li><strong>AML/CFT</strong>：Anti-Money Laundering / Countering the Financing of Terrorism。マネーロンダリング対策／テロ資金供与防止。</li>
+      <li><strong>NPRM（Notice of Proposed Rulemaking）</strong>：規則制定の予告通知。米国では最終規則公布前にパブリックコメントを募集することが法的義務。</li>
+      <li><strong>NCUA（National Credit Union Administration）</strong>：全国信用組合管理局。米国の信用組合を規制・監督する連邦機関。</li>
+      <li><strong>システミック（Systemic）</strong>：金融システム全体に波及しうる規模・影響力を持つことを指す。特定のステーブルコインが大規模になり流動性危機等を起こした場合に金融安定に影響するリスクを指してこの語を用いる。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 2-E -->
+<div class="article">
+  <div class="article-meta">American Banker / CoinDesk / The Block｜2026年6月5日</div>
+  <div class="article-headline">JPMorgan・Citi・BofAら12行、The Clearing Houseを通じてトークン化預金ネットワークを構築——2027年前半の稼働目標</div>
+  <div class="article-body">
+    <div class="recap">
+      米国の決済インフラはFed Now・CHIPS・Fedwireが並立してきた。The Clearing House（TCH<span class="fn">1</span>）はCHIPSを運営する銀行所有の決済インフラ会社。JPMorganは2023年以降KinexysでオンチェーンB2B決済を先行させていた。
+    </div>
+    <p>
+      TCHは6月5日、JPMorgan・Citi・BofA・Wells Fargo・BNY・HSBC・PNC・U.S. Bank・Truist・Santander・TD・Regionsの12行が参加する<strong>トークン化預金<span class="fn">2</span>ネットワーク</strong>の構築を正式発表した。伝統的な銀行預金をブロックチェーントークンに変換して24時間365日即時移動できる仕組みで、資金は規制された銀行システム内に留まる設計。稼働目標は2027年前半。
+    </p>
+    <p>
+      同日HKMAもJPMorgan・HSBC・スタンダードチャータード・UBS・Ant Digital・HashKeyを含むトークン化債券エキスパートグループの設立を発表。<strong>資産のトークン化とその決済手段の整備が両輪で進む</strong>構図となってきた。
+    </p>
+    <p>
+      <span class="analysis-label">TB業務への示唆</span>
+      本ネットワーク稼働後はコルレスバンキング経由の日中流動性管理・イントラデイ<span class="fn">3</span>ファンディング・キャッシュプーリング<span class="fn">4</span>の設計前提が根本から変わりうる。国内メガバンクの参加可能性と米ドル建て取引での利用条件の把握が当面の論点。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（4項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>TCH（The Clearing House）</strong>：米国の大手銀行が所有する民間決済インフラ会社。CHIPSとRTPを運営する。</li>
+      <li><strong>トークン化預金（Tokenized Deposit）</strong>：従来の銀行預金をブロックチェーン上のデジタルトークンとして表現したもの。民間ステーブルコインとは異なり、既存の銀行規制・預金保護の枠組み内に留まる。</li>
+      <li><strong>イントラデイ（Intraday）</strong>：日中の意。イントラデイ流動性とは日中の支払い義務を満たすために必要な資金の流動性を指す。</li>
+      <li><strong>キャッシュプーリング（Cash Pooling）</strong>：グループ企業の複数口座残高を仮想的または実質的に一つにまとめて資金効率を高めるTBサービス。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 3: 外銀TB速報
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 03</div>
+  <div class="section-title">外銀TB速報 <span class="section-badge">薄・3本</span></div>
+</div>
+
+<!-- 3-A -->
+<div class="article">
+  <div class="article-meta">JPMorgan Kinexys / Yahoo Finance｜2026年6月</div>
+  <div class="article-headline">JPMorgan Kinexys、BMWグループ・Siemens・三菱商事とのプログラマブル決済を発動——Canton Networkでの「JPMD」ネイティブ発行も計画</div>
+  <div class="article-body">
+    <div class="recap">
+      JPMorganはOnyx（旧称）→Kinexysとブランドをリニューアルしながらブロックチェーン決済の本格展開を加速してきた。JPM Coin（現JPMD）は2020年代前半から機関間決済に試験的に使われており、2025年以降は実業への接続が本格化している。
+    </div>
+    <p>
+      JPMorganのKinexysは2026年マイルストーンを公表した。① <strong>Kinexys Fund Flow</strong>：投資家レジスターと取引データをKinexys Digital Assetsプライベートブロックチェーン上で一元管理する新ソリューション（JPMorgan Private Bank・J.P. Morgan Asset Management・Citcoで初取引完了）。② <strong>BMWグループ・FirstRand Bank・三菱商事</strong>へのKinexys Digital Payments（プログラマブル決済<span class="fn">1</span>）の拡大。③ B2C2・Siemensとのオンチェーン<span class="fn">2</span>FX決済実施。④ パブリックブロックチェーン「Canton Network<span class="fn">3</span>」上でのJPMD<span class="fn">4</span>ネイティブ発行を計画中。
+    </p>
+    <p>
+      Kinexysは今やトークン化預金・プログラマブル決済・ファンド管理を統合したJPMorganのブロックチェーンTBプラットフォームとして確立しつつある。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（4項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>プログラマブル決済（Programmable Payment）</strong>：あらかじめ設定した条件（特定日時・特定イベント発生等）が満たされると自動的に実行される決済。スマートコントラクトにより実現され、手動指示なしで決済を完結できる。</li>
+      <li><strong>オンチェーンFX（On-chain FX）</strong>：ブロックチェーン上で外国為替（FX）の交換・決済を行うこと。伝統的なCLS（Continuous Linked Settlement）などを経由せず、スマートコントラクト経由でPVP（Payment vs. Payment）決済を実現できる。</li>
+      <li><strong>Canton Network</strong>：Damlスマートコントラクト言語をベースとした、プライバシー機能付きのパブリックブロックチェーンネットワーク。Goldman Sachs・BNY Mellon・Microsoft等も参加しており、制度的金融用途を想定して設計されている。</li>
+      <li><strong>JPMD</strong>：JPM Coinの現在の名称（旧称JPM Coin）。Kinexysブランド統合後に改称された。機関投資家・大企業向けの24時間即時決済に使われる。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 3-B -->
+<div class="article">
+  <div class="article-meta">Citigroup / PYMNTS｜2026年6月11日</div>
+  <div class="article-headline">Citi、市場初の「デジタル預託証書（DDR）」をリリース——ブロックチェーンで非上場株へのアクセスを機関投資家に開放</div>
+  <div class="article-body">
+    <div class="recap">
+      Citiは2023〜2025年にCiti Token Servicesとして預金・貿易金融のトークン化実証を重ねてきた。一方でプライベートクレジット・非上場株式への機関投資家需要が急増しており、流動性が低い非上場資産のアクセシビリティ向上が業界課題となっていた。
+    </div>
+    <p>
+      Citiは6月11日、<strong>Digital Depositary Receipts（DDR）</strong>を発売した——非上場企業の株式にCiti Issuer Servicesの預託証書<span class="fn">1</span>構造をブロックチェーン（SIX Digital Exchange<span class="fn">2</span>）で実装した市場初の商品。非上場企業がIPOなしに機関投資家へ株式を提供できる仕組みで、投資家は慣れ親しんだ預託証書の形式でアクセスできる。
+    </p>
+    <p>
+      初回取引はCiti資産運用部門の投資家とKaleido（Citiのポートフォリオ企業・機関向けトークン化プラットフォーム）の間で完了。Citiは同月「Tokenization 2030」リサーチレポートを公表し、2026年末から3年間のパイロットとして株式・ETF・米国債のトークン化を計画していることを明かした。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（2項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>預託証書（Depositary Receipt / DR）</strong>：外国株式を国内投資家が取引しやすくするために、外国株を預託機関が保有し発行する代替証書。ADS（米国預託株式）やGDR（グローバル預託証書）が代表例。DDRはこの概念を非上場企業に適用したもの。</li>
+      <li><strong>SIX Digital Exchange（SDX）</strong>：スイスの証券取引所SIXグループが運営するデジタル資産取引所・決済インフラ。DLT（分散台帳技術）ベースで規制対応したデジタル証券の発行・取引・決済を提供する。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 3-C -->
+<div class="article">
+  <div class="article-meta">HSBC / PYMNTS｜2026年6月15日</div>
+  <div class="article-headline">HSBC、売掛金担保の即時融資ツール「TradeCash」をリリース——30日以上の支払いサイクルを待たずして運転資金を確保</div>
+  <div class="article-body">
+    <div class="recap">
+      HSBCのTB部門はサプライチェーンファイナンス・トレードファイナンスで歴史的な強みを持つ。中東情勢起因の資材費上昇・長期化する支払いサイクルが企業の流動性を圧迫する中、短期ファイナンスソリューションへの需要が高まっていた。
+    </div>
+    <p>
+      HSBCは6月15日、<strong>HSBC TradeCash</strong>を公開した。企業が販売請求書データをデジタルでHSBCに共有することで、バイヤーの通常30日超の支払いを待たずして<strong>ほぼリアルタイムで売掛金担保融資</strong>を受けられる仕組み。バイヤーは後日顧客のHSBC口座に直接決済する設計で、エンドツーエンドがデジタルジャーニーで完結する。
+    </p>
+    <p>
+      「高まるボラティリティ・長期化する支払いサイクル・原材料費の上昇が企業流動性を圧迫している」という市場認識が製品設計の背景にある。今後スタンダードチャータード・Deutsche Bankとの競合が激化することが予想される。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>売掛金担保融資（Receivables Finance / Invoice Financing）</strong>：企業が保有する売掛金（未回収の請求書）を担保または譲渡して金融機関から資金を調達する手法。サプライチェーンファイナンスの一形態。ファクタリング・フォルフェイティングとも類似する。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 4: 国内政治
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 04</div>
+  <div class="section-title">国内政治 <span class="section-badge">薄・2本</span></div>
+</div>
+
+<!-- 4-A -->
+<div class="article">
+  <div class="article-meta">日本銀行 / CNBC｜2026年6月16日</div>
+  <div class="article-headline">日本銀行、政策金利を1.0%に引き上げ——1995年以来の最高水準、中東エネルギーショックが追加利上げを後押し</div>
+  <div class="article-body">
+    <div class="recap">
+      日銀は2024年3月にマイナス金利政策を解除し、同年7月・2025年1月と段階的な利上げを実施してきた。2025年後半のイラン情勢に起因するエネルギー価格上昇が国内インフレの第2波を引き起こし、2026年春以降の政策運営に新たな変数を加えていた。
+    </div>
+    <p>
+      日本銀行は6月16日の金融政策決定会合で、短期政策金利を25bps<span class="fn">1</span>引き上げて<strong>1.0%</strong>とすることを賛成7反対1で決定した。1.0%水準は1995年9月以来最高。反対票の審議委員・浅田東一郎氏は生産・雇用へのダウンサイドリスクを根拠とした。
+    </p>
+    <p>
+      公表された「主な意見」では多数の審議委員が利上げサイクルの継続を支持しており、中立金利<span class="fn">2</span>の推計値は2%程度とされている。声明文は中東情勢の注視を明言しており、次回以降の政策判断への影響が注目される。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（2項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>bps（ベーシスポイント）</strong>：金利の変動幅を表す単位。1bps＝0.01%。25bpsは0.25ポイントの変化を意味する。</li>
+      <li><strong>中立金利（Neutral Rate）</strong>：景気を加速も減速もさせない理論上の金利水準。日銀が見積もる2%前後は現在の1.0%からさらに追加利上げの余地があることを示唆する。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 4-B -->
+<div class="article">
+  <div class="article-meta">金融庁 / CryptoRank / FintechObserver｜2026年6月13日</div>
+  <div class="article-headline">金融庁、改正資金決済法に基づく海外ステーブルコイン規制を施行——外国信託型を「電子決済手段」として認定、LDP「デジタル日本2026」も推進</div>
+  <div class="article-body">
+    <div class="recap">
+      日本は2022年の資金決済法改正でステーブルコインの法的地位を初めて定義した。2023〜2025年の実施細則整備を経て、海外発行体の取り扱いについての規定が最後の課題として残っていた。
+    </div>
+    <p>
+      金融庁は6月13日、海外の信託型ステーブルコインを改正<strong>資金決済法<span class="fn">1</span></strong>上の「電子決済手段」として認める新規則を施行した。海外発行体への適用要件として、①母国での同等水準の免許保有、②監査済み準備資産の保有・独立検証、③AML/CFT対応（取引停止メカニズムを含む）が明示された。
+    </p>
+    <p>
+      自民党デジタル社会推進本部は「デジタル日本2026」構想を前進させており、政府決済口座を通じたプッシュ型<span class="fn">2</span>給付の即時配布と、マイナアプリ<span class="fn">3</span>を活用した官民横断認証基盤の整備が主要施策として盛り込まれた。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（3項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>資金決済法</strong>：資金移動業・前払式支払手段・暗号資産・ステーブルコイン等を規制する日本の法律。2022年改正で電子決済手段（ステーブルコイン）の規定が追加された。</li>
+      <li><strong>プッシュ型給付</strong>：受給者が申請せずとも政府が自動的に給付を実行するシステム。マイナンバーと金融口座の連携を通じて実現する。従来の申請主義（プル型）からの転換。</li>
+      <li><strong>マイナアプリ</strong>：マイナンバーカードの機能をスマートフォンで利用するためのデジタル庁公式アプリ。身分証明・行政手続きのデジタル化を担う。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 5: 海外政治
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 05</div>
+  <div class="section-title">海外政治 <span class="section-badge">薄・2本</span></div>
+</div>
+
+<!-- 5-A -->
+<div class="article">
+  <div class="article-meta">Federal Reserve / CNBC｜2026年6月17日</div>
+  <div class="article-headline">FRB、Warsh新議長下で初の政策決定——金利据え置きも「ドットプロット」が年内利上げを示唆するタカ派転換</div>
+  <div class="article-body">
+    <div class="recap">
+      米国では2026年初頭にパウエル前議長の任期が満了し、元FRB理事・ケビン・ウォーシュ氏が後任に就任。ウォーシュ氏はかねて現行緩和策に批判的な立場を示しており、市場は政策スタンス変化を注視していた。
+    </div>
+    <p>
+      FOMC<span class="fn">1</span>は6月17日、フェデラルファンド<span class="fn">2</span>目標レンジを<strong>3.50〜3.75%</strong>に据え置くことを全会一致で決定した。声明文は「固調な経済拡大」を確認しつつ「エネルギー価格上昇による高インフレ」を懸念事項として明記。
+    </p>
+    <p>
+      更新されたドットプロット<span class="fn">3</span>では2026年内の利下げ見通しがゼロに修正され、19人中9名が少なくとも1回の利上げを、6名が2回の利上げを予想。市場は<strong>「Higher for Longer 2.0」</strong>シナリオへの織り込みを強め、USD高・新興国通貨安の圧力が高まりつつある。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（3項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>FOMC（Federal Open Market Committee）</strong>：連邦公開市場委員会。米国の金融政策の意思決定機関。FRB理事7名とニューヨーク連銀総裁を含む計12名の地区連銀総裁が参加する。</li>
+      <li><strong>フェデラルファンド金利（FFレート）</strong>：銀行間の翌日物資金調達レート。FOMCがターゲットレンジを設定し米国の実質的な政策金利として機能する。</li>
+      <li><strong>ドットプロット</strong>：各FOMC参加者が将来の適切な政策金利水準を匿名で予測した散布図。年4回公表され、FRBの政策方向性を読む上での重要な指標。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 5-B -->
+<div class="article">
+  <div class="article-meta">EU Council / Chicago Council on Global Affairs｜2026年6月15〜17日</div>
+  <div class="article-headline">G7エヴィアン・サミット閉幕——重要鉱物の特定国依存を2030年までに60%以下へ、中国貿易・金融透明性で協調</div>
+  <div class="article-body">
+    <div class="recap">
+      G7はウクライナ戦争後のサプライチェーン断絶を受けて2023年以降、重要鉱物・半導体の供給安全保障を優先議題としてきた。中国の産業過剰生産問題はEUが反補助金関税を発動した2024〜2025年以降、G7通商政策の中心的課題となっている。
+    </div>
+    <p>
+      フランス・エヴィアンで開催された第52回G7サミット（6月15〜17日）は「重要鉱物強靱化・生産同盟」を創設することで合意。2030年までに希土類<span class="fn">1</span>・永久磁石の単一非G7供給国への依存を<strong>60%以下</strong>に抑えることを目標値として設定した（法的拘束力なし）。
+    </p>
+    <p>
+      金融面では開発・金融担当閣僚会合が税の透明性強化・不正資金フロー対策・開発投資と受入国優先事項の整合化を強調。EUフォン・デア・ライエン委員長は中国の産業過剰生産を「構造的リスク」と位置づけた。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>希土類（レアアース）</strong>：ランタノイド系17元素の総称。電気自動車用モーター・風力発電機・半導体製造装置に不可欠な戦略物資。中国が生産・精製の世界シェアの大部分を占めており地政学的リスクの焦点。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 6: 国内企業動向
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 06</div>
+  <div class="section-title">国内企業動向 <span class="section-badge">薄・2本</span></div>
+</div>
+
+<!-- 6-A -->
+<div class="article">
+  <div class="article-meta">Ledger Insights / Fintech Futures / CryptoTimes｜2026年6月10日</div>
+  <div class="article-headline">三菱UFJ・みずほ・三井住友、円建てステーブルコイン共同発行のMOU締結——2027年3月目標、B2B決済で年間1兆円規模を想定</div>
+  <div class="article-body">
+    <div class="recap">
+      本邦メガバンクは各行個別にデジタル通貨実証実験を重ねてきたが（MUFGコイン・J-Coin等）、産業利用への展開は限定的だった。金融庁の海外ステーブルコイン規制施行（6月13日）が法的基盤を提供し、三行連合の発表を後押しした形となった。
+    </div>
+    <p>
+      MUFG・みずほFG・SMBCの3メガバンクが円建てステーブルコインの共同発行に向けたMOU<span class="fn">1</span>を締結した。スキームは信託型：三行が共同委託者となりライセンスを持つ信託機関を受託者とする構造を採る。合算資産7兆ドル超のコンソーシアムはB2B決済を主要ユースケースとして設定し、2028年までに年間約1兆円（約65億ドル相当）の取引量を目指す。
+    </p>
+    <p>
+      金融庁フィンテックPoCハブ<span class="fn">2</span>の支援を受けており、本日施行された規制枠組みを直接活用する計画。</p>
+    <p>
+      <span class="analysis-label">TB業務への含意</span>
+      企業間決済（貿易代金・サプライチェーンファイナンス）でのステーブルコイン活用はコルレス手数料削減・決済リードタイム短縮の双方に効果が見込まれる。自行の決済システムとの接続インターフェース設計の検討を早期に開始することが推奨される。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（2項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>MOU（Memorandum of Understanding）</strong>：覚書。法的拘束力を持たない合意文書で、正式契約締結前の意向確認・協力枠組みの確認に使われる。</li>
+      <li><strong>PoCハブ（Proof of Concept Hub）</strong>：金融庁が設けた新技術の試験運用を促進するサンドボックス的な制度。実証実験を行う事業者が規制当局と協議しながら限定的な運用を行える場を提供する。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 6-B -->
+<div class="article">
+  <div class="article-meta">Trading Economics / Yahoo Finance｜2026年6月25日</div>
+  <div class="article-headline">日経平均、AIインフラ支出懸念で0.88%下落——T&amp;D・第一生命が大幅安、Nikkei 225は69,175円で引け</div>
+  <div class="article-body">
+    <div class="recap">
+      日経平均は2026年6月初旬に66,000円台の過去最高値を更新後、米国AIハイパースケーラー<span class="fn">1</span>への過剰投資懸念とFRBの利上げ再開シグナルを受けて調整局面に入っていた。
+    </div>
+    <p>
+      日経225は前日比0.88%安の約69,175円、TOPIXは0.67%安の3,964で6月25日の取引を終えた。下落率が大きい銘柄はT&amp;Dホールディングス（-6.01%）・第一生命（-4.50%）・日本通運（-3.85%）と金融・物流セクターに集中。一方でパナソニック（+6.31%）・シチズン時計（+4.83%）・J.フロントリテイリング（+4.30%）は上昇し、バリュー株・非AI銘柄へのローテーションが続いている。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（1項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>ハイパースケーラー</strong>：超大規模なデータセンターを運営するクラウドサービス大手（Amazon・Microsoft・Google・Meta・Apple）の総称。AI学習・推論インフラの大半を担い、その設備投資動向が半導体・ハードウェア市場全体を左右する。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     SECTION 7: 海外企業動向
+     ══════════════════════════════════════════════ -->
+<div class="section-header">
+  <div class="section-number">Section 07</div>
+  <div class="section-title">海外企業動向 <span class="section-badge">薄・2本</span></div>
+</div>
+
+<!-- 7-A -->
+<div class="article">
+  <div class="article-meta">SunStar / Globe Telecom / Crunchbase｜2026年6月17日</div>
+  <div class="article-headline">フィリピン最大フィンテックGCash運営MYNT、IPO申請へ——東南アジア初の50億ドルフィンテックユニコーンが公開市場へ</div>
+  <div class="article-body">
+    <div class="recap">
+      GCash（MYNT Inc.運営）はフィリピントップシェアのデジタル金融プラットフォームでデジタル決済・融資・貯蓄・投資を提供。2023年に評価額50億ドルでユニコーン認定を受け、東南アジアフィンテックIPO市場への先鞭役として注目されてきた。
+    </div>
+    <p>
+      MYNT Inc.の取締役会と株主は6月17日、フィリピン証券取引委員会（SEC）への登録申請書提出とPSE<span class="fn">1</span>への上場申請を承認した。
+    </p>
+    <p>
+      Crunchbaseの予測では2026年中のIPOが「高確率」と評価されており、英国のモンゾ（チャレンジャーバンク）・米国のPlaidも同年中の上場を検討。インドのMoneyviewもSEBI<span class="fn">2</span>に目論見書草案を提出済みで、グローバル新興市場のフィンテックIPO潮流が形成されつつある。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（2項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>PSE（Philippine Stock Exchange）</strong>：フィリピン証券取引所。マニラに本部を置くフィリピン唯一の証券取引所。</li>
+      <li><strong>SEBI（Securities and Exchange Board of India）</strong>：インド証券取引委員会。インドの証券市場を規制・監督する政府機関。米国のSECに相当する。</li>
+    </ol></div>
+  </details>
+</div>
+
+<!-- 7-B -->
+<div class="article">
+  <div class="article-meta">Bloomberg / Globe and Mail｜2026年6月</div>
+  <div class="article-headline">Goldman・UBS・HSBCがS&amp;P500年末目標を7,600超に上方修正、JPMorganは500億ドル自社株買いと増配を発表——金価格5,000ドル予測が主流に</div>
+  <div class="article-body">
+    <div class="recap">
+      S&amp;P500は2026年初頭からの年初来上昇率が約9%に達している（6月時点）。FRBのタカ派転換観測と中東地政学リスクが金価格を押し上げており、銀行セクターは高金利環境のもとで堅調な利息収入を享受してきた。
+    </div>
+    <p>
+      Goldman Sachs・UBS・HSBCはS&amp;P500の年末目標を軒並み<strong>7,600以上</strong>に引き上げた。JPMorganは四半期配当を1株1.65ドルに増配、500億ドルの自社株買いプログラム実施を発表し7月中旬のQ2決算に向けた資本余力の強さをアピール。
+    </p>
+    <p>
+      金価格についてはBofA・Goldman Sachs・HSBC・ソシエテジェネラル<span class="fn">1</span>が2026年の目標価格を1オンス5,000ドルに設定、JPMorganプライベートバンク部門は5,200〜5,300ドルを予測。中東情勢とFRBタカ派スタンスが安全資産需要を維持しており、H2<span class="fn">2</span>の銀行収益は高金利と信用コスト動向の綱引きとなる見通し。
+    </p>
+  </div>
+  <details class="footnotes">
+    <summary>注釈を開く（2項目）</summary>
+    <div class="footnotes-body"><ol>
+      <li><strong>ソシエテジェネラル（Société Générale）</strong>：フランスの大手総合金融グループ。BNPパリバに次ぐフランス第2位の銀行。デリバティブ・資産運用・コーポレートバンキングで欧州有数の地位を持つ。</li>
+      <li><strong>H2（Second Half）</strong>：下半期（7〜12月）。H1（上半期、1〜6月）の対語として使われるビジネス用語。</li>
+    </ol></div>
+  </details>
+</div>
+
+
+<div class="footer">
+  <p>THE MORNING BRIEF &mdash; Transaction Banking Division</p>
+  <p style="margin-top:4px;">本ブリーフは自動収集・生成されたものです。投資・経営判断の参考としての利用は自己責任でお願いします。</p>
+  <p style="margin-top:4px; font-size:10px;">情報基準：2026年6月24日 EST 23:00 &nbsp;|&nbsp; 生成：2026年6月25日 JST</p>
+</div>
+
+</div><!-- /container -->
+</body>
+</html>
